@@ -827,3 +827,28 @@ html[data-type-system] body.open-book #mobileNav .menu-explore:hover {background
 }
 @media (prefers-reduced-motion:reduce) {html[data-type-system] body.open-book #header :is(.header-explore,.menu-explore) {transition:none}}
 html[data-type-system][data-motion=calm] body.open-book #header :is(.header-explore,.menu-explore) {transition:none}
+html:root[data-type-system] body.open-book #main#main .explore-entry:has(.result-preview)>a {grid-template-columns:minmax(0,1fr)}
+html:root[data-type-system] body.open-book #main#main .result-content {display:flex;flex-direction:column;min-width:0;height:100%}
+html:root[data-type-system] body.open-book #main#main .result-heading {display:flex;align-items:center;gap:22px;margin-bottom:18px}
+html:root[data-type-system] body.open-book #main#main .result-heading>div {min-width:0;flex:1}
+html:root[data-type-system] body.open-book #main#main .result-heading h3 {margin:0}
+html:root[data-type-system] body.open-book #main#main .result-heading .explore-label {margin:0 0 10px}
+html:root[data-type-system] body.open-book #main#main .result-media {display:flex;align-items:center;justify-content:center;flex:none;overflow:hidden}
+html:root[data-type-system] body.open-book #main#main .result-media--book {width:82px;border-radius:3px;box-shadow:0 5px 14px #0002}
+html:root[data-type-system] body.open-book #main#main .result-media--app {width:100px;height:100px;border-radius:20px;background:#f6f2e8;border:1px solid #c9bda64d;padding:10px}
+html:root[data-type-system] body.open-book #main#main .result-media img {display:block;width:100%;height:auto;object-fit:contain;margin:0;filter:none;mix-blend-mode:normal;opacity:1;transform:none}
+html:root[data-type-system] body.open-book #main#main .result-preview {display:grid;gap:12px;margin:22px 0 24px;padding-top:18px;border-top:1px solid var(--line)}
+html:root[data-type-system] body.open-book #main#main .result-preview>div {display:grid;grid-template-columns:66px minmax(0,1fr);gap:12px}
+html:root[data-type-system] body.open-book #main#main .result-preview dt {font:500 .8125rem/1.8 var(--type-interface-family);color:var(--ink-soft)}
+html:root[data-type-system] body.open-book #main#main .result-preview dd {font:400 .9375rem/1.8 var(--type-interface-family);color:var(--ink);margin:0}
+html:root[data-type-system] body.open-book #main#main .result-action {display:flex;align-items:center;justify-content:space-between;gap:16px;margin-top:auto;padding-top:4px;font:500 .9375rem/1.8 var(--type-interface-family);color:var(--ink)}
+html:root[data-type-system] body.open-book #main#main .result-action>span {color:var(--gold);flex:none}
+@media(max-width:760px) {
+html:root[data-type-system] body.open-book #main#main .result-heading {gap:16px}
+html:root[data-type-system] body.open-book #main#main .result-media--book {width:68px}
+html:root[data-type-system] body.open-book #main#main .result-media--app {width:76px;height:76px;border-radius:16px;padding:8px}
+html:root[data-type-system] body.open-book #main#main .result-preview>div {grid-template-columns:60px minmax(0,1fr);gap:10px}
+}
+@media(max-width:360px) {
+html:root[data-type-system] body.open-book #main#main .result-heading:has(.result-media) {align-items:flex-start;flex-direction:column}
+}
