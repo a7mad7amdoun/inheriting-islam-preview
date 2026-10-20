@@ -605,7 +605,15 @@ padding:14px 16px;border:1px solid var(--control-line);border-radius:14px;
 background-color:var(--paper-2);color:var(--ink);font-size:1rem;line-height:1.65;
 box-shadow:none;transition:border-color .25s ease,background-color .25s ease;
 }
-html:root[data-type-system] body.open-book #main#main .form .field select {padding-inline-end:40px}
+html:root[data-type-system] body.open-book #main#main .form .field select {
+padding-inline-end:40px;
+background-image:linear-gradient(45deg,transparent 50%,currentColor 50%),linear-gradient(135deg,currentColor 50%,transparent 50%);
+background-position:calc(100% - 21px) 52%,calc(100% - 16px) 52%;
+background-size:5px 5px;background-repeat:no-repeat;
+}
+html:root[data-type-system][dir=rtl] body.open-book #main#main .form .field select {
+background-position:16px 52%,21px 52%;
+}
 html:root[data-type-system] body.open-book #main#main .form .field textarea {
 min-block-size:184px;resize:vertical;font-family:var(--type-prose-family)!important;line-height:1.85;
 }
@@ -642,7 +650,7 @@ outline:2px solid var(--gold);outline-offset:3px;
 html:root[data-type-system] body.open-book #main#main :is(.btn,.copybtn) {
 min-block-size:50px;max-inline-size:100%;padding:13px 24px;border-radius:15px;
 font-size:1rem;line-height:1.5;font-weight:500;letter-spacing:0;
-white-space:normal;text-wrap:balance;box-shadow:none;transform:none;translate:none;
+white-space:normal;text-wrap:balance;text-transform:none;box-shadow:none;transform:none;translate:none;
 transition:background-color .25s ease,color .25s ease,border-color .25s ease;
 }
 html:root[data-type-system] body.open-book #main#main :is(.btn,.copybtn):hover {
