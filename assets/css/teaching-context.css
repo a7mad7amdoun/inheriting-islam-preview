@@ -135,6 +135,91 @@ html:root body.open-book #main#main :is(
 .inheritance-supplication>.wrap,.quran-companion>header,.quran-companion-page,
 .source-encounter .source-grid,.reader-source
 ) {background-color:var(--paper);box-shadow:0 0 24px 16px var(--paper)}
+@media screen and (min-width:761px) {
+html:root body.open-book {--calligraphy-strength:.22}
+html:root[data-theme=dark] body.open-book {--calligraphy-strength:.25}
+html[data-type-system] body.open-book #main .surah-guide {
+display:grid; grid-template-columns:minmax(150px,.8fr) minmax(0,1.2fr);
+align-items:center; gap:16px 28px; padding:24px 28px 12px;
+}
+html[data-type-system] body.open-book #main .surah-guide-name {
+flex-direction:column; align-items:flex-start; gap:2px; margin:0;
+}
+html[data-type-system] body.open-book #main .surah-guide-facts {
+border-inline-start:1px solid var(--verse-line); padding-inline-start:28px; gap:16px;
+}
+html[data-type-system] body.open-book #main .surah-guide-notes {
+grid-column:1/-1; margin:0; border-block-start:1px solid var(--verse-line); padding-block-start:4px;
+}
+html[data-type-system] body.open-book #main .prophetic-guidance {
+grid-template-columns:minmax(0,1fr); gap:0;
+inline-size:calc(100% - 2 * var(--gutter)); max-inline-size:1120px;
+margin:clamp(56px,6vw,88px) auto; padding:clamp(32px,4vw,56px);
+background:var(--paper); border:1px solid var(--verse-line); border-radius:28px;
+box-shadow:0 14px 40px var(--verse-shadow);
+}
+html[data-type-system] body.open-book #main .prophetic-guidance>header {
+display:grid; grid-template-columns:minmax(0,1.2fr) minmax(0,.8fr);
+column-gap:48px; align-items:start; padding-block-end:32px;
+border-block-end:1px solid var(--verse-line); box-shadow:none;
+}
+html[data-type-system] body.open-book #main .prophetic-guidance>header>.eyebrow {
+grid-column:1; grid-row:1; margin:0 0 14px;
+}
+html[data-type-system] body.open-book #main .prophetic-guidance h2 {
+grid-column:1; grid-row:2/5; max-inline-size:20ch; margin:0;
+font-size:clamp(2rem,3.1vw,2.8rem); line-height:1.18; text-wrap:balance;
+}
+html[data-type-system] body.open-book #main .guidance-introduction {
+grid-column:2; grid-row:1; margin:0;
+}
+html[data-type-system] body.open-book #main .guidance-salawat {
+grid-column:2; grid-row:2; justify-self:start; margin:4px 0 12px;
+}
+html[data-type-system] body.open-book #main .prophetic-guidance .hadith-grade {
+grid-column:2; grid-row:3; justify-self:start; margin:0;
+}
+html[data-type-system] body.open-book #main .guidance-reading {
+display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:28px 40px;
+padding:32px 0 0; border:0; border-radius:0; background:none; box-shadow:none;
+}
+html[data-type-system] body.open-book #main .guidance-arabic {
+grid-column:1/-1; max-inline-size:42ch; justify-self:center;
+font-size:clamp(1.8rem,2.6vw,2.4rem)!important; line-height:2.15!important;
+margin:0; text-align:center; padding-block:8px;
+}
+html[data-type-system] body.open-book #main .guidance-provenance {
+grid-column:1/-1; display:flex; flex-wrap:wrap; align-items:center;
+justify-content:center; gap:0 24px; margin:0; padding-block-end:24px;
+}
+html[data-type-system] body.open-book #main .guidance-provenance p {margin:0}
+html[data-type-system] body.open-book #main .guidance-provenance p:last-child {
+flex-basis:100%; text-align:center;
+}
+html[data-type-system] body.open-book #main .guidance-meaning {
+grid-column:1; margin:0; max-inline-size:46ch;
+}
+html[data-type-system] body.open-book #main .guidance-practice {
+grid-column:2; margin:0; padding-inline-start:28px;
+}
+html[data-type-system] body.open-book #main .guidance-practice p {
+margin:10px 0 0; max-inline-size:46ch;
+}
+html[data-type-system] body.open-book #main .guidance-notes {
+grid-column:1/-1; min-inline-size:0;
+border-block-start:1px solid var(--verse-line); padding-block-start:12px;
+}
+html[data-type-system] body.open-book #main .guidance-notes p {
+max-inline-size:72ch;
+}
+html[data-type-system] body.open-book #main .guidance-next {
+grid-column:1/-1; justify-self:start; margin:0;
+}
+html[data-type-system] body.open-book #main .quran-companion-page
+:is(.quran-companion-meaning,.quran-companion-reflection p,.quran-companion-practice p) {
+max-inline-size:60ch; line-height:1.9;
+}
+}
 @media screen and (max-width:760px) {
 html:root body.open-book {--calligraphy-strength:.16}
 html:root[data-theme=dark] body.open-book {--calligraphy-strength:.19}
