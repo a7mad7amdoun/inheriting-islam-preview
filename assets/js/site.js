@@ -107,16 +107,16 @@
   }
   var header = document.getElementById('header');
   if (header) {
-    var onScroll = function () { header.classList.toggle('is-stuck', window.scrollY > 8); };
+    var onScroll = function () { header.classList.toggle('is-stuck', (window.scrollY || document.body.scrollTop) > 8); };
     onScroll();
-    addEventListener('scroll', onScroll, { passive: true });
+    document.addEventListener('scroll', onScroll, { capture:true, passive: true });
   }
 
   var navBtn = document.getElementById('navToggle');
   var navPanel = document.getElementById('mobileNav');
   var journeyMenu = document.querySelector('[data-journey-menu]');
   var navReturnTarget = navBtn;
-  var background = Array.from(document.querySelectorAll('main, body > footer, .armbar, .journey-dock'));
+  var background = Array.from(document.querySelectorAll('main, body > footer, .armbar, .journey-tray, .journey-dock'));
   var previousInert = [];
   function closeNav(restoreFocus) {
     if (!navBtn || !navPanel || navBtn.getAttribute('aria-expanded') !== 'true') return;
@@ -170,6 +170,40 @@
   if (journeyMenu && navBtn && navPanel) {
     journeyMenu.hidden = false;
     journeyMenu.addEventListener('click', function () { navBtn.click(); });
+  }
+
+  // An explicit, reversible reading preference; never hide navigation on a timer.
+  var journeyToggle = document.querySelector('[data-journey-toggle]');
+  var journeyDock = document.querySelector('.journey-dock');
+  if (journeyToggle && journeyDock) {
+    function setJourneyCollapsed(collapsed) {
+      document.body.dataset.journeyCollapsed = String(collapsed);
+      journeyToggle.setAttribute('aria-expanded', String(!collapsed));
+      journeyToggle.querySelector('span').textContent = collapsed ? journeyToggle.dataset.showLabel : journeyToggle.dataset.hideLabel;
+      journeyDock.inert = collapsed;
+    }
+    var collapsed = false;
+    try { collapsed = sessionStorage.getItem('ii-navigation-collapsed') === 'true'; } catch (e) {}
+    setJourneyCollapsed(collapsed);
+    journeyToggle.hidden = false;
+    journeyToggle.addEventListener('click', function () {
+      collapsed = document.body.dataset.journeyCollapsed !== 'true';
+      setJourneyCollapsed(collapsed);
+      try { sessionStorage.setItem('ii-navigation-collapsed', String(collapsed)); } catch (e) {}
+    });
+    // Preserve the reader's position when crossing the mobile/desktop breakpoint.
+    var mobileJourney = innerWidth <= 1000;
+    var journeyScroll = mobileJourney ? document.body.scrollTop : window.scrollY;
+    document.addEventListener('scroll', function () {
+      journeyScroll = mobileJourney ? document.body.scrollTop : window.scrollY;
+    }, {capture:true, passive:true});
+    addEventListener('resize', function () {
+      var nextMobile = innerWidth <= 1000;
+      if (nextMobile === mobileJourney) return;
+      mobileJourney = nextMobile;
+      if (mobileJourney) document.body.scrollTop = journeyScroll;
+      else window.scrollTo({top:journeyScroll, behavior:'instant'});
+    });
   }
 
   /* Native desktop disclosure: usable without JS, enhanced with dismissal.
@@ -431,7 +465,8 @@
       progressPending = false;
       var box = readingMain.getBoundingClientRect();
       var headerSize = header.getBoundingClientRect().height;
-      var distance = box.height - (innerHeight - headerSize);
+      var visibleHeight = Math.min(innerHeight, document.body.clientHeight || innerHeight);
+      var distance = box.height - (visibleHeight - headerSize);
       var ratio = distance > 0 ? Math.max(0, Math.min(1, (headerSize - box.top) / distance)) : 0;
       progress.style.setProperty('--reading-position', String(ratio));
     }
@@ -440,7 +475,7 @@
       progressPending = true;
       (window.requestAnimationFrame || function (fn) { return setTimeout(fn,16); })(updateProgress);
     }
-    addEventListener('scroll', scheduleProgress, {passive:true});
+    document.addEventListener('scroll', scheduleProgress, {capture:true, passive:true});
     addEventListener('resize', scheduleProgress);
     document.addEventListener('toggle', scheduleProgress, true);
     if ('ResizeObserver' in window) new ResizeObserver(scheduleProgress).observe(readingMain);
@@ -522,7 +557,7 @@
       if (!updatePending) { updatePending = true; frame(updateChapter); }
     }
     updateChapter();
-    addEventListener('scroll', scheduleChapter, { passive: true });
+    document.addEventListener('scroll', scheduleChapter, { capture:true, passive: true });
     addEventListener('resize', scheduleChapter);
     addEventListener('hashchange', scheduleChapter);
     document.addEventListener('toggle', scheduleChapter, true);

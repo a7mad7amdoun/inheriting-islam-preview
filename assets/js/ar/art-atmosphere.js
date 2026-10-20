@@ -92,8 +92,9 @@
  }
  function scroll() {
   if (!enabled()) { stop(); return; }
-  var distance = Math.max(1, root.scrollHeight - window.innerHeight);
-  var progress = Math.max(0, Math.min(1, window.scrollY / distance));
+  var mobile = window.innerWidth <= 1000 && document.querySelector('.journey-tray');
+  var distance = Math.max(1, mobile ? main.scrollHeight - main.clientHeight : root.scrollHeight - window.innerHeight);
+  var progress = Math.max(0, Math.min(1, (mobile ? main.scrollTop : window.scrollY) / distance));
   sweep = null; tx = .94 - progress * .88; ty = .18 + progress * .64;
   targetZoom = 1 + progress * (window.innerWidth <= 760 ? .05 : .08);
   start();
@@ -109,7 +110,7 @@
   ty = Math.max(.12, Math.min(.88, event.clientY / window.innerHeight));
   sweep = -1;start();
  }
- window.addEventListener('scroll', scroll, {passive:true});
+ document.addEventListener('scroll', scroll, {capture:true, passive:true});
  window.addEventListener('resize', scroll, {passive:true});
  window.addEventListener('pageshow', scroll);
  window.addEventListener('pagehide', stop);
