@@ -242,5 +242,7 @@
   input.addEventListener('keydown', function (event) {
     if (event.key === 'Escape' && input.value) { input.value = ''; update(); }
   });
+  var returnPath = new URL(location.href).searchParams.get('path');
+  if (['learn','books','apps'].includes(returnPath)) category.value=returnPath;
   update();
 })();
