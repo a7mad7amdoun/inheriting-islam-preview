@@ -249,6 +249,9 @@ html[data-type-system] body.open-book #mobileNav * {scroll-behavior:auto!importa
 }
 html[data-type-system][data-motion=calm] body.open-book #mobileNav,
 html[data-type-system][data-motion=calm] body.open-book #mobileNav * {scroll-behavior:auto!important;transition:none!important;animation:none!important}
+@media screen and (max-width:1000px) {
+html:root:not([data-theme-transition])::view-transition {pointer-events:none}
+}
 @keyframes journey-page-leave {from{opacity:1}to{opacity:0}}
 @keyframes journey-page-enter {from{opacity:0}to{opacity:1}}
 @media screen and (max-width:1000px) and (prefers-reduced-motion:no-preference) {
