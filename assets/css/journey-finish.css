@@ -786,8 +786,12 @@ html:root[data-type-system] body.open-book #main#main .explore-controls>div:nth-
 }
 @media screen and (max-width:760px) {
 html:root[data-type-system] body.open-book #main#main .explore-controls {padding:24px 20px}
-html:root[data-type-system] body.open-book #main#main .explore-query-row {display:grid;grid-template-columns:minmax(0,1fr)}
-html:root[data-type-system] body.open-book #main#main .explore-query-row button {justify-self:end;min-block-size:44px;padding:8px 16px}
+html:root[data-type-system] body.open-book #main#main .explore-controls [role=search] {display:grid;grid-template-columns:minmax(0,1fr) auto;gap:12px}
+html:root[data-type-system] body.open-book #main#main .explore-controls [role=search]>label {grid-column:1;grid-row:1;align-self:center;margin:0}
+html:root[data-type-system] body.open-book #main#main .explore-query-row {display:contents}
+html:root[data-type-system] body.open-book #main#main .explore-query-row input {grid-column:1/-1;grid-row:2}
+html:root[data-type-system] body.open-book #main#main .explore-query-row button {grid-column:2;grid-row:1;justify-self:end;min-block-size:44px;padding:8px 16px}
+html:root[data-type-system] body.open-book #main#main #search-privacy {grid-column:1/-1;grid-row:3;margin:0}
 html:root[data-type-system] body.open-book #main#main .explore-suggestions {display:grid;grid-template-columns:repeat(2,minmax(0,1fr))}
 html:root[data-type-system] body.open-book #main#main .explore-suggestions>span {grid-column:1/-1;margin:0 0 4px}
 html:root[data-type-system] body.open-book #main#main .explore-entry>a {padding:24px 20px;gap:12px}
