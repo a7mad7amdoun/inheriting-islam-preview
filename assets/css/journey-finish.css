@@ -504,7 +504,7 @@ html:root[data-type-system] body.open-book #main#main .inheritance-bridge-links 
 font-size:1rem;line-height:1.8;max-inline-size:34ch;padding:0;
 }
 html:root[data-type-system] body.open-book #main#main .inheritance-arrow {
-position:static;align-self:flex-end;margin-block:24px 0;transform:none;transition:none;
+position:static;align-self:flex-end;margin-block:auto 0;padding-block-start:24px;transform:none;transition:none;
 }
 html:root[data-type-system] body.open-book #main#main .chapter-top {
 display:inline-flex;align-items:center;min-block-size:44px;margin-block-start:24px;font-size:.9375rem;
