@@ -269,14 +269,40 @@ max-inline-size:60ch; line-height:1.9;
 @media screen and (max-width:760px) {
 html:root body.open-book {--calligraphy-strength:.16}
 html:root[data-theme=dark] body.open-book {--calligraphy-strength:.19}
-html[data-type-system] body.open-book #main .prophetic-guidance {grid-template-columns:minmax(0,1fr);gap:24px;padding-block:48px}
-html[data-type-system] body.open-book #main .prophetic-guidance h2 {max-inline-size:22ch;font-size:2.2rem;margin-bottom:18px}
-html[data-type-system] body.open-book #main .guidance-reading {padding:26px 22px;border-radius:20px}
-html[data-type-system] body.open-book #main .guidance-arabic {font-size:1.75rem!important;line-height:2.15!important}
+html[data-type-system] body.open-book #main#main .prophetic-guidance {
+grid-template-columns:minmax(0,1fr); gap:24px;
+inline-size:calc(100% - 2 * var(--gutter)); max-inline-size:600px;
+margin:48px auto; padding:28px 20px;
+background:var(--paper); border:1px solid var(--verse-line); border-radius:22px;
+box-shadow:0 10px 28px var(--verse-shadow); scroll-margin-block-start:96px;
+}
+html[data-type-system] body.open-book #main .prophetic-guidance>header {
+box-shadow:none; padding-block-end:24px; border-block-end:1px solid var(--verse-line);
+}
+html[data-type-system] body.open-book #main .prophetic-guidance h2 {
+max-inline-size:22ch; font-size:2rem; line-height:1.22; margin-block:14px 20px; text-wrap:balance;
+}
+html[data-type-system] body.open-book #main .guidance-salawat {
+inline-size:fit-content; max-inline-size:100%; margin-block:6px 16px;
+}
+html[data-type-system] body.open-book #main .prophetic-guidance .hadith-grade {margin:0}
+html[data-type-system] body.open-book #main .guidance-reading {
+padding:0; border:0; border-radius:0; box-shadow:none;
+}
+html[data-type-system] body.open-book #main .guidance-arabic {
+font-size:1.75rem!important; line-height:2.15!important; text-align:center; margin-block:0 24px;
+}
+html[data-type-system] body.open-book #main .guidance-practice {padding-inline-start:16px}
+html[data-type-system] body.open-book #main .guidance-next {
+display:inline-flex; align-items:center; max-inline-size:100%; line-height:1.7;
+}
 html[data-type-system] body.open-book #main .surah-guide {padding:22px 12px 14px}
 html[data-type-system] body.open-book #main .surah-guide-name {gap:8px 16px}
 html[data-type-system] body.open-book #main .surah-guide-name p {font-size:1.65rem!important}
 html[data-type-system] body.open-book #main .surah-guide-facts {gap:8px}
+html[data-type-system] body.open-book #main .surah-guide-facts>div {
+display:grid; grid-template-rows:1fr auto;
+}
 html[data-type-system] body.open-book #main .guidance-index ul {grid-template-columns:minmax(0,1fr)}
 html[data-type-system] body.open-book #main .guidance-index li a {padding:22px;gap:12px}
 }
