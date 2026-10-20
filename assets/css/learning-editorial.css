@@ -1,3 +1,4 @@
+/* Continuous paper, meaningful covers, and a quiet space for practice. */
 @media screen {
 html:root[data-type-system] body.open-book #main#main[data-learning-editorial] {--study-measure:62ch}
 html:root[data-type-system] body.open-book #main#main[data-learning-editorial] :is(.band,.band-alt,.book,.letterpane,.note,.pending,.study-draft-note,.library-cover,.book-inside,.mrow2,.cols-3>.col){border-radius:0;box-shadow:none;background:transparent;background-image:none}
@@ -20,6 +21,7 @@ html:root[data-type-system] body.open-book #main#main[data-learning-editorial] .
 html:root[data-type-system] body.open-book #main#main[data-learning-editorial] .study-contents{background:var(--paper);border-block:1px solid var(--line);box-shadow:none}
 html:root[data-type-system] body.open-book #main#main[data-learning-editorial] .study-contents a{border:0;border-radius:0;background:transparent;box-shadow:none;min-height:44px}
 html:root[data-type-system] body.open-book #main#main[data-learning-editorial] .study-contents a:hover{color:var(--gold)}
+/* Interactive buttons retain an unmistakable selected state; notes are unboxed. */
 html:root[data-type-system] body.open-book #main#main[data-learning-editorial] .huruf.pick{border:0;gap:8px;background:transparent;grid-template-columns:repeat(7,minmax(0,1fr))}
 html:root[data-type-system] body.open-book #main#main[data-learning-editorial] .huruf.pick button{min-width:0;min-height:56px;border:1px solid var(--line);border-radius:10px;background:var(--paper);box-shadow:none;line-height:1.7;color:var(--ink);animation:none;transform:none;transition:background-color .2s,color .2s,border-color .2s}
 html:root[data-type-system] body.open-book #main#main[data-learning-editorial] .huruf.pick button[aria-pressed=true]{color:var(--cta-fg);background:var(--cta-bg);border-color:var(--cta-bg)}
@@ -38,6 +40,7 @@ html:root[data-type-system] body.open-book #main#main[data-learning-editorial] .
 html:root[data-type-system] body.open-book #main#main[data-learning-editorial] .mrow2 .glyphs span{background:transparent;box-shadow:none;border:0;border-radius:0;line-height:1.9;animation:none;transform:none}
 html:root[data-type-system] body.open-book #main#main[data-learning-editorial] .lesson-continuation{margin-top:32px}
 html:root[data-type-system] body.open-book #main#main[data-learning-editorial] .lesson-continuation a{min-height:44px;display:inline-flex;align-items:center;gap:14px}
+/* A catalogue of actual books, with one shared PDF explanation. */
 html:root[data-type-system] body.open-book #main#main[data-learning-editorial] .library-cover{border:0;padding:24px 0}
 html:root[data-type-system] body.open-book #main#main[data-learning-editorial] .library-cover-books{gap:18px;align-items:center}
 html:root[data-type-system] body.open-book #main#main[data-learning-editorial] .library-cover-books a{transform:none;rotate:none;max-width:none}
@@ -61,6 +64,7 @@ html:root[data-type-system] body.open-book #main#main[data-learning-editorial] #
 html:root[data-type-system] body.open-book #main#main[data-learning-editorial] .book .book-preview-link{margin-block:0 12px}
 html:root[data-type-system] body.open-book #main#main[data-learning-editorial] .book .arrival-next{border-block-start:1px solid var(--gold-line);padding-top:20px;margin-top:20px}
 html:root[data-type-system] body.open-book #main#main[data-learning-editorial] .cols-3>.col{border:0;padding:0}
+/* The sacred text remains still; its surrounding commentary uses the page. */
 html:root[data-type-system] body.open-book #main#main[data-learning-editorial] :is(.quran-companion,.quran-companion-page,.quran-companion-reflection,.guidance-panel,.guidance-page){box-shadow:none;border-radius:0}
 html:root[data-type-system] body.open-book #main#main[data-learning-editorial] :is(.quran-companion-reflection,.quran-companion-practice){border:0;background:transparent;padding-inline:0}
 html:root[data-type-system] body.open-book #main#main[data-learning-editorial] :is(.quran-companion-arabic,.guidance-arabic,.inheritance-arabic){animation:none!important;transform:none!important;transition:none!important}
@@ -87,6 +91,7 @@ html:root[data-type-system] body.open-book #main#main[data-learning-editorial] .
 }
 @media screen and (max-width:360px){html:root[data-type-system] body.open-book #main#main[data-learning-editorial] .huruf.pick{grid-template-columns:repeat(6,minmax(0,1fr))} html:root[data-type-system] body.open-book #main#main[data-learning-editorial] .shapes{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(prefers-reduced-motion:reduce){html:root[data-type-system] body.open-book #main#main[data-learning-editorial] .huruf.pick button{transition:none}}
+
 @media screen {
 html:root[data-type-system] body.open-book #main#main[data-learning-editorial] .study-draft-note{max-width:none;display:grid;grid-template-columns:190px minmax(0,1fr);gap:32px}
 html:root[data-type-system] body.open-book #main#main[data-learning-editorial] .study-draft-note p{max-width:70ch}
@@ -100,6 +105,8 @@ html:root[data-type-system] body.open-book #main#main[data-learning-editorial] .
 html:root[data-type-system] body.open-book #main#main[data-learning-editorial] .huruf.pick button{min-height:56px}
 html:root[data-type-system] body.open-book #main#main[data-learning-editorial] .lesson-keyboard{font-size:.8rem;line-height:1.7;margin-block:12px 0}
 }
+
+/* A welcoming starting point, with the teacher at the heart of the journey. */
 @media screen {
 html:root[data-type-system] body.open-book #main#main[data-learning-editorial] :is(#check-section,#results-band,#teacher-record,#teaching-practice,#scope){background:var(--paper);isolation:isolate}
 html:root[data-type-system] body.open-book #main#main[data-learning-editorial] :is(.check,.check .step,.result,.steps,.steps>li,#scope .cols,#scope .col){border:0;border-radius:0;box-shadow:none;background:transparent;padding:0}
@@ -156,6 +163,7 @@ html:root[data-type-system] body.open-book #main#main[data-learning-editorial] .
 html:root[data-type-system] body.open-book #main#main[data-learning-editorial] #teacher-record .body{max-width:none}
 html:root[data-type-system] body.open-book #main#main[data-learning-editorial] #teaching-practice .steps{grid-template-columns:minmax(0,1fr);gap:28px;margin-bottom:32px}
 html:root[data-type-system] body.open-book #main#main[data-learning-editorial] #teaching-practice .steps>li{grid-template-columns:28px minmax(0,1fr);gap:16px;padding-top:24px}
+html:root[data-type-system] body.open-book #main#main[data-learning-editorial] #teaching-practice :is(.shead,.house-art){margin-block:0}
 html:root[data-type-system] body.open-book #main#main[data-learning-editorial] #teaching-practice .house-art img{aspect-ratio:4/3}
 html:root[data-type-system] body.open-book #main#main[data-learning-editorial] #scope .cols{grid-template-columns:minmax(0,1fr);gap:28px}
 html:root[data-type-system] body.open-book #main#main[data-learning-editorial] .check .step{padding-top:24px}
@@ -170,5 +178,6 @@ html:root[data-type-system] body.open-book #main#main[data-learning-editorial] .
 html:root[data-type-system] body.open-book #main#main[data-learning-editorial] .result .link{align-self:start}
 html:root[data-type-system] body.open-book #main#main[data-learning-editorial] .teacher-review-note{padding-block:16px}
 }
+
 @media screen{html:root[data-type-system] body.open-book #main#main[data-learning-editorial] :is(#results,.check .step){scroll-margin-block-start:184px}}
 @media screen and (max-width:850px){html:root[data-type-system] body.open-book #main#main[data-learning-editorial] :is(#results,.check .step){scroll-margin-block-start:116px}}
