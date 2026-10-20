@@ -118,7 +118,26 @@
   var navReturnTarget = navBtn;
   var background = Array.from(document.querySelectorAll('main, body > footer, .armbar, .journey-tray, .journey-dock'));
   var previousInert = [];
-  function closeNav(restoreFocus) {
+  var navAnimation = null;
+  var navAnimationRevision = 0;
+  function revealMobileMenu(open, animate) {
+    var revision = ++navAnimationRevision;
+    if (navAnimation) navAnimation.cancel();
+    navAnimation = null;
+    navPanel.inert = !open;
+    function finish() {
+      if (revision !== navAnimationRevision) return;
+      navAnimation = null;
+      if (!open) navPanel.hidden = true;
+    }
+    if (!animate || reduce.matches || root.dataset.motion === 'calm' || !navPanel.animate) { finish(); return; }
+    // Only opacity changes. Arabic glyphs keep their position, scale and sharpness.
+    navAnimation = navPanel.animate([{opacity:open ? 0 : 1},{opacity:open ? 1 : 0}], {
+      duration:open ? 280 : 180, easing:'cubic-bezier(.22,1,.36,1)'
+    });
+    navAnimation.finished.then(finish, finish);
+  }
+  function closeNav(restoreFocus, animate) {
     if (!navBtn || !navPanel || navBtn.getAttribute('aria-expanded') !== 'true') return;
     navBtn.setAttribute('aria-expanded', 'false');
     if (journeyMenu) journeyMenu.setAttribute('aria-expanded', 'false');
@@ -126,7 +145,7 @@
     var menuLabel = navBtn.querySelector('.nav-menu-label');
     if (menuLabel) menuLabel.textContent = 'Menu';
     navPanel.classList.remove('open');
-    navPanel.hidden = true;
+    revealMobileMenu(false, animate !== false);
     document.body.classList.remove('nav-lock');
     background.forEach(function (el, i) { el.inert = previousInert[i]; });
     if (restoreFocus) (navReturnTarget || navBtn).focus();
@@ -151,11 +170,13 @@
       var menuLabel = navBtn.querySelector('.nav-menu-label');
       if (menuLabel) menuLabel.textContent = 'Close';
       document.body.classList.add('nav-lock');
+      revealMobileMenu(true, true);
+      navPanel.scrollTop = 0;
       var first = navPanel.querySelector('a');
-      if (first) first.focus();
+      if (first) first.focus({preventScroll:true});
     });
     navPanel.querySelectorAll('a').forEach(function (a) {
-      a.addEventListener('click', function () { closeNav(true); });
+      a.addEventListener('click', function () { closeNav(true, false); });
     });
     addEventListener('keydown', function (e) {
       if (e.key === 'Escape' && navBtn.getAttribute('aria-expanded') === 'true') { e.preventDefault(); closeNav(true); }
@@ -163,7 +184,7 @@
     addEventListener('resize', function () {
       if (innerWidth <= 1000 || navBtn.getAttribute('aria-expanded') !== 'true') return;
       var focused = navPanel.contains(document.activeElement) || document.activeElement === navBtn;
-      closeNav(false);
+      closeNav(false, false);
       if (focused) {
         var destination = document.querySelector('.nav [aria-current], #header .brand');
         if (destination) destination.focus();
@@ -260,7 +281,7 @@
   }
   /* Keep keyboard focus within the open mobile navigation and its controls. */
   addEventListener('keydown', function (event) {
-    if (event.key !== 'Tab' || !navPanel || navPanel.hidden) return;
+    if (event.key !== 'Tab' || !navPanel || navBtn.getAttribute('aria-expanded') !== 'true') return;
     var candidates = Array.from(navPanel.querySelectorAll('a[href], summary, button:not([disabled])')).filter(function (el) {
       var closed = el.closest('details:not([open])');
       return !el.closest('[hidden]') && (!closed || (el.tagName === 'SUMMARY' && el.parentElement === closed));
