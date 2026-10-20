@@ -1,0 +1,42 @@
+html[data-type-system]{
+--rhythm-section:clamp(52px,6vw,88px);--rhythm-section-quiet:clamp(36px,4vw,56px);
+--rhythm-gap:clamp(24px,3.5vw,48px);--rhythm-heading:clamp(1.9rem,2.7vw,2.75rem);
+--rhythm-reading:66ch;--motion-quiet:240ms;--motion-paper:360ms;
+--motion-ease:cubic-bezier(.22,1,.36,1);
+}
+html[lang=ar][data-type-system]{--rhythm-reading:54ch}
+@media screen {
+html:root[data-type-system] body.open-book #main#main .band:not(.hero):not(.study-opening){padding-block:var(--rhythm-section)}
+html:root[data-type-system] body.open-book #main#main .band-tight:not(.study-opening){padding-block:var(--rhythm-section-quiet)}
+html:root[data-type-system] body.open-book #main#main .shead{margin-block-end:var(--rhythm-gap);gap:var(--rhythm-gap)}
+html:root[data-type-system] body.open-book #main#main :is(.shead h2,.open-section-title h2,.section-heading h2){font-size:var(--rhythm-heading);line-height:var(--type-chapter-leading);max-inline-size:28ch;margin-block:12px 20px;text-wrap:balance}
+html:root[data-type-system] body.open-book #main#main :is(.shead,.open-section-title,.section-heading) p:not(.eyebrow){max-inline-size:var(--rhythm-reading);line-height:var(--type-reading-leading)}
+html:root[data-type-system] body.open-book #main#main :is(.note,.reader-explanation,.reader-practice,.quran-teacher-letter,.about-founder-letter,.book-content) p{max-inline-size:var(--rhythm-reading);line-height:var(--type-reading-leading)}
+html:root[data-type-system] body.open-book #main#main :is(.note,.reader-explanation,.reader-practice,.quran-teacher-letter,.about-founder-letter) p+p{margin-block-start:1em}
+html:root[data-type-system] body.open-book #main#main figcaption{margin-block-start:12px;line-height:var(--type-reference-leading);max-inline-size:var(--rhythm-reading)}
+html:root[data-type-system] body.open-book #main#main .wrap>.note:not([role]){border:0;border-block-start:1px solid var(--line);border-radius:0;box-shadow:none;padding:24px 0;background:transparent}
+html:root[data-type-system] body.open-book #main#main :is(.quran-companion-page,.reader-source,.source-encounter,.guidance-reading){background-image:none}
+html:root[data-type-system] body.open-book #main#main :is(.quran-companion-arabic,.reader-arabic,.source-arabic,.guidance-arabic,.inheritance-arabic,.inheritance-supplication-arabic){animation:none!important;transition:none!important;transform:none!important;translate:none!important;filter:none!important;letter-spacing:0!important;overflow:visible;padding-block:clamp(20px,3vw,36px)}
+html:root[data-type-system] body.open-book #main#main :is(.reveal,.reader-section,.source-grid,.quran-companion,.prophetic-guidance){transform:none;translate:none;filter:none;transition-property:opacity;transition-duration:var(--motion-quiet)}
+html:root[data-type-system] body.open-book #main#main :is(a,button,summary){scroll-margin-block:calc(var(--header-height,88px) + 24px) 140px}
+html:root[data-type-system] body.open-book :is(a,button,summary,input,textarea,select):focus-visible{outline:2px solid var(--gold);outline-offset:5px}
+html:root[data-type-system] body.open-book :is(.btn,.link,summary){transition-property:color,background-color,border-color,box-shadow,opacity;transition-duration:var(--motion-quiet);transition-timing-function:var(--motion-ease)}
+html:root[data-type-system] body.open-book .nav-disclosure[open] .nav-panel{animation:none}
+html:root[data-type-system] body.open-book #main#main .practice-guide{margin-block:24px 0;border-block-start:1px solid var(--gold-line);padding-block-start:20px;max-inline-size:var(--rhythm-reading)}
+html:root[data-type-system] body.open-book #main#main .practice-guide dl{display:grid;gap:18px;margin:0}
+html:root[data-type-system] body.open-book #main#main .practice-guide dl>div{display:grid;grid-template-columns:90px minmax(0,1fr);gap:16px;align-items:baseline}
+html:root[data-type-system] body.open-book #main#main .practice-guide dt{font-family:var(--type-interface-family);font-size:.875rem;color:var(--gold);line-height:1.8}
+html:root[data-type-system] body.open-book #main#main .practice-guide dd{margin:0;line-height:var(--type-reading-leading)}
+html:root[data-type-system] body.open-book #main#main .practice-guide .practice-provenance{font-size:var(--type-reference-size);line-height:var(--type-reference-leading);margin-block:20px 0;color:var(--ink-soft)}
+html:root[data-type-system] body.open-book #main#main .approved-teaching-note{border-inline-start:2px solid var(--gold-line);padding-inline-start:20px;margin-block:24px}
+html:root[data-type-system] body.open-book #main#main .approved-teaching-note audio{inline-size:100%;margin-block-start:12px}
+}
+@media screen and (max-width:600px){
+html:root[data-type-system]{--rhythm-section:52px;--rhythm-section-quiet:36px;--rhythm-gap:28px;--rhythm-heading:2rem}
+html:root[data-type-system] body.open-book #main#main .practice-guide dl>div{grid-template-columns:1fr;gap:4px}
+html:root[data-type-system] body.open-book #main#main :is(.shead h2,.open-section-title h2,.section-heading h2){max-inline-size:100%}
+}
+@media(prefers-reduced-motion:reduce){
+html:root[data-type-system] body.open-book *,html:root[data-type-system] body.open-book *::before,html:root[data-type-system] body.open-book *::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}
+}
+html:root[data-type-system][data-motion=calm] body.open-book *,html:root[data-type-system][data-motion=calm] body.open-book *::before,html:root[data-type-system][data-motion=calm] body.open-book *::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}

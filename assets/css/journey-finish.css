@@ -952,3 +952,94 @@ html:root[data-type-system] body.open-book #main#main .inheritance-path-grid>a:i
 html:root[data-type-system] body.open-book #main#main :is(.inheritance-source-ref a,.quran-companion-reference a,.inheritance-path-grid>a,.inheritance-source-notes>summary,.quran-companion-depth>summary,.chapter-disclosure>summary):focus-visible {outline:2px solid var(--gold);outline-offset:5px}
 @media(prefers-reduced-motion:reduce) {html:root[data-type-system] body.open-book #main#main .inheritance-path-grid>a {transition:none}}
 html:root[data-motion=calm][data-type-system] body.open-book #main#main .inheritance-path-grid>a {transition:none}
+html:root[data-type-system] body.open-book:is([data-room=quran],[data-room=apps]) #main#main :is(.desk-introduction,.workshop-intro) h1 {
+font-family:var(--type-signature-family);font-size:clamp(2.75rem,4.8vw,5.5rem);line-height:var(--type-signature-leading);font-weight:500;max-inline-size:19ch;margin-block:20px 28px;letter-spacing:-.02em;
+}
+html:root[data-type-system] body.open-book:is([data-room=quran],[data-room=apps]) #main#main :is(.desk-introduction,.workshop-intro) .lede {
+font-family:var(--type-prose-family);font-size:clamp(1.125rem,1rem + .45vw,1.375rem);line-height:var(--type-reading-leading);max-inline-size:46ch;color:var(--ink-soft);
+}
+html:root[data-type-system] body.open-book:is([data-room=quran],[data-room=apps]) #main#main :is(.desk-spread,.workshop-opening .hero-grid) {
+gap:clamp(28px,5vw,76px);align-items:center;
+}
+html:root[data-type-system] body.open-book:is([data-room=quran],[data-room=apps]) #main#main :is(.desk-art,.apps-cover-art) figcaption {
+font-family:var(--type-prose-family);font-size:var(--type-reference-size);line-height:var(--type-reference-leading);color:var(--ink-soft);padding-block:16px;border-bottom:1px solid var(--line);letter-spacing:0;
+}
+html:root[data-type-system] body.open-book:is([data-room=quran],[data-room=apps]) #main#main :is(.learning-routes strong,.need-finder b,.tool-story h3,.project-card h3) {
+font-family:var(--type-editorial-family)!important;font-size:clamp(1.6rem,1.25rem + .8vw,2.25rem);font-weight:500;line-height:var(--type-chapter-leading);letter-spacing:0;text-wrap:balance;
+}
+html:root[data-type-system] body.open-book:is([data-room=quran],[data-room=apps]) #main#main :is(.learning-routes,.need-finder) > a {
+padding-block:24px;min-inline-size:0;border-color:var(--line);transition:border-color .3s ease,background-color .3s ease;
+}
+html:root[data-type-system] body.open-book:is([data-room=quran],[data-room=apps]) #main#main :is(.learning-routes,.need-finder) > a:is(:hover,:focus-visible) {
+border-color:var(--gold);background-color:color-mix(in srgb,var(--paper-2) 65%,transparent);
+}
+html:root[data-type-system] body.open-book:is([data-room=quran],[data-room=apps]) #main#main :is(.learning-routes,.need-finder) small {
+font-family:var(--type-prose-family);font-size:var(--type-reference-size);line-height:var(--type-reference-leading);color:var(--ink-soft);
+}
+html:root[data-type-system] body.open-book[data-room=apps] #main#main .project-card {
+background:var(--paper);color:var(--ink);border:1px solid var(--line);border-radius:16px;padding:clamp(24px,3vw,40px);box-shadow:none;
+}
+html:root[data-type-system] body.open-book[data-room=apps] #main#main .tool-dossiers .lrow {
+border-radius:20px;padding:clamp(24px,3.5vw,48px);gap:clamp(24px,4vw,56px);
+}
+html:root[data-type-system] body.open-book[data-room=apps] #main#main .tool-story p {
+font-family:var(--type-prose-family);line-height:var(--type-reading-leading);max-inline-size:var(--reading-measure);
+}
+html:root[data-type-system] body.open-book:is([data-room=quran],[data-room=apps]) #main#main :is(.learning-routes,.need-finder) > a:focus-visible {
+outline:2px solid var(--gold);outline-offset:5px;
+}
+@media(max-width:600px){
+html:root[data-type-system] body.open-book:is([data-room=quran],[data-room=apps]) #main#main :is(.desk-introduction,.workshop-intro) h1 {font-size:clamp(2.5rem,9vw,3.5rem);letter-spacing:0}
+html:root[data-type-system] body.open-book[data-room=apps] #main#main .tool-dossiers .lrow {padding:24px 20px}
+}
+@media(prefers-reduced-motion:reduce){
+html:root[data-type-system] body.open-book:is([data-room=quran],[data-room=apps]) #main#main :is(.learning-routes,.need-finder) > a {transition:none}
+}
+html:root[data-motion=calm][data-type-system] body.open-book:is([data-room=quran],[data-room=apps]) #main#main :is(.learning-routes,.need-finder) > a {transition:none}
+html:root[data-type-system] body.open-book[data-room=apps] #main#main .chapter-contents .wrap {
+display:flex;align-items:baseline;flex-wrap:wrap;gap:16px 32px;padding-block:24px;border-block:1px solid var(--line);
+}
+html:root[data-type-system] body.open-book[data-room=apps] #main#main .contents-links {
+display:flex;flex-wrap:wrap;gap:8px 24px;
+}
+html:root[data-type-system] body.open-book[data-room=apps] #main#main .contents-links a {
+display:inline-flex;align-items:center;min-height:44px;font-family:var(--type-interface-family);font-size:var(--type-reference-size);color:var(--ink);text-underline-offset:6px;
+}
+html:root[data-type-system] body.open-book[data-room=apps] #main#main .shead {
+display:block;max-inline-size:64ch;margin-block-end:clamp(28px,4vw,48px);
+}
+html:root[data-type-system] body.open-book[data-room=apps] #main#main .shead h2 {margin-block:12px 20px;line-height:var(--type-chapter-leading)}
+html:root[data-type-system] body.open-book[data-room=apps] #main#main .tool-story .kind {
+font-family:var(--type-interface-family);font-size:var(--type-reference-size);color:var(--ink-soft);letter-spacing:0;text-transform:none;margin-block:0 12px;
+}
+html:root[data-type-system] body.open-book[data-room=apps] #main#main .tool-story .name {
+font-family:var(--type-editorial-family)!important;font-size:clamp(2rem,3vw,3.25rem);margin-block:0 20px;
+}
+html:root[data-type-system] body.open-book[data-room=apps] #main#main .tool-story .meta {margin-block-start:28px;gap:16px 24px;flex-wrap:wrap}
+html:root[data-type-system] body.open-book[data-room=apps] #main#main :is(.workshop-projects,.history-projects) {
+display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px;align-items:stretch;
+}
+html:root[data-type-system] body.open-book[data-room=apps] #main#main :is(.workshop-projects,.history-projects) > .project-card {
+display:flex;flex-direction:column;gap:24px;min-inline-size:0;
+}
+html:root[data-type-system] body.open-book[data-room=apps] #main#main .project-card-heading {
+display:grid;grid-template-columns:88px minmax(0,1fr);align-items:center;gap:20px;
+}
+html:root[data-type-system] body.open-book[data-room=apps] #main#main .project-mark {
+width:88px;max-width:100%;grid-column:auto;grid-row:auto;align-self:center;
+}
+html:root[data-type-system] body.open-book[data-room=apps] #main#main .project-card-title {grid-column:auto;grid-row:auto;min-inline-size:0}
+html:root[data-type-system] body.open-book[data-room=apps] #main#main .project-card-title h3 {margin-block:8px 12px}
+html:root[data-type-system] body.open-book[data-room=apps] #main#main .project-card-copy p {
+font-family:var(--type-prose-family);font-size:var(--type-reading-size);line-height:var(--type-reading-leading);color:var(--ink-soft);
+}
+html:root[data-type-system] body.open-book[data-room=apps] #main#main .apps-project-links {margin-block-start:auto;padding-block-start:20px;border-top:1px solid var(--line)}
+@media(min-width:1100px){
+html:root[data-type-system] body.open-book[data-room=apps] #main#main .workshop-projects {grid-template-columns:repeat(3,minmax(0,1fr))}
+html:root[data-type-system] body.open-book[data-room=apps] #main#main .workshop-projects .project-card-heading {grid-template-columns:1fr;align-items:start}
+}
+@media(max-width:700px){
+html:root[data-type-system] body.open-book[data-room=apps] #main#main :is(.workshop-projects,.history-projects) {grid-template-columns:minmax(0,1fr)}
+html:root[data-type-system] body.open-book[data-room=apps] #main#main .project-card-heading {grid-template-columns:72px minmax(0,1fr);gap:16px}
+html:root[data-type-system] body.open-book[data-room=apps] #main#main .project-mark {width:72px}
+}

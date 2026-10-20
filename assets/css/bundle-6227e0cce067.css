@@ -1,3 +1,296 @@
+[data-arm="quran"]{
+--band-warm:color-mix(in srgb, var(--brand-gold) 10%, var(--paper-2));
+}
+[data-arm="quran"] .band-alt{background:var(--band-warm)}
+[data-arm="quran"] .ar{font-size:1.24em;line-height:2}
+.specimen{
+font-family:var(--f-ar);direction:rtl;text-align:center;color:var(--ink);
+background:var(--paper);border:1px solid var(--line);
+padding:clamp(20px,3.6vw,44px) clamp(14px,2.4vw,28px);
+font-size:clamp(1.9rem,1.1rem + 3.4vw,3.4rem);line-height:2.05;
+overflow-wrap:break-word
+}
+.band-alt .specimen{background:var(--paper)}
+.specimen.sm{font-size:clamp(1.5rem,1.1rem + 2vw,2.4rem);line-height:1.95}
+.check{border-top:1px solid var(--line)}
+.check .step{
+padding-block:clamp(26px,4vw,44px);border-bottom:1px solid var(--line-soft)
+}
+.check .step .head{margin-bottom:1.1em}
+.check .step .head .n{
+display:block;margin-bottom:.6em;
+font-family:var(--f-body);font-weight:600;font-size:.68rem;letter-spacing:.2em;
+text-transform:uppercase;color:var(--gold)
+}
+.check .step h2{font-size:clamp(1.3rem,1.1rem + .9vw,1.85rem);max-width:26ch}
+.check .step .gloss{
+font-family:var(--f-body);font-size:.83rem;color:var(--ink-faint);
+text-align:center;margin-top:.9em;letter-spacing:.02em
+}
+.choices{display:flex;gap:12px;flex-wrap:wrap;margin-top:clamp(18px,2.4vw,26px)}
+.choices .btn{min-width:min(100%,15rem)}
+.check-progress{
+display:flex;align-items:center;gap:10px;
+font-family:var(--f-body);font-weight:600;font-size:.68rem;letter-spacing:.2em;
+text-transform:uppercase;color:var(--ink-faint);margin-bottom:1.4em
+}
+.check-progress .bar{
+flex:1;max-width:220px;height:2px;background:var(--line);position:relative;overflow:hidden
+}
+.check-progress .bar i{
+position:absolute;inset:0 auto 0 0;background:var(--gold-line);
+width:0;transition:width .4s cubic-bezier(.2,.7,.3,1)
+}
+.result{
+border:1px solid var(--line);border-top:2px solid var(--gold-line);
+background:var(--paper);padding:clamp(24px,3.4vw,40px)
+}
+.band-alt .result{background:var(--paper)}
+.result .lbl{
+font-family:var(--f-body);font-weight:600;font-size:.68rem;letter-spacing:.2em;
+text-transform:uppercase;color:var(--gold);margin-bottom:1em
+}
+.result h2,.result h3{margin-bottom:.5em;max-width:22ch}
+.result p{color:var(--ink-soft);max-width:62ch}
+.result .btns{margin-top:1.6em}
+.results-static > * + *{margin-top:clamp(16px,2vw,22px)}
+.huruf.pick span{cursor:pointer;user-select:none}
+.huruf.pick span[aria-pressed="true"]{background:var(--gold-wash);color:var(--gold)}
+.huruf.pick span:focus-visible{outline:2px solid var(--ring);outline-offset:-2px}
+.letterpane{
+border:1px solid var(--line);border-inline-start:2px solid var(--gold-line);
+background:var(--paper);padding:clamp(20px,2.6vw,28px);
+display:grid;grid-template-columns:auto minmax(0,1fr);
+gap:clamp(18px,2.6vw,30px);align-items:center;min-height:150px
+}
+.band-alt .letterpane{background:var(--paper)}
+.letterpane .gl{
+font-family:var(--f-ar);direction:rtl;font-size:clamp(3rem,2rem + 4vw,5rem);
+line-height:1.4;color:var(--ink);flex:none;
+min-width:1.7em;text-align:center
+}
+.letterpane .name-row{
+display:flex;align-items:baseline;gap:.7em;flex-wrap:wrap;margin-bottom:.85em
+}
+.letterpane .nm{
+font-family:var(--f-display);font-weight:600;
+font-size:clamp(1.3rem,1.1rem + .8vw,1.7rem);line-height:1.15;margin:0
+}
+.letterpane .tr{
+font-family:var(--f-display);font-style:italic;font-weight:400;
+font-size:1.12rem;letter-spacing:0;color:var(--gold);margin:0
+}
+.letterpane p{color:var(--ink-soft);font-size:.95rem;margin:0;max-width:52ch}
+.letterpane .zone{
+display:inline-block;margin-top:.9em;font-family:var(--f-body);font-weight:600;
+font-size:.65rem;letter-spacing:.18em;text-transform:uppercase;color:var(--ink-faint)
+}
+@media (max-width:620px){
+.letterpane{grid-template-columns:1fr;text-align:center;gap:12px}
+.letterpane p,.letterpane .nm{max-width:none}
+}
+.makhraj{border-top:1px solid var(--line)}
+.mrow2{
+display:grid;grid-template-columns:minmax(0,.85fr) minmax(0,1.35fr);
+gap:clamp(16px,3vw,44px);padding:clamp(20px,2.6vw,30px) 0;
+border-bottom:1px solid var(--line-soft);align-items:start
+}
+.mrow2 .zone-name{display:flex;align-items:baseline;gap:.6em;flex-wrap:wrap;margin-bottom:.45em}
+.mrow2 .zone-name h3{font-size:clamp(1.15rem,1.05rem + .5vw,1.4rem)}
+.mrow2 .zone-name .ar{font-size:1.15rem;color:var(--gold)}
+.mrow2 .desc{color:var(--ink-soft);font-size:.95rem;max-width:56ch;margin:0}
+.mrow2 .glyphs{
+direction:rtl;display:flex;flex-wrap:wrap;gap:8px;align-items:center
+}
+.mrow2 .glyphs span{
+font-family:var(--f-ar);font-size:clamp(1.45rem,1.1rem + 1.2vw,1.95rem);line-height:1;
+color:var(--ink);border:1px solid var(--line);background:var(--paper);
+padding:.44em .5em;min-width:2.1em;text-align:center
+}
+.band-alt .mrow2 .glyphs span{background:var(--paper)}
+.mrow2 .count{
+font-family:var(--f-body);font-weight:600;font-size:.65rem;letter-spacing:.18em;
+text-transform:uppercase;color:var(--ink-faint);margin-top:1em;display:block
+}
+@media (max-width:760px){.mrow2{grid-template-columns:1fr;gap:16px}}
+.sched{border-top:1px solid var(--line)}
+.srow{
+display:grid;grid-template-columns:minmax(0,.7fr) minmax(0,1.3fr) auto;
+gap:clamp(14px,2.6vw,36px);align-items:start;
+padding:clamp(20px,2.6vw,28px) 0;border-bottom:1px solid var(--line-soft)
+}
+.srow .cname{font-family:var(--f-display);font-weight:600;font-size:1.35rem;line-height:1.15}
+.srow .cname .sub{
+display:block;font-family:var(--f-body);font-weight:600;font-size:.64rem;
+letter-spacing:.18em;text-transform:uppercase;color:var(--ink-faint);margin-top:.5em
+}
+.srow dl{margin:0;display:grid;grid-template-columns:auto minmax(0,1fr);gap:.5em 1.2em;font-size:.95rem}
+.srow dt{
+font-family:var(--f-body);font-weight:600;font-size:.64rem;letter-spacing:.16em;
+text-transform:uppercase;color:var(--ink-faint);padding-top:.28em
+}
+.srow dd{margin:0;color:var(--ink-soft)}
+.srow dd.tbd{color:var(--ink-faint);font-style:italic}
+.srow .meta{display:flex;flex-direction:column;align-items:flex-end;gap:10px;text-align:end}
+@media (max-width:860px){
+.srow{grid-template-columns:1fr;gap:14px}
+.srow .meta{align-items:flex-start;text-align:start;flex-direction:row;flex-wrap:wrap}
+}
+.checkgrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+@media (max-width:600px){.checkgrid{grid-template-columns:1fr}}
+.checkgrid .checkrow{font-size:.92rem}
+.tzline{
+font-family:var(--f-body);font-size:.8rem;color:var(--ink-faint);
+margin-block:.55em 0;margin-inline:0;min-height:1.3em
+}
+[data-arm="quran"] .band-alt .timeline li::before{background:var(--band-warm)}
+.portrait{max-width:290px;margin-block:0 1.6em;margin-inline:0}
+@media (max-width:860px){.portrait{max-width:230px}}
+
+body.living-book[data-room="quran"] main { --study-measure: 68ch; }
+body.living-book[data-room="quran"] .study-opening { padding-block: clamp(38px,5vw,76px); }
+body.living-book[data-room="quran"] .study-opening:not(.hero) > .wrap { max-width: 1160px; margin-inline: auto; }
+body.living-book[data-room="quran"] .study-opening h1 { font-size:var(--type-signature-size); line-height: 1.03; letter-spacing: -.025em; max-width: 20ch; }
+body.living-book[data-room="quran"] .study-opening .lede { max-width: 67ch; font-size: clamp(1.1rem,1.25vw,1.24rem); line-height: 1.65; }
+body.living-book[data-room="quran"] .study-opening .pending { margin-top: 1.8rem !important; max-width: var(--study-measure) !important; }
+body.living-book[data-room="quran"] .hero.study-opening { padding: 0; }
+body.living-book[data-room="quran"] .hero-grid { grid-template-columns: minmax(0,1.25fr) minmax(0,.75fr); min-height: 0; gap: clamp(28px,5vw,72px); padding: clamp(36px,5vw,74px) var(--gutter); max-width: 1500px; margin-inline: auto; border: 0; align-items: center; }
+body.living-book[data-room="quran"] .hero-grid > div:first-child { padding: 0; }
+body.living-book[data-room="quran"] .hero h1 { max-width: 17ch; font-size:var(--type-signature-size); }
+body.living-book[data-room="quran"] .hero .lede { max-width: 55ch; font-size: 1.12rem; }
+body.living-book[data-room="quran"] .study-teacher { align-self: center; margin: 0; padding: 0; }
+body.living-book[data-room="quran"] .study-teacher .frame { position: relative; inset: auto; aspect-ratio: 800 / 789; max-height: none; border: 1px solid var(--line); }
+body.living-book[data-room="quran"] .study-teacher .frame::after { display: none; }
+body.living-book[data-room="quran"] .study-teacher img { position: static; display: block; width: 100%; height: auto; aspect-ratio: 800 / 789; object-fit: contain; }
+body.living-book[data-room="quran"] .study-teacher figcaption { position: static; padding-block:20px 0;padding-inline:0; border: 0; background: transparent; backdrop-filter: none; display: block; }
+body.living-book[data-room="quran"] .study-caption-label { display: block; font: 600 .75rem var(--f-body); letter-spacing: .14em; text-transform: uppercase; color: var(--ink-faint); }
+body.living-book[data-room="quran"] .study-caption-name { display: block; margin-top: .3rem; font: 600 1.7rem/1.2 var(--f-display); color: var(--ink); }
+body.living-book[data-room="quran"] .study-teacher .say { border: 0; margin-block:.45rem .65rem;margin-inline:0; padding: 0; font-size: .94rem; color: var(--ink-soft); }
+body.living-book[data-room="quran"] .study-teacher .link { font-size: .9rem; }
+body.living-book[data-room="quran"] .study-facts { display: grid; grid-template-columns: 1.1fr 1fr 1.3fr; gap: 18px; margin: 1.7rem 0; padding: 1.1rem 0; border-block: 1px solid var(--line); }
+body.living-book[data-room="quran"] .study-facts dt { font-size: .76rem; color: var(--ink-faint); margin-bottom: .3rem; }
+body.living-book[data-room="quran"] .study-facts dd { margin: 0; font-weight: 600; font-size: 1.05rem; }
+body.living-book[data-room="quran"] .study-facts dd span { font-weight: 400; font-size: .9rem; }
+body.living-book[data-room="quran"] .hero-note { max-width: 60ch; font-size: .94rem; line-height: 1.6; }
+body.living-book[data-room="quran"] .study-contents { padding-block: 20px; background: var(--paper-2); border-block: 1px solid var(--line); }
+body.living-book[data-room="quran"] .study-contents > .wrap { display: grid; grid-template-columns: 9rem minmax(0,1fr); gap: 18px 30px; align-items: baseline; }
+body.living-book[data-room="quran"] .study-contents p { margin: 0; color: var(--ink-faint); font-size: .76rem; letter-spacing: .08em; text-transform: uppercase; }
+body.living-book[data-room="quran"] .study-contents .wrap > div { display: flex; flex-wrap: wrap; gap: 10px 28px; }
+body.living-book[data-room="quran"] .study-contents a { display: inline-flex; gap: .6em; align-items: baseline; color: var(--ink); font-size: .94rem; padding-block: 4px; text-decoration-thickness: 1px; text-underline-offset: .25em; }
+body.living-book[data-room="quran"] .study-contents a span { color: var(--gold); font-size: .74rem; font-variant-numeric: tabular-nums; }
+body.living-book[data-room="quran"] main :is(section[id], [data-check], #results) { scroll-margin-top: calc(76px + var(--armbar-h) + 20px); }
+body.living-book[data-room="quran"] .band { padding-block: clamp(40px,5.5vw,80px); }
+body.living-book[data-room="quran"] .band .shead { margin-bottom: clamp(24px,3vw,38px); }
+body.living-book[data-room="quran"] .shead h2 { max-width: 28ch; }
+body.living-book[data-room="quran"] .cols-2 { gap: clamp(26px,5vw,70px); }
+body.living-book[data-room="quran"] .cols-2 > *,
+body.living-book[data-room="quran"] .cols > *,
+body.living-book[data-room="quran"] .book > * { min-width: 0; }
+body.living-book[data-room="quran"] .cols .col p,
+body.living-book[data-room="quran"] .founder .body p { max-width: var(--study-measure); }
+body.living-book[data-room="quran"] .note { padding: clamp(20px,2.5vw,30px); }
+body.living-book[data-room="quran"] .note h3 { font-size: 1.35rem; }
+body.living-book[data-room="quran"] .tiny,
+body.living-book[data-room="quran"] .tzline { font-size: .86rem; line-height: 1.6; }
+body.living-book[data-room="quran"] .check .step .head .n,
+body.living-book[data-room="quran"] .check-progress,
+body.living-book[data-room="quran"] .result .lbl,
+body.living-book[data-room="quran"] .letterpane .zone,
+body.living-book[data-room="quran"] .mrow2 .count,
+body.living-book[data-room="quran"] .srow .cname .sub,
+body.living-book[data-room="quran"] .srow dt,
+body.living-book[data-room="quran"] .shapes .lb { font-size: .76rem; letter-spacing: .09em; }
+body.living-book[data-room="quran"] .check:not(.check-enhanced) .choices { display: none; }
+body.living-book[data-room="quran"] [data-study="start"] .wrap-narrow { max-width: 1010px; }
+body.living-book[data-room="quran"] .check .step h2 { max-width: 32ch; font-size: clamp(1.65rem,2.4vw,2.25rem); }
+body.living-book[data-room="quran"] .specimen { border-color: var(--line); padding-block: clamp(22px,4vw,42px); line-height: 2.15; }
+body.living-book[data-room="quran"] .check .step .gloss { font-size: .96rem; line-height: 1.6; }
+body.living-book[data-room="quran"] .choices .btn { min-height: 48px; }
+body.living-book[data-room="quran"] .result { border-top-width: 3px; }
+body.living-book[data-room="quran"] .result h2 { max-width: 28ch; }
+body.living-book[data-room="quran"] .huruf.pick { align-self: start; }
+body.living-book[data-room="quran"] .huruf.pick button { appearance: none; border: 0; border-radius: 0; cursor: pointer; background: var(--paper); color: var(--ink); padding: .55em .2em; min-height: 64px; font: 2.1rem/1.3 var(--f-ar); }
+body.living-book[data-room="quran"] .huruf.pick button[aria-pressed="true"] { background: var(--pine); color: var(--on-pine, var(--paper)); outline: 2px solid var(--gold-line); outline-offset: -3px; }
+body.living-book[data-room="quran"] .huruf.pick button:focus-visible { outline: 3px solid var(--ring); outline-offset: -4px; }
+body.living-book[data-room="quran"] .huruf.pick button:hover { background: var(--gold-wash); color: var(--ink); }
+body.living-book[data-room="quran"] .letterpane { min-height: 240px; align-items: start; }
+body.living-book[data-room="quran"] .letterpane .name-row { margin-top: .3rem; }
+body.living-book[data-room="quran"] .letterpane p { font-size: 1rem; line-height: 1.65; }
+body.living-book[data-room="quran"] .lesson-keyboard { color: var(--ink-faint); font-size: .86rem; margin-top: 1rem; max-width: 65ch; }
+body.living-book[data-room="quran"] .mrow2 { grid-template-columns: minmax(0,1fr) minmax(0,1fr); gap: 30px; padding-block: 28px; }
+body.living-book[data-room="quran"] .mrow2 .desc { font-size: 1rem; }
+body.living-book[data-room="quran"] .shapes .gl { line-height: 1.8; }
+body.living-book[data-room="quran"] .study-draft-note { display: grid; grid-template-columns: 12rem minmax(0,1fr); gap: 14px 30px; padding: 22px 0; border-block: 1px solid var(--line); margin-bottom: 30px; color: var(--ink-soft); }
+body.living-book[data-room="quran"] .study-draft-note strong { color: var(--ink); }
+body.living-book[data-room="quran"] .study-draft-note p { max-width: 75ch; margin: 0; }
+body.living-book[data-room="quran"] .books { display: grid; grid-template-columns: 1fr; gap: 0; }
+body.living-book[data-room="quran"] .book { max-width: none; display: grid; grid-template-columns: minmax(120px,.36fr) minmax(0,1fr); gap: clamp(28px,5vw,72px); padding-block: clamp(26px,4vw,54px); border-bottom: 1px solid var(--line); }
+body.living-book[data-room="quran"] .book:last-child { border-bottom: 0; padding-bottom: 0; }
+body.living-book[data-room="quran"] .book .shot { width: 100%; max-width: 255px; padding: 0; margin: 0 auto; align-self: start; }
+body.living-book[data-room="quran"] .book .shot img { width: 100%; height: auto; object-fit: contain; }
+body.living-book[data-room="quran"] .book h3 { font-size: clamp(1.8rem,2.5vw,2.65rem); }
+body.living-book[data-room="quran"] .book p { max-width: 70ch; font-size: 1rem; }
+body.living-book[data-room="quran"] .book .n { font-size: .77rem; letter-spacing: .08em; }
+body.living-book[data-room="quran"] .book .facts { flex-wrap: wrap; font-size: .76rem; letter-spacing: .06em; }
+body.living-book[data-room="quran"] .book .dl { width: fit-content; max-width: 100%; }
+body.living-book[data-room="quran"] .srow { grid-template-columns: minmax(0,.8fr) minmax(0,1.2fr) minmax(110px,.4fr); gap: 24px; padding-block: 30px; }
+body.living-book[data-room="quran"] .srow .cname { font-size: 1.65rem; }
+body.living-book[data-room="quran"] .srow dl { gap: .7em 1.5em; }
+body.living-book[data-room="quran"] .srow .meta { max-width: 100%; }
+body.living-book[data-room="quran"] .srow .pill { white-space: normal; text-align: center; }
+body.living-book[data-room="quran"] .checkgrid .checkrow { align-items: flex-start; line-height: 1.5; }
+body.living-book[data-room="quran"] .form .field input,
+body.living-book[data-room="quran"] .form .field select { min-height: 48px; font-size: 1rem; }
+body.living-book[data-room="quran"] .form .field textarea { font-size: 1rem; line-height: 1.6; }
+body.living-book[data-room="quran"] .portrait { max-width: 320px; }
+body.living-book[data-room="quran"] .portrait img { height: auto; object-fit: contain; }
+body.living-book[data-room="quran"] [data-study="verify"] .study-opening h1 { max-width: 22ch; }
+body.living-book[data-room="quran"] [data-study="verify"] .pending { border-inline-start: 3px solid var(--gold-line); }
+@media (max-width: 960px) {
+body.living-book[data-room="quran"] .hero-grid { grid-template-columns: minmax(0,1.2fr) minmax(0,.8fr); gap: 28px; }
+body.living-book[data-room="quran"] .hero h1 { font-size:var(--type-signature-size); }
+body.living-book[data-room="quran"] .study-facts { grid-template-columns: 1fr; gap: 10px; }
+body.living-book[data-room="quran"] .study-facts > div { display: flex; gap: 12px; justify-content: space-between; }
+body.living-book[data-room="quran"] .study-contents > .wrap { grid-template-columns: 1fr; gap: 10px; }
+body.living-book[data-room="quran"] .srow { grid-template-columns: 1fr; gap: 18px; }
+body.living-book[data-room="quran"] .srow .meta { align-items: start; text-align:start; }
+}
+@media (max-width: 700px) {
+body.living-book[data-room="quran"] .hero-grid { grid-template-columns: 1fr; padding-block: 34px; }
+body.living-book[data-room="quran"] .hero h1 { font-size:var(--type-signature-size); }
+body.living-book[data-room="quran"] .study-teacher { display: grid; grid-template-columns: minmax(0,.7fr) minmax(0,1fr); align-items: center; gap: 20px; }
+body.living-book[data-room="quran"] .study-teacher figcaption { padding-top: 0; }
+body.living-book[data-room="quran"] .study-caption-name { font-size: 1.45rem; }
+body.living-book[data-room="quran"] .study-teacher .say { font-size: .86rem; }
+body.living-book[data-room="quran"] .study-contents .wrap > div { gap: 8px 22px; }
+body.living-book[data-room="quran"] .study-contents a { min-height: 36px; }
+body.living-book[data-room="quran"] .study-draft-note { grid-template-columns: 1fr; gap: 8px; }
+body.living-book[data-room="quran"] .book { grid-template-columns: 1fr; gap: 22px; }
+body.living-book[data-room="quran"] .book .shot { max-width: 160px; margin-inline-start: 0; }
+body.living-book[data-room="quran"] .letterpane { min-height: 0; }
+body.living-book[data-room="quran"] .mrow2 { grid-template-columns: 1fr; gap: 18px; }
+}
+@media (max-width: 420px) {
+body.living-book[data-room="quran"] .study-teacher { grid-template-columns: 1fr; }
+body.living-book[data-room="quran"] .study-teacher .frame { max-width: 220px; }
+body.living-book[data-room="quran"] .study-facts > div { align-items: baseline; }
+body.living-book[data-room="quran"] .choices { display: grid; grid-template-columns: 1fr; }
+body.living-book[data-room="quran"] .choices .btn { width: 100%; min-width: 0; }
+}
+@media (prefers-reduced-motion: reduce) {
+body.living-book[data-room="quran"] .check-progress .bar i,
+body.living-book[data-room="quran"] .huruf.pick button { transition: none; }
+}
+@media print {
+body.living-book[data-room="quran"] .study-contents,
+body.living-book[data-room="quran"] .choices,
+body.living-book[data-room="quran"] .lesson-keyboard { display: none; }
+body.living-book[data-room="quran"] .band { padding-block: 24px; }
+body.living-book[data-room="quran"] .book { break-inside: avoid; }
+}
+@media(max-width:1000px){body.living-book[data-room="quran"] main :is(section[id], [data-check], #results){scroll-margin-top:96px}}
+body.living-book[data-room="quran"] .huruf.pick button .letter-glyph{display:inline;padding:0;border:0;background:transparent;color:inherit;font:inherit;user-select:text}
+
 body.open-book.living-book[data-room="quran"] main :is(section[id],[data-check],#results){scroll-margin-top:calc(var(--header-height,104px) + var(--armbar-h,52px) + 24px)}
 body.open-book.living-book.illuminated[data-room="quran"] .reading-desk{padding-block:clamp(22px,3.7vw,56px) 0}
 body.open-book.living-book.illuminated[data-room="quran"] .reading-desk>.wrap{padding-inline:var(--gutter);max-width:1520px}

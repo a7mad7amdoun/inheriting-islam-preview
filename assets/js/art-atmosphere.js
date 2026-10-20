@@ -25,7 +25,7 @@
    var rect = el.getBoundingClientRect();
    if (rect.bottom < -100 || rect.top > height + 100) return 0;
    var progress = Math.max(-1, Math.min(1, (height / 2 - rect.top - rect.height / 2) / height));
-   return progress * (i < art.length ? (i % 2 ? -14 : 18) : 28);
+   return progress * (i < art.length ? (i % 2 ? -5 : 6) : 12);
   });
   art.forEach(function (img, i) { img.style.setProperty('--art-drift', offsets[i].toFixed(2) + 'px'); });
   rooms.forEach(function (room, i) { room.style.setProperty('--architecture-drift', offsets[art.length + i].toFixed(2) + 'px'); });
@@ -44,7 +44,7 @@
  schedule();
 })();
 
-/* Shared edge illumination: scroll, fine pointer, and one gentle click sweep.
+/* Shared edge illumination follows reading progress, not taps on the content.
    No text moves, no input is intercepted, and rendering stops when settled. */
 (function () {
  'use strict';
@@ -52,13 +52,12 @@
  var main = document.querySelector('body.open-book');
  if (!main) return;
  var reduce = matchMedia('(prefers-reduced-motion: reduce)');
- var fine = matchMedia('(hover: hover) and (pointer: fine)');
  var frame = 0, previous = 0, x = .94, y = .26, tx = x, ty = y;
- var sweep = null, zoom = 1, targetZoom = 1;
+ var zoom = 1, targetZoom = 1;
  function enabled() { return !reduce.matches && root.dataset.motion !== 'calm' && !document.hidden; }
  function stop() {
   if (frame) cancelAnimationFrame(frame);
-  frame = 0; previous = 0; sweep = null;
+  frame = 0; previous = 0;
  }
  function start() {
   if (!enabled()) { stop(); return; }
@@ -69,15 +68,7 @@
   if (!enabled()) { stop(); return; }
   var elapsed = previous ? Math.min(time - previous, 64) : 16;
   previous = time;
-  if (sweep !== null) {
-   if (sweep < 0) sweep = time;
-   var progress = Math.min(1, (time - sweep) / 1600);
-   var ease = .5 - Math.cos(progress * Math.PI) / 2;
-   x = .94 - .88 * ease; tx = x;
-   if (progress === 1) sweep = null;
-  } else {
-   x += (tx - x) * (1 - Math.exp(-elapsed / 240));
-  }
+  x += (tx - x) * (1 - Math.exp(-elapsed / 240));
   y += (ty - y) * (1 - Math.exp(-elapsed / 240));
   zoom += (targetZoom - zoom) * (1 - Math.exp(-elapsed / 360));
   if (Math.abs(targetZoom - zoom) < .00005) zoom = targetZoom;
@@ -86,7 +77,7 @@
   if (Math.abs(ty - y) < .0005) y = ty;
   main.style.setProperty('--inheritance-light-screen-x', (window.innerWidth * x).toFixed(2) + 'px');
   main.style.setProperty('--inheritance-light-screen-y', (window.innerHeight * y).toFixed(2) + 'px');
-  if (sweep !== null || x !== tx || y !== ty || zoom !== targetZoom) frame = requestAnimationFrame(draw);
+  if (x !== tx || y !== ty || zoom !== targetZoom) frame = requestAnimationFrame(draw);
   else previous = 0;
  }
  function scroll() {
@@ -94,27 +85,16 @@
   var mobile = window.innerWidth <= 1000 && document.querySelector('.journey-tray');
   var distance = Math.max(1, mobile ? main.scrollHeight - main.clientHeight : root.scrollHeight - window.innerHeight);
   var progress = Math.max(0, Math.min(1, (mobile ? main.scrollTop : window.scrollY) / distance));
-  sweep = null; tx = .94 - progress * .88; ty = .18 + progress * .64;
+  tx = .94 - progress * .88; ty = .18 + progress * .64;
   targetZoom = 1 + progress * (window.innerWidth <= 760 ? .05 : .08);
   start();
- }
- function pointer(event) {
-  if (!enabled() || !fine.matches || event.pointerType === 'touch' || sweep !== null) return;
-  tx = Math.max(.06, Math.min(.94, event.clientX / window.innerWidth));
-  ty = Math.max(.12, Math.min(.88, event.clientY / window.innerHeight));
-  start();
- }
- function click(event) {
-  if (!enabled() || (event.button !== undefined && event.button !== 0)) return;
-  ty = Math.max(.12, Math.min(.88, event.clientY / window.innerHeight));
-  sweep = -1;start();
  }
  document.addEventListener('scroll', scroll, {capture:true, passive:true});
  window.addEventListener('resize', scroll, {passive:true});
  window.addEventListener('pageshow', scroll);
  window.addEventListener('pagehide', stop);
- document.addEventListener('pointermove', pointer, {passive:true});
- document.addEventListener('pointerdown', click, {passive:true});
+ // No pointer tracking or click sweep: reading, selecting text and using controls
+ // should never trigger decorative movement behind the content.
  document.addEventListener('visibilitychange', scroll);
  reduce.addEventListener('change', scroll);
  new MutationObserver(scroll).observe(root, {attributes:true, attributeFilter:['data-motion']});

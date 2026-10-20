@@ -477,3 +477,493 @@ body.living-book.illuminated.open-book[data-room][data-atmosphere][data-edition]
 body.living-book.illuminated.open-book[data-room][data-atmosphere][data-edition][data-direction=inheritance][data-art-layout=spacious] :is(#class-format,#teaching-practice,#community-process)>.wrap>.shead {margin:0}
 body.living-book.illuminated.open-book[data-room][data-atmosphere][data-edition][data-direction=inheritance][data-art-layout=spacious] :is(.podcast-vision-spread,.inheritance-listening-layout,#teacher-placement>.wrap,#class-format>.wrap,#teaching-practice>.wrap,#community-process>.wrap)>.house-art--narrative {grid-column:1;grid-row:2;margin:0}
 }
+
+@media screen {
+body.open-book #main {
+--inheritance-pattern-tone:#96774C;
+--inheritance-pattern-foil:#B39159;
+--inheritance-pattern-opacity:.18;
+--inheritance-light-opacity:.85;
+--inheritance-ornament-top:-16vh;
+--inheritance-ornament-end:-16vw;
+--inheritance-drift:44px;
+--inheritance-light-drift:48px;
+--inheritance-glow:rgb(176 141 87 / .12);
+--inheritance-cool:rgb(80 106 91 / .04);
+--inheritance-ambient:var(--gold-wash);
+position:relative;isolation:isolate;background-color:var(--paper);
+background-image:radial-gradient(ellipse 85vw 80vh at 95% 0%,var(--inheritance-ambient),transparent 78%);
+}
+html[data-theme=dark] body.open-book #main {
+--inheritance-pattern-tone:#A5AE98;
+--inheritance-pattern-foil:#E0BA7A;
+--inheritance-pattern-opacity:.17;
+--inheritance-glow:rgb(217 180 120 / .1);
+--inheritance-cool:rgb(143 166 153 / .045);
+--inheritance-light-opacity:.65;
+}
+body.open-book #main::before {
+content:"";position:fixed;z-index:-1;pointer-events:none;
+background-color:var(--inheritance-pattern-tone);
+background-image:radial-gradient(ellipse at 65% 24%,var(--inheritance-pattern-foil),transparent 76%);
+transform-origin:center;contain:paint;
+}
+body.open-book #main::before {
+inset-block-start:var(--inheritance-ornament-top);right:var(--inheritance-ornament-end);
+width:clamp(680px,88vw,1400px);aspect-ratio:1;
+-webkit-mask-image:radial-gradient(ellipse at 54% 45%,#000 12%,transparent 70%);
+mask-image:radial-gradient(ellipse at 54% 45%,#000 12%,transparent 70%);
+-webkit-mask-size:100% 100%;mask-size:100% 100%;
+-webkit-mask-repeat:no-repeat;mask-repeat:no-repeat;
+-webkit-mask-composite:source-in;mask-composite:intersect;
+opacity:var(--inheritance-pattern-opacity);
+}
+body.open-book #main::after {
+content:"";display:block;position:fixed;z-index:-1;pointer-events:none;
+left:-24vw;bottom:-22vh;width:85vw;height:110vh;
+background-image:
+radial-gradient(ellipse at 30% 64%,var(--inheritance-glow),transparent 65%),
+radial-gradient(ellipse at 18% 38%,var(--inheritance-cool),transparent 58%);
+opacity:var(--inheritance-light-opacity);
+}
+body.open-book[data-atmosphere=reading] #main::after {opacity:.35}
+body.open-book #main .quran-companion>header::after {content:none;display:none}
+body.open-book #main .quran-companion-page {border-top:3px double var(--gold-line)}
+body.open-book #main>:is(.band,.band-alt,.chapter-opening,.inheritance-hero,.about-letter,.about-partner,.reader-opening,.explore-opening,.open-cover,.source-encounter,.open-beginnings,.open-listening) {
+background:transparent;border-block-color:transparent;
+}
+body.open-book #main :is(.inheritance-hero-art,.apps-cover-art,.listening-scene,.about-inheritance-art,.house-art:not([data-house-art=teaching]):not([data-still-art]),.reader-collection-art) img {
+-webkit-mask-image:linear-gradient(90deg,transparent,#000 5%,#000 95%,transparent),linear-gradient(0deg,transparent,#000 6%,#000 94%,transparent);
+mask-image:linear-gradient(90deg,transparent,#000 5%,#000 95%,transparent),linear-gradient(0deg,transparent,#000 6%,#000 94%,transparent);
+-webkit-mask-composite:source-in;mask-composite:intersect;
+opacity:1;filter:none;border-radius:0;
+}
+body.open-book #main :is(.inheritance-hero-layout,.about-cover-grid,.about-partner-grid,.desk-spread,.workshop-opening>.hero-grid,.listening-opening>.hero-grid,.chapter-opening-grid,.reader-opening,.explore-opening,.invitation-opening>.wrap)::before {display:none}
+body.open-book #main :is(.quran-companion-page,.reader-source,.source-grid,.reader-section,.about-letter-prose) {position:relative;background:var(--paper)}
+body.open-book #main>.quran-companion {margin-block:clamp(24px,4vw,64px)}
+body.open-book[data-atmosphere=archive] #main {--inheritance-ornament-top:8vh;--inheritance-ornament-end:-26vw}
+body.open-book[data-atmosphere=listening] #main {--inheritance-ornament-top:-28vh;--inheritance-ornament-end:-8vw}
+body.open-book[data-atmosphere=reading] #main {--inheritance-pattern-opacity:.09;--inheritance-drift:18px;--inheritance-light-drift:18px;--inheritance-ornament-end:-30vw}
+html[data-theme=dark] body.open-book[data-atmosphere=reading] #main {--inheritance-pattern-opacity:.1}
+}
+@media screen and (prefers-reduced-motion:no-preference) {
+html[data-motion=gentle] body.open-book #main {transition:background-color .75s ease}
+html[data-motion=gentle] body.open-book #main::after {
+animation:inheritance-paper-light 32s cubic-bezier(.45,0,.55,1) -9s infinite alternate;
+transition:background-color .75s ease,opacity .75s ease;
+}
+html[data-motion=gentle] body.open-book #main::before {
+animation:inheritance-pattern-breathe 24s cubic-bezier(.45,0,.55,1) -6s infinite alternate;
+transition:background-color .75s ease,opacity .75s ease;
+}
+}
+@keyframes inheritance-pattern-breathe {
+from {transform:translate3d(calc(-.5 * var(--inheritance-drift)),calc(-.6 * var(--inheritance-drift)),0) rotate(-1.8deg) scale(1)}
+50% {transform:translate3d(calc(.35 * var(--inheritance-drift)),calc(-.15 * var(--inheritance-drift)),0) rotate(.2deg) scale(1.015)}
+to {transform:translate3d(var(--inheritance-drift),var(--inheritance-drift),0) rotate(2deg) scale(1.04)}
+}
+@keyframes inheritance-paper-light {
+from {transform:translate3d(calc(-.5 * var(--inheritance-light-drift)),var(--inheritance-light-drift),0) scale(.98)}
+to {transform:translate3d(var(--inheritance-light-drift),calc(-.6 * var(--inheritance-light-drift)),0) scale(1.06)}
+}
+@media screen and (max-width:760px) {
+body.open-book #main {--inheritance-pattern-opacity:.15;--inheritance-drift:16px;--inheritance-light-drift:16px}
+html[data-theme=dark] body.open-book #main {--inheritance-pattern-opacity:.18}
+body.open-book #main::before {width:560px;inset-block-start:-70px;right:-300px}
+body.open-book #main::after {width:110vw;height:90vh;left:-45vw;bottom:-16vh;opacity:.55}
+html[data-theme=dark] body.open-book #main::after {opacity:.4}
+html[data-motion=gentle] body.open-book #main::after {animation-duration:44s}
+html[data-motion=gentle] body.open-book #main::before {animation-duration:32s}
+}
+@media (prefers-reduced-motion:reduce) {
+body.open-book #main::before,body.open-book #main::after {animation:none;transition:none;transform:none}
+}
+html[data-motion=calm] body.open-book #main::before,
+html[data-motion=calm] body.open-book #main::after {animation:none;transition:none;transform:none}
+@media print {
+body.open-book #main::before,body.open-book #main::after {display:none}
+}
+html[data-background-paused] body.open-book #main::before,
+html[data-background-paused] body.open-book #main::after {animation-play-state:paused}
+@media screen {
+body.open-book #main :is(.inheritance-hero-copy,.about-cover-copy,.desk-introduction,.listening-introduction,.listening-title,.apps-cover-copy,.workshop-intro,.chapter-opening-copy,.chapter-opening-grid>div:first-child,.reader-opening>div:first-child,.explore-opening>div:first-child,.podcast-vision-copy) {
+position:relative;isolation:isolate;z-index:2;background:transparent;min-width:0;
+}
+body.open-book #main :is(.inheritance-hero-copy,.about-cover-copy,.desk-introduction,.listening-introduction,.listening-title,.apps-cover-copy,.workshop-intro,.chapter-opening-copy,.chapter-opening-grid>div:first-child,.reader-opening>div:first-child,.explore-opening>div:first-child,.podcast-vision-copy)::before {
+content:"";display:block;position:absolute;inset:-28px;z-index:-1;pointer-events:none;
+background:var(--paper);
+-webkit-mask-image:linear-gradient(90deg,transparent,#000 28px,#000 calc(100% - 28px),transparent),linear-gradient(0deg,transparent,#000 28px,#000 calc(100% - 28px),transparent);
+mask-image:linear-gradient(90deg,transparent,#000 28px,#000 calc(100% - 28px),transparent),linear-gradient(0deg,transparent,#000 28px,#000 calc(100% - 28px),transparent);
+-webkit-mask-composite:source-in;mask-composite:intersect;
+}
+body.open-book #main :is(h1,h2,h3,p,figcaption) {text-shadow:none}
+body.open-book #main :is(.lede,.inheritance-hero-lede,.about-cover-lede,.listening-introduction>p:not(.eyebrow)) {max-inline-size:49ch}
+body.open-book #main :is(.about-letter-prose,.podcast-vision-copy,.reader-prose) {max-inline-size:var(--reading-measure,66ch)}
+body.open-book #main :is(.house-art,.inheritance-hero-art,.about-inheritance-art,.listening-scene,.apps-cover-art) figcaption {color:var(--ink-soft);padding-block-start:20px}
+body.open-book #main .desk-art img {
+-webkit-mask-image:linear-gradient(90deg,transparent,#000 2%,#000 98%,transparent),linear-gradient(0deg,transparent,#000 2%,#000 98%,transparent);
+mask-image:linear-gradient(90deg,transparent,#000 2%,#000 98%,transparent),linear-gradient(0deg,transparent,#000 2%,#000 98%,transparent);
+-webkit-mask-composite:source-in;mask-composite:intersect;
+}
+body.open-book #main :is(.reading-desk,.workshop-opening,.listening-opening) {padding-block:0}
+body.open-book #main :is(.desk-spread,.workshop-opening>.hero-grid,.listening-opening>.hero-grid) {padding-block:clamp(36px,4vw,64px)}
+body.open-book #main .about-cover-grid {padding-block:clamp(28px,3.5vw,56px)}
+body.open-book #main .reader-opening {align-items:start;padding-block:clamp(28px,3.5vw,48px)}
+body.open-book #main .reader-folio {margin-block-start:0}
+body.open-book #main .reader-opening>div:first-child {padding-block-start:24px}
+body.open-book #main .chapter-opening-grid:has(.house-art) {align-items:start}
+body.open-book #main .chapter-opening-grid:has(.house-art)>div:first-child {padding-block-start:24px}
+body.open-book #main .contact-routing:has(.house-art) {margin-block-start:0}
+}
+@media screen and (min-width:1025px) {
+body.open-book #main :is(.inheritance-hero-copy,.workshop-opening>.hero-grid>div:first-child,.listening-opening>.hero-grid>div:first-child) {grid-column:1 / 6;padding-inline-end:16px}
+body.open-book #main .desk-spread {grid-template-columns:minmax(0,.95fr) minmax(0,1.05fr);column-gap:clamp(32px,4vw,64px)}
+body.open-book #main .desk-spread>.desk-introduction {grid-column:1;grid-row:1;padding-inline:0}
+body.open-book #main .desk-art {grid-column:2;grid-row:1}
+body.open-book #main .desk-art figcaption {padding-inline-start:0}
+}
+@media screen and (max-width:760px) {
+body.open-book #main :is(.inheritance-hero-copy,.about-cover-copy,.desk-introduction,.listening-introduction,.listening-title,.apps-cover-copy,.workshop-intro,.chapter-opening-copy,.chapter-opening-grid>div:first-child,.reader-opening>div:first-child,.explore-opening>div:first-child,.podcast-vision-copy)::before {inset:-20px}
+body.open-book #main :is(.desk-spread,.workshop-opening>.hero-grid,.listening-opening>.hero-grid) {row-gap:28px;padding-block:28px 40px}
+}
+@media screen {
+body.living-book.illuminated.open-book[data-art-layout=spacious] #main {
+--content-halo:28px;
+--inheritance-pattern-opacity:.12;
+}
+html[data-theme=dark] body.living-book.illuminated.open-book[data-art-layout=spacious] #main {--inheritance-pattern-opacity:.11}
+body.living-book.illuminated.open-book[data-art-layout=spacious] #main :is(
+.band:not(.chapter-opening):not(.source-encounter)>.wrap,
+.inheritance-hero-copy,.about-cover-copy,.desk-introduction,
+.listening-introduction,.listening-title,.apps-cover-copy,.workshop-intro,
+.chapter-opening-copy,.chapter-opening-grid>div:first-child,
+.reader-opening>div:first-child,.explore-opening>div:first-child,
+.podcast-vision-copy,
+.library-cover,.chapter-note,.reader-folio,.reader-collection-note,
+.invitation-opening>.wrap,.missing-opening>.wrap,
+.contact-routing,.explore-opening-note,.about-partner-grid,
+.about-commitments>.wrap,.quran-companion,.learning-doorways,
+.reader-prose,.reader-collection-close,.reading-collection-filter,
+.reading-session,.reader-related,.explore-directory,.explore-personal
+) {
+position:relative;isolation:isolate;
+background-color:var(--paper);
+box-shadow:0 0 var(--content-halo) var(--content-halo) var(--paper);
+}
+body.living-book.illuminated.open-book[data-art-layout=spacious] #main :is(
+.inheritance-hero-art,.apps-cover-art,.listening-scene,
+.about-inheritance-art,.house-art,.reader-collection-art,.desk-art,
+.about-portrait,.teacher-opening-portrait
+) {
+isolation:isolate;background-color:var(--paper);
+box-shadow:0 0 24px 16px var(--paper);
+}
+body.living-book.illuminated.open-book[data-art-layout=spacious] #main :is(
+.inheritance-hero-art,.apps-cover-art,.listening-scene,
+.about-inheritance-art,.house-art,.reader-collection-art,.desk-art
+) img {
+-webkit-mask-image:none;mask-image:none;
+opacity:1;filter:none;mix-blend-mode:normal;border-radius:10px;
+}
+body.living-book.illuminated.open-book[data-art-layout=spacious] #main :is(
+.inheritance-hero-art,.apps-cover-art,.listening-scene,
+.about-inheritance-art,.house-art,.reader-collection-art,.desk-art
+) figcaption {
+background-color:var(--paper);line-height:1.65;
+padding-block-start:18px;
+}
+body.living-book.illuminated.open-book[data-art-layout=spacious][data-atmosphere=reading] #main {--inheritance-pattern-opacity:.07}
+html[data-theme=dark] body.living-book.illuminated.open-book[data-art-layout=spacious][data-atmosphere=reading] #main {--inheritance-pattern-opacity:.07}
+}
+@media screen and (max-width:760px) {
+body.living-book.illuminated.open-book[data-art-layout=spacious] #main {--content-halo:16px;--inheritance-pattern-opacity:.1}
+html[data-theme=dark] body.living-book.illuminated.open-book[data-art-layout=spacious] #main {--inheritance-pattern-opacity:.1}
+body.living-book.illuminated.open-book[data-art-layout=spacious] #main :is(.library-cover,.chapter-note,.reader-folio,.reader-collection-note,.contact-routing) {min-width:0}
+}
+@media screen {
+body.living-book.illuminated.open-book[data-art-layout=spacious] #main :is(
+.inheritance-hero-layout,.about-cover-grid,.about-partner-grid,.desk-spread,
+.workshop-opening>.hero-grid,.listening-opening>.hero-grid,
+.chapter-opening-grid,.reader-opening,.explore-opening,.invitation-opening>.wrap
+) {
+position:relative;isolation:isolate;background:var(--paper);
+box-shadow:0 0 32px 20px var(--paper);
+}
+body.living-book.illuminated.open-book[data-art-layout=spacious] #main :is(
+.inheritance-hero-layout,.about-cover-grid,.about-partner-grid,.desk-spread,
+.workshop-opening>.hero-grid,.listening-opening>.hero-grid,
+.chapter-opening-grid,.reader-opening,.explore-opening,.invitation-opening>.wrap
+)::before {content:none}
+body.living-book.illuminated.open-book[data-art-layout=spacious] #main :is(
+.inheritance-hero-copy,.about-cover-copy,.desk-introduction,
+.listening-title,.workshop-intro,.chapter-opening-copy,
+.chapter-opening-grid>div:first-child,.reader-opening>div:first-child,
+.explore-opening>div:first-child,
+.inheritance-hero-art,.apps-cover-art,.listening-scene,.about-inheritance-art,
+.house-art,.reader-collection-art,.desk-art,.about-portrait,.teacher-opening-portrait
+) {box-shadow:none}
+body.living-book.illuminated.open-book[data-art-layout=spacious] #main :is(
+.inheritance-hero-copy,.about-cover-copy,.desk-introduction,.listening-title,
+.workshop-intro,.chapter-opening-copy,.chapter-opening-grid>div:first-child,
+.reader-opening>div:first-child,.explore-opening>div:first-child
+)::before {content:none}
+body.living-book.illuminated.open-book[data-art-layout=spacious] #main :is(
+.inheritance-hero-art,.apps-cover-art,.listening-scene,.about-inheritance-art,
+.house-art,.reader-collection-art,.desk-art
+) img {translate:none;transform:none}
+}
+@media screen and (min-width:1025px) {
+body.living-book.illuminated.open-book[data-art-layout=spacious] #main :is(
+.inheritance-hero-layout,.workshop-opening>.hero-grid,.listening-opening>.hero-grid
+) {
+grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);
+column-gap:clamp(40px,4vw,72px);align-items:center;
+}
+body.living-book.illuminated.open-book[data-art-layout=spacious] #main :is(
+.inheritance-hero-copy,.workshop-opening>.hero-grid>div:first-child,
+.listening-opening>.hero-grid>div:first-child
+) {grid-column:1;grid-row:1;padding-inline:0;min-width:0;max-width:none}
+body.living-book.illuminated.open-book[data-art-layout=spacious] #main :is(
+.inheritance-hero-art,.workshop-opening .apps-cover-art,.listening-opening .listening-scene
+) {grid-column:2;grid-row:1;width:100%;margin:0;min-width:0}
+body.living-book.illuminated.open-book[data-art-layout=spacious] #main :is(
+.inheritance-hero-art,.apps-cover-art,.listening-scene
+) figcaption {padding-inline-start:0}
+}
+@media screen and (max-width:1024px) {
+body.living-book.illuminated.open-book[data-art-layout=spacious] #main :is(
+.inheritance-hero-layout,.workshop-opening>.hero-grid,.listening-opening>.hero-grid,
+.desk-spread,.about-cover-grid,.chapter-opening-grid,.reader-opening
+) {row-gap:36px}
+}
+@media screen {
+body.living-book.illuminated.open-book[data-room=home][data-art-layout=spacious] #main {
+--inheritance-pattern-tone:#9c8055;
+--inheritance-pattern-foil:#b99b68;
+--inheritance-pattern-opacity:.19;
+--inheritance-drift:18px;
+}
+html[data-theme=dark] body.living-book.illuminated.open-book[data-room=home][data-art-layout=spacious] #main {
+--inheritance-pattern-tone:#b99c6d;
+--inheritance-pattern-foil:#e0c391;
+--inheritance-pattern-opacity:.17;
+}
+body.living-book.illuminated.open-book[data-room=home][data-art-layout=spacious] #main::before {
+-webkit-mask-image:none;
+mask-image:none;
+-webkit-mask-composite:source-over;mask-composite:add;
+width:clamp(880px,88vw,1400px);
+inset-block-start:-24vh;right:-17vw;
+}
+body.living-book.illuminated.open-book[data-room=home][data-art-layout=spacious] #main .inheritance-hero-layout {
+padding-block:clamp(40px,4.6vw,76px);
+box-shadow:0 0 40px 24px var(--paper);
+}
+body.living-book.illuminated.open-book[data-room=home][data-art-layout=spacious] #main .inheritance-hero-lede {
+max-inline-size:38ch;line-height:1.75;margin-block:28px 32px;
+}
+body.living-book.illuminated.open-book[data-room=home][data-art-layout=spacious] #main .inheritance-hero-actions {
+display:flex;flex-wrap:wrap;align-items:center;gap:20px 28px;
+}
+body.living-book.illuminated.open-book[data-room=home][data-art-layout=spacious] #main .inheritance-hero-art img {
+display:block;width:100%;height:auto;object-fit:contain;
+border-radius:14px;mask-image:none;-webkit-mask-image:none;
+}
+body.living-book.illuminated.open-book[data-room=home][data-art-layout=spacious] #main .inheritance-hero-art figcaption {
+align-items:center;gap:16px;line-height:1.65;padding-block-start:18px;
+}
+}
+@media screen and (min-width:1025px) {
+body.living-book.illuminated.open-book[data-room=home][data-art-layout=spacious] #main .inheritance-hero-layout {
+grid-template-columns:minmax(0,.76fr) minmax(0,1.24fr);
+column-gap:clamp(40px,4vw,72px);
+}
+}
+@media screen and (max-width:760px) {
+body.living-book.illuminated.open-book[data-room=home][data-art-layout=spacious] #main::before {
+width:660px;right:-270px;inset-block-start:-150px;
+}
+body.living-book.illuminated.open-book[data-room=home][data-art-layout=spacious] #main .inheritance-hero-layout {
+padding-block:32px 40px;row-gap:36px;
+}
+body.living-book.illuminated.open-book[data-room=home][data-art-layout=spacious] #main .inheritance-hero-lede {
+margin-block:24px 28px;
+}
+}
+@media screen and (prefers-reduced-motion:no-preference) {
+html[data-motion=gentle] body.living-book.illuminated.open-book[data-room=home][data-art-layout=spacious] #main::before {
+animation:mirath-margin-float 48s cubic-bezier(.45,0,.55,1) -12s infinite alternate;
+}
+}
+@keyframes mirath-margin-float {
+from {transform:translate3d(-9px,-12px,0)}
+to {transform:translate3d(9px,12px,0)}
+}
+html[data-background-paused][data-motion=gentle] body.living-book.illuminated.open-book[data-room=home][data-art-layout=spacious] #main::before {
+animation-play-state:paused;
+}
+@media screen {
+html:root body.open-book {
+position:relative;isolation:isolate;
+--calligraphy-width:clamp(360px,54vw,900px);
+--calligraphy-zoom:1;
+--calligraphy-strength:.38;
+--calligraphy-ink:var(--brand-pine);
+--inheritance-light-screen-x:85vw;
+--inheritance-light-screen-y:32vh;
+}
+html:root[data-theme=dark] body.open-book {--calligraphy-strength:.44;--calligraphy-ink:var(--text-secondary)}
+html:root body.open-book #main#main::before,
+html:root body.open-book #main#main::after {content:none;display:none;animation:none}
+html:root body.open-book #main#main {background-color:transparent}
+html:root body.open-book #main#main>section {background-color:transparent}
+html:root body.open-book>footer {background:transparent}
+html:root body.open-book>footer :is(.fcol,.footer-appearance,.footer-search,.fbot) {
+position:relative;background-color:var(--paper);box-shadow:0 0 18px 10px var(--paper);
+}
+html:root body.open-book::before,
+html:root body.open-book::after {
+content:"";display:block;position:fixed;inset-block-start:0;right:0;left:auto;
+width:var(--calligraphy-width);height:100vh;z-index:-1;pointer-events:none;
+--calligraphy-offset:calc(100vw - var(--calligraphy-width));--calligraphy-fade:90deg;
+opacity:var(--calligraphy-strength);transform:none;contain:paint;
+background-color:color-mix(in srgb,var(--calligraphy-ink) 55%,transparent);
+background-image:radial-gradient(ellipse clamp(140px,22vw,320px) 170px at calc(var(--inheritance-light-screen-x) - var(--calligraphy-offset)) var(--inheritance-light-screen-y),var(--gold),transparent 100%);
+-webkit-mask-image:url('/assets/img/architecture/inheritance-calligraphy.avif'),linear-gradient(var(--calligraphy-fade),transparent,rgb(0 0 0 / .12) 22%,rgb(0 0 0 / .65) 62%,#000);
+mask-image:url('/assets/img/architecture/inheritance-calligraphy.avif'),linear-gradient(var(--calligraphy-fade),transparent,rgb(0 0 0 / .12) 22%,rgb(0 0 0 / .65) 62%,#000);
+-webkit-mask-size:calc(100% * var(--calligraphy-zoom)) auto,100% 100%;mask-size:calc(100% * var(--calligraphy-zoom)) auto,100% 100%;
+-webkit-mask-position:right top,center;mask-position:right top,center;
+-webkit-mask-repeat:no-repeat;mask-repeat:no-repeat;
+-webkit-mask-composite:source-in;mask-composite:intersect;mask-mode:luminance,alpha;
+}
+html:root body.open-book::after {
+left:0;right:auto;--calligraphy-offset:0px;--calligraphy-fade:270deg;
+-webkit-mask-position:left bottom,center;mask-position:left bottom,center;
+opacity:calc(var(--calligraphy-strength) * .85);
+}
+html:root[dir=rtl] body.open-book::before {opacity:calc(var(--calligraphy-strength) * .85)}
+html:root[dir=rtl] body.open-book::after {opacity:var(--calligraphy-strength)}
+html:root body.open-book[data-atmosphere=reading] {--calligraphy-strength:.23}
+}
+@media screen and (max-width:760px) {
+html:root body.open-book {--calligraphy-width:70vw;--calligraphy-strength:.27}
+html:root[data-theme=dark] body.open-book {--calligraphy-strength:.31}
+html:root body.open-book::before,html:root body.open-book::after {
+background-image:radial-gradient(ellipse 120px 130px at calc(var(--inheritance-light-screen-x) - var(--calligraphy-offset)) var(--inheritance-light-screen-y),var(--gold),transparent 100%);
+}
+}
+@media (prefers-reduced-motion:reduce) {
+html:root body.open-book::before,html:root body.open-book::after {background-image:none;--calligraphy-zoom:1}
+}
+html:root[data-motion=calm] body.open-book::before,
+html:root[data-motion=calm] body.open-book::after {background-image:none;--calligraphy-zoom:1}
+@media print {
+html:root body.open-book::before,html:root body.open-book::after {display:none}
+}
+
+@media screen {
+body.living-book.illuminated.open-book #main {
+--verse-paper:#faf5e9;
+--verse-ink:#634d25;
+--verse-metal:#94723c;
+--verse-line:rgb(148 114 60 / .46);
+--verse-shadow:rgb(58 43 23 / .07);
+}
+html[data-theme=dark] body.living-book.illuminated.open-book #main {
+--verse-paper:#181813;
+--verse-ink:#eed8ad;
+--verse-metal:#c7a66a;
+--verse-line:rgb(199 166 106 / .43);
+--verse-shadow:rgb(0 0 0 / .18);
+}
+body.living-book.illuminated.open-book #main :is(
+.inheritance-supplication-arabic,.quran-companion-arabic,
+.reader-source[data-source-id^="quran-"] .reader-arabic,
+.inheritance-source:has(a[href^="https://quran.com/"]) .inheritance-arabic,
+.source-encounter:has(a[href^="https://quran.com/"]) .source-arabic
+) {
+position:relative;isolation:isolate;display:block;box-sizing:border-box;
+inline-size:100%;max-inline-size:100%;min-inline-size:0;
+margin-block:28px 32px;margin-inline:0;
+padding:96px clamp(24px,3vw,48px) 80px;
+background:var(--verse-paper);color:var(--verse-ink);
+border:1px solid var(--verse-metal);
+border-radius:28px;
+box-shadow:inset 0 0 0 7px var(--verse-paper),
+inset 0 0 0 8px var(--verse-line),0 12px 36px var(--verse-shadow);
+text-align:center;letter-spacing:0;word-spacing:normal;
+overflow:visible;text-shadow:none;
+animation:none;transform:none;translate:none;filter:none;
+}
+body.living-book.illuminated.open-book #main :is(
+.inheritance-supplication-arabic,.quran-companion-arabic,
+.reader-source[data-source-id^="quran-"] .reader-arabic,
+.inheritance-source:has(a[href^="https://quran.com/"]) .inheritance-arabic,
+.source-encounter:has(a[href^="https://quran.com/"]) .source-arabic
+)::before,
+body.living-book.illuminated.open-book #main :is(
+.inheritance-supplication-arabic,.quran-companion-arabic,
+.reader-source[data-source-id^="quran-"] .reader-arabic,
+.inheritance-source:has(a[href^="https://quran.com/"]) .inheritance-arabic,
+.source-encounter:has(a[href^="https://quran.com/"]) .source-arabic
+)::after {
+content:"";position:absolute;pointer-events:none;
+left:50%;translate:-50% 0;width:144px;height:53px;
+background:var(--verse-metal);opacity:.9;
+-webkit-mask:url('/assets/img/architecture/verse-palmette.svg') center/contain no-repeat;
+mask:url('/assets/img/architecture/verse-palmette.svg') center/contain no-repeat;
+}
+body.living-book.illuminated.open-book #main :is(
+.inheritance-supplication-arabic,.quran-companion-arabic,
+.reader-source[data-source-id^="quran-"] .reader-arabic,
+.inheritance-source:has(a[href^="https://quran.com/"]) .inheritance-arabic,
+.source-encounter:has(a[href^="https://quran.com/"]) .source-arabic
+)::before {top:20px}
+body.living-book.illuminated.open-book #main :is(
+.inheritance-supplication-arabic,.quran-companion-arabic,
+.reader-source[data-source-id^="quran-"] .reader-arabic,
+.inheritance-source:has(a[href^="https://quran.com/"]) .inheritance-arabic,
+.source-encounter:has(a[href^="https://quran.com/"]) .source-arabic
+)::after {bottom:18px;width:104px;height:38px;rotate:180deg;opacity:.65}
+body.living-book.illuminated.open-book #main .inheritance-supplication>.wrap {
+max-inline-size:1040px;
+}
+body.living-book.illuminated.open-book #main .inheritance-supplication-arabic {
+padding-block:112px 96px;border-radius:80px 80px 28px 28px;
+}
+body.living-book.illuminated.open-book #main .quran-companion-page {
+border:0;padding-inline:0;background:var(--paper);
+}
+body.living-book.illuminated.open-book #main .quran-companion>header::after {display:none}
+body.living-book.illuminated.open-book #main .reader-source[data-source-id^="quran-"] {
+padding-inline:0;border:0;background:var(--paper);box-shadow:none;
+}
+}
+@media screen and (max-width:600px) {
+body.living-book.illuminated.open-book #main :is(
+.inheritance-supplication-arabic,.quran-companion-arabic,
+.reader-source[data-source-id^="quran-"] .reader-arabic,
+.inheritance-source:has(a[href^="https://quran.com/"]) .inheritance-arabic,
+.source-encounter:has(a[href^="https://quran.com/"]) .source-arabic
+) {padding:80px 22px 68px;border-radius:22px;margin-block:24px}
+body.living-book.illuminated.open-book #main .inheritance-supplication-arabic {
+border-radius:48px 48px 22px 22px;
+}
+body.living-book.illuminated.open-book #main :is(
+.inheritance-supplication-arabic,.quran-companion-arabic,
+.reader-source[data-source-id^="quran-"] .reader-arabic,
+.inheritance-source:has(a[href^="https://quran.com/"]) .inheritance-arabic,
+.source-encounter:has(a[href^="https://quran.com/"]) .source-arabic
+)::before {width:120px;height:44px;top:17px}
+}
+html[data-type-system] body.open-book #main [data-translation-replaced][hidden]{display:none!important}
+html[data-type-system] body.open-book #main .quran-translation{max-inline-size:60ch;margin:24px auto 28px;text-align:start;direction:ltr;color:var(--ink);animation:none!important;transform:none!important}
+html[data-type-system] body.open-book #main .quran-translation-text{font-family:'Newsreader','EB Garamond',Georgia,serif!important;font-size:clamp(1.2rem,1.1rem + .35vw,1.45rem)!important;font-weight:400!important;line-height:1.75!important;letter-spacing:0!important;margin:12px 0 16px;text-align:start;direction:ltr}
+html[data-type-system] body.open-book #main :is(.quran-translation-label,.quran-translation-credit){font-family:'Source Sans 3',system-ui,sans-serif!important;font-size:.875rem!important;line-height:1.65!important;letter-spacing:0!important;font-weight:400!important;direction:ltr;text-transform:none!important;margin:0;color:var(--ink-soft)}
+html[data-type-system] body.open-book #main .quran-translation-label{color:var(--gold)}
+html[data-type-system] body.open-book #main .quran-translation-credit a{color:inherit;text-decoration:underline;text-underline-offset:4px}
+html[data-type-system] body.open-book #main .quran-translation-toggle{max-inline-size:64ch;margin:20px auto;padding:0 20px;border:1px solid var(--line);border-radius:12px;background:var(--paper)}
+html[data-type-system] body.open-book #main .quran-translation-toggle>summary{font-family:'Noto Naskh Arabic',serif!important;font-size:1.125rem!important;line-height:1.8!important;cursor:pointer;padding:14px 0;color:var(--ink)}
+html[data-type-system] body.open-book #main .quran-translation-toggle>summary span{font-family:'Newsreader','EB Garamond',serif!important;font-size:1rem;margin-inline-start:12px;color:var(--ink-soft);display:inline-block}
+html[data-type-system] body.open-book #main .quran-translation-toggle>summary:focus-visible{outline:2px solid var(--gold);outline-offset:5px;border-radius:4px}
+html[data-type-system] body.open-book #main .quran-translation-toggle .quran-translation{margin-top:4px}
