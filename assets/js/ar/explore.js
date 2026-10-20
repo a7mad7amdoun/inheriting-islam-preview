@@ -47,7 +47,7 @@
     ['enroll', 'تسجيل', 'enroll enrol registration تسجيل'],
     ['hamza', 'حمزة', 'hamza حمزة'],
     ['khadijah', 'خديجة', 'khadijah khadija خديجة'],
-    ['mosque', 'مسجد', 'mosque masjid masajid mosque mosques مسجد مساجد'],
+    ['mosque', 'مسجد', 'mosque masjid masajid mosques مسجد مساجد'],
     ['schedule', 'مواعيد', 'schedule times timetable مواعيد جدول توقيت'],
     ['free', 'مجاني', 'free مجاني مجانا'],
     ['revision', 'مراجعة', 'revision revise مراجعة'],
@@ -55,12 +55,12 @@
     ['death', 'وفاة', 'death loss bereavement وفاة موت فقد'],
     ['funeral', 'جنازة', 'funeral janazah جنازة جنائز'],
     ['podcast', 'بودكاست', 'podcast podcasts بودكاست'],
-    ['adhan', 'أذان', 'adhan adhan اذان أذان'],
+    ['adhan', 'أذان', 'adhan اذان أذان'],
     ['names', 'أسماء', 'names name أسماء اسم'],
     ['print', 'طباعة', 'print printable طباعة'],
     ['download', 'تحميل', 'download تحميل تنزيل'],
     ['itqan', 'إتقان', 'itqan إتقان'],
-    ['jadhr', 'جذر', 'jadhr jadhr جذر'],
+    ['jadhr', 'جذر', 'jadhr جذر'],
     ['sakinah', 'سكينة', 'sakinah sakina سكينة']
   ];
   var equivalents = new Map(), vocabulary = [];
