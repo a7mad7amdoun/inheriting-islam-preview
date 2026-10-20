@@ -88,6 +88,45 @@
   function resultsFor(words, scope) {
     return entries.filter(function (entry, index) { return (scope === 'all' || entry.dataset.category === scope) && matches(words, index); });
   }
+  var resultList = document.getElementById('explore-results');
+  var ranking = new Map(entries.map(function (entry, index) {
+    return [entry, {
+      titles:[queryWords(entry.querySelector('h3').textContent), queryWords(entry.dataset.rankTitle || '')],
+      focus:queryWords(entry.dataset.rankFocus || ''),
+      keywords:queryWords(entry.dataset.rankKeywords || ''),
+      priority:Number(entry.dataset.priority) || 1000,
+      index:index
+    }];
+  }));
+  function canonical(word) { return (equivalents.get(word) || [word])[0]; }
+  function strength(word, terms) {
+    var alternatives = equivalents.get(word) || [word];
+    if (alternatives.some(function (v) { return terms.includes(v); })) return 2;
+    return alternatives.some(function (v) { return v.length >= 3 && terms.some(function (t) { return t.startsWith(v); }); }) ? 1 : 0;
+  }
+  function broadQuery(words) {
+    return words.every(function (word) { return ['quran','book','lesson','app','free'].includes(canonical(word)); });
+  }
+  function relevance(entry, words) {
+    if (!words.length) return 0;
+    var meta = ranking.get(entry), concepts = words.map(canonical);
+    if (broadQuery(words)) {
+      var categoryFor = {book:'books', lesson:'learn', app:'apps'};
+      return concepts.some(function (word) { return categoryFor[word] === entry.dataset.category; }) ? 100 : 0;
+    }
+    var phrase = concepts.join(' ');
+    var exactTitle = meta.titles.some(function (title) { return title.map(canonical).join(' ') === phrase; });
+    return (exactTitle ? 10000 : 0) + words.reduce(function (score, word) {
+      return score + 80*strength(word, meta.focus)
+        + 30*Math.max.apply(null, meta.titles.map(function (title) { return strength(word,title); }))
+        + 8*strength(word,meta.keywords);
+    }, 0);
+  }
+  function rankResults(found, words) {
+    return found.slice().sort(function (a,b) {
+      return relevance(b,words)-relevance(a,words) || ranking.get(a).priority-ranking.get(b).priority || ranking.get(a).index-ranking.get(b).index;
+    });
+  }
   // Bounded Damerau-Levenshtein handles swapped, missing, or mistyped letters.
   function distance(a, b) {
     var rows = Array.from({length:a.length + 1}, function (_, i) { return [i]; });
@@ -117,9 +156,16 @@
   }
   function update() {
     var words = queryWords(input.value);
-    var found = resultsFor(words, category.value), total = found.length;
+    var found = rankResults(resultsFor(words, category.value), words), total = found.length;
     entries.forEach(function (entry) { entry.hidden = !found.includes(entry); });
+    // Move the original cards, rather than clone or visually reorder them.
+    // Reading order, keyboard order, and the visible order stay identical.
+    var ordered = found.concat(entries.filter(function (entry) { return entry.hidden; }));
+    if (ordered.some(function (entry,index) { return resultList.children[index] !== entry; })) resultList.append.apply(resultList,ordered);
     count.textContent = total + (total === 1 ? ' resource' : ' resources') + (words.length || category.value !== 'all' ? ' found' : '');
+    if (total > 1) count.textContent += words.length && !broadQuery(words)
+      ? (arabic ? ' · الأقرب لبحثك أولًا' : ' · Closest matches first')
+      : (arabic ? ' · بدايات مقترحة أولًا' : ' · Starting points first');
     empty.hidden = total !== 0;
     if (editorialNote) editorialNote.hidden = !entries.some(function (entry) { return !entry.hidden && entry.dataset.category === 'read'; });
     var corrections = total ? [] : suggestions(words);
