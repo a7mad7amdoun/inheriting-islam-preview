@@ -55,6 +55,12 @@
       if (guided && link.getAttribute('href') === '#' + ids[current]) link.setAttribute('aria-current', 'location');
       else link.removeAttribute('aria-current');
     });
+    document.querySelectorAll('[data-related-reading]').forEach(function (link) {
+      var destination = new URL(link.href);
+      if (guided) destination.searchParams.set('mode', 'guided');
+      else destination.searchParams.delete('mode');
+      link.href = destination.href;
+    });
     toggle.setAttribute('aria-pressed', String(guided));
     toggle.textContent = guided ? "قراءة الفصل كاملًا" : "القراءة خطوةً خطوة";
     previous.disabled = current === 0;
@@ -69,6 +75,18 @@
       if (heading.scrollIntoView) heading.scrollIntoView({block: 'start', behavior: 'auto'});
     }
   }
+  var begin = document.querySelector('[data-reading-begin]');
+  if (begin) begin.addEventListener('click', function (event) {
+    event.preventDefault();
+    show(0, true);
+  });
+  finish.addEventListener('click', function (event) {
+    var heading = document.getElementById('related-title');
+    if (!heading) return;
+    event.preventDefault();
+    heading.focus({preventScroll: true});
+    heading.scrollIntoView({block: 'start', behavior: 'auto'});
+  });
   toggle.addEventListener('click', function () {
     guided = !guided;
     if (guided) show(fromHash(), true);
