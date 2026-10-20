@@ -631,7 +631,9 @@ font-size:.9375rem;line-height:1.8;color:var(--ink-soft);max-inline-size:62ch;
 }
 html:root[data-type-system] body.open-book #main#main .form .formnote {margin:0}
 html:root[data-type-system] body.open-book #main#main .form .formnote.ok {color:var(--ink)}
-html:root[data-type-system] body.open-book #main#main .checkgrid {gap:12px}
+html:root[data-type-system] body.open-book #main#main .form .checkgrid {
+display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;
+}
 html:root[data-type-system] body.open-book #main#main .form .checkrow {
 display:flex;align-items:flex-start;gap:12px;padding:16px;border:1px solid var(--control-line);
 border-radius:14px;background:var(--paper);min-block-size:54px;
@@ -694,6 +696,7 @@ line-height:1.95;
 @media screen and (max-width:760px) {
 html:root[data-type-system] body.open-book #main#main .form {gap:24px}
 html:root[data-type-system] body.open-book #main#main .form-row {grid-template-columns:minmax(0,1fr);gap:24px}
+html:root[data-type-system] body.open-book #main#main .form .checkgrid {grid-template-columns:minmax(0,1fr)}
 html:root[data-type-system] body.open-book #main#main .form .email-preview {padding:24px 18px}
 html:root[data-type-system] body.open-book #main#main .email-preview .btns {display:grid;grid-template-columns:minmax(0,1fr);gap:12px}
 html:root[data-type-system] body.open-book #main#main .form :is(input,select,textarea) {scroll-margin-block:120px 28px}
