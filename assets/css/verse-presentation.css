@@ -16,6 +16,7 @@ html[data-theme=dark] body.living-book.illuminated.open-book #main {
 body.living-book.illuminated.open-book #main :is(
 .inheritance-supplication-arabic,.quran-companion-arabic,
 .reader-source[data-source-id^="quran-"] .reader-arabic,
+.inheritance-source:has(a[href^="https://quran.com/"]) .inheritance-arabic,
 .source-encounter:has(a[href^="https://quran.com/"]) .source-arabic
 ) {
 position:relative;isolation:isolate;display:block;box-sizing:border-box;
@@ -34,11 +35,13 @@ animation:none;transform:none;translate:none;filter:none;
 body.living-book.illuminated.open-book #main :is(
 .inheritance-supplication-arabic,.quran-companion-arabic,
 .reader-source[data-source-id^="quran-"] .reader-arabic,
+.inheritance-source:has(a[href^="https://quran.com/"]) .inheritance-arabic,
 .source-encounter:has(a[href^="https://quran.com/"]) .source-arabic
 )::before,
 body.living-book.illuminated.open-book #main :is(
 .inheritance-supplication-arabic,.quran-companion-arabic,
 .reader-source[data-source-id^="quran-"] .reader-arabic,
+.inheritance-source:has(a[href^="https://quran.com/"]) .inheritance-arabic,
 .source-encounter:has(a[href^="https://quran.com/"]) .source-arabic
 )::after {
 content:"";position:absolute;pointer-events:none;
@@ -50,11 +53,13 @@ mask:url('/assets/img/architecture/verse-palmette.svg') center/contain no-repeat
 body.living-book.illuminated.open-book #main :is(
 .inheritance-supplication-arabic,.quran-companion-arabic,
 .reader-source[data-source-id^="quran-"] .reader-arabic,
+.inheritance-source:has(a[href^="https://quran.com/"]) .inheritance-arabic,
 .source-encounter:has(a[href^="https://quran.com/"]) .source-arabic
 )::before {top:20px}
 body.living-book.illuminated.open-book #main :is(
 .inheritance-supplication-arabic,.quran-companion-arabic,
 .reader-source[data-source-id^="quran-"] .reader-arabic,
+.inheritance-source:has(a[href^="https://quran.com/"]) .inheritance-arabic,
 .source-encounter:has(a[href^="https://quran.com/"]) .source-arabic
 )::after {bottom:18px;width:104px;height:38px;rotate:180deg;opacity:.65}
 body.living-book.illuminated.open-book #main .inheritance-supplication>.wrap {
@@ -75,6 +80,7 @@ padding-inline:0;border:0;background:var(--paper);box-shadow:none;
 body.living-book.illuminated.open-book #main :is(
 .inheritance-supplication-arabic,.quran-companion-arabic,
 .reader-source[data-source-id^="quran-"] .reader-arabic,
+.inheritance-source:has(a[href^="https://quran.com/"]) .inheritance-arabic,
 .source-encounter:has(a[href^="https://quran.com/"]) .source-arabic
 ) {padding:80px 22px 68px;border-radius:22px;margin-block:24px}
 body.living-book.illuminated.open-book #main .inheritance-supplication-arabic {
@@ -83,6 +89,7 @@ border-radius:48px 48px 22px 22px;
 body.living-book.illuminated.open-book #main :is(
 .inheritance-supplication-arabic,.quran-companion-arabic,
 .reader-source[data-source-id^="quran-"] .reader-arabic,
+.inheritance-source:has(a[href^="https://quran.com/"]) .inheritance-arabic,
 .source-encounter:has(a[href^="https://quran.com/"]) .source-arabic
 )::before {width:120px;height:44px;top:17px}
 }
