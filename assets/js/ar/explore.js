@@ -11,6 +11,8 @@
   var empty = document.querySelector('[data-explore-empty]');
   var editorialNote = document.querySelector('.explore-editorial-note');
   var shortcuts = Array.from(document.querySelectorAll('[data-explore-category]'));
+  var pathGuidance = document.querySelector('[data-path-guidance]');
+  var pathCopy = Array.from(document.querySelectorAll('[data-path-copy]'));
   var arabic = document.documentElement.lang === 'ar';
   var correctionBox = document.querySelector('[data-search-corrections]');
   var correctionList = document.querySelector('[data-search-correction-list]');
@@ -168,6 +170,8 @@
       ? (arabic ? ' · الأقرب لبحثك أولًا' : ' · Closest matches first')
       : (arabic ? ' · بدايات مقترحة أولًا' : ' · Starting points first');
     empty.hidden = total !== 0;
+    pathCopy.forEach(function (copy) { copy.hidden = words.length > 0 || copy.dataset.pathCopy !== category.value; });
+    if (pathGuidance) pathGuidance.hidden = !pathCopy.some(function (copy) { return !copy.hidden; });
     if (editorialNote) editorialNote.hidden = !entries.some(function (entry) { return !entry.hidden && entry.dataset.category === 'read'; });
     var corrections = total ? [] : suggestions(words);
     correctionList.replaceChildren();
