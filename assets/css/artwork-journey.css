@@ -84,8 +84,8 @@ body.living-book.illuminated.open-book[data-art-layout=spacious] :is(.inheritanc
 content:"";position:absolute;inset-block-start:-40px;inset-inline-end:0;
 width:min(58%,760px);height:calc(100% + 60px);z-index:-1;pointer-events:none;
 background:var(--gold);opacity:var(--architecture-opacity);
--webkit-mask:url('/assets/img/architecture/inheritance-arch.svg') center top/contain no-repeat;
-mask:url('/assets/img/architecture/inheritance-arch.svg') center top/contain no-repeat;
+-webkit-mask:url('/assets/img/architecture/inheritance-calligraphy.avif') center top/contain no-repeat;
+mask:url('/assets/img/architecture/inheritance-calligraphy.avif') center top/contain no-repeat;
 translate:0 var(--architecture-drift,0px);
 }
 body.living-book.illuminated.open-book[data-art-layout=spacious][data-atmosphere=listening] :is(.inheritance-hero-layout,.about-cover-grid,.about-partner-grid,.desk-spread,.workshop-opening>.hero-grid,.listening-opening>.hero-grid,.chapter-opening-grid,.reader-opening,.explore-opening,.invitation-opening>.wrap)::before {inset-inline-end:8%;width:68%;opacity:.13}

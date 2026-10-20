@@ -63,10 +63,10 @@ height:var(--journey-space);padding:0 12px calc(6px + env(safe-area-inset-bottom
 z-index:70;isolation:isolate;background:var(--paper);border-block-start:1px solid var(--verse-line);
 }
 html[data-type-system] body.open-book .journey-tray::before {
-content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;opacity:.15;
+content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;opacity:.09;mask-mode:luminance;
 background:linear-gradient(115deg,var(--gold),var(--ink-soft),var(--gold));
-mask:url('/assets/img/architecture/manuscript-flourish.svg') center / 460px 124px repeat-x;
--webkit-mask:url('/assets/img/architecture/manuscript-flourish.svg') center / 460px 124px repeat-x;
+mask:url('/assets/img/architecture/inheritance-calligraphy.avif') center / 380px auto no-repeat;
+-webkit-mask:url('/assets/img/architecture/inheritance-calligraphy.avif') center / 380px auto no-repeat;
 }
 html[data-type-system] body.open-book .journey-toggle {
 display:flex;align-items:center;justify-content:center;gap:7px;flex:none;height:44px;
@@ -241,6 +241,86 @@ transition:block-size .3s cubic-bezier(.22,1,.36,1),opacity .22s ease,content-vi
 transition-behavior:allow-discrete;
 }
 html[data-type-system][data-motion=gentle] body.open-book #mobileNav .mobile-learning[open]::details-content {block-size:auto;opacity:1}
+}
+}
+@media screen and (max-width:760px) {
+html:root[data-type-system] body.open-book #main#main [data-mobile-opening] {
+display:grid;grid-template-columns:minmax(0,1fr);grid-auto-flow:row;
+gap:18px;align-items:start;
+inline-size:calc(100% - 40px);max-inline-size:600px;
+margin-inline:auto;padding:24px 0 48px;
+background:var(--paper);box-shadow:0 0 20px 12px var(--paper);
+}
+html:root[data-type-system] body.open-book #main#main [data-mobile-opening]>:is(
+.inheritance-hero-copy,.about-cover-copy,.desk-introduction,
+.workshop-intro,.listening-title,.chapter-intro
+),
+html:root[data-type-system] body.open-book #main#main .reader-opening[data-mobile-opening]>div:first-child {
+display:contents;
+}
+html:root[data-type-system] body.open-book #main#main [data-mobile-opening]>aside:has(>.house-art,>.reader-collection-art) {
+display:contents;
+}
+html:root[data-type-system] body.open-book #main#main [data-mobile-opening]>*,
+html:root[data-type-system] body.open-book #main#main [data-mobile-opening]>:is(
+.inheritance-hero-copy,.about-cover-copy,.desk-introduction,.workshop-intro,
+.listening-title,.chapter-intro
+)>*,
+html:root[data-type-system] body.open-book #main#main .reader-opening[data-mobile-opening]>div:first-child>* {
+grid-column:1;grid-row:auto;order:4;min-inline-size:0;max-inline-size:100%;
+}
+html:root[data-type-system] body.open-book #main#main [data-mobile-opening] h1 {
+order:2;margin:0;padding:0;max-inline-size:100%;
+text-wrap:balance;transform:none;translate:none;filter:none;
+}
+html:root[data-type-system] body.open-book #main#main [data-mobile-opening]>:is(
+.inheritance-hero-copy,.about-cover-copy,.desk-introduction,.workshop-intro,
+.listening-title,.chapter-intro
+)>.eyebrow,
+html:root[data-type-system] body.open-book #main#main .reader-opening[data-mobile-opening]>div:first-child>.eyebrow {
+order:1;margin:0;line-height:1.6;
+}
+html:root[data-type-system] body.open-book #main#main [data-mobile-opening] :is(
+.inheritance-hero-art,.about-portrait,.desk-art,.apps-cover-art,
+.listening-scene,.teacher-opening-portrait,.house-art,.reader-collection-art
+),
+html:root[data-type-system] body.open-book #main#main [data-mobile-opening]>.library-cover {
+order:3;grid-column:1;grid-row:auto;inline-size:100%;max-inline-size:100%;
+margin:8px 0 4px;padding:0;justify-self:stretch;align-self:start;
+background:transparent;box-shadow:none;
+}
+html:root[data-type-system] body.open-book #main#main [data-mobile-opening] :is(
+.inheritance-hero-art,.desk-art,.apps-cover-art,.listening-scene,.house-art,.reader-collection-art
+) img {
+display:block;inline-size:100%;block-size:auto;max-block-size:none;
+aspect-ratio:auto;object-fit:contain;border-radius:12px;
+mask-image:none;-webkit-mask-image:none;transform:none;translate:none;filter:none;opacity:1;
+}
+html:root[data-type-system] body.open-book #main#main [data-mobile-opening] .listening-scene .frame {
+aspect-ratio:auto;overflow:visible;border:0;background:transparent;
+}
+html:root[data-type-system] body.open-book #main#main [data-mobile-opening] :is(.about-portrait,.teacher-opening-portrait) img {
+inline-size:100%;block-size:auto;max-block-size:420px;object-fit:contain;
+transform:none;translate:none;
+}
+html:root[data-type-system] body.open-book #main#main [data-mobile-opening] figcaption {
+display:flex;flex-wrap:wrap;align-items:baseline;gap:6px 12px;
+margin:0;padding:12px 2px 0;line-height:1.65;max-inline-size:100%;
+}
+html:root[data-type-system] body.open-book #main#main [data-mobile-opening] :is(.lede,.inheritance-hero-lede) {
+margin:0;max-inline-size:100%;line-height:1.85;
+}
+html:root[data-type-system] body.open-book #main#main [data-mobile-opening] :is(.btns,.inheritance-hero-actions) {
+margin:4px 0 0;gap:12px 20px;align-items:center;
+}
+html:root[data-type-system] body.open-book #main#main [data-mobile-opening] :is(.hero-note,.desk-introduction-note,.about-cover-role) {
+margin:0;line-height:1.75;
+}
+html:root[data-type-system] body.open-book #main#main [data-mobile-opening]>aside:has(>.house-art,>.reader-collection-art)>:not(figure) {
+order:6;grid-column:1;grid-row:auto;max-inline-size:100%;
+}
+html:root[data-type-system][lang=ar] body.open-book #main#main [data-mobile-opening] h1 {
+line-height:1.65;letter-spacing:normal;word-spacing:normal;
 }
 }
 @media (prefers-reduced-motion:reduce) {

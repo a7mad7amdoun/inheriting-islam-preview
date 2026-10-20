@@ -47,13 +47,7 @@ radial-gradient(ellipse at 18% 38%,var(--inheritance-cool),transparent 58%);
 opacity:var(--inheritance-light-opacity);
 }
 body.open-book[data-atmosphere=reading] #main::after {opacity:.35}
-body.open-book #main .quran-companion>header::after {
-content:"";display:block;width:clamp(112px,12vw,168px);aspect-ratio:240/64;
-margin-block-start:24px;background-color:var(--gold);
--webkit-mask:url('/assets/img/architecture/manuscript-flourish.svg') center/contain no-repeat;
-mask:url('/assets/img/architecture/manuscript-flourish.svg') center/contain no-repeat;
-opacity:.7;pointer-events:none;
-}
+body.open-book #main .quran-companion>header::after {content:none;display:none}
 body.open-book #main .quran-companion-page {border-top:3px double var(--gold-line)}
 body.open-book #main>:is(.band,.band-alt,.chapter-opening,.inheritance-hero,.about-letter,.about-partner,.reader-opening,.explore-opening,.open-cover,.source-encounter,.open-beginnings,.open-listening) {
 background:transparent;border-block-color:transparent;
