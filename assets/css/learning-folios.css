@@ -1,0 +1,144 @@
+@media screen {
+html[data-type-system] body.open-book #main#main {
+--study-width:1120px; --study-gap:clamp(28px,4vw,52px);
+--study-padding:clamp(24px,3.5vw,44px);
+}
+html[data-type-system] body.open-book #main#main>.band:not(.chapter-opening):not(.quran-teacher)>.wrap {
+inline-size:calc(100% - 2 * var(--gutter)); max-inline-size:var(--study-width);
+padding-inline:0; margin-inline:auto; min-inline-size:0;
+}
+html[data-type-system] body.open-book #main#main>.band:not(.chapter-opening):not(.quran-teacher)>.wrap-narrow {max-inline-size:860px}
+html[data-type-system] body.open-book #main#main>.band:not(.chapter-opening) {padding-block:clamp(44px,5.5vw,80px)}
+html[data-type-system] body.open-book #main#main .shead {margin-block-end:32px;gap:28px}
+html[data-type-system] body.open-book #main#main .shead h2 {
+font-size:clamp(2rem,3.2vw,3.1rem);line-height:1.23;max-inline-size:27ch;text-wrap:balance;
+}
+html[data-type-system] body.open-book #main#main .shead>p:not(.eyebrow) {max-inline-size:56ch;line-height:1.85}
+html[data-type-system] body.open-book #main#main :is(.cols,.cols-2,.contact-grid) {gap:var(--study-gap);min-inline-size:0}
+html[data-type-system] body.open-book #main#main :is(.col,.cols-2>div,.contact-grid>div) {min-inline-size:0}
+html[data-type-system] body.open-book #main#main :is(.col,.cols-2>div,.founder .body)>p {line-height:1.9;max-inline-size:62ch}
+html[data-type-system] body.open-book #main#main :is(.note,.pending,.faq,.form,.sched) {
+border:1px solid var(--verse-line);border-radius:22px;background:var(--paper);
+padding:clamp(22px,3vw,32px);min-inline-size:0;
+}
+html[data-type-system] body.open-book #main#main :is(.note,.pending) p {line-height:1.85}
+html[data-type-system] body.open-book #main#main .faq details {padding-block:12px}
+html[data-type-system] body.open-book #main#main .faq summary {min-block-size:48px;line-height:1.65;padding-block:12px}
+html[data-type-system] body.open-book #main#main .faq .a {max-inline-size:68ch;line-height:1.9}
+html[data-type-system] body.open-book #main#main .form :is(input,select,textarea) {border-radius:12px;min-inline-size:0;font-size:1rem;line-height:1.6}
+html[data-type-system] body.open-book #main#main .srow {padding-block:24px;gap:24px}
+html[data-type-system] body.open-book #main#main .srow:first-child {border-block-start:0}
+html[data-type-system] body.open-book #main#main .huruf.pick {
+border:1px solid var(--verse-line);border-radius:24px;padding:16px;gap:8px;background:var(--paper);
+}
+html[data-type-system] body.open-book #main#main .huruf.pick button {
+border-radius:12px;min-block-size:68px;line-height:1.9;transition:background-color .25s,border-color .25s;
+}
+html[data-type-system] body.open-book #main#main .letterpane {
+border:1px solid var(--verse-line);border-radius:24px;padding:var(--study-padding);
+background:var(--paper);box-shadow:0 12px 32px var(--verse-shadow);gap:24px;
+}
+html[data-type-system] body.open-book #main#main .letterpane p {line-height:1.85}
+html[data-type-system] body.open-book #main#main :is(.shapes,.makhraj) {
+border:1px solid var(--verse-line);border-radius:22px;background:var(--paper);padding:20px;
+}
+html[data-type-system] body.open-book #main#main .mrow2 {padding-block:24px;gap:24px}
+html[data-type-system] body.open-book #main#main .check .step,
+html[data-type-system] body.open-book #main#main .result {
+border:1px solid var(--verse-line);border-radius:26px;background:var(--paper);
+padding:var(--study-padding);box-shadow:0 12px 32px var(--verse-shadow);
+}
+html[data-type-system] body.open-book #main#main .check .step h2 {font-size:clamp(1.8rem,2.8vw,2.5rem);line-height:1.3;max-inline-size:30ch}
+html[data-type-system] body.open-book #main#main .specimen {border-radius:16px;line-height:2.2}
+html[data-type-system] body.open-book #main#main .choices {gap:12px 16px}
+html[data-type-system] body.open-book #main#main .library-catalog {
+display:grid;grid-template-columns:minmax(0,1fr);gap:28px;
+}
+html[data-type-system] body.open-book #main#main .library-catalog .book {
+display:grid;grid-template-columns:minmax(160px,.55fr) minmax(0,1.45fr);
+padding:var(--study-padding);gap:var(--study-gap);align-items:center;
+border:1px solid var(--verse-line);border-radius:26px;background:var(--paper);
+box-shadow:0 12px 32px var(--verse-shadow);
+}
+html[data-type-system] body.open-book #main#main .library-catalog .shot {
+inline-size:100%;max-inline-size:230px;justify-self:center;padding:12px;border-radius:12px;
+}
+html[data-type-system] body.open-book #main#main .library-catalog h3 {font-size:clamp(1.9rem,2.8vw,2.6rem);line-height:1.25;margin-block:16px}
+html[data-type-system] body.open-book #main#main .library-catalog p {max-inline-size:62ch;line-height:1.9}
+html[data-type-system] body.open-book #main#main :is(.steps,.timeline) {
+background:var(--paper);border-radius:24px;padding:var(--study-padding);border:1px solid var(--verse-line);
+}
+html[data-type-system] body.open-book #main#main :is(.steps,.timeline) h3 {line-height:1.35}
+html[data-type-system] body.open-book #main#main :is(.steps,.timeline) p {line-height:1.85;max-inline-size:62ch}
+html[data-type-system] body.open-book #main#main #teacher-record .founder {gap:var(--study-gap)}
+html[data-type-system] body.open-book #main#main :is(.reading-entries,.reading-collection-filter,.reader-collection-close,.reader-saved,.reading-session,.reader-layout,.reader-related) {
+inline-size:calc(100% - 2 * var(--gutter));max-inline-size:var(--study-width);margin-inline:auto;min-inline-size:0;
+}
+html[data-type-system] body.open-book #main#main .reading-collection-filter {padding:24px 0;gap:24px;margin-block:12px 24px}
+html[data-type-system] body.open-book #main#main .reading-filter-buttons button {border-radius:24px;min-block-size:46px}
+html[data-type-system] body.open-book #main#main .reading-entries {gap:28px;padding-inline:0}
+html[data-type-system] body.open-book #main#main .reading-entry {
+padding:32px;border:1px solid var(--verse-line);border-radius:26px;background:var(--paper);
+gap:18px;box-shadow:0 10px 30px var(--verse-shadow);
+}
+html[data-type-system] body.open-book #main#main .reading-entry h2 {font-size:clamp(1.9rem,2.8vw,2.7rem);line-height:1.25;margin-block:12px 20px}
+html[data-type-system] body.open-book #main#main .reading-entry p {line-height:1.85}
+html[data-type-system] body.open-book #main#main .reading-entry-actions {border-block-start:1px solid var(--verse-line);padding-block-start:20px}
+html[data-type-system] body.open-book #main#main .reader-collection-close {gap:var(--study-gap);padding-inline:0}
+html[data-type-system] body.open-book #main#main .reader-collection-close h2 {font-size:clamp(2rem,3.2vw,3.1rem);line-height:1.25}
+html[data-type-system] body.open-book #main#main .reading-session {
+padding:24px 32px;border:1px solid var(--verse-line);border-radius:24px;background:var(--paper);margin-block-end:28px;
+}
+html[data-type-system] body.open-book #main#main .reading-session-heading {padding:0;border:0}
+html[data-type-system] body.open-book #main#main .reading-session-steps button {border-radius:16px}
+html[data-type-system] body.open-book #main#main .reader-layout {
+padding-inline:0;border:0;grid-template-columns:210px minmax(0,1fr);gap:36px;
+}
+html[data-type-system] body.open-book #main#main .reader-margin {
+background:var(--paper);border-radius:20px;padding:24px 20px;border:1px solid var(--verse-line);
+}
+html[data-type-system] body.open-book #main#main .reader-prose {
+border:1px solid var(--verse-line);border-radius:28px;padding:8px var(--study-padding) 24px;
+background:var(--paper);box-shadow:0 12px 36px var(--verse-shadow);max-inline-size:none;
+}
+html[data-type-system] body.open-book #main#main .reader-section {padding-block:36px}
+html[data-type-system] body.open-book #main#main .reader-section h2 {font-size:clamp(2rem,3vw,2.8rem);line-height:1.25}
+html[data-type-system] body.open-book #main#main .reader-section h3 {line-height:1.3}
+html[data-type-system] body.open-book #main#main .reader-prose p {line-height:1.9}
+html[data-type-system] body.open-book #main#main .reader-prose .reader-arabic {line-height:2.2;animation:none;transform:none}
+html[data-type-system] body.open-book #main#main .reader-question {border-radius:16px;padding:24px}
+html[data-type-system] body.open-book #main#main .reader-comfort button {border-radius:12px}
+html[data-type-system] body.open-book #main#main .reader-related>div {
+padding-inline:24px;border:1px solid var(--verse-line);border-radius:24px;background:var(--paper);
+}
+html[data-type-system] body.open-book #main#main .reader-related a>span {line-height:1.3}
+}
+@media screen and (max-width:900px) {
+html[data-type-system] body.open-book #main#main .reader-layout {grid-template-columns:minmax(0,1fr);gap:24px}
+html[data-type-system] body.open-book #main#main .reader-margin {position:static;max-block-size:none;display:flex;flex-wrap:wrap;gap:12px 20px}
+html[data-type-system] body.open-book #main#main .reader-margin>.eyebrow {flex-basis:100%}
+html[data-type-system] body.open-book #main#main .reader-margin>.reader-caption {display:none}
+html[data-type-system] body.open-book #main#main .reader-comfort {flex-basis:100%}
+html[data-type-system] body.open-book #main#main .contact-grid {grid-template-columns:minmax(0,1fr)}
+}
+@media screen and (max-width:600px) {
+html[data-type-system] body.open-book #main#main>.band:not(.chapter-opening) {padding-block:40px}
+html[data-type-system] body.open-book #main#main :is(.note,.pending,.faq,.form,.sched,.check .step,.result,.steps,.timeline) {padding:24px 20px;border-radius:20px}
+html[data-type-system] body.open-book #main#main .huruf.pick {padding:10px;gap:6px;border-radius:20px}
+html[data-type-system] body.open-book #main#main .huruf.pick button {min-block-size:58px;border-radius:10px}
+html[data-type-system] body.open-book #main#main .letterpane {padding:24px 20px;border-radius:20px}
+html[data-type-system] body.open-book #main#main :is(.shapes,.makhraj) {padding:16px 12px}
+html[data-type-system] body.open-book #main#main .library-catalog .book {grid-template-columns:minmax(0,1fr);padding:28px 20px;gap:24px;border-radius:22px}
+html[data-type-system] body.open-book #main#main .library-catalog .shot {max-inline-size:190px;margin-inline:auto}
+html[data-type-system] body.open-book #main#main .library-catalog .facts {flex-wrap:wrap}
+html[data-type-system] body.open-book #main#main :is(.reading-entry,.reading-session) {padding:24px 20px;border-radius:22px}
+html[data-type-system] body.open-book #main#main .reading-entries {grid-template-columns:minmax(0,1fr);gap:22px}
+html[data-type-system] body.open-book #main#main .reader-prose {padding:0 18px 16px;border-radius:22px}
+html[data-type-system] body.open-book #main#main .reader-section {padding-block:28px}
+html[data-type-system] body.open-book #main#main .reader-question {padding:20px 16px}
+html[data-type-system] body.open-book #main#main .reader-related>div {padding-inline:20px}
+html[data-type-system] body.open-book #main#main .form-row {grid-template-columns:minmax(0,1fr)}
+}
+@media (prefers-reduced-motion:reduce) {
+html[data-type-system] body.open-book #main#main .huruf.pick button {transition:none}
+}
