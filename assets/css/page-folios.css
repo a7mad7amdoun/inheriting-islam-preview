@@ -1,0 +1,185 @@
+@media screen {
+html[data-type-system] body.open-book #main#main {
+--folio-width:1120px; --folio-gap:clamp(28px,4vw,56px);
+--folio-padding:clamp(28px,3.5vw,48px);
+}
+html[data-type-system] body.open-book #main#main>.band>.wrap,
+html[data-type-system] body.open-book #main#main .about-commitments-grid {
+inline-size:calc(100% - 2 * var(--gutter)); max-inline-size:var(--folio-width);
+margin-inline:auto; padding-inline:0; min-inline-size:0;
+}
+html[data-type-system] body.open-book #main#main>.band {padding-block:clamp(48px,5.5vw,80px)}
+html[data-type-system] body.open-book #main#main :is(.shead,.about-commitments-grid>header) h2 {
+font-size:clamp(2rem,3.2vw,3.1rem); line-height:1.2; max-inline-size:26ch;
+text-wrap:balance; margin-block:14px 22px;
+}
+html[data-type-system] body.open-book #main#main .shead {margin-block-end:36px}
+html[data-type-system] body.open-book #main#main .shead>p:not(.eyebrow) {max-inline-size:60ch;line-height:1.85}
+html[data-type-system] body.open-book #main#main .about-letter-grid {
+inline-size:calc(100% - 2 * var(--gutter)); max-inline-size:var(--folio-width);
+margin-inline:auto; padding:var(--folio-padding);
+grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr); gap:var(--folio-gap);
+border:1px solid var(--verse-line); border-radius:28px; background:var(--paper);
+box-shadow:0 12px 36px var(--verse-shadow);
+}
+html[data-type-system] body.open-book #main#main .about-letter-margin h2 {
+font-size:clamp(2rem,3vw,2.8rem); line-height:1.2; margin-block:18px 24px;
+}
+html[data-type-system] body.open-book #main#main .about-letter-margin blockquote {
+border-inline-start:2px solid var(--verse-metal); padding-inline-start:20px;
+margin-inline:0; max-inline-size:32ch;
+}
+html[data-type-system] body.open-book #main#main .about-letter-margin blockquote p {line-height:1.65}
+html[data-type-system] body.open-book #main#main .about-letter-prose {
+min-inline-size:0; max-inline-size:62ch; box-shadow:none;
+}
+html[data-type-system] body.open-book #main#main .about-letter-prose p {line-height:1.95;margin-block:0 24px}
+html[data-type-system] body.open-book #main#main .about-partner-grid {
+inline-size:calc(100% - 2 * var(--gutter)); max-inline-size:1320px;
+padding-inline:0; margin-inline:auto; gap:var(--folio-gap); align-items:center;
+}
+html[data-type-system] body.open-book #main#main .about-partner-grid>div {max-inline-size:48ch}
+html[data-type-system] body.open-book #main#main .about-partner-grid p:not(.eyebrow) {line-height:1.9}
+html[data-type-system] body.open-book #main#main .about-commitments-grid {
+grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr); gap:28px var(--folio-gap);
+}
+html[data-type-system] body.open-book #main#main .about-commitments-grid>div {display:contents}
+html[data-type-system] body.open-book #main#main .about-promises {grid-column:2;margin:0;min-inline-size:0}
+html[data-type-system] body.open-book #main#main .about-privacy {grid-column:1/-1;margin:8px 0;line-height:1.8}
+html[data-type-system] body.open-book #main#main .about-source-note {grid-column:1/-1}
+html[data-type-system] body.open-book #main#main :is(.about-source-note,.podcast-source-note) {
+padding:20px 32px; margin-block-start:24px; min-inline-size:0;
+border:1px solid var(--verse-line); border-radius:24px; background:var(--paper);
+box-shadow:0 12px 32px var(--verse-shadow);
+}
+html[data-type-system] body.open-book #main#main :is(.about-source-note,.podcast-source-note)>summary {
+cursor:pointer; min-block-size:48px; padding-block:12px;
+font-family:var(--type-interface-family); font-size:1rem; line-height:1.7; color:var(--ink);
+}
+html[data-type-system] body.open-book #main#main :is(.about-source-note,.podcast-source-note) .source-encounter {
+padding:20px 0 8px; margin:0; background:none; border:0;
+}
+html[data-type-system] body.open-book #main#main :is(.about-source-note,.podcast-source-note) .source-grid {
+display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:24px 40px;
+inline-size:100%; max-inline-size:none; padding:0; margin:0; box-shadow:none;
+}
+html[data-type-system] body.open-book #main#main :is(.about-source-note,.podcast-source-note) .source-grid>div:first-child {
+grid-column:1/-1; border-block-end:1px solid var(--verse-line); padding-block-end:20px;
+}
+html[data-type-system] body.open-book #main#main :is(.about-source-note,.podcast-source-note) .source-grid>div:last-child {display:contents}
+html[data-type-system] body.open-book #main#main :is(.about-source-note,.podcast-source-note) h2 {
+max-inline-size:28ch; font-size:clamp(1.9rem,3vw,2.6rem);line-height:1.25;margin-block:12px;
+}
+html[data-type-system] body.open-book #main#main :is(.about-source-note,.podcast-source-note) .hadith-attribution {margin:0;align-self:center}
+html[data-type-system] body.open-book #main#main :is(.about-source-note,.podcast-source-note) .hadith-grade {justify-self:end;align-self:center;margin:0}
+html[data-type-system] body.open-book #main#main :is(.about-source-note,.podcast-source-note) .source-arabic {
+grid-column:1/-1; font-size:clamp(1.8rem,2.6vw,2.4rem)!important; line-height:2.15!important;
+text-align:center; margin:0; padding:20px 12px 28px; border-block-end:1px solid var(--verse-line);
+color:var(--ink); animation:none; transform:none;
+}
+html[data-type-system] body.open-book #main#main :is(.about-source-note,.podcast-source-note) .source-meaning {
+grid-column:1; margin:0; padding:0; font-size:1.05rem; line-height:1.9; max-inline-size:60ch;
+}
+html[data-type-system] body.open-book #main#main :is(.about-source-note,.podcast-source-note) .source-reflection {
+grid-column:2; border:0; border-inline-start:2px solid var(--verse-metal);
+padding:0; padding-inline-start:24px; margin:0; font-size:1.05rem;line-height:1.9;max-inline-size:60ch;
+}
+html[data-type-system] body.open-book #main#main :is(.about-source-note,.podcast-source-note) .source-grid details {
+grid-column:1/-1; min-inline-size:0; border-block-start:1px solid var(--verse-line);padding-block-start:12px;
+}
+html[data-type-system] body.open-book #main#main :is(.about-source-note,.podcast-source-note) .source-grid details p {max-inline-size:72ch;line-height:1.85}
+html[data-type-system] body.open-book #main#main :is(.about-source-note,.podcast-source-note) .source-grid details summary {min-block-size:48px;padding-block:12px;line-height:1.7}
+html[data-type-system] body.open-book #main#main #ledger .tool-dossiers .lrow,
+html[data-type-system] body.open-book #main#main :is(.workshop-projects,.history-projects)>article.project-card {
+grid-template-columns:minmax(180px,.7fr) minmax(0,1.3fr);
+gap:24px clamp(28px,4vw,48px); padding:clamp(28px,3.5vw,44px); border-radius:24px;
+}
+html[data-type-system] body.open-book #main#main #ledger .tool-dossiers .lrow .tool-story {max-inline-size:none}
+html[data-type-system] body.open-book #main#main #ledger .tool-dossiers .lrow .plate.app-brand-plate {
+max-inline-size:280px; align-self:center; justify-self:center;
+}
+html[data-type-system] body.open-book #main#main :is(.workshop-projects,.history-projects) .project-mark {
+max-inline-size:260px; align-self:center; justify-self:center;
+}
+html[data-type-system] body.open-book #main#main :is(#app-principles,#stopped) .chapter-disclosure>summary {
+min-block-size:56px; padding-block:16px;
+}
+html[data-type-system] body.open-book #main#main #waitlist .contact-grid {
+grid-template-columns:minmax(0,1.25fr) minmax(0,.75fr); gap:var(--folio-gap);
+}
+html[data-type-system] body.open-book #main#main #waitlist .form {
+padding:28px; border:1px solid var(--verse-line); border-radius:24px; background:var(--paper);
+}
+html[data-type-system] body.open-book #main#main :is(.podcast-vision-spread,.podcast-invitation-spread,.podcast-season) {
+gap:var(--folio-gap); grid-template-columns:repeat(2,minmax(0,1fr)); align-items:start;
+}
+html[data-type-system] body.open-book #main#main :is(.podcast-vision-spread,.podcast-invitation-spread,.podcast-season) h2 {
+font-size:clamp(2rem,3.2vw,3.1rem); line-height:1.22; max-inline-size:24ch; text-wrap:balance;
+}
+html[data-type-system] body.open-book #main#main .podcast-vision-copy p {max-inline-size:56ch;line-height:1.95}
+html[data-type-system] body.open-book #main#main .podcast-questions {
+display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:0;
+padding:12px; border:1px solid var(--verse-line); border-radius:28px; background:var(--paper);
+}
+html[data-type-system] body.open-book #main#main .podcast-questions>li {
+padding:28px 24px; margin:0; min-inline-size:0; border:0;
+}
+html[data-type-system] body.open-book #main#main .podcast-questions>li+li {border-inline-start:1px solid var(--verse-line)}
+html[data-type-system] body.open-book #main#main .podcast-questions h3 {
+font-size:clamp(1.65rem,2.2vw,2rem); line-height:1.3; max-inline-size:20ch; margin-block:18px;
+}
+html[data-type-system] body.open-book #main#main .podcast-questions p {line-height:1.9;margin:0}
+html[data-type-system] body.open-book #main#main .podcast-guest-note {
+padding:28px 32px; border:1px solid var(--verse-line); border-radius:24px; background:var(--paper);
+}
+html[data-type-system] body.open-book #main#main .podcast-guest-note p {line-height:1.9}
+html[data-type-system] body.open-book #main#main .podcast-season {border-block-start:1px solid var(--verse-line);padding-block-start:36px}
+html[data-type-system] body.open-book #main#main .contact-routing>a {border-radius:16px}
+html[data-type-system] body.open-book #main#main #form .contact-grid {
+grid-template-columns:minmax(0,1.25fr) minmax(0,.75fr); gap:40px;
+}
+html[data-type-system] body.open-book #main#main .correspondence-letter {
+padding:var(--folio-padding); border:1px solid var(--verse-line); border-radius:28px;
+background:var(--paper); box-shadow:0 12px 32px var(--verse-shadow);
+}
+html[data-type-system] body.open-book #main#main .correspondence-margin {
+padding-block-start:12px; gap:32px; background:var(--paper); box-shadow:0 0 20px 12px var(--paper);
+}
+html[data-type-system] body.open-book #main#main .correspondence-margin h3 {
+font-size:1.65rem;line-height:1.35;margin-block:0 16px;
+}
+html[data-type-system] body.open-book #main#main .correspondence-margin p {max-inline-size:44ch;line-height:1.9}
+html[data-type-system] body.open-book #main#main :is(#form,#waitlist) :is(input,select,textarea) {
+border-radius:12px; min-inline-size:0; font-size:1rem; line-height:1.6;
+}
+html[data-type-system] body.open-book #main#main .direct .v {overflow-wrap:anywhere}
+html[data-type-system] body.open-book #main#main .direct .copybtn {min-block-size:44px;min-inline-size:44px}
+}
+@media screen and (max-width:1000px) {
+html[data-type-system] body.open-book #main#main :is(.about-letter-grid,.about-commitments-grid,.podcast-vision-spread,.podcast-invitation-spread,.podcast-season,#form .contact-grid,#waitlist .contact-grid) {
+grid-template-columns:minmax(0,1fr); gap:28px;
+}
+html[data-type-system] body.open-book #main#main .about-promises {grid-column:1}
+html[data-type-system] body.open-book #main#main .correspondence-margin {grid-template-columns:minmax(0,1fr)}
+html[data-type-system] body.open-book #main#main .podcast-questions {grid-template-columns:minmax(0,1fr)}
+html[data-type-system] body.open-book #main#main .podcast-questions>li+li {border-inline-start:0;border-block-start:1px solid var(--verse-line)}
+html[data-type-system] body.open-book #main#main .podcast-questions h3 {max-inline-size:30ch}
+}
+@media screen and (max-width:760px) {
+html[data-type-system] body.open-book #main#main>.band {padding-block:40px}
+html[data-type-system] body.open-book #main#main .about-letter-grid {padding:28px 20px;border-radius:22px}
+html[data-type-system] body.open-book #main#main .about-letter-prose p {line-height:1.85}
+html[data-type-system] body.open-book #main#main :is(.about-source-note,.podcast-source-note) {padding:16px 20px;border-radius:22px}
+html[data-type-system] body.open-book #main#main :is(.about-source-note,.podcast-source-note) .source-grid {grid-template-columns:minmax(0,1fr);gap:20px}
+html[data-type-system] body.open-book #main#main :is(.about-source-note,.podcast-source-note) .hadith-grade {justify-self:start}
+html[data-type-system] body.open-book #main#main :is(.about-source-note,.podcast-source-note) .source-arabic {font-size:1.75rem!important;padding:12px 0 24px}
+html[data-type-system] body.open-book #main#main :is(.about-source-note,.podcast-source-note) .source-reflection {grid-column:1;padding-inline-start:16px}
+html[data-type-system] body.open-book #main#main #ledger .tool-dossiers .lrow,
+html[data-type-system] body.open-book #main#main :is(.workshop-projects,.history-projects)>article.project-card {padding:24px 20px;gap:24px;display:flex;flex-direction:column}
+html[data-type-system] body.open-book #main#main #ledger .tool-dossiers .lrow .plate.app-brand-plate,
+html[data-type-system] body.open-book #main#main :is(.workshop-projects,.history-projects) .project-mark {max-inline-size:220px;align-self:center}
+html[data-type-system] body.open-book #main#main :is(.podcast-guest-note,.correspondence-letter,#waitlist .form) {padding:26px 20px;border-radius:22px}
+html[data-type-system] body.open-book #main#main .podcast-questions {padding:0 20px;border-radius:22px}
+html[data-type-system] body.open-book #main#main .podcast-questions>li {padding:26px 0}
+html[data-type-system] body.open-book #main#main :is(#form,#waitlist) .form-row {grid-template-columns:minmax(0,1fr)}
+}
