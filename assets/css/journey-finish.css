@@ -878,3 +878,21 @@ html:root[data-type-system] body.open-book #main#main .arrival-actions{align-ite
 html:root[data-type-system] body.open-book #main#main .arrival-actions>.btn{text-align:center;justify-content:center}
 html:root[data-type-system] body.open-book #main#main #how .arrival-back{display:flex;margin-inline-start:0}
 }
+body .letterpane .letter-practice {margin-block-start:1.15rem;padding-block-start:1rem;border-block-start:1px solid var(--line);display:grid;gap:.45rem;line-height:1.85}
+body .letter-practice strong {color:var(--ink);font-size:.82rem;font-weight:600}
+body .letter-practice bdi {font-family:var(--type-script-family,serif);font-size:1.5em;line-height:1.8;white-space:nowrap;padding-inline:.25em}
+body .lesson-practice-intro {font-size:.9rem;line-height:1.85;color:var(--ink-soft);max-width:57ch}
+body .lesson-next {align-self:start;margin-block-start:.2rem}
+body .book-preview-note {font-size:.8rem;line-height:1.75;color:var(--ink-soft);max-width:44ch;margin-block:.7rem .35rem}
+body .app-destination {display:flex;align-items:baseline;gap:.3rem .5rem;flex-wrap:wrap;font-size:.83rem;line-height:1.8}
+body .app-destination bdi {color:var(--ink);font-weight:500;overflow-wrap:anywhere}
+body .destination-kind {flex-basis:100%;font-size:.78rem;color:var(--ink-soft)}
+body .crafted-symbol .symbol-inlay {stroke:var(--gold);stroke-width:1.1;opacity:.9;transition:opacity .5s ease,stroke .5s ease}
+body .crafted-symbol .symbol-detail {opacity:.55;transition:opacity .6s ease}
+body :is(a,button,summary):is(:hover,:focus-visible) .crafted-symbol .symbol-inlay {opacity:1;stroke:currentColor}
+body :is(a,button,summary):is(:hover,:focus-visible) .crafted-symbol .symbol-detail {opacity:1}
+body .section-vignette .crafted-symbol {opacity:1}
+body .section-vignette .crafted-symbol .symbol-body {stroke:var(--ink-soft);opacity:.72;stroke-width:1.05}
+body section:hover .section-vignette .symbol-detail {opacity:.85}
+@media(prefers-reduced-motion:reduce){body .crafted-symbol * {transition:none!important}}
+html[data-motion="calm"] .crafted-symbol * {transition:none!important}

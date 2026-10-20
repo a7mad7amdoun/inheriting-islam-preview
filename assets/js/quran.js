@@ -196,6 +196,16 @@
     var paneTx = pane.querySelector('[data-tx]');
     var paneZn = pane.querySelector('[data-zn]');
 
+    // A short, selected-letter prompt lives inside the existing live panel.
+    var practice = document.createElement('p');
+    practice.className = 'letter-practice';
+    var practiceLabel = document.createElement('strong');
+    practiceLabel.textContent = 'Your turn';
+    var practiceText = document.createElement('span');
+    practice.appendChild(practiceLabel);
+    practice.appendChild(practiceText);
+    paneTx.parentNode.appendChild(practice);
+
     var pick = function (i) {
       var L = LETTERS[i];
       if (!L) return;
@@ -208,6 +218,12 @@
       paneTr.textContent = L[2];
       paneZn.textContent = L[3];
       paneTx.textContent = L[4];
+      practiceText.textContent = 'Trace the shape, notice its dots, then find this letter again: ';
+      var practiceLetter = document.createElement('bdi');
+      practiceLetter.lang = 'ar';
+      practiceLetter.dir = 'rtl';
+      practiceLetter.textContent = L[0];
+      practiceText.appendChild(practiceLetter);
     };
 
     cells.forEach(function (c, i) {
