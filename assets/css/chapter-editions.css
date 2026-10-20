@@ -38,7 +38,7 @@ body.living-book.illuminated.open-book[data-room][data-atmosphere][data-edition=
 body.living-book.illuminated.open-book[data-room][data-atmosphere][data-edition=practice] .letterpane{box-shadow:none;min-height:300px;align-items:center;border:1px solid var(--gold-line);padding:clamp(24px,4vw,56px)}
 body.living-book.illuminated.open-book[data-room][data-atmosphere][data-edition=practice] .huruf.pick{background:transparent;border:0;border-block:1px solid var(--line);padding:20px 0;gap:10px}
 body.living-book.illuminated.open-book[data-room][data-atmosphere][data-edition=practice] .huruf.pick button{min-height:76px;background:var(--paper);border:1px solid var(--line)}
-body.living-book.illuminated.open-book[data-room][data-atmosphere][data-edition=practice] .huruf.pick button[aria-pressed=true]{background:var(--paper-3);border-color:var(--gold-line)}
+body.living-book.illuminated.open-book[data-room][data-atmosphere][data-edition=practice] .huruf.pick button[aria-pressed=true]{background:var(--paper-3);color:var(--ink);border-color:var(--gold-line)}
 body.living-book.illuminated.open-book[data-room][data-atmosphere][data-edition=library] .library-cover{border:1px solid var(--gold-line);padding:28px;background:var(--paper-2)}
 body.living-book.illuminated.open-book[data-room][data-atmosphere][data-edition=library] .library-catalog{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:32px 48px}
 body.living-book.illuminated.open-book[data-room][data-atmosphere][data-edition=library] .library-catalog .book{display:grid;grid-template-columns:minmax(100px,.4fr) minmax(0,1fr);gap:24px;padding:28px 0;border:0;border-top:1px solid var(--gold-line);background:transparent}
