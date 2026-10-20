@@ -29,6 +29,20 @@
     });
   }
   controls.hidden = false;
+  // The mobile page scrolls inside body; repeated native hashes can leave it
+  // at the footer. Every search entry should reliably return to the directory.
+  document.addEventListener('click', function (event) {
+    var link = event.target.closest && event.target.closest('a[href]');
+    if (!link || event.defaultPrevented || event.button > 0 || event.ctrlKey || event.metaKey || event.altKey || event.shiftKey) return;
+    var target = new URL(link.href, location.href);
+    if (target.origin !== location.origin || target.pathname !== location.pathname || target.hash !== '#directory') return;
+    event.preventDefault();
+    var directory = document.getElementById('directory');
+    directory.tabIndex = -1;
+    directory.focus({preventScroll:true});
+    var calm = document.documentElement.dataset.motion === 'calm' || (window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches);
+    directory.scrollIntoView({block:'start', behavior:calm ? 'auto' : 'smooth'});
+  });
   input.addEventListener('input', update);
   category.addEventListener('change', update);
   shortcuts.forEach(function (button) {
