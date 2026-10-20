@@ -599,7 +599,7 @@ html:root[data-type-system] body.open-book #main#main .form :is(label:not(.check
 font-family:var(--type-interface-family);font-size:.9375rem;line-height:1.65;
 font-weight:500;letter-spacing:0;text-transform:none;color:var(--ink);
 }
-html:root[data-type-system] body.open-book #main#main .form .field :is(input:not([type=checkbox]):not([type=radio]),select,textarea) {
+html:root[data-type-system] body.open-book #main#main .form .field :where(input:not([type=checkbox]):not([type=radio]),select,textarea) {
 inline-size:100%;max-inline-size:100%;min-block-size:54px;
 padding:14px 16px;border:1px solid var(--control-line);border-radius:14px;
 background-color:var(--paper-2);color:var(--ink);font-size:1rem;line-height:1.65;
