@@ -269,7 +269,7 @@ html:root[data-type-system] body.open-book #main#main [data-mobile-opening]>:is(
 html:root[data-type-system] body.open-book #main#main .reader-opening[data-mobile-opening]>div:first-child>* {
 grid-column:1;grid-row:auto;order:4;min-inline-size:0;max-inline-size:100%;
 }
-html:root[data-type-system] body.open-book #main#main [data-mobile-opening] h1 {
+html:root[data-type-system] body.open-book #main#main [data-mobile-opening] h1:first-of-type {
 order:2;margin:0;padding:0;max-inline-size:100%;
 text-wrap:balance;transform:none;translate:none;filter:none;
 }
