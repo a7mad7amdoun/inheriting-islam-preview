@@ -152,3 +152,50 @@ body.open-book #main .desk-art figcaption {padding-inline-start:0}
 body.open-book #main :is(.inheritance-hero-copy,.about-cover-copy,.desk-introduction,.listening-introduction,.listening-title,.apps-cover-copy,.workshop-intro,.chapter-opening-copy,.chapter-opening-grid>div:first-child,.reader-opening>div:first-child,.explore-opening>div:first-child,.podcast-vision-copy)::before {inset:-20px}
 body.open-book #main :is(.desk-spread,.workshop-opening>.hero-grid,.listening-opening>.hero-grid) {row-gap:28px;padding-block:28px 40px}
 }
+@media screen {
+body.open-book #main {
+--content-halo:28px;
+--inheritance-pattern-opacity:.12;
+}
+html[data-theme=dark] body.open-book #main {--inheritance-pattern-opacity:.11}
+body.open-book #main :is(
+.band:not(.chapter-opening):not(.source-encounter)>.wrap,
+.library-cover,.chapter-note,.reader-folio,.reader-collection-note,
+.contact-routing,.explore-opening-note,.about-partner-grid,
+.about-commitments>.wrap,.quran-companion,.learning-doorways,
+.reader-prose,.reader-collection-close,.reading-collection-filter,
+.reading-session,.reader-related,.explore-directory,.explore-personal
+) {
+position:relative;isolation:isolate;
+background-color:var(--paper);
+box-shadow:0 0 var(--content-halo) var(--content-halo) var(--paper);
+}
+body.open-book #main :is(
+.inheritance-hero-art,.apps-cover-art,.listening-scene,
+.about-inheritance-art,.house-art,.reader-collection-art,.desk-art
+) {
+isolation:isolate;background-color:var(--paper);
+box-shadow:0 0 24px 16px var(--paper);
+}
+body.open-book #main :is(
+.inheritance-hero-art,.apps-cover-art,.listening-scene,
+.about-inheritance-art,.house-art,.reader-collection-art,.desk-art
+) img {
+-webkit-mask-image:none;mask-image:none;
+opacity:1;filter:none;mix-blend-mode:normal;border-radius:10px;
+}
+body.open-book #main :is(
+.inheritance-hero-art,.apps-cover-art,.listening-scene,
+.about-inheritance-art,.house-art,.reader-collection-art,.desk-art
+) figcaption {
+background-color:var(--paper);line-height:1.65;
+padding-block-start:18px;
+}
+body.open-book[data-atmosphere=reading] #main {--inheritance-pattern-opacity:.07}
+html[data-theme=dark] body.open-book[data-atmosphere=reading] #main {--inheritance-pattern-opacity:.07}
+}
+@media screen and (max-width:760px) {
+body.open-book #main {--content-halo:16px;--inheritance-pattern-opacity:.1}
+html[data-theme=dark] body.open-book #main {--inheritance-pattern-opacity:.1}
+body.open-book #main :is(.library-cover,.chapter-note,.reader-folio,.reader-collection-note,.contact-routing) {min-width:0}
+}
