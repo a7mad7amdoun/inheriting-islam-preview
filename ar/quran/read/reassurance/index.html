@@ -55,6 +55,35 @@
 <link rel="stylesheet" href="/assets/css/teaching-context.css?v=89de4f881e12">
 <link rel="stylesheet" href="/assets/css/learning-folios.css?v=3abcd03ee277">
 <link rel="stylesheet" href="/assets/css/journey-finish.css?v=3347c392a4de">
+<!-- journey:page-motion --><script data-page-travel>/* Runs in the head before the first render, so no arriving transition is missed. */
+(function () {
+  'use strict';
+  var active = null;
+  var root = document.documentElement;
+  addEventListener('pagereveal', function (event) {
+    var transition = event.viewTransition;
+    if (!transition) return;
+    if (root.dataset.motion === 'calm' || matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      transition.skipTransition(); return;
+    }
+    if (innerWidth > 1000) return;
+    active = transition;
+    root.dataset.pageTravel = 'arriving';
+    function finish() {
+      if (active === transition) active = null;
+      root.dataset.pageTravel = 'complete';
+    }
+    if (transition.finished) transition.finished.then(finish, finish);
+  });
+  function interrupt() {
+    if (!active) return;
+    active.skipTransition(); active = null;
+  }
+  document.addEventListener('pointerdown', interrupt, {capture:true,passive:true});
+  document.addEventListener('click', interrupt, true);
+  document.addEventListener('keydown', interrupt, true);
+})();
+</script><!-- /journey -->
 <meta name="robots" content="noindex,nofollow">
 </head>
 <body data-art-layout="spacious" data-direction="inheritance" data-atmosphere="reading" data-edition="reading-reassurance" data-arm="quran" class="living-book illuminated open-book" data-room="reading" data-editorial-state="draft">
@@ -172,7 +201,7 @@
   </div>
 </footer>
 
-<script src="/assets/js/ar/site.js?v=4fdf149a50dc" defer=""></script>
+<script src="/assets/js/ar/site.js?v=75e8199a8a21" defer=""></script>
 
 
 

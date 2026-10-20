@@ -37,28 +37,11 @@
   document.addEventListener('visibilitychange', syncBackgroundVisibility);
   window.addEventListener('pageshow', syncBackgroundVisibility);
   syncBackgroundVisibility();
-  // Native page navigation retains history, downloads and modified-click behavior.
-  var activePageTransition = null;
-  ['pageswap', 'pagereveal'].forEach(function (name) {
-    addEventListener(name, function (event) {
-      if (!event.viewTransition) return;
-      if (reduce.matches || root.dataset.motion === 'calm') { event.viewTransition.skipTransition(); return; }
-      if (name === 'pagereveal' && innerWidth <= 1000) {
-        var transition = event.viewTransition;
-        activePageTransition = transition;
-        function finished() { if (activePageTransition === transition) activePageTransition = null; }
-        if (transition.finished) transition.finished.then(finished, finished);
-      }
-    });
+  // The arriving transition is registered in the head before the first render.
+  // Outgoing transitions still respect the current reading preference.
+  addEventListener('pageswap', function (event) {
+    if (event.viewTransition && (reduce.matches || root.dataset.motion === 'calm')) event.viewTransition.skipTransition();
   });
-  function interruptPageFade() {
-    if (!activePageTransition) return;
-    activePageTransition.skipTransition();
-    activePageTransition = null;
-  }
-  // A second tap or keyboard action always wins over decorative motion.
-  document.addEventListener('pointerdown', interruptPageFade, {passive:true});
-  document.addEventListener('keydown', interruptPageFade);
 
   // Older engines keep native navigation and receive a small arrival fade only.
   // Never intercept links, postpone navigation, or replay an arrival on browser Back.
