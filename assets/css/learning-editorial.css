@@ -1,0 +1,89 @@
+@media screen {
+html:root[data-type-system] body.open-book #main#main[data-learning-editorial] {--study-measure:62ch}
+html:root[data-type-system] body.open-book #main#main[data-learning-editorial] :is(.band,.band-alt,.book,.letterpane,.note,.pending,.study-draft-note,.library-cover,.book-inside,.mrow2,.cols-3>.col){border-radius:0;box-shadow:none;background:transparent;background-image:none}
+html:root[data-type-system] body.open-book #main#main[data-learning-editorial] :is(.band,.band-alt){padding-block:clamp(48px,6vw,88px)}
+html:root[data-type-system] body.open-book #main#main[data-learning-editorial] :is(#letters,#shapes,#vowels,#makharij,#the-books,#book-care){background:var(--paper);isolation:isolate}
+html:root[data-type-system] body.open-book #main#main[data-learning-editorial] :is(.book,.letterpane,.note,.pending,.study-draft-note,.library-cover,.book-inside,.mrow2,.cols-3>.col)::before,
+html:root[data-type-system] body.open-book #main#main[data-learning-editorial] :is(.book,.letterpane,.note,.pending,.study-draft-note,.library-cover,.book-inside,.mrow2,.cols-3>.col)::after{content:none}
+html:root[data-type-system] body.open-book #main#main[data-learning-editorial] :is(.note,.pending,.study-draft-note){padding:24px 0;border:0;border-block-start:1px solid var(--gold-line);max-width:var(--study-measure)}
+html:root[data-type-system] body.open-book #main#main[data-learning-editorial] :is(.note,.pending) p{max-width:var(--study-measure);line-height:1.9}
+html:root[data-type-system] body.open-book #main#main[data-learning-editorial] :is(.band,.book,h2,h3){scroll-margin-block-start:184px}
+html:root[data-type-system] body.open-book #main#main[data-learning-editorial] .shead{margin-bottom:clamp(30px,4vw,56px)}
+html:root[data-type-system] body.open-book #main#main[data-learning-editorial] .shead-split{column-gap:clamp(36px,6vw,96px)}
+html:root[data-type-system] body.open-book #main#main[data-learning-editorial] .shead .small{max-width:52ch;line-height:1.9}
+html:root[data-type-system] body.open-book #main#main[data-learning-editorial] .cols-2{gap:clamp(32px,5vw,80px)}
+html:root[data-type-system] body.open-book #main#main[data-learning-editorial] .study-opening .chapter-opening-grid{grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr);align-items:center;gap:clamp(32px,5vw,80px)}
+html:root[data-type-system] body.open-book #main#main[data-learning-editorial] .study-opening .chapter-note{border:0;padding:0;background:transparent;box-shadow:none;max-width:none}
+html:root[data-type-system] body.open-book #main#main[data-learning-editorial] .study-opening .house-art{border:0;padding:0;background:transparent;box-shadow:none;width:100%;margin:0}
+html:root[data-type-system] body.open-book #main#main[data-learning-editorial] .study-opening .house-art img{aspect-ratio:3/2;width:100%;height:auto;object-fit:cover;border-radius:6px;mask:none;-webkit-mask:none;filter:none;opacity:1}
+html:root[data-type-system] body.open-book #main#main[data-learning-editorial] .study-opening .house-art figcaption{padding-block:18px 0;max-width:none}
+html:root[data-type-system] body.open-book #main#main[data-learning-editorial] .study-contents{background:var(--paper);border-block:1px solid var(--line);box-shadow:none}
+html:root[data-type-system] body.open-book #main#main[data-learning-editorial] .study-contents a{border:0;border-radius:0;background:transparent;box-shadow:none;min-height:44px}
+html:root[data-type-system] body.open-book #main#main[data-learning-editorial] .study-contents a:hover{color:var(--gold)}
+html:root[data-type-system] body.open-book #main#main[data-learning-editorial] .huruf.pick{border:0;gap:8px;background:transparent;grid-template-columns:repeat(7,minmax(0,1fr))}
+html:root[data-type-system] body.open-book #main#main[data-learning-editorial] .huruf.pick button{min-width:0;min-height:56px;border:1px solid var(--line);border-radius:10px;background:var(--paper);box-shadow:none;line-height:1.7;color:var(--ink);animation:none;transform:none;transition:background-color .2s,color .2s,border-color .2s}
+html:root[data-type-system] body.open-book #main#main[data-learning-editorial] .huruf.pick button[aria-pressed=true]{color:var(--cta-fg);background:var(--cta-bg);border-color:var(--cta-bg)}
+html:root[data-type-system] body.open-book #main#main[data-learning-editorial] .huruf.pick button:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+html:root[data-type-system] body.open-book #main#main[data-learning-editorial] .letterpane{border:0;border-block-start:1px solid var(--gold-line);padding:24px 0;grid-template-columns:80px minmax(0,1fr);gap:24px;align-items:start;text-align:start}
+html:root[data-type-system] body.open-book #main#main[data-learning-editorial] .letterpane .gl{font-size:4.2rem;min-width:0;line-height:1.8;animation:none;transform:none}
+html:root[data-type-system] body.open-book #main#main[data-learning-editorial] .letterpane .letter-practice{border:0;padding:0;margin-block:24px 0}
+html:root[data-type-system] body.open-book #main#main[data-learning-editorial] .letterpane .zone{letter-spacing:.02em;text-transform:none;line-height:1.7}
+html:root[data-type-system] body.open-book #main#main[data-learning-editorial] .letterpane p{font-size:1rem;line-height:1.9}
+html:root[data-type-system] body.open-book #main#main[data-learning-editorial] .lesson-practice-intro{border:0;max-width:52ch;margin:0}
+html:root[data-type-system] body.open-book #main#main[data-learning-editorial] .shapes{border:0;background:transparent;gap:0}
+html:root[data-type-system] body.open-book #main#main[data-learning-editorial] .shapes>div{border:0;border-block:1px solid var(--line);border-radius:0;background:transparent;box-shadow:none;padding:24px 8px;min-width:0}
+html:root[data-type-system] body.open-book #main#main[data-learning-editorial] .shapes .gl{animation:none;transform:none;line-height:1.9}
+html:root[data-type-system] body.open-book #main#main[data-learning-editorial] .mrow2{border:0;border-block-start:1px solid var(--line);padding-block:36px;gap:clamp(28px,4vw,64px)}
+html:root[data-type-system] body.open-book #main#main[data-learning-editorial] .mrow2 .glyphs{gap:12px;align-content:start}
+html:root[data-type-system] body.open-book #main#main[data-learning-editorial] .mrow2 .glyphs span{background:transparent;box-shadow:none;border:0;border-radius:0;line-height:1.9;animation:none;transform:none}
+html:root[data-type-system] body.open-book #main#main[data-learning-editorial] .lesson-continuation{margin-top:32px}
+html:root[data-type-system] body.open-book #main#main[data-learning-editorial] .lesson-continuation a{min-height:44px;display:inline-flex;align-items:center;gap:14px}
+html:root[data-type-system] body.open-book #main#main[data-learning-editorial] .library-cover{border:0;padding:24px 0}
+html:root[data-type-system] body.open-book #main#main[data-learning-editorial] .library-cover-books{gap:18px;align-items:center}
+html:root[data-type-system] body.open-book #main#main[data-learning-editorial] .library-cover-books a{transform:none;rotate:none;max-width:none}
+html:root[data-type-system] body.open-book #main#main[data-learning-editorial] .library-cover-books img{border-radius:2px;box-shadow:0 14px 24px -20px #0008}
+html:root[data-type-system] body.open-book #main#main[data-learning-editorial] .library-cover>p{margin-top:28px;text-align:center;line-height:1.9}
+html:root[data-type-system] body.open-book #main#main[data-learning-editorial] .library-catalog{display:grid;grid-template-columns:minmax(0,1fr);gap:0}
+html:root[data-type-system] body.open-book #main#main[data-learning-editorial] .library-catalog .book{display:grid;grid-template-columns:minmax(220px,.65fr) minmax(0,1.35fr);gap:clamp(40px,7vw,100px);align-items:start;border:0;border-block-start:1px solid var(--line);padding:clamp(36px,5vw,64px) 0;margin:0;max-width:none;width:100%}
+html:root[data-type-system] body.open-book #main#main[data-learning-editorial] .book .shot{padding:0;margin:0 auto;border:0;border-radius:0;background:transparent;box-shadow:none;max-width:310px;width:100%}
+html:root[data-type-system] body.open-book #main#main[data-learning-editorial] .book .shot img{width:100%;height:auto;object-fit:contain;border:0;border-radius:2px;padding:0;filter:none;transform:none;box-shadow:0 16px 24px -22px #0008}
+html:root[data-type-system] body.open-book #main#main[data-learning-editorial] .book>div{max-width:60ch;min-width:0}
+html:root[data-type-system] body.open-book #main#main[data-learning-editorial] .book h3{font-size:clamp(1.8rem,2.7vw,2.5rem);line-height:1.35;margin-block:14px 18px}
+html:root[data-type-system] body.open-book #main#main[data-learning-editorial] .book .n{font-size:.8rem;line-height:1.8;letter-spacing:.02em;text-transform:none}
+html:root[data-type-system] body.open-book #main#main[data-learning-editorial] .book p{font-size:1rem;line-height:1.9}
+html:root[data-type-system] body.open-book #main#main[data-learning-editorial] .book .facts{font-size:.8rem;letter-spacing:0;text-transform:none;gap:10px 20px;margin-block:24px;color:var(--ink-soft)}
+html:root[data-type-system] body.open-book #main#main[data-learning-editorial] .book .facts span+span{border:0;padding:0}
+html:root[data-type-system] body.open-book #main#main[data-learning-editorial] .book-inside{border:0;border-block:1px solid var(--line);padding:0;margin-block:24px}
+html:root[data-type-system] body.open-book #main#main[data-learning-editorial] .book-inside summary{cursor:pointer;padding-block:16px;min-height:44px;color:var(--ink);line-height:1.8}
+html:root[data-type-system] body.open-book #main#main[data-learning-editorial] .book-inside p{padding-block:0 20px;margin:0}
+html:root[data-type-system] body.open-book #main#main[data-learning-editorial] .book-inside summary:focus-visible{outline:2px solid var(--gold);outline-offset:4px}
+html:root[data-type-system] body.open-book #main#main[data-learning-editorial] #book-pdf-note{max-width:65ch;font-size:.9rem;line-height:1.85;margin-block:24px 40px}
+html:root[data-type-system] body.open-book #main#main[data-learning-editorial] .book .book-preview-link{margin-block:0 12px}
+html:root[data-type-system] body.open-book #main#main[data-learning-editorial] .book .arrival-next{border-block-start:1px solid var(--gold-line);padding-top:20px;margin-top:20px}
+html:root[data-type-system] body.open-book #main#main[data-learning-editorial] .cols-3>.col{border:0;padding:0}
+html:root[data-type-system] body.open-book #main#main[data-learning-editorial] :is(.quran-companion,.quran-companion-page,.quran-companion-reflection,.guidance-panel,.guidance-page){box-shadow:none;border-radius:0}
+html:root[data-type-system] body.open-book #main#main[data-learning-editorial] :is(.quran-companion-reflection,.quran-companion-practice){border:0;background:transparent;padding-inline:0}
+html:root[data-type-system] body.open-book #main#main[data-learning-editorial] :is(.quran-companion-arabic,.guidance-arabic,.inheritance-arabic){animation:none!important;transform:none!important;transition:none!important}
+}
+@media screen and (max-width:850px){
+html:root[data-type-system] body.open-book #main#main[data-learning-editorial] :is(.band,.band-alt){padding-block:44px}
+html:root[data-type-system] body.open-book #main#main[data-learning-editorial] .study-opening .chapter-opening-grid{grid-template-columns:minmax(0,1fr);gap:24px}
+html:root[data-type-system] body.open-book #main#main[data-learning-editorial] .cols-2{grid-template-columns:minmax(0,1fr);gap:32px}
+html:root[data-type-system] body.open-book #main#main[data-learning-editorial] .huruf.pick{gap:6px}
+html:root[data-type-system] body.open-book #main#main[data-learning-editorial] .huruf.pick button{min-height:48px;font-size:1.7rem;padding:4px;line-height:1.6}
+html:root[data-type-system] body.open-book #main#main[data-learning-editorial] .letterpane{grid-template-columns:64px minmax(0,1fr);gap:18px}
+html:root[data-type-system] body.open-book #main#main[data-learning-editorial] .letterpane .gl{font-size:3.4rem}
+html:root[data-type-system] body.open-book #main#main[data-learning-editorial] .letterpane .name-row{justify-content:start}
+html:root[data-type-system] body.open-book #main#main[data-learning-editorial] .mrow2{grid-template-columns:minmax(0,1fr);gap:20px;padding-block:28px}
+html:root[data-type-system] body.open-book #main#main[data-learning-editorial] .library-cover-books{gap:12px}
+html:root[data-type-system] body.open-book #main#main[data-learning-editorial] .library-catalog .book{grid-template-columns:minmax(0,1fr);gap:28px;padding-block:40px}
+html:root[data-type-system] body.open-book #main#main[data-learning-editorial] .book .shot{max-width:230px}
+html:root[data-type-system] body.open-book #main#main[data-learning-editorial] .book h3{font-size:1.9rem}
+html:root[data-type-system] body.open-book #main#main[data-learning-editorial] .book>div{max-width:none}
+html:root[data-type-system] body.open-book #main#main[data-learning-editorial] :is(.band,.book,h2,h3){scroll-margin-block-start:116px}
+html:root[data-type-system] body.open-book #main#main[data-learning-editorial] .book .book-preview-link{width:100%;justify-content:center}
+html:root[data-type-system] body.open-book #main#main[data-learning-editorial] .cols-3{grid-template-columns:minmax(0,1fr);gap:32px}
+html:root[data-type-system] body.open-book #main#main[data-learning-editorial] .cols-3>.col{border-block-start:1px solid var(--line);padding-top:24px}
+}
+@media screen and (max-width:360px){html:root[data-type-system] body.open-book #main#main[data-learning-editorial] .huruf.pick{grid-template-columns:repeat(6,minmax(0,1fr))} html:root[data-type-system] body.open-book #main#main[data-learning-editorial] .shapes{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(prefers-reduced-motion:reduce){html:root[data-type-system] body.open-book #main#main[data-learning-editorial] .huruf.pick button{transition:none}}
