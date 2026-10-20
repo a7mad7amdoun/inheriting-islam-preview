@@ -115,11 +115,14 @@
 
   var navBtn = document.getElementById('navToggle');
   var navPanel = document.getElementById('mobileNav');
-  var background = Array.from(document.querySelectorAll('main, body > footer, .armbar'));
+  var journeyMenu = document.querySelector('[data-journey-menu]');
+  var navReturnTarget = navBtn;
+  var background = Array.from(document.querySelectorAll('main, body > footer, .armbar, .journey-dock'));
   var previousInert = [];
   function closeNav(restoreFocus) {
     if (!navBtn || !navPanel || navBtn.getAttribute('aria-expanded') !== 'true') return;
     navBtn.setAttribute('aria-expanded', 'false');
+    if (journeyMenu) journeyMenu.setAttribute('aria-expanded', 'false');
     navBtn.setAttribute('aria-label', "فتح القائمة");
     var menuLabel = navBtn.querySelector('.nav-menu-label');
     if (menuLabel) menuLabel.textContent = "القائمة";
@@ -127,7 +130,7 @@
     navPanel.hidden = true;
     document.body.classList.remove('nav-lock');
     background.forEach(function (el, i) { el.inert = previousInert[i]; });
-    if (restoreFocus) navBtn.focus();
+    if (restoreFocus) (navReturnTarget || navBtn).focus();
   }
   if (navBtn && navPanel) {
     navBtn.hidden = false;
@@ -135,11 +138,13 @@
     navBtn.setAttribute('aria-label', "فتح القائمة");
     navBtn.addEventListener('click', function () {
       if (navBtn.getAttribute('aria-expanded') === 'true') { closeNav(true); return; }
+      navReturnTarget = document.activeElement === journeyMenu ? journeyMenu : navBtn;
       previousInert = background.map(function (el) { return !!el.inert; });
       background.forEach(function (el) { el.inert = true; });
       navPanel.hidden = false;
       navPanel.classList.add('open');
       navBtn.setAttribute('aria-expanded', 'true');
+      if (journeyMenu) journeyMenu.setAttribute('aria-expanded', 'true');
       navBtn.setAttribute('aria-label', "إغلاق القائمة");
       var menuLabel = navBtn.querySelector('.nav-menu-label');
       if (menuLabel) menuLabel.textContent = "إغلاق";
@@ -162,6 +167,10 @@
         if (destination) destination.focus();
       }
     });
+  }
+  if (journeyMenu && navBtn && navPanel) {
+    journeyMenu.hidden = false;
+    journeyMenu.addEventListener('click', function () { navBtn.click(); });
   }
 
   /* Native desktop disclosure: usable without JS, enhanced with dismissal.

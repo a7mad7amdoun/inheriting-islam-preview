@@ -1,0 +1,92 @@
+.journey-dock {display:none}
+.journey-icon {inline-size:24px;block-size:24px;flex:none}
+html[data-type-system] body.open-book #mobileNav .mrow>.journey-icon {
+color:var(--gold);margin-block-end:12px;inline-size:26px;block-size:26px;
+}
+@media screen {
+html[data-type-system] body.open-book #main#main :is(.inheritance-bridge,.chapter-next) {
+inline-size:calc(100% - 2 * var(--gutter));max-inline-size:1120px;margin-inline:auto;
+padding:36px 0 44px;border-block-start:1px solid var(--verse-line);
+}
+html[data-type-system] body.open-book #main#main .inheritance-bridge-links {gap:24px}
+html[data-type-system] body.open-book #main#main .inheritance-bridge-links>a {
+padding:24px;border:1px solid var(--verse-line);border-radius:20px;background:var(--paper);
+min-inline-size:0;transition:border-color .25s ease,background-color .25s ease;
+}
+html[data-type-system] body.open-book #main#main .inheritance-bridge-links>a:hover {border-color:var(--gold);background:var(--paper-2)}
+html[data-type-system] body.open-book #main#main .inheritance-bridge-links strong {line-height:1.35}
+html[data-type-system] body.open-book #main#main .inheritance-bridge-links small {line-height:1.8}
+html[data-type-system] body.open-book #main#main :is(.study-contents,.chapter-contents,.about-contents) a {
+min-block-size:44px;line-height:1.5;transition:color .25s ease,background-color .25s ease,border-color .25s ease;
+}
+html[data-type-system] body.open-book #main#main :is(.study-contents,.chapter-contents) a:focus-visible {
+outline:2px solid var(--gold);outline-offset:3px;
+}
+html[data-type-system] body.open-book[data-edition=invitation] #main#main>.band:not(.chapter-opening)>.wrap {
+inline-size:calc(100% - 2 * var(--gutter));max-inline-size:1120px;padding-inline:0;margin-inline:auto;
+}
+html[data-type-system] body.open-book[data-edition=invitation] #main#main>.band:not(.chapter-opening) {padding-block:clamp(44px,5.5vw,80px)}
+html[data-type-system] body.open-book[data-edition=invitation] #main#main :is(.cols,.cols-2,.contact-grid) {gap:clamp(28px,4vw,52px)}
+html[data-type-system] body.open-book[data-edition=invitation] #main#main :is(.note,.form) {
+border:1px solid var(--verse-line);border-radius:24px;padding:clamp(24px,3.5vw,40px);background:var(--paper);
+}
+html[data-type-system] body.open-book[data-edition=invitation] #main#main .shead h2 {font-size:clamp(2rem,3.2vw,3.1rem);line-height:1.25}
+html[data-type-system] body.open-book[data-edition=invitation] #main#main :is(.col,.cols-2>div,.note)>p {line-height:1.9;max-inline-size:60ch}
+html[data-type-system] body.open-book[data-room=explore] #main#main :is(.explore-directory,.explore-personal) {max-inline-size:1120px}
+html[data-type-system] body.open-book #main#main :is(section[id],article[id]) {scroll-margin-block-start:calc(var(--header-height,88px) + var(--armbar-h,0px) + 24px)}
+}
+@media screen and (max-width:1000px) {
+html[data-type-system] {scroll-padding-block-end:108px}
+html[data-type-system] body.open-book {padding-block-end:calc(90px + env(safe-area-inset-bottom,0px))}
+html[data-type-system] body.open-book .journey-dock {
+position:fixed;inset-inline:12px;inset-block-end:max(10px,env(safe-area-inset-bottom,0px));
+z-index:70;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:2px;
+padding:6px;max-inline-size:520px;margin-inline:auto;
+border:1px solid var(--verse-line);border-radius:24px;background:var(--paper);
+box-shadow:0 8px 32px var(--verse-shadow),0 0 0 5px color-mix(in srgb,var(--paper) 75%,transparent);
+}
+html[data-type-system] body.open-book .journey-dock :is(a,button) {
+display:flex;flex-direction:column;align-items:center;justify-content:center;gap:5px;
+min-block-size:56px;min-inline-size:0;padding:7px 2px;border:1px solid transparent;
+border-radius:18px;background:transparent;color:var(--ink-soft);text-decoration:none;
+font:500 .72rem/1.35 var(--type-interface-family);cursor:pointer;
+transition:color .22s ease,background-color .22s ease,border-color .22s ease;
+}
+html[data-type-system] body.open-book .journey-dock [hidden] {display:none}
+html[data-type-system] body.open-book .journey-dock:has([data-journey-menu][hidden]) {grid-template-columns:repeat(4,minmax(0,1fr))}
+html[data-type-system] body.open-book .journey-dock :is([aria-current],.journey-current) {
+background:var(--paper-2);color:var(--gold);border-color:var(--verse-line);
+}
+html[data-type-system] body.open-book .journey-dock :is(a,button):focus-visible {outline:2px solid var(--gold);outline-offset:1px}
+html[data-type-system] body.open-book .journey-dock :is(a,button):active {background:var(--paper-2)}
+html[data-type-system] body.open-book:is(.nav-lock,.reading-focused) .journey-dock,
+html[data-type-system] body.open-book:has(:is(input,textarea,select):focus) .journey-dock {display:none}
+html[data-type-system] body.open-book #main#main :is(.study-contents,.chapter-contents)>.wrap {
+display:block;padding-block:18px;min-inline-size:0;
+}
+html[data-type-system] body.open-book #main#main :is(.study-contents,.chapter-contents)>.wrap>p {margin:0 0 10px;font-size:.72rem}
+html[data-type-system] body.open-book #main#main :is(.study-contents,.chapter-contents)>.wrap>div,
+html[data-type-system] body.open-book #main#main .about-contents>.wrap {
+display:flex;flex-wrap:nowrap;gap:8px;overflow-x:auto;overscroll-behavior-inline:contain;
+scrollbar-width:thin;padding-block:4px 10px;scroll-snap-type:inline proximity;
+}
+html[data-type-system] body.open-book #main#main :is(.study-contents,.chapter-contents,.about-contents) a {
+flex:0 0 auto;white-space:nowrap;padding:10px 16px;border:1px solid var(--verse-line);
+border-radius:999px;background:var(--paper);scroll-snap-align:start;
+}
+html[data-type-system] body.open-book #main#main :is(.study-contents,.chapter-contents,.about-contents) a[aria-current] {background:var(--paper-2);color:var(--gold)}
+html[data-type-system] body.open-book #main#main :is(section[id],article[id]) {scroll-margin-block-start:calc(var(--header-height,88px) + 20px)}
+html[data-type-system] body.open-book #main#main :is(.inheritance-bridge,.chapter-next) {padding-block:28px 36px}
+html[data-type-system] body.open-book #main#main .inheritance-bridge-heading {display:block}
+html[data-type-system] body.open-book #main#main .inheritance-bridge-links {grid-template-columns:minmax(0,1fr);gap:12px}
+html[data-type-system] body.open-book #main#main .inheritance-bridge-links>a {padding:20px}
+}
+@media screen and (max-width:600px) {
+html[data-type-system] body.open-book[data-edition=invitation] #main#main :is(.cols,.cols-2,.contact-grid,.form-row) {grid-template-columns:minmax(0,1fr)}
+html[data-type-system] body.open-book[data-edition=invitation] #main#main :is(.note,.form) {padding:24px 20px}
+}
+@media (prefers-reduced-motion:reduce) {
+.journey-dock *,html[data-type-system] body.open-book #main#main :is(.inheritance-bridge-links>a,.study-contents a,.chapter-contents a,.about-contents a) {transition:none!important}
+}
+:root[data-motion=calm] .journey-dock * {transition:none!important}
+@media print {.journey-dock{display:none!important}}
