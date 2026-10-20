@@ -172,7 +172,7 @@ body[data-apps=directory] :is(#in-progress,#stopped) img.project-symbol {display
 body[data-apps=directory] :is(#in-progress,#stopped) .project-card-title {min-width:0}
 body[data-apps=directory] :is(#in-progress,#stopped) .project-card-title .kind {margin:0 0 8px;font-size:.75rem;line-height:1.6;color:var(--gold)}
 body[data-apps=directory] :is(#in-progress,#stopped) .project-card-title h3 {font-size:clamp(1.65rem,2.2vw,2.1rem);line-height:1.2;margin:0 0 14px;overflow-wrap:normal}
-body[data-apps=directory] :is(#in-progress,#stopped) .project-card-title h3 [lang=ar] {display:block;font-size:1.2rem;line-height:1.85;margin:4px 0 0}
+body[data-apps=directory] :is(#in-progress,#stopped) .project-card-title h3 [lang=ar] {display:block;width:fit-content;max-width:100%;font-size:1.2rem;line-height:1.85;margin:4px 0 0}
 body[data-apps=directory] :is(#in-progress,#stopped) .project-card-title .pill {display:inline-flex;margin:0;padding:5px 10px;max-width:100%;white-space:normal;text-align:start;font-size:.72rem;line-height:1.5}
 body[data-apps=directory] :is(#in-progress,#stopped) .project-card-copy {flex:1;border-top:1px solid var(--line);padding-top:22px}
 body[data-apps=directory] :is(#in-progress,#stopped) .project-card-copy p {margin:0;font-size:1rem;line-height:1.8;max-width:55ch;color:var(--ink-soft)}
@@ -230,7 +230,7 @@ align-items:start;gap:clamp(28px,4vw,56px);width:100%;min-width:0;
 padding:clamp(24px,3.5vw,44px);margin:0;border-radius:20px;box-shadow:none;
 }
 body[data-apps=directory] #ledger .tool-dossiers .lrow .plate.app-brand-plate {
-grid-column:1;grid-row:1;align-self:start;justify-self:center;width:100%;max-width:240px;margin:0;
+grid-column:1;grid-row:1;align-self:start;justify-self:center;width:100%;max-width:240px;margin:0;box-shadow:none;
 }
 body[data-apps=directory] #ledger .tool-dossiers .lrow .tool-story {grid-column:2;grid-row:1;min-width:0;width:100%;max-width:65ch;padding:0}
 body[data-apps=directory] #ledger .tool-dossiers .name {font-size:clamp(1.9rem,2.6vw,2.7rem);line-height:1.2;max-width:none;margin-block:0 18px}
