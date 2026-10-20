@@ -160,6 +160,11 @@ body.living-book.illuminated.open-book[data-art-layout=spacious] #main {
 html[data-theme=dark] body.living-book.illuminated.open-book[data-art-layout=spacious] #main {--inheritance-pattern-opacity:.11}
 body.living-book.illuminated.open-book[data-art-layout=spacious] #main :is(
 .band:not(.chapter-opening):not(.source-encounter)>.wrap,
+.inheritance-hero-copy,.about-cover-copy,.desk-introduction,
+.listening-introduction,.listening-title,.apps-cover-copy,.workshop-intro,
+.chapter-opening-copy,.chapter-opening-grid>div:first-child,
+.reader-opening>div:first-child,.explore-opening>div:first-child,
+.podcast-vision-copy,
 .library-cover,.chapter-note,.reader-folio,.reader-collection-note,
 .invitation-opening>.wrap,.missing-opening>.wrap,
 .contact-routing,.explore-opening-note,.about-partner-grid,
