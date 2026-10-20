@@ -4,6 +4,103 @@ html[data-type-system] body.open-book #mobileNav .mrow>.journey-icon {
 color:var(--gold);margin-block-end:12px;inline-size:26px;block-size:26px;
 }
 @media screen {
+html:root[data-type-system] body.open-book #main#main {
+--journey-section-space:clamp(48px,5.5vw,80px);
+--journey-reading-size:clamp(1.0625rem,1rem + .18vw,1.125rem);
+--journey-reading-line:1.85;
+--journey-content-gap:clamp(24px,3vw,40px);
+}
+html:root[data-type-system] body.open-book #main#main>section:not(.chapter-opening):not(.inheritance-hero):not(.explore-opening):not([hidden]) {
+margin-block:0;padding-block:var(--journey-section-space);
+}
+html:root[data-type-system] body.open-book #main#main :is(h2,h3) {
+font-kerning:normal;text-wrap:balance;word-break:normal;overflow-wrap:normal;
+color:var(--ink);font-weight:500;
+}
+html:root[data-type-system][lang=en] body.open-book #main#main h2 {
+font-size:clamp(2rem,1.55rem + 1.7vw,3rem);line-height:1.22;letter-spacing:-.012em;
+}
+html:root[data-type-system][lang=en] body.open-book #main#main h3 {
+font-size:clamp(1.375rem,1.18rem + .6vw,1.75rem);line-height:1.35;letter-spacing:0;
+}
+html:root[data-type-system] body.open-book #main#main :is(
+.quran-companion-meaning,.quran-companion-reflection p,.quran-companion-practice p,
+.reader-meaning,.reader-section>p:not([lang=ar]),.source-meaning,.source-reflection,
+.about-letter-prose p,.podcast-vision-copy p,.tool-story>.what,.shead>p:not(.eyebrow)
+) {
+font-size:var(--journey-reading-size);line-height:var(--journey-reading-line);
+max-inline-size:62ch;text-wrap:pretty;
+}
+html:root[data-type-system] body.open-book #main#main :is(.shead,.quran-companion>header)>h2 {
+margin-block:12px 20px;
+}
+html:root[data-type-system] body.open-book #main#main :is(
+.quran-companion-reflection,.quran-companion-practice,.reader-section,.source-reflection
+) h3 {margin-block:0 14px}
+html:root[data-type-system] body.open-book #main#main :is(.quran-companion,.source-grid) {
+gap:var(--journey-content-gap);
+}
+html:root[data-type-system] body.open-book #main#main :is(.quran-companion-reflection,.quran-companion-depth) {
+padding-block-start:24px;margin-block-start:24px;
+}
+html:root[data-type-system] body.open-book #main#main :is(.reader-section,.about-letter-prose,.podcast-vision-copy)>p+p {
+margin-block-start:20px;
+}
+html:root[data-type-system] body.open-book #main#main :is(
+.source-arabic,.reader-arabic,.quran-companion-arabic,.inheritance-arabic,.inheritance-supplication-arabic
+) {
+animation:none;transition:none;transform:none;translate:none;filter:none;
+overflow:visible;word-break:normal;overflow-wrap:normal;
+letter-spacing:0!important;word-spacing:normal;text-wrap:pretty;
+}
+html:root[data-type-system][lang=ar] body.open-book #main#main {
+--journey-reading-line:2;--journey-reading-size:clamp(1.0625rem,1rem + .18vw,1.125rem);
+}
+html:root[data-type-system][lang=ar] body.open-book #main#main h2 {
+font-size:clamp(1.875rem,1.5rem + 1vw,2.6rem);line-height:1.85!important;
+}
+html:root[data-type-system][lang=ar] body.open-book #main#main h3 {
+font-size:clamp(1.375rem,1.15rem + .6vw,1.8rem);line-height:1.85!important;
+}
+html:root[data-type-system] body.open-book #main#main :is(.house-art,.about-inheritance-art) {
+min-inline-size:0;
+}
+html:root[data-type-system] body.open-book #main#main :is(.house-art,.about-inheritance-art) figcaption {
+padding-block-start:16px;line-height:1.75;max-inline-size:58ch;
+}
+}
+@media screen and (max-width:760px) {
+html:root[data-type-system] body.open-book #main#main {--journey-section-space:44px;--journey-content-gap:28px}
+html:root[data-type-system] body.open-book #main#main :is(
+.quran-companion,.source-grid,.about-letter-grid,.about-partner-grid,
+.quran-teacher-grid,.podcast-vision-spread,.podcast-invitation-spread,
+.first-lesson-invitation,.reading-cards,.reader-related
+) {row-gap:28px}
+html:root[data-type-system] body.open-book #main#main .shead {margin-block-end:28px}
+html:root[data-type-system] body.open-book #main#main :is(
+.house-art--chapter,.house-art--section,.about-inheritance-art
+) {margin-block:12px 24px}
+html:root[data-type-system] body.open-book #main#main :is(
+.house-art--chapter,.house-art--section,.about-inheritance-art
+) img {display:block;inline-size:100%;block-size:auto;object-fit:contain}
+html:root[data-type-system] body.open-book #main#main .house-art-title {
+max-inline-size:none;font-size:1.0625rem;line-height:1.6;text-wrap:pretty;
+}
+html:root[data-type-system] body.open-book #main#main :is(.quran-companion-meaning,.source-meaning) {
+margin-block:20px;
+}
+html:root[data-type-system] body.open-book #main#main .source-label {
+display:block;margin-block-end:10px;
+}
+html:root[data-type-system] body.open-book #main#main :is(.reader-section,.quran-companion-page) {
+min-inline-size:0;
+}
+html:root[data-type-system] body.open-book #main#main .reader-section {padding-block:32px}
+html:root[data-type-system] body.open-book #main#main .quran-companion-arabic {
+font-size:clamp(1.9rem,7.8vw,2.25rem);line-height:2.15!important;
+}
+}
+@media screen {
 html[data-type-system] body.open-book #main#main :is(.inheritance-bridge,.chapter-next) {
 inline-size:calc(100% - 2 * var(--gutter));max-inline-size:1120px;margin-inline:auto;
 padding:36px 0 44px;border-block-start:1px solid var(--verse-line);

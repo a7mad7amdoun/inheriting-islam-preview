@@ -432,3 +432,6 @@ body.living-book.illuminated.open-book[data-room][data-atmosphere][data-edition]
 body.living-book.illuminated.open-book[data-room][data-atmosphere][data-edition][data-direction=inheritance][data-art-layout=spacious] :is(#commitments .about-commitments-grid,#take-part .podcast-invitation-spread)>.house-art--chapter {grid-row:2}
 body.living-book.illuminated.open-book[data-room][data-atmosphere][data-edition][data-direction=inheritance][data-art-layout=spacious] .house-art--chapter {margin-block:12px}
 }
+@media screen {
+body.living-book.illuminated.open-book[data-room][data-atmosphere][data-edition][data-direction=inheritance][data-art-layout=spacious] .house-art:has(img[src*="/collection-"]) .house-art-title {max-width:none;text-wrap:pretty}
+}
