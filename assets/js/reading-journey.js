@@ -67,6 +67,7 @@
     finish.hidden = current !== sections.length - 1;
     next.textContent = current === 0 ? 'Continue to reflection →' : 'Carry it forward →';
     session.querySelector('[data-guided-status]').textContent = guided ? 'Step ' + (current + 1) + ' of 3 · ' + names[current] : '';
+    if (moveFocus) document.dispatchEvent(new CustomEvent('reading:place', {detail: {section: ids[current], guided: guided}}));
     if (moveFocus) {
       var heading = sections[current].querySelector('h2');
       heading.setAttribute('tabindex', '-1');
@@ -91,6 +92,7 @@
     if (guided) show(fromHash(), true);
     else {
       show(current, false);
+      document.dispatchEvent(new CustomEvent('reading:place', {detail: {section: ids[current], guided: false}}));
       toggle.focus({preventScroll: true});
       // The URL may have explicitly requested a guided entrance; exit should survive reload.
       var url = new URL(location.href);
@@ -104,7 +106,7 @@
   previous.addEventListener('click', function () { show(current - 1, true); });
   next.addEventListener('click', function () { show(current + 1, true); });
   document.querySelectorAll('.reader-margin > a[href^="#"]').forEach(function (link) {
-    link.addEventListener('click', function () { if (guided) show(ids.indexOf(link.hash.slice(1)), false); });
+    link.addEventListener('click', function () { var index = ids.indexOf(link.hash.slice(1)); if (guided) show(index, false); document.dispatchEvent(new CustomEvent('reading:place', {detail: {section: ids[index], guided: guided}})); });
   });
   window.addEventListener('hashchange', function () { if (guided) show(fromHash(), false); });
   window.addEventListener('beforeprint', function () { printing = true; sections.forEach(function (section) { section.hidden = false; }); });

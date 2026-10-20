@@ -1,5 +1,5 @@
-/* Optional reading tools. A click stores chapter IDs on this device only.
-   No requests, identities, timestamps, notes, or background reading history. */
+/* Optional reading tools. A click saves a chapter and its current section on this device only.
+   No requests, identities, timestamps, notes, or visit history. */
 (function () {
   'use strict';
   /* Reading appearance is transient; no preference or reading activity is stored. */
@@ -25,7 +25,8 @@
       var sectionObserver = new IntersectionObserver(function (entries) {
         if (document.body.classList.contains('reading-guided')) return;
         entries.forEach(function (entry) {
-          if (!entry.isIntersecting) return;
+          if (!entry.isIntersecting || printNotes) return;
+          rememberPlace(entry.target.id, false);
           contentsLinks.forEach(function (link) {
             if (link.getAttribute('href') === '#' + entry.target.id) link.setAttribute('aria-current', 'location');
             else link.removeAttribute('aria-current');
@@ -71,11 +72,17 @@
     });
   }
   var key = 'ii-saved-readings-v1';
+  var placeKey = 'ii-reading-places-v1';
+  var places = {}, undo = null;
+  var sectionIds = ['received', 'lived', 'passed-on'];
+  var sectionNames = ['Source and context', 'Reflection and optional practice', 'Keep the reference'];
+  var currentSection = sectionIds.indexOf(location.hash.slice(1)) >= 0 ? location.hash.slice(1) : 'received';
+  var currentGuided = new URLSearchParams(location.search).get('mode') === 'guided';
   var chapters = window.II_READINGS || {};
   var saved = [];
   var mounts = Array.from(document.querySelectorAll('[data-saved-chapters]'));
   var buttons = Array.from(document.querySelectorAll('[data-save-chapter]'));
-  var revealed = false;
+
   function clean(value) {
     return Array.isArray(value) ? value.filter(function (id, i, all) {
       return typeof id === 'string' && Object.prototype.hasOwnProperty.call(chapters, id) && all.indexOf(id) === i;
@@ -84,29 +91,92 @@
   function read() {
     try { saved = clean(JSON.parse(localStorage.getItem(key) || '[]')); }
     catch (e) { saved = []; }
+    places = {};
+    try {
+      var raw = JSON.parse(localStorage.getItem(placeKey) || '{}');
+      if (raw && typeof raw === 'object' && !Array.isArray(raw)) saved.forEach(function (id) {
+        var place = raw[id];
+        if (place && sectionIds.indexOf(place.section) >= 0 && typeof place.guided === 'boolean') {
+          places[id] = {section: place.section, guided: place.guided};
+        }
+      });
+    } catch (e) { places = {}; }
   }
   function announce(message) {
     document.querySelectorAll('[data-reader-status]').forEach(function (el) { el.textContent = message; });
   }
+  function rememberPlace(section, guided) {
+    if (sectionIds.indexOf(section) < 0) return;
+    currentSection = section; currentGuided = guided;
+    read();
+    var button = buttons[0], id = button && button.dataset.saveChapter;
+    if (!id || saved.indexOf(id) < 0) return;
+    if (places[id] && places[id].section === section && places[id].guided === guided) return true;
+    places[id] = {section: section, guided: guided};
+    try { localStorage.setItem(placeKey, JSON.stringify(places)); return true; }
+    catch (e) { announce('Your bookmark is kept, but this browser could not update your place.'); return false; }
+  }
+  document.addEventListener('reading:place', function (event) {
+    if (event.detail) rememberPlace(event.detail.section, event.detail.guided);
+  });
+  function removeSaved(ids) {
+    read();
+    var previous = {saved: saved.slice(), places: Object.assign({}, places)};
+    var next = saved.filter(function (id) { return ids.indexOf(id) < 0; });
+    try {
+      if (next.length) localStorage.setItem(key, JSON.stringify(next));
+      else localStorage.removeItem(key);
+      saved = next;
+      // Orphaned places never render; removing a bookmark also removes its position.
+      ids.forEach(function (id) { delete places[id]; });
+      try {
+        if (Object.keys(places).length) localStorage.setItem(placeKey, JSON.stringify(places));
+        else localStorage.removeItem(placeKey);
+      } catch (e) { /* Invalid orphan positions are ignored on the next read. */ }
+      undo = previous; render();
+      announce('Bookmark removed. You can undo this change.');
+      var target = document.querySelector('[data-undo-saved]');
+      if (target) target.focus({preventScroll: true});
+    } catch (e) { announce('This browser could not clear the bookmarks. Try clearing site data in your browser settings.'); }
+  }
   function render() {
+    document.querySelectorAll('[data-bookmark-control]').forEach(function (control) { control.hidden = false; });
     buttons.forEach(function (button) {
       var active = saved.indexOf(button.dataset.saveChapter) !== -1;
       button.setAttribute('aria-pressed', String(active));
       button.textContent = active ? 'Saved · Remove bookmark' : 'Save this reading';
     });
+    document.querySelectorAll('[data-saved-shortcut]').forEach(function (link) { link.hidden = false; });
     mounts.forEach(function (mount) {
-      mount.hidden = !saved.length && !revealed;
+      mount.hidden = false;
+      var empty = mount.querySelector('[data-saved-empty]');
+      if (empty) empty.hidden = !!saved.length;
       var list = mount.querySelector('[data-saved-list], [data-saved-chapters-list]');
       if (list) {
         list.replaceChildren();
         saved.forEach(function (id) {
           var item = document.createElement('li'), link = document.createElement('a');
-          link.href = '/quran/read/' + id + '/'; link.textContent = chapters[id];
-          item.appendChild(link); list.appendChild(item);
+          var title = document.createElement('h3'), context = document.createElement('p');
+          var actions = document.createElement('div'), remove = document.createElement('button');
+          var place = places[id];
+          title.textContent = chapters[id];
+          context.className = 'saved-place';
+          context.textContent = place ? sectionNames[sectionIds.indexOf(place.section)] : 'Ready when you are';
+          link.href = '/quran/read/' + id + '/' + (place ? (place.guided ? '?mode=guided' : '') + '#' + place.section : '');
+          link.textContent = place ? 'Continue reading' : 'Open reading';
+          link.setAttribute('aria-label', link.textContent + ': ' + chapters[id]);
+          link.className = 'saved-resume';
+          remove.type = 'button'; remove.textContent = 'Remove';
+          remove.setAttribute('aria-label', 'Remove' + ': ' + chapters[id]);
+          remove.addEventListener('click', function () { removeSaved([id]); });
+          actions.className = 'saved-item-actions'; actions.append(link, remove);
+          item.append(context, title, actions); list.appendChild(item);
         });
       }
       var clear = mount.querySelector('[data-clear-chapters]');
       if (clear) { clear.hidden = !saved.length; clear.disabled = !saved.length; }
+      var undoButton = mount.querySelector('[data-undo-saved]');
+      if (undoButton) undoButton.hidden = !undo;
     });
   }
   read();
@@ -119,26 +189,42 @@
       var removing = saved.indexOf(id) !== -1;
       var next = removing ? saved.filter(function (value) { return value !== id; }) : saved.concat(id);
       try {
-        localStorage.setItem(key, JSON.stringify(next)); saved = next; render();
-        announce(removing ? 'Bookmark removed from this browser.' : 'Saved only in this browser. You can return from the reading desk.');
+        localStorage.setItem(key, JSON.stringify(next)); saved = next;
+        if (removing) {
+          delete places[id];
+          try { localStorage.setItem(placeKey, JSON.stringify(places)); } catch (e) {}
+        } else {
+          var placeSaved = rememberPlace(currentSection, currentGuided);
+        }
+        render();
+        if (removing) announce('Bookmark removed from this browser.');
+        else if (placeSaved) announce('Saved only in this browser. Return from Your saved readings.');
       } catch (e) {
         render(); announce('This browser could not save the reading. You can use your browser’s bookmark feature instead.');
       }
     });
   });
   document.querySelectorAll('[data-clear-chapters]').forEach(function (button) {
+    button.addEventListener('click', function () { read(); removeSaved(saved.slice()); });
+  });
+  document.querySelectorAll('[data-undo-saved]').forEach(function (button) {
     button.addEventListener('click', function () {
+      if (!undo) return;
+      read();
+      var restored = clean(saved.concat(undo.saved));
+      var restoredPlaces = Object.assign({}, undo.places, places);
       try {
-        localStorage.removeItem(key); saved = []; revealed = true; render();
-        announce('Your saved chapters have been cleared from this browser.');
-        var mount = button.closest('[data-saved-chapters]');
-        var target = mount && mount.querySelector('[data-reader-status]');
-        if (target) { target.tabIndex = -1; target.focus(); }
-      } catch (e) { announce('This browser could not clear the bookmarks. Try clearing site data in your browser settings.'); }
+        localStorage.setItem(key, JSON.stringify(restored));
+        localStorage.setItem(placeKey, JSON.stringify(restoredPlaces));
+        saved = restored; places = restoredPlaces; undo = null; render();
+        announce('Your saved readings have been restored.');
+        var first = document.querySelector('.saved-resume');
+        if (first) first.focus({preventScroll: true});
+      } catch (e) { announce('This browser could not restore your saved readings.'); }
     });
   });
   addEventListener('storage', function (event) {
-    if (event.key === key || event.key === null) { read(); render(); }
+    if (event.key === key || event.key === placeKey || event.key === null) { read(); render(); }
   });
   function copy(text) {
     if (navigator.clipboard && navigator.clipboard.writeText) return navigator.clipboard.writeText(text);

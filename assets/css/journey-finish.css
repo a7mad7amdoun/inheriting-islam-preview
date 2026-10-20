@@ -899,3 +899,56 @@ html[data-motion="calm"] .crafted-symbol * {transition:none!important}
 body #main .library-catalog .book .facts {display:flex!important;flex-wrap:wrap;align-items:baseline;gap:.4rem 1rem}
 body #main .library-catalog .book .facts > span {white-space:nowrap;unicode-bidi:isolate}
 body #main .library-catalog .book .facts > span+span {border:0;padding:0}
+html:root[data-type-system] body.open-book #main#main .eyebrow::before,
+html:root[data-type-system] body.open-book #main#main .section-vignette {display:none;content:none}
+html:root[data-type-system] body.open-book #main#main :is(
+.inheritance-supplication-arabic,.quran-companion-arabic,
+.reader-source[data-source-id^="quran-"] .reader-arabic,
+.inheritance-source:has(a[href^="https://quran.com/"]) .inheritance-arabic,
+.source-encounter:has(a[href^="https://quran.com/"]) .source-arabic
+) {padding:clamp(28px,4vw,52px) clamp(20px,3vw,40px);border-radius:12px;border:1px solid var(--verse-line);box-shadow:none}
+html:root[data-type-system] body.open-book #main#main :is(
+.inheritance-supplication-arabic,.quran-companion-arabic,
+.reader-source[data-source-id^="quran-"] .reader-arabic,
+.inheritance-source:has(a[href^="https://quran.com/"]) .inheritance-arabic,
+.source-encounter:has(a[href^="https://quran.com/"]) .source-arabic
+)::before,
+html:root[data-type-system] body.open-book #main#main :is(
+.inheritance-supplication-arabic,.quran-companion-arabic,
+.reader-source[data-source-id^="quran-"] .reader-arabic,
+.inheritance-source:has(a[href^="https://quran.com/"]) .inheritance-arabic,
+.source-encounter:has(a[href^="https://quran.com/"]) .source-arabic
+)::after {content:none;display:none}
+html:root[data-type-system] body.open-book #main#main :is(.inheritance-source-ref,.quran-companion-reference) a {
+display:inline-block;border-inline-start:2px solid var(--gold-line);
+padding-block:6px;padding-inline:12px 4px;line-height:1.7;
+color:var(--ink-soft);text-decoration:none;text-underline-offset:.25em;
+}
+html:root[data-type-system] body.open-book #main#main :is(.inheritance-source-ref,.quran-companion-reference) a:is(:hover,:focus-visible) {color:var(--ink);text-decoration:underline;text-decoration-thickness:1px}
+html:root[data-type-system] body.open-book #main#main :is(.inheritance-source-notes,.quran-companion-depth,.chapter-disclosure)>summary {
+position:relative;list-style:none;cursor:pointer;min-block-size:44px;
+padding-block:14px;padding-inline:0 36px;text-align:start;
+border-block-end:1px solid var(--line);color:var(--ink);line-height:1.7;
+}
+html:root[data-type-system] body.open-book #main#main :is(.inheritance-source-notes,.quran-companion-depth,.chapter-disclosure)>summary::-webkit-details-marker {display:none}
+html:root[data-type-system] body.open-book #main#main :is(.inheritance-source-notes,.quran-companion-depth,.chapter-disclosure)>summary::after {
+content:"";position:absolute;inset-inline-end:4px;inset-block-start:calc(50% - 6px);
+width:12px;height:12px;margin:0;border:0;border-radius:0;transform:none;
+background:linear-gradient(var(--gold),var(--gold)) center/12px 1px no-repeat,linear-gradient(var(--gold),var(--gold)) center/1px 12px no-repeat;
+}
+html:root[data-type-system] body.open-book #main#main :is(.inheritance-source-notes,.quran-companion-depth,.chapter-disclosure)[open]>summary::after {
+background:linear-gradient(var(--gold),var(--gold)) center/12px 1px no-repeat;
+}
+html:root[data-type-system] body.open-book #main#main .inheritance-path-number {
+font-family:var(--f-body);font-variant-numeric:tabular-nums;
+font-size:.8125rem;letter-spacing:.04em;color:var(--gold);
+border:0;border-radius:0;background:none;padding:0;line-height:1.5;
+}
+html:root[data-type-system] body.open-book #main#main .inheritance-path-grid>a {
+transition:border-color .22s ease;
+}
+html:root[data-type-system] body.open-book #main#main .inheritance-path-grid>a:is(:hover,:focus-visible) {border-block-start-color:var(--gold-line)}
+html:root[data-type-system] body.open-book #main#main .inheritance-path-grid>a:is(:hover,:focus-visible) .inheritance-path-action {text-decoration:underline;text-underline-offset:.3em;text-decoration-thickness:1px}
+html:root[data-type-system] body.open-book #main#main :is(.inheritance-source-ref a,.quran-companion-reference a,.inheritance-path-grid>a,.inheritance-source-notes>summary,.quran-companion-depth>summary,.chapter-disclosure>summary):focus-visible {outline:2px solid var(--gold);outline-offset:5px}
+@media(prefers-reduced-motion:reduce) {html:root[data-type-system] body.open-book #main#main .inheritance-path-grid>a {transition:none}}
+html:root[data-motion=calm][data-type-system] body.open-book #main#main .inheritance-path-grid>a {transition:none}
