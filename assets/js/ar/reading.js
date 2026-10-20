@@ -163,7 +163,7 @@
           title.textContent = chapters[id];
           context.className = 'saved-place';
           context.textContent = place ? sectionNames[sectionIds.indexOf(place.section)] : "جاهزة حين ترغب في القراءة";
-          link.href = '/ar/quran/read/' + id + '/' + (place ? (place.guided ? '?mode=guided' : '') + '#' + place.section : '');
+          link.href = '/ar/quran/read/' + `${id}/` + (place ? (place.guided ? '?mode=guided' : '') + '#' + place.section : '');
           link.textContent = place ? "تابع القراءة" : "افتح القراءة";
           link.setAttribute('aria-label', link.textContent + ': ' + chapters[id]);
           link.className = 'saved-resume';

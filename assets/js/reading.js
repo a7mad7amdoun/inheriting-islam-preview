@@ -162,7 +162,7 @@
           title.textContent = chapters[id];
           context.className = 'saved-place';
           context.textContent = place ? sectionNames[sectionIds.indexOf(place.section)] : 'Ready when you are';
-          link.href = '/quran/read/' + id + '/' + (place ? (place.guided ? '?mode=guided' : '') + '#' + place.section : '');
+          link.href = '/quran/read/' + `${id}/` + (place ? (place.guided ? '?mode=guided' : '') + '#' + place.section : '');
           link.textContent = place ? 'Continue reading' : 'Open reading';
           link.setAttribute('aria-label', link.textContent + ': ' + chapters[id]);
           link.className = 'saved-resume';
