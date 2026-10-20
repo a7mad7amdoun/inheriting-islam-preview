@@ -705,3 +705,96 @@ html:root[data-type-system] body.open-book #main#main .form :is(input,select,tex
 html:root[data-type-system] body.open-book #main#main :is(.btn,.copybtn,.form input,.form select,.form textarea,.checkrow) {transition:none}
 }
 html:root[data-type-system][data-motion=calm] body.open-book #main#main :is(.btn,.copybtn,.form input,.form select,.form textarea,.checkrow) {transition:none}
+@media screen {
+html:root[data-type-system] body.open-book #main#main .explore-opening {padding-block-end:32px}
+html:root[data-type-system] body.open-book #main#main .explore-jump {
+display:inline-flex;align-items:center;gap:14px;min-block-size:48px;margin-block-start:20px;
+}
+html:root[data-type-system] body.open-book #main#main .explore-directory {padding-block-start:24px}
+html:root[data-type-system] body.open-book #main#main .explore-controls {
+grid-template-columns:minmax(0,1fr) minmax(240px,.45fr);gap:28px 32px;
+padding:32px;border:1px solid var(--line);border-radius:24px;background:var(--paper);
+}
+html:root[data-type-system] body.open-book #main#main .explore-controls label {
+font-size:1rem;font-weight:500;line-height:1.6;margin-block-end:12px;color:var(--ink);
+}
+html:root[data-type-system] body.open-book #main#main .explore-query-row {display:flex;gap:12px}
+html:root[data-type-system] body.open-book #main#main .explore-controls :is(input,select) {
+min-block-size:56px;padding:14px 16px;border:1px solid var(--control-line);
+border-radius:14px;background-color:var(--paper-2);color:var(--ink);font-size:1rem;line-height:1.6;
+box-shadow:none;transition:border-color .25s ease,background-color .25s ease;
+}
+html:root[data-type-system] body.open-book #main#main .explore-controls select {
+appearance:none;padding-inline-end:40px;
+background-image:linear-gradient(45deg,transparent 50%,currentColor 50%),linear-gradient(135deg,currentColor 50%,transparent 50%);
+background-position:calc(100% - 21px) 52%,calc(100% - 16px) 52%;background-size:5px 5px;background-repeat:no-repeat;
+}
+html:root[data-type-system][dir=rtl] body.open-book #main#main .explore-controls select {background-position:16px 52%,21px 52%}
+html:root[data-type-system] body.open-book #main#main .explore-controls button {
+min-block-size:48px;padding:10px 18px;border:1px solid var(--line);border-radius:13px;
+font-size:.9375rem;font-weight:500;line-height:1.5;color:var(--ink);background:var(--paper);
+text-decoration:none;transition:background-color .25s ease,border-color .25s ease,color .25s ease;
+}
+html:root[data-type-system] body.open-book #main#main .explore-controls button:hover {border-color:var(--gold);background:var(--paper-2)}
+html:root[data-type-system] body.open-book #main#main .explore-controls button[aria-pressed=true] {
+background:var(--cta-bg);color:var(--cta-fg);border-color:var(--cta-bg);
+}
+html:root[data-type-system] body.open-book #main#main .explore-controls :is(input,select,button):focus-visible {
+outline:2px solid var(--gold);outline-offset:3px;
+}
+html:root[data-type-system] body.open-book #main#main #search-privacy {
+font-size:.875rem;line-height:1.8;margin-block-start:14px;max-inline-size:62ch;
+}
+html:root[data-type-system] body.open-book #main#main .explore-suggestions {
+gap:12px;align-items:center;padding-block-start:24px;
+}
+html:root[data-type-system] body.open-book #main#main .explore-suggestions>span {
+font-size:.9375rem;margin-inline-end:8px;color:var(--ink-soft);
+}
+html:root[data-type-system] body.open-book #main#main .explore-results-heading {
+margin-block:40px 24px;gap:20px;
+}
+html:root[data-type-system] body.open-book #main#main .explore-results-heading p {
+font-size:.9375rem;line-height:1.75;white-space:normal;
+}
+html:root[data-type-system] body.open-book #main#main .explore-results {gap:20px}
+html:root[data-type-system] body.open-book #main#main .explore-entry>a {
+grid-template-columns:minmax(0,1fr) 20px;gap:20px;padding:28px;border:1px solid var(--line);border-radius:22px;
+background:var(--paper);box-shadow:none;translate:none;transition:background-color .25s ease,border-color .25s ease;
+}
+html:root[data-type-system] body.open-book #main#main .explore-number {display:none}
+html:root[data-type-system] body.open-book #main#main .explore-entry>a:hover {background:var(--paper-2);border-color:var(--gold);translate:none;box-shadow:none}
+html:root[data-type-system] body.open-book #main#main .explore-arrow {transform:none;transition:none}
+html:root[data-type-system] body.open-book #main#main .explore-entry h3 {
+font-size:clamp(1.625rem,1.35rem + .8vw,2rem);line-height:1.35;margin-block:0 14px;
+}
+html:root[data-type-system] body.open-book #main#main .explore-entry .explore-label {
+font-size:.875rem;line-height:1.8;margin-block-end:16px;
+}
+html:root[data-type-system] body.open-book #main#main .explore-entry p:not(.explore-label) {font-size:1rem;line-height:1.85;max-inline-size:48ch}
+html:root[data-type-system] body.open-book #main#main .explore-empty {
+padding:32px;border:1px solid var(--line);border-radius:22px;background:var(--paper);
+}
+html:root[data-type-system] body.open-book #main#main .explore-empty p {font-size:1.0625rem;line-height:1.85;margin-block:16px 24px}
+html:root[data-type-system] body.open-book #main#main .explore-editorial-note {font-size:.9375rem;line-height:1.85;margin-block-start:28px}
+html:root[data-type-system][lang=ar] body.open-book #main#main .explore-entry h3 {line-height:1.85!important}
+html:root[data-type-system][lang=ar] body.open-book #main#main .explore-controls :is(input,select,label,button) {line-height:1.85!important}
+}
+@media screen and (max-width:900px) {
+html:root[data-type-system] body.open-book #main#main .explore-controls {grid-template-columns:minmax(0,1fr);gap:24px}
+html:root[data-type-system] body.open-book #main#main .explore-controls>div:nth-child(2) {max-inline-size:none}
+}
+@media screen and (max-width:760px) {
+html:root[data-type-system] body.open-book #main#main .explore-controls {padding:24px 20px}
+html:root[data-type-system] body.open-book #main#main .explore-query-row {display:grid;grid-template-columns:minmax(0,1fr)}
+html:root[data-type-system] body.open-book #main#main .explore-query-row button {justify-self:end;min-block-size:44px;padding:8px 16px}
+html:root[data-type-system] body.open-book #main#main .explore-suggestions {display:grid;grid-template-columns:repeat(2,minmax(0,1fr))}
+html:root[data-type-system] body.open-book #main#main .explore-suggestions>span {grid-column:1/-1;margin:0 0 4px}
+html:root[data-type-system] body.open-book #main#main .explore-entry>a {padding:24px 20px;gap:12px}
+html:root[data-type-system] body.open-book #main#main .explore-empty {padding:24px 20px}
+html:root[data-type-system] body.open-book #main#main .explore-empty :is(.btn,.link) {margin-inline:0;margin-block-end:12px}
+}
+@media(prefers-reduced-motion:reduce) {
+html:root[data-type-system] body.open-book #main#main :is(.explore-controls input,.explore-controls select,.explore-controls button,.explore-entry>a) {transition:none}
+}
+html:root[data-type-system][data-motion=calm] body.open-book #main#main :is(.explore-controls input,.explore-controls select,.explore-controls button,.explore-entry>a) {transition:none}
