@@ -161,6 +161,7 @@ html[data-theme=dark] body.living-book.illuminated.open-book[data-art-layout=spa
 body.living-book.illuminated.open-book[data-art-layout=spacious] #main :is(
 .band:not(.chapter-opening):not(.source-encounter)>.wrap,
 .library-cover,.chapter-note,.reader-folio,.reader-collection-note,
+.invitation-opening>.wrap,.missing-opening>.wrap,
 .contact-routing,.explore-opening-note,.about-partner-grid,
 .about-commitments>.wrap,.quran-companion,.learning-doorways,
 .reader-prose,.reader-collection-close,.reading-collection-filter,
@@ -172,7 +173,8 @@ box-shadow:0 0 var(--content-halo) var(--content-halo) var(--paper);
 }
 body.living-book.illuminated.open-book[data-art-layout=spacious] #main :is(
 .inheritance-hero-art,.apps-cover-art,.listening-scene,
-.about-inheritance-art,.house-art,.reader-collection-art,.desk-art
+.about-inheritance-art,.house-art,.reader-collection-art,.desk-art,
+.about-portrait,.teacher-opening-portrait
 ) {
 isolation:isolate;background-color:var(--paper);
 box-shadow:0 0 24px 16px var(--paper);
