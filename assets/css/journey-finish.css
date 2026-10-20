@@ -1043,3 +1043,15 @@ html:root[data-type-system] body.open-book[data-room=apps] #main#main :is(.works
 html:root[data-type-system] body.open-book[data-room=apps] #main#main .project-card-heading {grid-template-columns:72px minmax(0,1fr);gap:16px}
 html:root[data-type-system] body.open-book[data-room=apps] #main#main .project-mark {width:72px}
 }
+html:root[data-type-system] body.open-book[data-room=apps] #main#main .workshop-intro .eyebrow:has(.brand-name) {
+font-size:clamp(1.6rem,1.35rem + .65vw,2.125rem)!important;
+line-height:1.35!important;color:var(--ink);letter-spacing:0!important;
+margin-block:0 24px;text-transform:none!important;
+}
+html:root[data-type-system] body.open-book[data-room=apps] #main#main .workshop-intro .eyebrow .brand-name {
+font-family:var(--type-brand-family)!important;font-weight:600!important;
+font-style:normal!important;letter-spacing:-.014em!important;
+}
+html:root[lang=ar][data-type-system] body.open-book[data-room=apps] #main#main .workshop-intro .eyebrow .brand-name {
+font-family:var(--type-brand-arabic-family)!important;font-weight:400!important;letter-spacing:0!important;line-height:1.8;
+}
