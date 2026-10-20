@@ -100,3 +100,75 @@ html:root[data-type-system] body.open-book #main#main[data-learning-editorial] .
 html:root[data-type-system] body.open-book #main#main[data-learning-editorial] .huruf.pick button{min-height:56px}
 html:root[data-type-system] body.open-book #main#main[data-learning-editorial] .lesson-keyboard{font-size:.8rem;line-height:1.7;margin-block:12px 0}
 }
+@media screen {
+html:root[data-type-system] body.open-book #main#main[data-learning-editorial] :is(#check-section,#results-band,#teacher-record,#teaching-practice,#scope){background:var(--paper);isolation:isolate}
+html:root[data-type-system] body.open-book #main#main[data-learning-editorial] :is(.check,.check .step,.result,.steps,.steps>li,#scope .cols,#scope .col){border:0;border-radius:0;box-shadow:none;background:transparent;padding:0}
+html:root[data-type-system] body.open-book #main#main[data-learning-editorial] :is(.check,.check .step,.result,.steps,.steps>li,#scope .cols,#scope .col)::before,
+html:root[data-type-system] body.open-book #main#main[data-learning-editorial] :is(.check,.check .step,.result,.steps,.steps>li,#scope .cols,#scope .col)::after{content:none}
+html:root[data-type-system] body.open-book #main#main[data-learning-editorial] :is(#check-section,#results-band) .wrap-narrow{max-width:880px}
+html:root[data-type-system] body.open-book #main#main[data-learning-editorial] .check-progress{font-size:.85rem;letter-spacing:0;text-transform:none;margin-bottom:32px;line-height:1.8}
+html:root[data-type-system] body.open-book #main#main[data-learning-editorial] .check-progress .bar{max-width:none;opacity:.85}
+html:root[data-type-system] body.open-book #main#main[data-learning-editorial] .check .step{border-block-start:1px solid var(--gold-line);padding-block:32px 0}
+html:root[data-type-system] body.open-book #main#main[data-learning-editorial] .check .step .head{margin-bottom:32px}
+html:root[data-type-system] body.open-book #main#main[data-learning-editorial] .check .step h2{font-size:clamp(1.8rem,3.4vw,2.8rem);max-width:28ch;line-height:1.4}
+html:root[data-type-system] body.open-book #main#main[data-learning-editorial] .specimen{border:0;border-block:1px solid var(--line);border-radius:0;background:transparent;box-shadow:none;padding:32px 16px;margin-block:32px;line-height:2.3!important;animation:none!important;transform:none!important;transition:none!important}
+html:root[data-type-system] body.open-book #main#main[data-learning-editorial] .check .step .gloss{font-size:1.05rem;line-height:1.9;letter-spacing:0;color:var(--ink-soft);max-width:58ch;margin:24px auto;text-align:start}
+html:root[data-type-system] body.open-book #main#main[data-learning-editorial] .choices{display:flex;gap:16px;margin-top:32px;justify-content:start}
+html:root[data-type-system] body.open-book #main#main[data-learning-editorial] .choices .btn{min-height:52px;min-width:0;flex:0 1 auto;white-space:normal;line-height:1.7}
+html:root[data-type-system] body.open-book #main#main[data-learning-editorial] .result{border-block-start:1px solid var(--gold-line);padding-block:32px}
+html:root[data-type-system] body.open-book #main#main[data-learning-editorial] .result .lbl{font-size:.85rem;letter-spacing:.02em;text-transform:none;margin-bottom:20px}
+html:root[data-type-system] body.open-book #main#main[data-learning-editorial] .result h2{font-size:clamp(1.9rem,3.4vw,2.8rem);line-height:1.4;max-width:28ch}
+html:root[data-type-system] body.open-book #main#main[data-learning-editorial] .result p{line-height:1.9;max-width:62ch}
+html:root[data-type-system] body.open-book #main#main[data-learning-editorial] .result .btns{display:flex;align-items:center;flex-wrap:wrap;gap:20px 28px}
+html:root[data-type-system] body.open-book #main#main[data-learning-editorial] .result .link{min-height:44px;display:inline-flex;align-items:center}
+html:root[data-type-system] body.open-book #main#main[data-learning-editorial] [data-restart]{margin-top:12px;min-height:48px}
+html:root[data-type-system] body.open-book #main#main[data-learning-editorial=teacher] .study-opening .chapter-opening-grid{grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);gap:clamp(40px,6vw,88px)}
+html:root[data-type-system] body.open-book #main#main[data-learning-editorial] .teacher-opening-portrait{max-width:560px;width:100%;margin:0;justify-self:center;border:0;background:transparent;box-shadow:none;padding:0}
+html:root[data-type-system] body.open-book #main#main[data-learning-editorial] .teacher-opening-portrait img{width:100%;height:auto;max-height:none;object-fit:contain;filter:none;animation:none;transform:none}
+html:root[data-type-system] body.open-book #main#main[data-learning-editorial] .teacher-opening-portrait figcaption{border:0;padding-block:18px 0;line-height:1.8}
+html:root[data-type-system] body.open-book #main#main[data-learning-editorial] #teacher-record .founder{grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr);gap:clamp(40px,6vw,96px);align-items:start}
+html:root[data-type-system] body.open-book #main#main[data-learning-editorial] #teacher-record .body{max-width:62ch}
+html:root[data-type-system] body.open-book #main#main[data-learning-editorial] #teacher-record .body p{line-height:1.95;margin-bottom:24px}
+html:root[data-type-system] body.open-book #main#main[data-learning-editorial] #teacher-record .sig{border:0;line-height:1.8}
+html:root[data-type-system] body.open-book #main#main[data-learning-editorial] #teaching-practice .steps{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:40px 64px;margin-block:36px 56px}
+html:root[data-type-system] body.open-book #main#main[data-learning-editorial] #teaching-practice .steps>li{display:grid;grid-template-columns:32px minmax(0,1fr);gap:20px;border-block-start:1px solid var(--gold-line);padding-block:28px 0;align-items:start}
+html:root[data-type-system] body.open-book #main#main[data-learning-editorial] #teaching-practice .steps .num{background:transparent;border:0;border-radius:0;box-shadow:none;color:var(--gold);padding:0;font-size:.9rem;line-height:2}
+html:root[data-type-system] body.open-book #main#main[data-learning-editorial] #teaching-practice .steps h3{font-size:clamp(1.5rem,2.1vw,2rem);line-height:1.4;margin-bottom:18px}
+html:root[data-type-system] body.open-book #main#main[data-learning-editorial] #teaching-practice .steps p{font-size:1rem;line-height:1.9;max-width:50ch}
+html:root[data-type-system] body.open-book #main#main[data-learning-editorial] #teaching-practice .house-art{max-width:100%;margin-block:48px 0;border:0;background:transparent;box-shadow:none;padding:0}
+html:root[data-type-system] body.open-book #main#main[data-learning-editorial] #teaching-practice .house-art img{aspect-ratio:2/1;object-fit:cover;object-position:center 58%;width:100%;height:auto;border-radius:6px;filter:none;mask:none;-webkit-mask:none}
+html:root[data-type-system] body.open-book #main#main[data-learning-editorial] #scope .cols{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:40px}
+html:root[data-type-system] body.open-book #main#main[data-learning-editorial] #scope .col{border-block-start:1px solid var(--line);padding-block:24px 0}
+html:root[data-type-system] body.open-book #main#main[data-learning-editorial] #scope .col h3{font-size:1.6rem;line-height:1.4;margin-bottom:20px}
+html:root[data-type-system] body.open-book #main#main[data-learning-editorial] #scope .col p{font-size:1rem;line-height:1.9}
+html:root[data-type-system] body.open-book #main#main[data-learning-editorial] #scope .note{max-width:72ch;margin-top:48px;border-block-start:1px solid var(--gold-line)}
+html:root[data-type-system] body.open-book #main#main[data-learning-editorial] .teacher-review-note{padding-block:24px;max-width:1120px}
+html:root[data-type-system] body.open-book #main#main[data-learning-editorial] .teacher-review-note details{border-block:1px solid var(--line);padding:0}
+html:root[data-type-system] body.open-book #main#main[data-learning-editorial] .teacher-review-note summary{cursor:pointer;min-height:48px;padding-block:16px;color:var(--ink);line-height:1.8}
+html:root[data-type-system] body.open-book #main#main[data-learning-editorial] .teacher-review-note p{max-width:66ch;padding-bottom:24px;line-height:1.9}
+html:root[data-type-system] body.open-book #main#main[data-learning-editorial] .teacher-review-note summary:focus-visible{outline:2px solid var(--gold);outline-offset:4px}
+html:root[data-type-system] body.open-book #main#main[data-learning-editorial] #teacher-call .btns{gap:16px;align-items:center}
+}
+@media screen and (max-width:850px){
+html:root[data-type-system] body.open-book #main#main[data-learning-editorial=teacher] .study-opening .chapter-opening-grid,
+html:root[data-type-system] body.open-book #main#main[data-learning-editorial] #teacher-record .founder{grid-template-columns:minmax(0,1fr);gap:28px}
+html:root[data-type-system] body.open-book #main#main[data-learning-editorial] .teacher-opening-portrait{max-width:420px}
+html:root[data-type-system] body.open-book #main#main[data-learning-editorial] #teacher-record .body{max-width:none}
+html:root[data-type-system] body.open-book #main#main[data-learning-editorial] #teaching-practice .steps{grid-template-columns:minmax(0,1fr);gap:28px;margin-bottom:32px}
+html:root[data-type-system] body.open-book #main#main[data-learning-editorial] #teaching-practice .steps>li{grid-template-columns:28px minmax(0,1fr);gap:16px;padding-top:24px}
+html:root[data-type-system] body.open-book #main#main[data-learning-editorial] #teaching-practice .house-art img{aspect-ratio:4/3}
+html:root[data-type-system] body.open-book #main#main[data-learning-editorial] #scope .cols{grid-template-columns:minmax(0,1fr);gap:28px}
+html:root[data-type-system] body.open-book #main#main[data-learning-editorial] .check .step{padding-top:24px}
+html:root[data-type-system] body.open-book #main#main[data-learning-editorial] .check .step .head{margin-bottom:24px}
+html:root[data-type-system] body.open-book #main#main[data-learning-editorial] .specimen{padding:24px 10px;margin-block:24px;font-size:2.4rem;line-height:2.3!important}
+html:root[data-type-system] body.open-book #main#main[data-learning-editorial] .specimen.sm{font-size:1.9rem}
+html:root[data-type-system] body.open-book #main#main[data-learning-editorial] .check .step .gloss{font-size:1rem;line-height:1.9;margin-block:24px}
+html:root[data-type-system] body.open-book #main#main[data-learning-editorial] .choices{flex-direction:column;gap:12px}
+html:root[data-type-system] body.open-book #main#main[data-learning-editorial] .choices .btn{width:100%;min-height:52px}
+html:root[data-type-system] body.open-book #main#main[data-learning-editorial] .result .btns{align-items:stretch;flex-direction:column;gap:12px}
+html:root[data-type-system] body.open-book #main#main[data-learning-editorial] .result .btn-primary{justify-content:center;white-space:normal;line-height:1.7}
+html:root[data-type-system] body.open-book #main#main[data-learning-editorial] .result .link{align-self:start}
+html:root[data-type-system] body.open-book #main#main[data-learning-editorial] .teacher-review-note{padding-block:16px}
+}
+@media screen{html:root[data-type-system] body.open-book #main#main[data-learning-editorial] :is(#results,.check .step){scroll-margin-block-start:184px}}
+@media screen and (max-width:850px){html:root[data-type-system] body.open-book #main#main[data-learning-editorial] :is(#results,.check .step){scroll-margin-block-start:116px}}
