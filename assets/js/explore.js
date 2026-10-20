@@ -8,6 +8,7 @@
   var entries = Array.from(document.querySelectorAll('.explore-entry'));
   var count = document.querySelector('[data-explore-count]');
   var empty = document.querySelector('[data-explore-empty]');
+  var editorialNote = document.querySelector('.explore-editorial-note');
   var shortcuts = Array.from(document.querySelectorAll('[data-explore-category]'));
   function normalize(value) {
     return value.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f\u064b-\u065f\u0670\u0640]/g, '')
@@ -24,6 +25,7 @@
     });
     count.textContent = total + (total === 1 ? ' resource' : ' resources') + (words.length || category.value !== 'all' ? ' found' : '');
     empty.hidden = total !== 0;
+    if (editorialNote) editorialNote.hidden = !entries.some(function (entry) { return !entry.hidden && entry.dataset.category === 'read'; });
     shortcuts.forEach(function (button) {
       button.setAttribute('aria-pressed', String(button.dataset.exploreCategory === category.value));
     });
