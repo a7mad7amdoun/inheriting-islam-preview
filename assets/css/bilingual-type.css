@@ -287,9 +287,15 @@ html[data-motion=calm] body.open-book .nav-disclosure[open] .nav-panel{animation
 html[lang=ar][data-type-system] body.open-book .fihrist-app-name{text-align:right}
 html[data-type-system] body.open-book .nav-panel-heading>span:first-child{min-width:0;flex:1}
 html[data-type-system] body.open-book .nav-panel-number{flex-shrink:0}
-@font-face{font-family:'Markazi Text';font-style:normal;font-weight:500;font-display:swap;src:url('/assets/fonts/editorial/markazi-text-medium.woff2') format('woff2')}
-html[data-type-system]{--type-brand-arabic-family:'Markazi Text','Noto Naskh Arabic',serif}
-html[data-type-system] body .brand-name[lang=ar]{font-family:var(--type-brand-arabic-family)!important;font-weight:500!important;font-size:1.22em;letter-spacing:0!important;direction:rtl;unicode-bidi:isolate}
+html[data-type-system]{--type-brand-arabic-family:'Amiri Complete','Noto Naskh Arabic',serif}
+html[data-type-system] body .brand-name[lang=ar]{font-family:var(--type-brand-arabic-family)!important;font-weight:400!important;font-size:1.08em;letter-spacing:0!important;direction:rtl;unicode-bidi:isolate}
 html[lang=ar][data-type-system] body .brand{direction:rtl;text-align:right}
-html[lang=ar][data-type-system] body .brand .wm{font-family:var(--type-brand-arabic-family)!important;font-size:2rem!important;font-weight:500!important;letter-spacing:0!important;line-height:1.2!important;direction:rtl}
-@media(max-width:600px){html[lang=ar][data-type-system] body #header .brand .wm{font-size:1.75rem!important}}
+html[lang=ar][data-type-system] body .brand .wm{font-family:var(--type-brand-arabic-family)!important;font-size:1.896rem!important;font-weight:400!important;letter-spacing:0!important;line-height:1.25!important;direction:rtl;color:var(--ink)!important;font-synthesis:none}
+@media(max-width:600px){html[lang=ar][data-type-system] body #header .brand .wm{font-size:1.812rem!important}}
+html[data-type-system] body .brand .wm{inline-size:max-content}
+@media(max-width:420px){html[lang=ar][data-type-system] body #header .brand .wm{font-size:1.603rem!important}}
+html[lang=ar][data-type-system] body #header .brand .sub{
+display:flex;align-items:center;justify-content:space-between;
+inline-size:10.743rem;gap:0;white-space:nowrap;letter-spacing:0!important;
+}
+@media(max-width:600px){html[lang=ar][data-type-system] body #header .brand .sub{display:none}}
