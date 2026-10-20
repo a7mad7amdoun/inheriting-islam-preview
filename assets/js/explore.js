@@ -12,6 +12,14 @@
   var shortcuts = Array.from(document.querySelectorAll('[data-explore-category]'));
   var pathGuidance = document.querySelector('[data-path-guidance]');
   var pathCopy = Array.from(document.querySelectorAll('[data-path-copy]'));
+  var pathTargets = Array.from(document.querySelectorAll('[data-path-target]'));
+  var pathBrowse = document.querySelector('[data-path-browse]');
+  var chosenResource = null;
+  function goToStep(element) {
+    element.focus({preventScroll:true});
+    var calm = document.documentElement.dataset.motion === 'calm' || (window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches);
+    element.scrollIntoView({block:'start',behavior:calm ? 'auto' : 'smooth'});
+  }
   var arabic = document.documentElement.lang === 'ar';
   var correctionBox = document.querySelector('[data-search-corrections]');
   var correctionList = document.querySelector('[data-search-correction-list]');
@@ -158,7 +166,12 @@
   }
   function update() {
     var words = queryWords(input.value);
-    var found = rankResults(resultsFor(words, category.value), words), total = found.length;
+    var found = rankResults(resultsFor(words, category.value), words);
+    if (chosenResource) found = found.filter(function (entry) { return entry.id === chosenResource; });
+    var total = found.length;
+    resultList.classList.toggle('has-guided-result', !!chosenResource);
+    pathTargets.forEach(function (button) { button.setAttribute('aria-pressed',String(button.dataset.pathTarget === chosenResource)); });
+    if (pathBrowse) pathBrowse.hidden = !chosenResource;
     entries.forEach(function (entry) { entry.hidden = !found.includes(entry); });
     // Move the original cards, rather than clone or visually reorder them.
     // Reading order, keyboard order, and the visible order stay identical.
@@ -203,15 +216,24 @@
     var calm = document.documentElement.dataset.motion === 'calm' || (window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches);
     directory.scrollIntoView({block:'start', behavior:calm ? 'auto' : 'smooth'});
   });
-  input.addEventListener('input', update);
-  category.addEventListener('change', update);
+  input.addEventListener('input', function () { chosenResource=null; update(); });
+  category.addEventListener('change', function () { chosenResource=null; update(); });
   shortcuts.forEach(function (button) {
     button.addEventListener('click', function () {
-      input.value = ''; category.value = button.dataset.exploreCategory; update();
+      chosenResource=null; input.value = ''; category.value = button.dataset.exploreCategory; update();
+      if (pathGuidance && !pathGuidance.hidden) goToStep(document.getElementById('path-guide-title'));
     });
   });
+  pathTargets.forEach(function (button) {
+    button.addEventListener('click', function () {
+      chosenResource=button.dataset.pathTarget; update();
+      var entry=document.getElementById(chosenResource);
+      if (entry && !entry.hidden) goToStep(entry.querySelector('a'));
+    });
+  });
+  if (pathBrowse) pathBrowse.addEventListener('click', function () { chosenResource=null;update();goToStep(document.getElementById('path-guide-title')); });
   document.querySelectorAll('[data-explore-reset]').forEach(function (button) {
-    button.addEventListener('click', function () { input.value = ''; category.value = 'all'; update(); input.focus(); });
+    button.addEventListener('click', function () { chosenResource=null; input.value = ''; category.value = 'all'; update(); input.focus(); });
   });
   document.querySelectorAll('[data-explore-suggestion]').forEach(function (button) {
     button.addEventListener('click', function () { input.value = button.dataset.exploreSuggestion; category.value = 'all'; update(); input.focus(); });

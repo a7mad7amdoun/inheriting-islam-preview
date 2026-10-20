@@ -42,3 +42,14 @@ html:root[data-type-system] body.open-book #main#main .explore-controls button.e
 html:root[data-type-system] body.open-book #main#main .path-title{font-size:1.4rem}
 html:root[data-type-system] body.open-book #main#main .explore-path-guidance{padding-inline:18px}
 }
+html:root[data-type-system] body.open-book #main#main .path-choices{display:flex;flex-wrap:wrap;gap:12px;margin-block:20px 8px}
+html:root[data-type-system] body.open-book #main#main .path-choices button,
+html:root[data-type-system] body.open-book #main#main .path-browse{font:inherit;font-size:.9375rem;line-height:1.7;min-height:48px;padding:12px 18px;border:1px solid var(--control-line);border-radius:14px;color:var(--ink);background:var(--paper);cursor:pointer;text-align:start}
+html:root[data-type-system] body.open-book #main#main .path-choices button{display:flex;align-items:center;justify-content:space-between;gap:20px}
+html:root[data-type-system] body.open-book #main#main .path-choices button:hover{border-color:var(--gold);background:var(--paper-2)}
+html:root[data-type-system] body.open-book #main#main .path-choices button[aria-pressed=true]{background:var(--cta-bg);color:var(--cta-fg);border-color:var(--cta-bg)}
+html:root[data-type-system] body.open-book #main#main .path-browse{margin-top:16px;background:transparent;border-color:transparent;text-decoration:underline;text-underline-offset:5px;padding-inline:0}
+html:root[data-type-system] body.open-book #main#main :is(.path-choices button,.path-browse,.explore-entry>a):focus-visible{outline:2px solid var(--gold);outline-offset:5px}
+html:root[data-type-system] body.open-book #main#main :is(#path-guide-title,.explore-entry>a){scroll-margin-block-start:calc(var(--header-height,88px) + 32px)}
+html:root[data-type-system] body.open-book #main#main .explore-results.has-guided-result{grid-template-columns:minmax(0,1fr);max-inline-size:700px}
+@media(max-width:700px){html:root[data-type-system] body.open-book #main#main .path-choices{display:grid;grid-template-columns:minmax(0,1fr)}}
