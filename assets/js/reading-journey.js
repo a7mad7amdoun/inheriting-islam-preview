@@ -25,6 +25,7 @@
   var sections = ids.map(function (id) { return document.getElementById(id); });
   if (sections.some(function (section) { return !section; })) return;
   var toggle = session.querySelector('[data-guided-toggle]');
+  var status = session.querySelector('[data-guided-status]');
   var navigation = session.querySelector('[data-guided-navigation]');
   var steps = Array.from(session.querySelectorAll('[data-guided-step]'));
   var footer = document.querySelector('[data-guided-footer]');
@@ -66,7 +67,7 @@
     next.hidden = current === sections.length - 1;
     finish.hidden = current !== sections.length - 1;
     next.textContent = current === 0 ? 'Continue to reflection →' : 'Carry it forward →';
-    session.querySelector('[data-guided-status]').textContent = guided ? 'Step ' + (current + 1) + ' of 3 · ' + names[current] : '';
+    status.textContent = guided ? 'Step ' + (current + 1) + ' of 3 · ' + names[current] : '';
     if (moveFocus) document.dispatchEvent(new CustomEvent('reading:place', {detail: {section: ids[current], guided: guided}}));
     if (moveFocus) {
       var heading = sections[current].querySelector('h2');
