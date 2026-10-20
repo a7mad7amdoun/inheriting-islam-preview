@@ -140,20 +140,20 @@ html[data-type-system][data-motion=gentle] body.open-book {scroll-behavior:smoot
 @media screen and (max-width:1000px) {
 html[data-type-system] body.open-book #mobileNav {
 isolation:isolate;inset-inline:10px;bottom:max(10px,env(safe-area-inset-bottom,0px));
-padding:24px 20px 28px;border:1px solid var(--verse-line);border-radius:26px;
-background:var(--paper);box-shadow:0 16px 48px var(--verse-shadow);
-scrollbar-width:thin;scroll-padding-block:20px;
+padding:24px 20px 28px;border:1px solid var(--line);border-radius:26px;
+background:var(--paper);box-shadow:0 16px 48px rgba(0,0,0,.12);
+scrollbar-width:thin;scroll-padding-block:20px;overflow-x:hidden;
 }
 html[data-type-system] body.open-book #mobileNav::before {
-content:"";position:absolute;inset-block-start:10px;inset-inline-end:-70px;
-width:310px;height:280px;z-index:-1;pointer-events:none;opacity:.075;
+content:"";position:absolute;inset-block-start:10px;inset-inline-end:0;
+width:min(100%,310px);height:200px;z-index:-1;pointer-events:none;opacity:.075;
 background:var(--gold);
 mask:url('/assets/img/architecture/inheritance-calligraphy.avif') center / cover no-repeat;
 -webkit-mask:url('/assets/img/architecture/inheritance-calligraphy.avif') center / cover no-repeat;
 mask-mode:luminance;
 }
 html[data-type-system] body.open-book #mobileNav .mobile-heading {
-gap:12px;margin:0 0 20px;padding:0 0 14px;border-block-end:1px solid var(--verse-line);
+gap:12px;margin:0 0 20px;padding:0 0 14px;border-block-end:1px solid var(--line);
 }
 html[data-type-system] body.open-book #mobileNav .mobile-heading>.eyebrow {
 font:500 .78rem/1.6 var(--type-interface-family);letter-spacing:0;color:var(--ink-soft);
@@ -167,7 +167,7 @@ html[data-type-system] body.open-book #mobileNav .mrow {
 display:grid;grid-template-columns:32px minmax(0,1fr);grid-template-rows:auto auto;
 align-content:center;align-items:center;gap:5px 16px;position:relative;
 min-height:86px;padding:17px 34px 17px 17px;padding-inline:17px 34px;
-border:1px solid var(--verse-line);border-radius:18px;background:var(--paper);
+border:1px solid var(--line);border-radius:18px;background:var(--paper);
 box-shadow:none;text-decoration:none;
 }
 html[data-type-system] body.open-book #mobileNav .mrow>.journey-icon {
@@ -183,11 +183,11 @@ html[data-type-system] body.open-book #mobileNav .mrow .vb {
 grid-column:2;grid-row:2;font:400 .81rem/1.65 var(--type-interface-family);color:var(--ink-soft);
 }
 html[data-type-system] body.open-book #mobileNav .mrow[aria-current] {
-border-color:var(--verse-metal);background:var(--paper-2);
+border-color:var(--gold-line);background:var(--paper-2);
 }
 html[data-type-system] body.open-book #mobileNav .mrow[aria-current]>.journey-icon {color:var(--ink);stroke-width:1.85}
 html[data-type-system] body.open-book #mobileNav .mobile-learning {
-margin-top:14px;border:1px solid var(--verse-line);border-radius:18px;background:var(--paper);
+margin-top:14px;border:1px solid var(--line);border-radius:18px;background:var(--paper);
 }
 html[data-type-system] body.open-book #mobileNav .mobile-learning>summary {
 padding:18px 16px;gap:16px;min-height:58px;
@@ -203,12 +203,12 @@ border-radius:12px;border:1px solid transparent;color:var(--ink-soft);text-decor
 font:400 .88rem/1.6 var(--type-interface-family);
 }
 html[data-type-system] body.open-book #mobileNav .mgroup .journey-icon {width:23px;height:23px;color:var(--ink-soft);flex:none}
-html[data-type-system] body.open-book #mobileNav .mgroup>a[aria-current] {background:var(--paper-2);color:var(--ink);border-color:var(--verse-line)}
+html[data-type-system] body.open-book #mobileNav .mgroup>a[aria-current] {background:var(--paper-2);color:var(--ink);border-color:var(--line)}
 html[data-type-system] body.open-book #mobileNav .mobile-bottom {padding-top:22px;margin:0}
 html[data-type-system] body.open-book #mobileNav .mobile-bottom>a {gap:10px;font:.8rem/1.7 var(--type-interface-family)}
 html[data-type-system] body.open-book #mobileNav .mobile-bottom .journey-icon {width:20px;height:20px}
 html[data-type-system] body.open-book #mobileNav :is(a,summary):focus-visible {outline:2px solid var(--gold);outline-offset:2px}
-html[data-type-system] body.open-book #mobileNav :is(.mrow,.mgroup>a):hover {background:var(--paper-2);border-color:var(--verse-metal)}
+html[data-type-system] body.open-book #mobileNav :is(.mrow,.mgroup>a):hover {background:var(--paper-2);border-color:var(--gold-line)}
 html[lang=ar][data-type-system] body.open-book #mobileNav .mobile-destination-title {font-size:1.16rem;line-height:1.5}
 html[lang=ar][data-type-system] body.open-book #mobileNav :is(.vb,.mobile-learning>summary,.mgroup>a) {line-height:1.8}
 }
