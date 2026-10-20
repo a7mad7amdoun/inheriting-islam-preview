@@ -249,3 +249,30 @@ html[data-type-system] body.open-book #mobileNav * {scroll-behavior:auto!importa
 }
 html[data-type-system][data-motion=calm] body.open-book #mobileNav,
 html[data-type-system][data-motion=calm] body.open-book #mobileNav * {scroll-behavior:auto!important;transition:none!important;animation:none!important}
+@keyframes journey-page-leave {from{opacity:1}to{opacity:0}}
+@keyframes journey-page-enter {from{opacity:0}to{opacity:1}}
+@media screen and (max-width:1000px) and (prefers-reduced-motion:no-preference) {
+html:root[data-type-system][data-motion=gentle]:not([data-theme-transition]) {background:var(--paper)}
+html:root[data-type-system][data-motion=gentle]:not([data-theme-transition]) body.open-book #header {view-transition-name:journey-masthead}
+html:root[data-type-system][data-motion=gentle]:not([data-theme-transition]) body.open-book .journey-tray {view-transition-name:journey-navigation}
+html:root[data-type-system][data-motion=gentle]:not([data-theme-transition]) body.open-book #header .mark {view-transition-name:none}
+html:root[data-type-system][data-motion=gentle]:not([data-theme-transition])::view-transition-group(root),
+html:root[data-type-system][data-motion=gentle]:not([data-theme-transition])::view-transition-group(journey-masthead),
+html:root[data-type-system][data-motion=gentle]:not([data-theme-transition])::view-transition-group(journey-navigation) {animation:none}
+html:root[data-type-system][data-motion=gentle]:not([data-theme-transition])::view-transition-image-pair(root) {isolation:isolate}
+html:root[data-type-system][data-motion=gentle]:not([data-theme-transition])::view-transition-old(root) {
+animation:journey-page-leave 120ms ease-out both;mix-blend-mode:normal;
+}
+html:root[data-type-system][data-motion=gentle]:not([data-theme-transition])::view-transition-new(root) {
+animation:journey-page-enter 220ms 120ms cubic-bezier(.22,1,.36,1) both;mix-blend-mode:normal;
+}
+html:root[data-type-system][data-motion=gentle]:not([data-theme-transition])::view-transition-old(journey-masthead),
+html:root[data-type-system][data-motion=gentle]:not([data-theme-transition])::view-transition-new(journey-masthead),
+html:root[data-type-system][data-motion=gentle]:not([data-theme-transition])::view-transition-old(journey-navigation),
+html:root[data-type-system][data-motion=gentle]:not([data-theme-transition])::view-transition-new(journey-navigation) {
+animation:none;mix-blend-mode:normal;opacity:1;
+}
+html:root[data-type-system][data-motion=gentle][data-page-arrival] body.open-book #main {
+animation:journey-page-enter 240ms ease-out both;
+}
+}

@@ -43,6 +43,19 @@
     });
   });
 
+  // Older engines keep native navigation and receive a small arrival fade only.
+  // Never intercept links, postpone navigation, or replay an arrival on browser Back.
+  if (!('onpagereveal' in window)) {
+    addEventListener('pageshow', function (event) {
+      delete root.dataset.pageArrival;
+      if (event.persisted || innerWidth > 1000 || reduce.matches || root.dataset.motion === 'calm') return;
+      var entry = window.performance && performance.getEntriesByType && performance.getEntriesByType('navigation')[0];
+      if (entry && entry.type === 'back_forward') return;
+      root.dataset.pageArrival = 'true';
+    });
+    addEventListener('pagehide', function () { delete root.dataset.pageArrival; });
+  }
+
   var toggle = document.getElementById('themeToggle');
   var appLogos = document.querySelectorAll('img[data-logo-dark][data-logo-light]');
   function syncAppLogos() {
