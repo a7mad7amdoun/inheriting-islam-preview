@@ -251,13 +251,16 @@
 
   /* Native desktop disclosure: usable without JS, enhanced with dismissal.
      These are ordinary navigation links, not an application menu widget. */
-  var learningMenu = document.querySelector('.nav-disclosure');
+  document.querySelectorAll('.nav-disclosure').forEach(function (learningMenu) {
   function closeLearning(restoreFocus) {
     if (!learningMenu || !learningMenu.open) return;
     learningMenu.open = false;
     if (restoreFocus) learningMenu.querySelector('summary').focus();
   }
   if (learningMenu) {
+    learningMenu.addEventListener('toggle', function () {
+      if (learningMenu.open) document.querySelectorAll('.nav-disclosure').forEach(function (other) { if (other !== learningMenu) other.open = false; });
+    });
     document.addEventListener('click', function (event) {
       if (!learningMenu.contains(event.target)) closeLearning(false);
     });
@@ -278,6 +281,7 @@
       }
     });
   }
+  });
   /* Keep keyboard focus within the open mobile navigation and its controls. */
   addEventListener('keydown', function (event) {
     if (event.key !== 'Tab' || !navPanel || navBtn.getAttribute('aria-expanded') !== 'true') return;

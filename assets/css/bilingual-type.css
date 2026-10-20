@@ -252,3 +252,44 @@ direction:ltr;unicode-bidi:isolate;
 html[data-type-system] body .nav-panel-heading .eyebrow:has(.brand-name){
 font-size:1.25rem!important;line-height:1.35!important;
 }
+html[data-type-system] body.open-book #header :is(.hcta,.language-switch a){font-family:var(--type-navigation-family)!important;font-weight:500;font-size:1.125rem!important;line-height:1.4!important;letter-spacing:0!important}
+html[data-type-system] body.open-book #header .language-switch a[lang=ar]{font-family:'Noto Naskh Arabic','Amiri Complete',serif!important;font-size:1.25rem!important;line-height:1.7!important;padding-block:7px}
+html[lang=ar][data-type-system] body.open-book #header .language-switch a[lang=en]{font-family:'Newsreader','EB Garamond',Georgia,serif!important}
+html[data-type-system] body.open-book .fihrist-intro{display:block;margin-top:8px;font:400 .9375rem/1.6 var(--type-prose-family);color:var(--ink-soft)}
+html[data-type-system] body.open-book .fihrist-app-list{padding-block:12px}
+html[data-type-system] body.open-book :is(#header,#mobileNav) .fihrist-app{display:grid;grid-template-columns:72px minmax(0,1fr) 18px;gap:18px;align-items:center;padding:12px 4px;border-radius:12px;white-space:normal;text-decoration:none;color:var(--ink);min-width:0;border-bottom:1px solid var(--line);transition:background-color .2s ease}
+html[data-type-system] body.open-book :is(#header,#mobileNav) .fihrist-app::after{display:none}
+html[data-type-system] body.open-book .fihrist-logo{display:grid;place-items:center;width:72px;height:72px;border-radius:16px;background:#f8f5ed;border:1px solid #d9d1bf;overflow:hidden}
+html[data-type-system] body.open-book .fihrist-logo img{display:block;width:64px;height:64px;object-fit:contain;filter:none;transform:none;opacity:1}
+html[data-type-system] body.open-book .fihrist-app-copy{display:grid;gap:5px;min-width:0}
+html[data-type-system] body.open-book .fihrist-app-name{font:500 1.25rem/1.4 'Newsreader','EB Garamond',Georgia,serif!important;text-align:start}
+html[data-type-system] body.open-book .fihrist-app small{font:400 .9375rem/1.6 var(--type-prose-family)!important;color:var(--ink-soft)}
+html[data-type-system] body.open-book .fihrist-app-sections{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;padding-block:12px 20px}
+html[data-type-system] body.open-book :is(#header,#mobileNav) .fihrist-app-sections a{display:grid;gap:5px;padding:10px 4px;white-space:normal;font:500 1.125rem/1.4 var(--type-navigation-family)!important;color:var(--ink);text-decoration:none}
+html[data-type-system] body.open-book .fihrist-app-sections small{font:400 .8125rem/1.6 var(--type-prose-family);color:var(--ink-soft)}
+html[data-type-system] body.open-book :is(.fihrist-app,.fihrist-app-sections a):hover{background:var(--paper-2)}
+html[data-type-system] body.open-book :is(.fihrist-app,.fihrist-app-sections a,summary):focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+html[data-type-system] body.open-book #mobileNav .fihrist-mobile-body{padding:4px 12px 16px}
+html[data-type-system] body.open-book #mobileNav .fihrist-overview{display:block;padding:14px 4px;font:500 1.2rem/1.5 var(--type-navigation-family);color:var(--gold)}
+html[data-type-system] body.open-book #mobileNav :is(.fihrist-mobile-quran,.fihrist-mobile-apps){margin-block:12px}
+html[data-type-system] body.open-book #mobileNav :is(.fihrist-mobile-quran,.fihrist-mobile-apps)>summary{font-family:var(--type-navigation-family)!important;font-size:1.5rem!important;line-height:1.6!important;padding-block:16px}
+html[data-type-system] body.open-book #mobileNav .fihrist-app{grid-template-columns:56px minmax(0,1fr) 14px;gap:12px}
+html[data-type-system] body.open-book #mobileNav .fihrist-logo{width:56px;height:56px;border-radius:12px}
+html[data-type-system] body.open-book #mobileNav .fihrist-logo img{width:50px;height:50px}
+html[data-type-system] body.open-book #mobileNav .fihrist-app-name{font-size:1.125rem!important}
+html[data-type-system] body.open-book #mobileNav .fihrist-app-sections{grid-template-columns:1fr;gap:2px;padding-bottom:0}
+html[lang=ar][data-type-system] body.open-book :is(.fihrist-app small,.fihrist-app-sections small,.fihrist-intro){line-height:1.9!important}
+html[lang=ar][data-type-system] body.open-book #header .hcta::after{content:'↖'}
+@keyframes fihrist-reveal{from{opacity:0}to{opacity:1}}
+html[data-type-system] body.open-book .nav-disclosure[open] .nav-panel{animation:fihrist-reveal .18s ease-out!important}
+@media(prefers-reduced-motion:reduce){html[data-type-system] body.open-book .nav-disclosure[open] .nav-panel{animation:none!important}}
+html[data-motion=calm] body.open-book .nav-disclosure[open] .nav-panel{animation:none!important}
+html[lang=ar][data-type-system] body.open-book .fihrist-app-name{text-align:right}
+html[data-type-system] body.open-book .nav-panel-heading>span:first-child{min-width:0;flex:1}
+html[data-type-system] body.open-book .nav-panel-number{flex-shrink:0}
+@font-face{font-family:'Markazi Text';font-style:normal;font-weight:500;font-display:swap;src:url('/assets/fonts/editorial/markazi-text-medium.woff2') format('woff2')}
+html[data-type-system]{--type-brand-arabic-family:'Markazi Text','Noto Naskh Arabic',serif}
+html[data-type-system] body .brand-name[lang=ar]{font-family:var(--type-brand-arabic-family)!important;font-weight:500!important;font-size:1.22em;letter-spacing:0!important;direction:rtl;unicode-bidi:isolate}
+html[lang=ar][data-type-system] body .brand{direction:rtl;text-align:right}
+html[lang=ar][data-type-system] body .brand .wm{font-family:var(--type-brand-arabic-family)!important;font-size:2rem!important;font-weight:500!important;letter-spacing:0!important;line-height:1.2!important;direction:rtl}
+@media(max-width:600px){html[lang=ar][data-type-system] body #header .brand .wm{font-size:1.75rem!important}}
