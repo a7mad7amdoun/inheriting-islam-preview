@@ -43,3 +43,37 @@ html:root[data-type-system] body.open-book #main#main :is(.shead h2,.open-sectio
 html:root[data-type-system] body.open-book *,html:root[data-type-system] body.open-book *::before,html:root[data-type-system] body.open-book *::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}
 }
 html:root[data-type-system][data-motion=calm] body.open-book *,html:root[data-type-system][data-motion=calm] body.open-book *::before,html:root[data-type-system][data-motion=calm] body.open-book *::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}
+@media screen {
+html:root[data-type-system] body.open-book #main#main .inheritance-hero-layout{grid-template-columns:minmax(0,1fr) minmax(0,1.48fr);column-gap:clamp(36px,4.4vw,72px);max-inline-size:1600px;margin-inline:auto;padding:clamp(32px,3.4vw,54px) var(--gutter) clamp(40px,4vw,64px);align-items:center}
+html:root[data-type-system] body.open-book #main#main .inheritance-hero-copy{padding:0 0 48px;max-inline-size:600px}
+html:root[data-type-system] body.open-book #main#main .inheritance-hero h1{font-size:clamp(3.5rem,6.2vw,6.4rem);line-height:1.06;margin-block:22px 24px;max-inline-size:12ch;letter-spacing:-.018em}
+html:root[data-type-system] body.open-book #main#main .inheritance-hero-teaching{font-family:var(--f-body);font-size:clamp(1.2rem,1.55vw,1.5rem);font-weight:500;line-height:1.6;color:var(--ink);margin:0 0 12px;max-inline-size:34ch}
+html:root[data-type-system] body.open-book #main#main .inheritance-hero-lede{font-size:clamp(1.05rem,1.35vw,1.25rem);line-height:1.75;max-inline-size:36ch;margin:0 0 28px;color:var(--ink-soft)}
+html:root[data-type-system] body.open-book #main#main .inheritance-hero-art{inline-size:100%;margin:0;align-self:center}
+html:root[data-type-system] body.open-book #main#main .inheritance-hero-art img{inline-size:100%;block-size:auto;aspect-ratio:4/3;object-fit:contain;border-radius:14px;mask-image:none;-webkit-mask-image:none;filter:none;opacity:1;transform:none}
+html:root[data-type-system] body.open-book #main#main .inheritance-hero-art figcaption{max-inline-size:none;inline-size:100%;gap:14px;margin:0;padding:16px 2px 0;align-items:center;flex-wrap:wrap;border:0}
+html:root[data-type-system] body.open-book #main#main .inheritance-hero-art figcaption>span{font-size:1rem!important;line-height:1.6!important}
+html:root[data-type-system] body.open-book #main#main .inheritance-hero-art figcaption [lang=ar]{font-size:2rem!important;line-height:1.6!important}
+html:root[data-type-system][lang=ar] body.open-book #main#main .inheritance-hero h1{font-size:clamp(3.2rem,5.2vw,5.5rem);line-height:1.55;letter-spacing:0;max-inline-size:14ch}
+html:root[data-type-system][lang=ar] body.open-book #main#main .inheritance-hero :is(.inheritance-hero-teaching,.inheritance-hero-lede){line-height:1.95}
+}
+@media screen and (min-width:761px) and (max-width:1024px){
+html:root[data-type-system] body.open-book #main#main .inheritance-hero-layout{grid-template-columns:minmax(0,1fr);gap:32px;max-inline-size:850px}
+html:root[data-type-system] body.open-book #main#main .inheritance-hero-copy{padding:0;max-inline-size:660px}
+html:root[data-type-system] body.open-book #main#main .inheritance-hero h1{max-inline-size:18ch}
+html:root[data-type-system] body.open-book #main#main .inheritance-hero h1 br{display:none}
+}
+@media screen and (max-width:760px){
+html:root[data-type-system] body.open-book #main#main .inheritance-hero-layout[data-mobile-opening]{grid-template-columns:minmax(0,1fr);inline-size:calc(100% - 40px);max-inline-size:600px;padding:24px 0 44px;gap:18px}
+html:root[data-type-system] body.open-book #main#main .inheritance-hero-copy{display:contents}
+html:root[data-type-system] body.open-book #main#main .inheritance-hero h1{font-size:clamp(2.8rem,12vw,4.3rem);line-height:1.08;margin:0;max-inline-size:100%}
+html:root[data-type-system] body.open-book #main#main .inheritance-hero-copy>.inheritance-hero-teaching{order:2;margin:0;font-size:1.15rem;line-height:1.65;max-inline-size:100%}
+html:root[data-type-system] body.open-book #main#main .inheritance-hero-art{order:3;margin:4px 0 0}
+html:root[data-type-system] body.open-book #main#main .inheritance-hero-art figcaption{padding-block-start:10px;gap:12px}
+html:root[data-type-system] body.open-book #main#main .inheritance-hero-art figcaption>span{font-size:.875rem!important}
+html:root[data-type-system] body.open-book #main#main .inheritance-hero-art figcaption [lang=ar]{font-size:1.65rem!important}
+html:root[data-type-system] body.open-book #main#main .inheritance-hero-lede{margin:0;font-size:1.125rem;max-inline-size:100%}
+html:root[data-type-system] body.open-book #main#main .inheritance-hero-actions{margin:0;gap:10px 18px}
+html:root[data-type-system][lang=ar] body.open-book #main#main .inheritance-hero h1{font-size:clamp(2.65rem,11vw,4rem);line-height:1.5}
+html:root[data-type-system][lang=ar] body.open-book #main#main .inheritance-hero-teaching{font-size:1.1rem}
+}

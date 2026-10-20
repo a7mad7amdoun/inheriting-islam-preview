@@ -250,6 +250,24 @@
     });
   }
 
+  /* Double activation is an optional shortcut; native single-click menus remain. */
+  document.querySelectorAll('.nav-disclosure > summary, .fihrist-mobile-quran > summary, .fihrist-mobile-apps > summary').forEach(function (summary) {
+    var apps = summary.parentElement.matches('.fihrist-apps, .fihrist-mobile-apps');
+    var destination = (document.documentElement.lang === 'ar' ? '/ar' : '') + (apps ? '/apps/' : '/quran/');
+    var lastTap = null;
+    summary.style.touchAction = 'manipulation';
+    summary.addEventListener('click', function (event) {
+      if (event.detail === 0 || event.button !== 0) { lastTap = null; return; }
+      var now = performance.now();
+      if (lastTap !== null && now - lastTap < 350) {
+        event.preventDefault();
+        lastTap = null;
+        window.location.assign(destination);
+      } else { lastTap = now; }
+    });
+    summary.addEventListener('blur', function () { lastTap = null; });
+  });
+
   /* Native desktop disclosure: usable without JS, enhanced with dismissal.
      These are ordinary navigation links, not an application menu widget. */
   document.querySelectorAll('.nav-disclosure').forEach(function (learningMenu) {

@@ -1043,15 +1043,28 @@ html:root[data-type-system] body.open-book[data-room=apps] #main#main :is(.works
 html:root[data-type-system] body.open-book[data-room=apps] #main#main .project-card-heading {grid-template-columns:72px minmax(0,1fr);gap:16px}
 html:root[data-type-system] body.open-book[data-room=apps] #main#main .project-mark {width:72px}
 }
-html:root[data-type-system] body.open-book[data-room=apps] #main#main .workshop-intro .eyebrow:has(.brand-name) {
-font-size:clamp(1.6rem,1.35rem + .65vw,2.125rem)!important;
-line-height:1.35!important;color:var(--ink);letter-spacing:0!important;
-margin-block:0 24px;text-transform:none!important;
+html:root[data-type-system] body.open-book[data-room=apps] #main#main .desk-spread {
+grid-template-columns:minmax(0,.95fr) minmax(0,1.05fr);
 }
-html:root[data-type-system] body.open-book[data-room=apps] #main#main .workshop-intro .eyebrow .brand-name {
-font-family:var(--type-brand-family)!important;font-weight:600!important;
-font-style:normal!important;letter-spacing:-.014em!important;
+html:root[data-type-system] body.open-book[data-room=apps] #main#main .shead {
+margin-block-end:32px;max-inline-size:none;
 }
-html:root[lang=ar][data-type-system] body.open-book[data-room=apps] #main#main .workshop-intro .eyebrow .brand-name {
-font-family:var(--type-brand-arabic-family)!important;font-weight:400!important;letter-spacing:0!important;line-height:1.8;
+html:root[data-type-system] body.open-book[data-room=apps] #main#main .shead h2 {
+font-size:clamp(2rem,3.2vw,3.1rem);line-height:1.23;max-inline-size:27ch;
 }
+@media(min-width:1001px){
+html:root[data-type-system] body.open-book[data-room=apps] #main#main .chapter-contents {display:none}
+}
+@media(max-width:760px){
+html:root[data-type-system] body.open-book[data-room=apps] #main#main .desk-spread {grid-template-columns:minmax(0,1fr)}
+html:root[data-type-system] body.open-book[data-room=apps] #main#main .desk-spread>.desk-art {grid-column:1;grid-row:auto}
+}
+html[data-type-system] body.open-book #header .nav-disclosure > summary,
+html[data-type-system] body.open-book #mobileNav :is(.fihrist-mobile-quran,.fihrist-mobile-apps) > summary {
+font-family:var(--type-brand-family)!important;font-weight:600;letter-spacing:-.014em;touch-action:manipulation;
+}
+html[lang=ar][data-type-system] body.open-book #header .nav-disclosure > summary,
+html[lang=ar][data-type-system] body.open-book #mobileNav :is(.fihrist-mobile-quran,.fihrist-mobile-apps) > summary {
+font-family:var(--type-brand-arabic-family)!important;letter-spacing:0;
+}
+html[data-type-system] body.open-book .fihrist-apps .nav-panel-heading strong:has(.brand-name) {font-size:1.25rem;line-height:1.35}
