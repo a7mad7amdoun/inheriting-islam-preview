@@ -218,3 +218,8 @@ html:root[data-type-system] body.open-book #main#main:is([data-learning-editoria
 html:root[data-type-system] body.open-book #main#main:is([data-learning-editorial=cohorts],[data-learning-editorial=masajid]) .community-opening-actions{align-items:stretch;flex-direction:column}
 html:root[data-type-system] body.open-book #main#main:is([data-learning-editorial=cohorts],[data-learning-editorial=masajid]) .community-opening-actions .link{align-self:start}
 }
+@media screen {
+html:root[data-type-system] body.open-book #main#main[data-learning-editorial=masajid] #community-process .shead-split{display:block}
+html:root[data-type-system] body.open-book #main#main[data-learning-editorial=masajid] #community-process .shead-split .small{margin-top:24px;max-width:54ch}
+html:root[data-type-system] body.open-book #main#main[data-learning-editorial=cohorts] .cname .sub{letter-spacing:0;text-transform:none;font-weight:400}
+}
