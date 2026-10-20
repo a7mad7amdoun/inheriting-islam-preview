@@ -43,3 +43,79 @@
  new MutationObserver(schedule).observe(root, {attributes:true, attributeFilter:['data-motion']});
  schedule();
 })();
+
+/* Shared edge illumination: scroll, fine pointer, and one gentle click sweep.
+   No text moves, no input is intercepted, and rendering stops when settled. */
+(function () {
+ 'use strict';
+ var root = document.documentElement;
+ var main = document.querySelector('body.open-book');
+ if (!main) return;
+ var reduce = matchMedia('(prefers-reduced-motion: reduce)');
+ var fine = matchMedia('(hover: hover) and (pointer: fine)');
+ var frame = 0, previous = 0, x = .94, y = .26, tx = x, ty = y;
+ var sweep = null, zoom = 1, targetZoom = 1;
+ function enabled() { return !reduce.matches && root.dataset.motion !== 'calm' && !document.hidden; }
+ function stop() {
+  if (frame) cancelAnimationFrame(frame);
+  frame = 0; previous = 0; sweep = null;
+ }
+ function start() {
+  if (!enabled()) { stop(); return; }
+  if (!frame) frame = requestAnimationFrame(draw);
+ }
+ function draw(time) {
+  frame = 0;
+  if (!enabled()) { stop(); return; }
+  var elapsed = previous ? Math.min(time - previous, 64) : 16;
+  previous = time;
+  if (sweep !== null) {
+   if (sweep < 0) sweep = time;
+   var progress = Math.min(1, (time - sweep) / 1600);
+   var ease = .5 - Math.cos(progress * Math.PI) / 2;
+   x = .94 - .88 * ease; tx = x;
+   if (progress === 1) sweep = null;
+  } else {
+   x += (tx - x) * (1 - Math.exp(-elapsed / 240));
+  }
+  y += (ty - y) * (1 - Math.exp(-elapsed / 240));
+  zoom += (targetZoom - zoom) * (1 - Math.exp(-elapsed / 360));
+  if (Math.abs(targetZoom - zoom) < .00005) zoom = targetZoom;
+  main.style.setProperty('--calligraphy-zoom', zoom.toFixed(5));
+  if (Math.abs(tx - x) < .0005) x = tx;
+  if (Math.abs(ty - y) < .0005) y = ty;
+  main.style.setProperty('--inheritance-light-screen-x', (window.innerWidth * x).toFixed(2) + 'px');
+  main.style.setProperty('--inheritance-light-screen-y', (window.innerHeight * y).toFixed(2) + 'px');
+  if (sweep !== null || x !== tx || y !== ty || zoom !== targetZoom) frame = requestAnimationFrame(draw);
+  else previous = 0;
+ }
+ function scroll() {
+  if (!enabled()) { stop(); return; }
+  var distance = Math.max(1, root.scrollHeight - window.innerHeight);
+  var progress = Math.max(0, Math.min(1, window.scrollY / distance));
+  sweep = null; tx = .94 - progress * .88; ty = .18 + progress * .64;
+  targetZoom = 1 + progress * (window.innerWidth <= 760 ? .05 : .08);
+  start();
+ }
+ function pointer(event) {
+  if (!enabled() || !fine.matches || event.pointerType === 'touch' || sweep !== null) return;
+  tx = Math.max(.06, Math.min(.94, event.clientX / window.innerWidth));
+  ty = Math.max(.12, Math.min(.88, event.clientY / window.innerHeight));
+  start();
+ }
+ function click(event) {
+  if (!enabled() || (event.button !== undefined && event.button !== 0)) return;
+  ty = Math.max(.12, Math.min(.88, event.clientY / window.innerHeight));
+  sweep = -1;start();
+ }
+ window.addEventListener('scroll', scroll, {passive:true});
+ window.addEventListener('resize', scroll, {passive:true});
+ window.addEventListener('pageshow', scroll);
+ window.addEventListener('pagehide', stop);
+ document.addEventListener('pointermove', pointer, {passive:true});
+ document.addEventListener('pointerdown', click, {passive:true});
+ document.addEventListener('visibilitychange', scroll);
+ reduce.addEventListener('change', scroll);
+ new MutationObserver(scroll).observe(root, {attributes:true, attributeFilter:['data-motion']});
+ scroll();
+})();
