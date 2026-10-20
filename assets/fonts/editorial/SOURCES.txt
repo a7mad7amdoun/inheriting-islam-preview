@@ -1,0 +1,2 @@
+Newsreader, self-hosted Latin and extended Latin subset with weight and optical-size axes. SIL Open Font License; see Newsreader-OFL.txt.
+Source: https://github.com/productiontype/Newsreader

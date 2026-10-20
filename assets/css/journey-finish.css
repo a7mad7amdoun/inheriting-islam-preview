@@ -589,3 +589,108 @@ html:root[data-type-system] body.open-book footer .fbot .vow {flex-basis:100%}
 html:root[data-type-system] body.open-book #main#main .inheritance-bridge-links>a {transition:none}
 }
 html:root[data-type-system][data-motion=calm] body.open-book #main#main .inheritance-bridge-links>a {transition:none}
+@media screen {
+html:root[data-type-system] body.open-book #main#main .form {
+gap:28px;min-inline-size:0;
+}
+html:root[data-type-system] body.open-book #main#main .form-row {gap:24px}
+html:root[data-type-system] body.open-book #main#main .field {gap:10px;min-inline-size:0}
+html:root[data-type-system] body.open-book #main#main .form :is(label:not(.checkrow),.room-field-label,legend) {
+font-family:var(--type-interface-family);font-size:.9375rem;line-height:1.65;
+font-weight:500;letter-spacing:0;text-transform:none;color:var(--ink);
+}
+html:root[data-type-system] body.open-book #main#main .form .field :is(input:not([type=checkbox]):not([type=radio]),select,textarea) {
+inline-size:100%;max-inline-size:100%;min-block-size:54px;
+padding:14px 16px;border:1px solid var(--control-line);border-radius:14px;
+background-color:var(--paper-2);color:var(--ink);font-size:1rem;line-height:1.65;
+box-shadow:none;transition:border-color .25s ease,background-color .25s ease;
+}
+html:root[data-type-system] body.open-book #main#main .form .field select {padding-inline-end:40px}
+html:root[data-type-system] body.open-book #main#main .form .field textarea {
+min-block-size:184px;resize:vertical;font-family:var(--type-prose-family)!important;line-height:1.85;
+}
+html:root[data-type-system] body.open-book #main#main .form :is(input,textarea)::placeholder {
+color:var(--ink-soft);opacity:1;font-size:1rem;
+}
+html:root[data-type-system] body.open-book #main#main .form .field :is(input,textarea,select):focus-visible {
+outline:2px solid var(--gold);outline-offset:3px;border-color:var(--gold);box-shadow:none;
+}
+html:root[data-type-system] body.open-book #main#main .form [aria-invalid=true] {
+border-width:2px;outline:2px solid var(--gold);outline-offset:3px;
+}
+html:root[data-type-system] body.open-book #main#main .form :is(.formnote,.tzline,.tiny) {
+font-size:.9375rem;line-height:1.8;color:var(--ink-soft);max-inline-size:62ch;
+}
+html:root[data-type-system] body.open-book #main#main .form .formnote {margin:0}
+html:root[data-type-system] body.open-book #main#main .form .formnote.ok {color:var(--ink)}
+html:root[data-type-system] body.open-book #main#main .checkgrid {gap:12px}
+html:root[data-type-system] body.open-book #main#main .form .checkrow {
+display:flex;align-items:flex-start;gap:12px;padding:16px;border:1px solid var(--control-line);
+border-radius:14px;background:var(--paper);min-block-size:54px;
+font-size:1rem;line-height:1.75;color:var(--ink);cursor:pointer;
+transition:border-color .25s ease,background-color .25s ease;
+}
+html:root[data-type-system] body.open-book #main#main .form .checkrow input {
+inline-size:20px;block-size:20px;min-block-size:20px;flex:none;margin-block-start:4px;accent-color:var(--gold);
+}
+html:root[data-type-system] body.open-book #main#main .form .checkrow:has(input:checked) {
+background:var(--paper-2);border-color:var(--gold);
+}
+html:root[data-type-system] body.open-book #main#main .form .checkrow:focus-within {
+outline:2px solid var(--gold);outline-offset:3px;
+}
+html:root[data-type-system] body.open-book #main#main :is(.btn,.copybtn) {
+min-block-size:50px;max-inline-size:100%;padding:13px 24px;border-radius:15px;
+font-size:1rem;line-height:1.5;font-weight:500;letter-spacing:0;
+white-space:normal;text-wrap:balance;box-shadow:none;transform:none;translate:none;
+transition:background-color .25s ease,color .25s ease,border-color .25s ease;
+}
+html:root[data-type-system] body.open-book #main#main :is(.btn,.copybtn):hover {
+box-shadow:none;transform:none;translate:none;
+}
+html:root[data-type-system] body.open-book #main#main :is(.btn,.copybtn):focus-visible {
+outline:2px solid var(--gold);outline-offset:4px;
+}
+html:root[data-type-system] body.open-book #main#main :is(.btn,.copybtn):disabled {
+cursor:not-allowed;opacity:.55;box-shadow:none;
+}
+html:root[data-type-system] body.open-book #main#main .btn-sm,
+html:root[data-type-system] body.open-book #main#main .copybtn {min-block-size:44px;padding:10px 16px;font-size:.9375rem}
+html:root[data-type-system] body.open-book #main#main .btns {gap:14px 20px}
+html:root[data-type-system] body.open-book #main#main .btns>.link {display:inline-flex;align-items:center;min-block-size:44px}
+html:root[data-type-system] body.open-book #main#main .form .email-preview {
+min-inline-size:0;margin-block-start:4px;padding:28px;border:1px solid var(--line);
+border-radius:20px;background:var(--paper-2);box-shadow:none;
+}
+html:root[data-type-system] body.open-book #main#main .email-preview h3 {margin-block:0 16px;scroll-margin-block-start:120px}
+html:root[data-type-system] body.open-book #main#main .email-preview p {font-size:1rem;line-height:1.85}
+html:root[data-type-system] body.open-book #main#main .email-preview pre {
+font-family:var(--type-prose-family);font-size:1rem;line-height:1.85;
+margin-block:24px;padding-block:20px;max-block-size:420px;white-space:pre-wrap;
+overflow-wrap:anywhere;scrollbar-gutter:stable;overscroll-behavior:contain;
+}
+html:root[data-type-system] body.open-book #main#main .email-preview pre:focus-visible {
+outline:2px solid var(--gold);outline-offset:4px;
+}
+html:root[data-type-system] body.open-book #main#main .copy-status {font-size:.9375rem;line-height:1.8}
+html:root[data-type-system] body.open-book #main#main .copy-status:empty {display:none}
+html:root[data-type-system] body.open-book #main#main .direct .k {
+font-size:.875rem;letter-spacing:0;text-transform:none;color:var(--ink-soft);margin-block-end:8px;
+}
+html:root[data-type-system] body.open-book #main#main .direct li {padding-block:20px}
+html:root[data-type-system] body.open-book #main#main .direct .copybtn {margin-inline-start:12px}
+html:root[data-type-system][lang=ar] body.open-book #main#main .form :is(label,.room-field-label,legend,input,select,textarea,.formnote,.checkrow,.email-preview pre) {
+line-height:1.95;
+}
+}
+@media screen and (max-width:760px) {
+html:root[data-type-system] body.open-book #main#main .form {gap:24px}
+html:root[data-type-system] body.open-book #main#main .form-row {grid-template-columns:minmax(0,1fr);gap:24px}
+html:root[data-type-system] body.open-book #main#main .form .email-preview {padding:24px 18px}
+html:root[data-type-system] body.open-book #main#main .email-preview .btns {display:grid;grid-template-columns:minmax(0,1fr);gap:12px}
+html:root[data-type-system] body.open-book #main#main .form :is(input,select,textarea) {scroll-margin-block:120px 28px}
+}
+@media(prefers-reduced-motion:reduce) {
+html:root[data-type-system] body.open-book #main#main :is(.btn,.copybtn,.form input,.form select,.form textarea,.checkrow) {transition:none}
+}
+html:root[data-type-system][data-motion=calm] body.open-book #main#main :is(.btn,.copybtn,.form input,.form select,.form textarea,.checkrow) {transition:none}

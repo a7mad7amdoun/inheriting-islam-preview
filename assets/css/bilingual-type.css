@@ -197,3 +197,49 @@ html[lang=en][data-type-system] body.open-book #main h2 {line-height:1.2;letter-
 html[data-type-system] body.open-book #main :is(h1,h2,h3) {text-wrap:balance}
 html[data-type-system] body.open-book #main :is(.lede,.inheritance-hero-lede,.about-cover-lede) {text-wrap:pretty}
 }
+@font-face{
+font-family:'Newsreader';font-style:normal;font-weight:200 800;font-display:swap;
+src:url('/assets/fonts/editorial/newsreader-variable.woff2') format('woff2');
+}
+html[data-type-system]{--type-navigation-family:'Newsreader','EB Garamond',Georgia,serif}
+html[lang=ar][data-type-system]{--type-navigation-family:'Noto Naskh Arabic','Amiri Complete',serif}
+html[data-type-system] :is(#header .nav,#mobileNav,.armbar,.study-contents,.about-contents){
+--type-interface-family:var(--type-navigation-family);
+}
+html[data-type-system] body.open-book #header :is(.nav>a,.nav-disclosure>summary){
+font-size:1.125rem;line-height:1.45!important;font-weight:500;
+font-optical-sizing:auto;letter-spacing:0!important;padding-block:11px;
+}
+html[data-type-system] body.open-book :is(.nav-panel-heading strong,.mobile-heading>a){
+font-family:var(--type-navigation-family)!important;font-size:1.5rem;line-height:1.4!important;font-weight:400;
+}
+html[data-type-system] body.open-book #header .nav-learning-grid>a>span{
+font-size:1.1875rem;line-height:1.45!important;font-weight:500;
+}
+html[data-type-system] body.open-book :is(.nav-panel small,.mobile-destinations .vb){
+font-family:var(--type-prose-family)!important;
+}
+html[data-type-system] body.open-book #mobileNav .mobile-destination-title{
+font-size:1.5rem;line-height:1.45!important;font-weight:400;
+}
+html[data-type-system] body.open-book #mobileNav :is(.mobile-learning>summary,.mgroup>a){
+font-size:1.125rem;line-height:1.65!important;
+}
+html[data-type-system] body.open-book :is(.armbar a,.study-contents a,.about-contents a){
+font-size:1.0625rem;line-height:1.55!important;font-weight:500;
+}
+html[data-type-system] body.open-book .nav-learning-grid>a{
+border-block-end:1px dotted var(--line);
+}
+html[lang=ar][data-type-system] body.open-book #header :is(.nav>a,.nav-disclosure>summary){
+font-size:1.1875rem;line-height:1.7!important;padding-block:7px;
+}
+html[lang=ar][data-type-system] body.open-book #header .nav-learning-grid>a>span{
+font-size:1.25rem;line-height:1.8!important;
+}
+html[lang=ar][data-type-system] body.open-book #mobileNav :is(.mobile-heading>a,.mobile-destination-title){
+font-size:1.5rem;line-height:1.8!important;
+}
+html[lang=ar][data-type-system] body.open-book :is(.armbar a,.study-contents a,.about-contents a){
+font-size:1.125rem;line-height:1.8!important;
+}
