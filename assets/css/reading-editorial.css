@@ -5,7 +5,7 @@ html:root[data-type-system] body.open-book[data-reading-editorial] #main#main :i
 html:root[data-type-system] body.open-book[data-reading-editorial] #main#main :is(.reader-section,.reader-source,.reader-explanation,.reader-practice)::before,html:root[data-type-system] body.open-book[data-reading-editorial] #main#main :is(.reader-section,.reader-source,.reader-explanation,.reader-practice)::after{content:none;display:none}
 html:root[data-type-system] body.open-book[data-reading-editorial] #main#main .reader-prose{min-width:0;padding:0;max-width:var(--reader-measure);margin-inline:auto;width:100%}
 html:root[data-type-system] body.open-book[data-reading-editorial] #main#main .reader-section{padding:0 0 48px;margin:0 0 48px;border-block-end:1px solid var(--line)}
-html:root[data-type-system] body.open-book[data-reading-editorial] #main#main .reader-section>h2{margin-block:10px 32px}
+html:root[data-type-system] body.open-book[data-reading-editorial] #main#main .reader-section>h2{margin-block:10px 32px;scroll-margin-block-start:calc(var(--header-height,104px) + 72px)}
 html:root[data-type-system] body.open-book[data-reading-editorial] #main#main .reader-source{padding:0;margin:32px 0 48px}
 html:root[data-type-system] body.open-book[data-reading-editorial] #main#main .surah-guide{border:0;border-radius:0;padding:0 0 20px;background:transparent;box-shadow:none}
 html:root[data-type-system] body.open-book[data-reading-editorial] #main#main .surah-guide-name{border:0}
@@ -82,8 +82,8 @@ html:root[data-type-system] body.open-book[data-reading-editorial] #main#main .r
 html:root[data-type-system] body.open-book[data-reading-editorial] #main#main .reader-tools-content .reader-bookmark-control{padding:0}
 html:root[data-type-system] body.open-book[data-reading-editorial] #main#main .reading-session{position:sticky;top:var(--header-height,88px);z-index:18;background:var(--paper);border-block:1px solid var(--line);padding:12px 16px!important;box-shadow:none;margin-block:0 12px!important}
 html:root[data-type-system] body.open-book[data-reading-editorial] #main#main .reading-session [data-guided-status]{font-size:.82rem;line-height:1.6;margin:0 0 8px}
-html:root[data-type-system] body.open-book[data-reading-editorial] #main#main .reading-session .reading-session-footer{padding:0;margin:0;width:100%;max-width:none;gap:8px;display:flex}
-html:root[data-type-system] body.open-book[data-reading-editorial] #main#main .reading-session-footer .btn{font-size:.82rem;padding:10px 12px;min-height:44px;white-space:normal;line-height:1.5}
+html:root[data-type-system] body.open-book[data-reading-editorial] #main#main .reading-session .reading-session-footer{padding:0;margin:0;width:100%;max-width:none;gap:8px;display:flex;flex-direction:row;align-items:center}
+html:root[data-type-system] body.open-book[data-reading-editorial] #main#main .reading-session-footer .btn{font-size:.82rem;padding:10px 12px;min-height:44px;white-space:normal;line-height:1.5;width:auto;flex:1 1 0;min-width:0}
 html:root[data-type-system] body.open-book[data-reading-editorial] #main#main .reading-session-footer [disabled]{display:none}
 html:root[data-type-system] body.open-book[data-reading-editorial] #main#main .reading-session-footer [data-guided-next],html:root[data-type-system] body.open-book[data-reading-editorial] #main#main .reading-session-footer [data-guided-finish]{margin-inline-start:auto}
 html:root[data-type-system] body.open-book[data-reading-editorial] #main#main .reader-section{padding-block:12px 32px;margin-block:0 32px}
@@ -99,3 +99,4 @@ html:root[data-type-system] body:not(.reading-guided)[data-reading-editorial] #m
 html:root[data-type-system] body.reading-focused[data-reading-editorial] #main#main .reading-session{top:64px}
 }
 @media print{body[data-reading-editorial] .reader-tools{display:none!important}}
+html:root[data-type-system] body.open-book[data-reading-editorial] #main#main #related-title{scroll-margin-block-start:calc(var(--header-height,104px) + 140px)}
