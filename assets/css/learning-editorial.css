@@ -91,7 +91,7 @@ html:root[data-type-system] body.open-book #main#main[data-learning-editorial] .
 html:root[data-type-system] body.open-book #main#main[data-learning-editorial] .study-draft-note{max-width:none;display:grid;grid-template-columns:190px minmax(0,1fr);gap:32px}
 html:root[data-type-system] body.open-book #main#main[data-learning-editorial] .study-draft-note p{max-width:70ch}
 html:root[data-type-system] body.open-book #main#main[data-learning-editorial] :is(.shapes,.makhraj){border:0;border-radius:0;box-shadow:none;background:transparent;padding:0}
-html:root[data-type-system] body.open-book #main#main[data-learning-editorial] .huruf.pick{padding:0;min-height:0;aspect-ratio:auto}
+html:root[data-type-system] body.open-book #main#main[data-learning-editorial] .huruf.pick{padding:0;min-height:0;aspect-ratio:auto;border-radius:0;overflow:visible}
 html:root[data-type-system] body.open-book #main#main[data-learning-editorial] .huruf.pick button>span{display:inline;min-width:0;min-height:0;padding:0;border:0;background:transparent;border-radius:0;font:inherit;line-height:inherit;box-shadow:none}
 }
 @media screen and (max-width:850px){
