@@ -158,6 +158,7 @@ margin:clamp(56px,6vw,88px) auto; padding:clamp(32px,4vw,56px);
 background:var(--paper); border:1px solid var(--verse-line); border-radius:28px;
 box-shadow:0 14px 40px var(--verse-shadow);
 }
+html:root body.open-book #main#main>.prophetic-guidance {background-color:var(--paper)}
 html[data-type-system] body.open-book #main .prophetic-guidance>header {
 display:grid; grid-template-columns:minmax(0,1.2fr) minmax(0,.8fr);
 column-gap:48px; align-items:start; padding-block-end:32px;
@@ -215,6 +216,48 @@ max-inline-size:72ch;
 html[data-type-system] body.open-book #main .guidance-next {
 grid-column:1/-1; justify-self:start; margin:0;
 }
+html[data-type-system] body.open-book #main#main .quran-companion {
+grid-template-columns:minmax(0,1fr); gap:24px;
+inline-size:calc(100% - 2 * var(--gutter)); max-inline-size:1120px;
+margin:clamp(48px,5vw,72px) auto; padding:clamp(24px,3vw,40px);
+background:var(--paper); box-shadow:0 0 24px 16px var(--paper);
+}
+html[data-type-system] body.open-book #main#main .quran-companion>header {
+display:grid; grid-template-columns:minmax(0,1fr) auto; gap:10px 32px;
+align-items:end; box-shadow:none;
+}
+html[data-type-system] body.open-book #main#main .quran-companion>header>.eyebrow {
+grid-column:1/-1; margin:0;
+}
+html[data-type-system] body.open-book #main#main .quran-companion h2 {
+max-inline-size:30ch; margin:0; font-size:clamp(1.9rem,2.6vw,2.5rem);
+line-height:1.22; text-wrap:balance;
+}
+html[data-type-system] body.open-book #main#main .quran-companion-reference {margin:0}
+html[data-type-system] body.open-book #main#main .quran-companion-reference a {
+display:inline-flex; align-items:center; min-block-size:44px;
+}
+html[data-type-system] body.open-book #main#main .quran-companion-page {
+display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:24px 40px;
+padding:0; border:0; max-inline-size:none; box-shadow:none;
+}
+html[data-type-system] body.open-book #main#main .quran-companion-page>
+:is(.surah-guide,.quran-companion-arabic,.quran-companion-scope,.quran-companion-depth,.quran-companion-review) {
+grid-column:1/-1; margin-block:0;
+}
+html[data-type-system] body.open-book #main#main .quran-companion-meaning {margin:0}
+html[data-type-system] body.open-book #main#main .quran-companion-reflection {
+margin:0; padding-block:0; padding-inline-start:28px;
+border:0; border-inline-start:2px solid var(--verse-metal);
+}
+html[data-type-system] body.open-book #main#main .quran-companion-reflection h3 {
+font-family:var(--type-detail-family); font-size:1.25rem; line-height:1.5; margin:0 0 10px;
+}
+html[data-type-system] body.open-book #main#main .quran-companion-reflection p {margin:0}
+html[data-type-system] body.open-book #main#main .quran-companion-depth {
+border-block-start:1px solid var(--verse-line); padding-block-start:12px;
+}
+html[data-type-system] body.open-book #main#main .quran-companion-depth p {max-inline-size:72ch}
 html[data-type-system] body.open-book #main .quran-companion-page
 :is(.quran-companion-meaning,.quran-companion-reflection p,.quran-companion-practice p) {
 max-inline-size:60ch; line-height:1.9;
