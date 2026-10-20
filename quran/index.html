@@ -46,34 +46,26 @@
 <!-- /bilingual -->
 <link rel="stylesheet" href="/assets/css/teaching-context.css?v=89de4f881e12">
 <link rel="stylesheet" href="/assets/css/learning-folios.css?v=3abcd03ee277">
-<link rel="stylesheet" href="/assets/css/journey-finish.css?v=3347c392a4de">
-<!-- journey:page-motion --><script data-page-travel>/* Runs in the head before the first render, so no arriving transition is missed. */
+<link rel="stylesheet" href="/assets/css/journey-finish.css?v=5421a44e0af9">
+<!-- journey:page-motion --><script data-page-travel>/* Prepare a quiet mobile arrival before the content's first paint. */
 (function () {
   'use strict';
-  var active = null;
   var root = document.documentElement;
-  addEventListener('pagereveal', function (event) {
-    var transition = event.viewTransition;
-    if (!transition) return;
-    if (root.dataset.motion === 'calm' || matchMedia('(prefers-reduced-motion: reduce)').matches) {
-      transition.skipTransition(); return;
-    }
-    if (innerWidth > 1000) return;
-    active = transition;
-    root.dataset.pageTravel = 'arriving';
-    function finish() {
-      if (active === transition) active = null;
-      root.dataset.pageTravel = 'complete';
-    }
-    if (transition.finished) transition.finished.then(finish, finish);
-  });
-  function interrupt() {
-    if (!active) return;
-    active.skipTransition(); active = null;
+  function calm() {
+    var saved = false;
+    try { saved = localStorage.getItem('ii-motion') === 'calm'; } catch (e) {}
+    return saved || root.dataset.motion === 'calm' || matchMedia('(prefers-reduced-motion: reduce)').matches;
   }
-  document.addEventListener('pointerdown', interrupt, {capture:true,passive:true});
-  document.addEventListener('click', interrupt, true);
-  document.addEventListener('keydown', interrupt, true);
+  var entry = performance.getEntriesByType && performance.getEntriesByType('navigation')[0];
+  if (innerWidth <= 1000 && !calm() && !(entry && entry.type === 'back_forward')) root.dataset.pageArrival = 'true';
+  addEventListener('pagereveal', function (event) {
+    if (event.viewTransition && (innerWidth <= 1000 || calm())) event.viewTransition.skipTransition();
+  });
+  // Cached history returns keep their original scroll position without replaying motion.
+  addEventListener('pageshow', function (event) {
+    if (event.persisted) delete root.dataset.pageArrival;
+  });
+  addEventListener('pagehide', function () { delete root.dataset.pageArrival; });
 })();
 </script><!-- /journey -->
 <meta name="robots" content="noindex,nofollow">
@@ -500,7 +492,7 @@
   </div>
 </footer>
 
-<script src="/assets/js/site.js?v=543dc583ee1f" defer=""></script>
+<script src="/assets/js/site.js?v=287cda3a6421" defer=""></script>
 <script src="/assets/js/quran.js?v=ba0822c0f9fe" defer=""></script>
 
 
