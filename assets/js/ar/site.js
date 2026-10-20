@@ -142,6 +142,9 @@
       previousInert = background.map(function (el) { return !!el.inert; });
       background.forEach(function (el) { el.inert = true; });
       navPanel.hidden = false;
+      navPanel.querySelectorAll('details').forEach(function (group) {
+        if (group.querySelector('[aria-current="page"]')) group.open = true;
+      });
       navPanel.classList.add('open');
       navBtn.setAttribute('aria-expanded', 'true');
       if (journeyMenu) journeyMenu.setAttribute('aria-expanded', 'true');
