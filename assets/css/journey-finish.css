@@ -802,3 +802,28 @@ html:root[data-type-system] body.open-book #main#main .explore-empty :is(.btn,.l
 html:root[data-type-system] body.open-book #main#main :is(.explore-controls input,.explore-controls select,.explore-controls button,.explore-entry>a) {transition:none}
 }
 html:root[data-type-system][data-motion=calm] body.open-book #main#main :is(.explore-controls input,.explore-controls select,.explore-controls button,.explore-entry>a) {transition:none}
+html[data-type-system] body.open-book #header .header-explore {
+display:inline-flex;align-items:center;justify-content:center;gap:9px;min-height:46px;
+padding:10px 15px;border:1px solid var(--control-line);border-radius:999px;
+background:var(--paper);color:var(--ink);font:500 .88rem/1.5 var(--type-interface-family);
+text-decoration:none;white-space:nowrap;transition:background-color .24s ease,border-color .24s ease;
+}
+html[data-type-system] body.open-book #header .header-explore .journey-icon {width:20px;height:20px;flex:none}
+html[data-type-system] body.open-book #header .header-explore:is(:hover,[aria-current]) {background:var(--paper-2);border-color:var(--gold-line)}
+html[data-type-system] body.open-book #header .header-explore:focus-visible {outline:2px solid var(--gold);outline-offset:4px}
+@media screen and (max-width:1000px) {
+html[data-type-system] body.open-book #header .header-explore {display:none}
+html[data-type-system] body.open-book #mobileNav .menu-explore {
+display:grid;grid-template-columns:26px minmax(0,1fr) 16px;align-items:center;gap:14px;
+min-height:84px;margin:0 0 20px;padding:17px;border:1px solid var(--gold-line);border-radius:18px;
+background:var(--paper-2);color:var(--ink);text-decoration:none;
+transition:background-color .24s ease,border-color .24s ease;
+}
+html[data-type-system] body.open-book #mobileNav .menu-explore .journey-icon {width:25px;height:25px;flex:none}
+html[data-type-system] body.open-book #mobileNav .menu-explore strong {display:block;font:500 .98rem/1.6 var(--type-interface-family)}
+html[data-type-system] body.open-book #mobileNav .menu-explore small {display:block;margin-top:3px;font:400 .8rem/1.8 var(--type-interface-family);color:var(--ink-soft)}
+html[data-type-system] body.open-book #mobileNav .menu-explore>span:last-child {color:var(--ink-soft)}
+html[data-type-system] body.open-book #mobileNav .menu-explore:hover {background:var(--paper)}
+}
+@media (prefers-reduced-motion:reduce) {html[data-type-system] body.open-book #header :is(.header-explore,.menu-explore) {transition:none}}
+html[data-type-system][data-motion=calm] body.open-book #header :is(.header-explore,.menu-explore) {transition:none}
