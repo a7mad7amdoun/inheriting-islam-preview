@@ -192,6 +192,26 @@
       setJourneyCollapsed(collapsed);
       try { sessionStorage.setItem('ii-navigation-collapsed', String(collapsed)); } catch (e) {}
     });
+    // Native history restores window scrolling; the mobile reading viewport is
+    // independent, so retain its position on the existing history entry only.
+    addEventListener('pagehide', function () {
+      if (innerWidth > 1000) return;
+      try {
+        history.replaceState(Object.assign({}, history.state, {iiViewport:{url:location.href, top:document.body.scrollTop}}), '', location.href);
+      } catch (e) {}
+    });
+    addEventListener('pageshow', function () {
+      if (innerWidth > 1000) return;
+      var saved = history.state && history.state.iiViewport;
+      if (saved && saved.url === location.href) {
+        if (document.body.scrollTo) document.body.scrollTo({top:saved.top, behavior:'instant'});
+        else document.body.scrollTop = saved.top;
+      } else if (location.hash) {
+        var target;
+        try { target = document.getElementById(decodeURIComponent(location.hash.slice(1))); } catch (e) {}
+        if (target) target.scrollIntoView({block:'start', behavior:'instant'});
+      }
+    });
     // Preserve the reader's position when crossing the mobile/desktop breakpoint.
     var mobileJourney = innerWidth <= 1000;
     var journeyScroll = mobileJourney ? document.body.scrollTop : window.scrollY;
