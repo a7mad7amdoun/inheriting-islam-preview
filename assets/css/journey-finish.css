@@ -255,10 +255,10 @@ html:root[data-type-system] body.open-book #main#main [data-mobile-opening]>:is(
 .inheritance-hero-copy,.about-cover-copy,.desk-introduction,
 .workshop-intro,.listening-title,.chapter-intro
 ),
-html:root[data-type-system] body.open-book #main#main .reader-opening[data-mobile-opening]>div:first-child {
+html:root[data-type-system] body.open-book #main#main :is(.reader-opening,.explore-opening)[data-mobile-opening]>div:first-child {
 display:contents;
 }
-html:root[data-type-system] body.open-book #main#main [data-mobile-opening]>aside:has(>.house-art,>.reader-collection-art) {
+html:root[data-type-system] body.open-book #main#main [data-mobile-opening]>:is(aside,.guest-assurances):has(>.house-art,>.reader-collection-art) {
 display:contents;
 }
 html:root[data-type-system] body.open-book #main#main [data-mobile-opening]>*,
@@ -266,18 +266,19 @@ html:root[data-type-system] body.open-book #main#main [data-mobile-opening]>:is(
 .inheritance-hero-copy,.about-cover-copy,.desk-introduction,.workshop-intro,
 .listening-title,.chapter-intro
 )>*,
-html:root[data-type-system] body.open-book #main#main .reader-opening[data-mobile-opening]>div:first-child>* {
+html:root[data-type-system] body.open-book #main#main :is(.reader-opening,.explore-opening)[data-mobile-opening]>div:first-child>* {
 grid-column:1;grid-row:auto;order:4;min-inline-size:0;max-inline-size:100%;
 }
 html:root[data-type-system] body.open-book #main#main [data-mobile-opening] h1:first-of-type {
 order:2;margin:0;padding:0;max-inline-size:100%;
 text-wrap:balance;transform:none;translate:none;filter:none;
 }
+html:root[data-type-system] body.open-book #main#main [data-mobile-opening]>.eyebrow,
 html:root[data-type-system] body.open-book #main#main [data-mobile-opening]>:is(
 .inheritance-hero-copy,.about-cover-copy,.desk-introduction,.workshop-intro,
 .listening-title,.chapter-intro
 )>.eyebrow,
-html:root[data-type-system] body.open-book #main#main .reader-opening[data-mobile-opening]>div:first-child>.eyebrow {
+html:root[data-type-system] body.open-book #main#main :is(.reader-opening,.explore-opening)[data-mobile-opening]>div:first-child>.eyebrow {
 order:1;margin:0;line-height:1.6;
 }
 html:root[data-type-system] body.open-book #main#main [data-mobile-opening] :is(
@@ -303,9 +304,24 @@ html:root[data-type-system] body.open-book #main#main [data-mobile-opening] :is(
 inline-size:100%;block-size:auto;max-block-size:420px;object-fit:contain;
 transform:none;translate:none;
 }
+html:root[data-type-system] body.open-book #main#main [data-mobile-opening] .about-portrait::before {
+inset-inline:0;
+}
+html:root[data-type-system] body.open-book #main#main .about-partner-grid>* {
+min-inline-size:0;max-inline-size:100%;
+}
 html:root[data-type-system] body.open-book #main#main [data-mobile-opening] figcaption {
 display:flex;flex-wrap:wrap;align-items:baseline;gap:6px 12px;
 margin:0;padding:12px 2px 0;line-height:1.65;max-inline-size:100%;
+}
+html:root[data-type-system] body.open-book #main#main [data-mobile-opening] figcaption :is(span,a) {
+font-size:.85rem;line-height:1.7;padding:0;
+}
+html:root[data-type-system] body.open-book #main#main [data-mobile-opening] .inheritance-hero-art figcaption [lang=ar] {
+font-size:1.65rem;line-height:1.7;
+}
+html:root[data-type-system][lang=ar] body.open-book #main#main [data-mobile-opening] figcaption :is(span,a) {
+font-size:1rem;line-height:1.8;
 }
 html:root[data-type-system] body.open-book #main#main [data-mobile-opening] :is(.lede,.inheritance-hero-lede) {
 margin:0;max-inline-size:100%;line-height:1.85;
@@ -316,7 +332,7 @@ margin:4px 0 0;gap:12px 20px;align-items:center;
 html:root[data-type-system] body.open-book #main#main [data-mobile-opening] :is(.hero-note,.desk-introduction-note,.about-cover-role) {
 margin:0;line-height:1.75;
 }
-html:root[data-type-system] body.open-book #main#main [data-mobile-opening]>aside:has(>.house-art,>.reader-collection-art)>:not(figure) {
+html:root[data-type-system] body.open-book #main#main [data-mobile-opening]>:is(aside,.guest-assurances):has(>.house-art,>.reader-collection-art)>:not(figure) {
 order:6;grid-column:1;grid-row:auto;max-inline-size:100%;
 }
 html:root[data-type-system][lang=ar] body.open-book #main#main [data-mobile-opening] h1 {
