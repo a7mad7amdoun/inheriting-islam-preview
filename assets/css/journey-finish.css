@@ -852,3 +852,16 @@ html:root[data-type-system] body.open-book #main#main .result-preview>div {grid-
 @media(max-width:360px) {
 html:root[data-type-system] body.open-book #main#main .result-heading:has(.result-media) {align-items:flex-start;flex-direction:column}
 }
+html:root[data-type-system] body.open-book #main#main .search-corrections {margin-block:24px;padding-block:20px;border-block:1px solid var(--line)}
+html:root[data-type-system] body.open-book #main#main .search-corrections>p {margin:0 0 14px;font:500 .9375rem/1.8 var(--type-interface-family);color:var(--ink)}
+html:root[data-type-system] body.open-book #main#main [data-search-correction-list] {display:flex;flex-wrap:wrap;gap:12px}
+html:root[data-type-system] body.open-book #main#main [data-search-correction-list]>button {
+min-height:48px;max-width:100%;padding:10px 18px;white-space:normal;overflow-wrap:anywhere;
+border:1px solid var(--gold-line);border-radius:14px;background:var(--paper-2);color:var(--ink);
+font:500 1rem/1.7 var(--type-interface-family);cursor:pointer;
+}
+html:root[data-type-system] body.open-book #main#main [data-search-correction-list]>button:hover {background:var(--paper);border-color:var(--gold)}
+html:root[data-type-system] body.open-book #main#main [data-search-correction-list]>button:focus-visible {outline:2px solid var(--gold);outline-offset:3px}
+html:root[data-type-system] body.open-book #main#main [data-search-all-categories] {margin-inline-end:12px;margin-block-end:16px;white-space:normal}
+html:root[data-type-system] body.open-book #main#main [data-search-all-categories][hidden] {display:none!important}
+@media(max-width:760px) {html:root[data-type-system] body.open-book #main#main [data-search-all-categories] {width:100%;margin-inline:0}}
