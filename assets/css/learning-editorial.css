@@ -87,3 +87,16 @@ html:root[data-type-system] body.open-book #main#main[data-learning-editorial] .
 }
 @media screen and (max-width:360px){html:root[data-type-system] body.open-book #main#main[data-learning-editorial] .huruf.pick{grid-template-columns:repeat(6,minmax(0,1fr))} html:root[data-type-system] body.open-book #main#main[data-learning-editorial] .shapes{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(prefers-reduced-motion:reduce){html:root[data-type-system] body.open-book #main#main[data-learning-editorial] .huruf.pick button{transition:none}}
+@media screen {
+html:root[data-type-system] body.open-book #main#main[data-learning-editorial] .study-draft-note{max-width:none;display:grid;grid-template-columns:190px minmax(0,1fr);gap:32px}
+html:root[data-type-system] body.open-book #main#main[data-learning-editorial] .study-draft-note p{max-width:70ch}
+html:root[data-type-system] body.open-book #main#main[data-learning-editorial] :is(.shapes,.makhraj){border:0;border-radius:0;box-shadow:none;background:transparent;padding:0}
+html:root[data-type-system] body.open-book #main#main[data-learning-editorial] .huruf.pick{padding:0;min-height:0;aspect-ratio:auto}
+html:root[data-type-system] body.open-book #main#main[data-learning-editorial] .huruf.pick button>span{display:inline;min-width:0;min-height:0;padding:0;border:0;background:transparent;border-radius:0;font:inherit;line-height:inherit;box-shadow:none}
+}
+@media screen and (max-width:850px){
+html:root[data-type-system] body.open-book #main#main[data-learning-editorial] .study-draft-note{grid-template-columns:minmax(0,1fr);gap:12px}
+html:root[data-type-system] body.open-book #main#main[data-learning-editorial] .huruf.pick{grid-template-columns:repeat(6,minmax(0,1fr))}
+html:root[data-type-system] body.open-book #main#main[data-learning-editorial] .huruf.pick button{min-height:56px}
+html:root[data-type-system] body.open-book #main#main[data-learning-editorial] .lesson-keyboard{font-size:.8rem;line-height:1.7;margin-block:12px 0}
+}

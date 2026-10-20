@@ -243,3 +243,12 @@ font-size:1.5rem;line-height:1.8!important;
 html[lang=ar][data-type-system] body.open-book :is(.armbar a,.study-contents a,.about-contents a){
 font-size:1.125rem;line-height:1.8!important;
 }
+html[data-type-system]{--type-brand-family:'Cormorant Garamond','Iowan Old Style',Georgia,serif}
+html[data-type-system] body .brand-name{
+font-family:var(--type-brand-family)!important;font-weight:600!important;
+font-style:normal!important;letter-spacing:-.014em!important;text-transform:none!important;
+direction:ltr;unicode-bidi:isolate;
+}
+html[data-type-system] body .nav-panel-heading .eyebrow:has(.brand-name){
+font-size:1.25rem!important;line-height:1.35!important;
+}
