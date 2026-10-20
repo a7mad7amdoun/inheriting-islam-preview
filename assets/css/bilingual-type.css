@@ -125,7 +125,7 @@ html[data-type-system] body #header .nav{margin-inline:auto;flex-shrink:0}
 html[data-type-system] body #header .tools{margin:0;flex-shrink:0}
 html[data-type-system] .language-switch .language-current{display:none}
 html[data-type-system] #mobileNav{overscroll-behavior:contain;scrollbar-gutter:stable;padding-bottom:max(28px,env(safe-area-inset-bottom))}
-html[data-type-system] #mobileNav .mobile-bottom{flex-wrap:wrap;gap:12px 24px;text-align:start}
+html[data-type-system] #mobileNav .mobile-bottom{display:flex;align-items:center;flex-wrap:wrap;gap:12px 24px;text-align:start}
 html[data-type-system] #mobileNav .mobile-bottom>a[href^="mailto:"]{direction:ltr;unicode-bidi:isolate;overflow-wrap:anywhere}
 html[data-type-system] .mobile-search-link{gap:10px;text-decoration:none;border:1px solid var(--control-line);border-radius:999px;padding:10px 18px}
 html[data-type-system] .mobile-search-link:focus-visible{outline:2px solid var(--gold);outline-offset:4px}
