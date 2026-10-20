@@ -21,6 +21,8 @@ html:root[data-type-system] body.open-book #main#main :is(.reveal,.reader-sectio
 html:root[data-type-system] body.open-book #main#main :is(a,button,summary){scroll-margin-block:calc(var(--header-height,88px) + 24px) 140px}
 html:root[data-type-system] body.open-book :is(a,button,summary,input,textarea,select):focus-visible{outline:2px solid var(--gold);outline-offset:5px}
 html:root[data-type-system] body.open-book :is(.btn,.link,summary){transition-property:color,background-color,border-color,box-shadow,opacity;transition-duration:var(--motion-quiet);transition-timing-function:var(--motion-ease)}
+html:root[data-type-system] body.open-book :is(.btn,.link):hover{transform:none;translate:none}
+html:root[data-type-system] body.open-book #main#main .quran-translation-toggle{border:0;border-block-start:1px solid var(--verse-line);border-radius:0;padding:0;background:transparent;box-shadow:none}
 html:root[data-type-system] body.open-book .nav-disclosure[open] .nav-panel{animation:none}
 html:root[data-type-system] body.open-book #main#main .practice-guide{margin-block:24px 0;border-block-start:1px solid var(--gold-line);padding-block-start:20px;max-inline-size:var(--rhythm-reading)}
 html:root[data-type-system] body.open-book #main#main .practice-guide dl{display:grid;gap:18px;margin:0}
@@ -28,6 +30,7 @@ html:root[data-type-system] body.open-book #main#main .practice-guide dl>div{dis
 html:root[data-type-system] body.open-book #main#main .practice-guide dt{font-family:var(--type-interface-family);font-size:.875rem;color:var(--gold);line-height:1.8}
 html:root[data-type-system] body.open-book #main#main .practice-guide dd{margin:0;line-height:var(--type-reading-leading)}
 html:root[data-type-system] body.open-book #main#main .practice-guide .practice-provenance{font-size:var(--type-reference-size);line-height:var(--type-reference-leading);margin-block:20px 0;color:var(--ink-soft)}
+html:root[data-type-system] body.open-book #main#main .practice-guide .lesson-next{display:inline-flex;align-items:center;min-height:44px;margin-block-start:18px}
 html:root[data-type-system] body.open-book #main#main .approved-teaching-note{border-inline-start:2px solid var(--gold-line);padding-inline-start:20px;margin-block:24px}
 html:root[data-type-system] body.open-book #main#main .approved-teaching-note audio{inline-size:100%;margin-block-start:12px}
 }

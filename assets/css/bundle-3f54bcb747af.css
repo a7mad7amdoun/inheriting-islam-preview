@@ -967,3 +967,45 @@ html[data-type-system] body.open-book #main .quran-translation-toggle>summary{fo
 html[data-type-system] body.open-book #main .quran-translation-toggle>summary span{font-family:'Newsreader','EB Garamond',serif!important;font-size:1rem;margin-inline-start:12px;color:var(--ink-soft);display:inline-block}
 html[data-type-system] body.open-book #main .quran-translation-toggle>summary:focus-visible{outline:2px solid var(--gold);outline-offset:5px;border-radius:4px}
 html[data-type-system] body.open-book #main .quran-translation-toggle .quran-translation{margin-top:4px}
+html[data-type-system] body.open-book #main .quran-translation{
+box-sizing:border-box;inline-size:100%;max-inline-size:none;
+padding:clamp(24px,4vw,44px) clamp(20px,5vw,64px);
+margin:0 auto 32px;text-align:center;background:var(--verse-paper);
+border:1px solid var(--verse-line);border-radius:20px;
+box-shadow:inset 0 0 0 5px var(--verse-paper),inset 0 0 0 6px var(--verse-line);
+}
+html[data-type-system] body.open-book #main .quran-translation-text{
+font-family:'EB Garamond',Georgia,serif!important;
+font-size:clamp(1.4rem,1.2rem + .65vw,1.8rem)!important;
+font-weight:400!important;font-style:normal!important;
+line-height:1.65!important;letter-spacing:0!important;
+max-inline-size:48ch;margin:18px auto 20px;text-align:center;
+color:var(--ink);text-wrap:pretty;font-kerning:normal;
+}
+html[data-type-system] body.open-book #main :is(.quran-translation-label,.quran-translation-credit){text-align:center}
+html[data-type-system] body.open-book #main .quran-translation-label{color:var(--verse-ink);font-size:.8125rem!important}
+html[data-type-system] body.open-book #main .quran-translation-toggle{
+inline-size:100%;max-inline-size:none;box-sizing:border-box;
+border-color:var(--verse-line);border-radius:20px;background:var(--verse-paper);
+padding-inline:20px;
+}
+html[data-type-system] body.open-book #main .quran-translation-toggle .quran-translation{
+border:0;box-shadow:none;padding-inline:clamp(0px,2vw,24px);margin-bottom:12px;
+}
+html[data-type-system] body.open-book #main :is(
+.inheritance-supplication-arabic,.quran-companion-arabic,
+.reader-source[data-source-id^="quran-"] .reader-arabic,
+.inheritance-source:has(a[href^="https://quran.com/"]) .inheritance-arabic,
+.source-encounter:has(a[href^="https://quran.com/"]) .source-arabic){
+font-family:'Amiri Complete','Amiri',serif!important;
+font-size:clamp(2rem,1.65rem + 1.1vw,2.65rem)!important;
+font-weight:400!important;line-height:2.15!important;
+letter-spacing:0!important;word-spacing:normal!important;
+font-synthesis:none;text-wrap:pretty;
+}
+@media(max-width:600px){
+html[data-type-system] body.open-book #main .quran-translation{padding:26px 20px}
+html[data-type-system] body.open-book #main .quran-translation-text{font-size:1.4rem!important;line-height:1.65!important}
+}
+html[data-type-system] body.open-book #main .quran-translation{box-shadow:none}
+html[data-type-system] body.open-book #main :is(.inheritance-supplication-arabic,.quran-companion-arabic,.reader-source[data-source-id^="quran-"] .reader-arabic,.inheritance-source:has(a[href^="https://quran.com/"]) .inheritance-arabic,.source-encounter:has(a[href^="https://quran.com/"]) .source-arabic){box-shadow:inset 0 0 0 6px var(--verse-paper),inset 0 0 0 7px var(--verse-line)!important}

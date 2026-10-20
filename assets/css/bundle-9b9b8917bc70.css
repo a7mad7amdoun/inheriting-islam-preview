@@ -482,3 +482,29 @@ html[lang=ar][data-type-system] body #header .brand .sub>span{white-space:nowrap
 html[data-type-system] body .brand .wm,
 html[data-type-system] body .brand .wm [data-proper-name]{color:var(--ink)!important}
 html[data-type-system] body .brand .sub{color:var(--gold)!important}
+html[data-type-system] body #header .brand{gap:14px}
+html[data-type-system] body #header .brand .mark{width:80px!important;height:auto!important}
+html[data-type-system] body #header .brand .wm{font-size:1.6rem!important}
+html[data-type-system] body #header .brand .sub{font-size:.64rem!important}
+html[lang=ar][data-type-system] body #header .brand .wm{font-size:2.23rem!important}
+html[lang=ar][data-type-system] body #header .brand .sub{font-size:.96rem!important;inline-size:11.855rem}
+html[data-type-system] body[data-room=home] #header .brand .mark{width:92px!important}
+html[data-type-system] body[data-room=home] #header .brand .wm{font-size:1.8rem!important}
+html[data-type-system] body[data-room=home] #header .brand .sub{font-size:.7rem!important}
+html[lang=ar][data-type-system] body[data-room=home] #header .brand .wm{font-size:2.51rem!important}
+html[lang=ar][data-type-system] body[data-room=home] #header .brand .sub{font-size:1.05rem!important;inline-size:12.966rem}
+@media(max-width:1100px){
+html[data-type-system] body #header .brand{gap:10px}
+html[data-type-system] body #header .brand .mark{width:52px!important}
+html[data-type-system] body #header .brand .wm{font-size:1.45rem!important}
+html[data-type-system] body[data-room=home] #header .brand .mark{width:58px!important}
+html[data-type-system] body[data-room=home] #header .brand .wm{font-size:1.55rem!important}
+html[lang=ar][data-type-system] body #header .brand .wm{font-size:2.02rem!important}
+html[lang=ar][data-type-system] body[data-room=home] #header .brand .wm{font-size:2.16rem!important}
+}
+@media(max-width:360px){
+html[data-type-system] body #header .brand{gap:7px}
+html[data-type-system] body #header .brand .mark,html[data-type-system] body[data-room=home] #header .brand .mark{width:42px!important}
+html[data-type-system] body #header .brand .wm,html[data-type-system] body[data-room=home] #header .brand .wm{font-size:1.25rem!important}
+html[lang=ar][data-type-system] body #header .brand .wm,html[lang=ar][data-type-system] body[data-room=home] #header .brand .wm{font-size:1.74rem!important}
+}
