@@ -896,3 +896,6 @@ body .section-vignette .crafted-symbol .symbol-body {stroke:var(--ink-soft);opac
 body section:hover .section-vignette .symbol-detail {opacity:.85}
 @media(prefers-reduced-motion:reduce){body .crafted-symbol * {transition:none!important}}
 html[data-motion="calm"] .crafted-symbol * {transition:none!important}
+body #main .library-catalog .book .facts {display:flex!important;flex-wrap:wrap;align-items:baseline;gap:.4rem 1rem}
+body #main .library-catalog .book .facts > span {white-space:nowrap;unicode-bidi:isolate}
+body #main .library-catalog .book .facts > span+span {border:0;padding:0}
