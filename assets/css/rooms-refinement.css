@@ -1,0 +1,138 @@
+body.living-book .room-opening {padding-block:clamp(48px,7vw,100px) clamp(40px,5.5vw,76px)}
+body.living-book .room-opening .lede {max-width:53ch}
+body.living-book .room-section-note {max-width:58ch;margin-top:1rem}
+body.living-book .room-subhead {max-width:64ch;padding-block:clamp(45px,6vw,80px) 26px;scroll-margin-top:120px}
+body.living-book .room-subhead .small {margin-top:1rem}
+body.living-book .room-field-label {font-weight:600;font-size:1rem}
+body.living-book[data-room="apps"] .hero-grid {grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);gap:clamp(28px,5vw,72px)}
+body.living-book[data-room="apps"] .room-opening h1 {max-width:12ch}
+body.living-book[data-room="apps"] .hero-art .frame {box-shadow:none}
+body.living-book[data-room="apps"] .hero-art img {aspect-ratio:4/3;object-fit:contain}
+body.living-book[data-room="apps"] .hero-art figcaption {padding:14px 0;background:transparent;border:0;border-bottom:1px solid var(--line);display:flex;align-items:baseline;gap:12px;flex-wrap:wrap}
+body.living-book[data-room="apps"] .hero-art .ar {font-size:1.7rem}
+body.living-book[data-room="apps"] .hero-art .say {flex-basis:100%;margin:0;padding:0;border:0;font-size:.95rem}
+body.living-book[data-room="apps"] #ledger {background:var(--paper)}
+body.living-book[data-room="apps"] .live-directory {display:grid;grid-template-columns:repeat(3,minmax(0,1fr));border:0;gap:clamp(22px,3.3vw,48px)}
+body.living-book[data-room="apps"] .live-directory .lrow {display:flex;flex-direction:column;gap:0;border-top:1px solid var(--gold-line);border-bottom:0;padding-block:20px 0;padding-inline:0;scroll-margin-top:120px}
+body.living-book[data-room="apps"] .live-directory .plate {width:100%;height:auto;margin-block:0 24px;margin-inline:0;aspect-ratio:1;max-width:none;border:1px solid var(--line);overflow:hidden}
+body.living-book[data-room="apps"] .live-directory .plate img {display:block;width:100%;height:100%;object-fit:contain}
+body.living-book[data-room="apps"] .live-directory .name {font-size:clamp(1.65rem,2vw,2.15rem);margin-bottom:14px}
+body.living-book[data-room="apps"] .live-directory .what {font-size:1rem;line-height:1.65}
+body.living-book[data-room="apps"] .live-directory .kind {font-size:.78rem;letter-spacing:.09em;color:var(--gold);margin-bottom:10px}
+body.living-book[data-room="apps"] .live-directory .meta {align-items:flex-start;text-align:start;margin-top:auto;padding-top:24px;gap:13px}
+body.living-book[data-room="apps"] .live-directory .meta .link {font-size:1rem;overflow-wrap:anywhere}
+body.living-book[data-room="apps"] .progress-directory .lrow,
+body.living-book[data-room="apps"] #stopped .lrow {grid-template-columns:76px minmax(0,.9fr) minmax(0,1.5fr) minmax(150px,.65fr);gap:24px;padding-block:26px;opacity:1}
+body.living-book[data-room="apps"] .progress-directory .plate,
+body.living-book[data-room="apps"] #stopped .plate {width:76px;height:76px;margin:0}
+body.living-book[data-room="apps"] .progress-directory .what,
+body.living-book[data-room="apps"] #stopped .what {grid-column:auto;font-size:1rem;line-height:1.6}
+body.living-book[data-room="apps"] .progress-directory .kind,
+body.living-book[data-room="apps"] #stopped .kind {font-size:.76rem;letter-spacing:.08em}
+body.living-book[data-room="apps"] .status-key {grid-template-columns:repeat(5,minmax(0,1fr));gap:24px}
+body.living-book[data-room="apps"] .status-key .col {padding-top:18px;border-top:1px solid var(--line)}
+body.living-book[data-room="apps"] .status-key p {font-size:.96rem;line-height:1.6}
+body.living-book[data-room="apps"] #waitlist .contact-grid {grid-template-columns:minmax(0,1.3fr) minmax(0,.7fr);gap:clamp(30px,7vw,104px)}
+body.living-book[data-room="apps"] #waitlist .stack {padding-top:22px}
+body.living-book[data-room="podcast"] .podcast-opening .hero-grid {grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(34px,6vw,88px);align-items:center}
+body.living-book[data-room="podcast"] .podcast-opening h1 {max-width:12ch}
+body.living-book[data-room="podcast"] .podcast-opening .hero-art .frame {box-shadow:none;border-color:var(--gold-line)}
+body.living-book[data-room="podcast"] .podcast-opening .hero-art img {aspect-ratio:4/3;object-fit:contain}
+body.living-book[data-room="podcast"] .podcast-opening .hero-art figcaption {border:0;border-bottom:1px solid var(--line);padding-inline:0;background:transparent}
+body.living-book[data-room="podcast"] .hero-note .pill {display:table;margin-bottom:12px}
+body.living-book[data-room="podcast"] .room-questions .col {border-top:1px solid var(--gold-line);padding-top:25px}
+body.living-book[data-room="podcast"] .room-questions h3 {max-width:16ch;font-size:clamp(1.6rem,2.4vw,2.25rem)}
+body.living-book[data-room="podcast"] .room-questions .n {font-size:.8rem;letter-spacing:.12em}
+body.living-book[data-room="podcast"] .room-questions p {font-size:1.05rem;line-height:1.65;max-width:35ch}
+body.living-book .room-empty {border-block:1px solid var(--line);padding:clamp(28px,5vw,60px);background:var(--paper-2);max-width:78ch}
+body.living-book .room-empty-label {display:block;font-size:.82rem;font-weight:600;color:var(--gold);letter-spacing:.08em;text-transform:uppercase;margin-bottom:22px}
+body.living-book .room-empty h3 {font-size:clamp(2rem,3.5vw,3rem)}
+body.living-book .room-empty p {max-width:55ch;margin-block:18px 24px;color:var(--ink-soft)}
+body.living-book .guest-opening h1 {max-width:16ch!important}
+body.living-book .guest-opening .lede {max-width:63ch}
+body.living-book .guest-assurances {display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:30px;border-top:1px solid var(--line);padding-top:26px;margin-top:40px}
+body.living-book .guest-assurances p {margin:0}
+body.living-book .guest-assurances b {display:block;font-size:1.05rem;margin-bottom:8px}
+body.living-book .guest-assurances span {display:block;color:var(--ink-soft);font-size:1rem;max-width:34ch}
+body.living-book[data-room="podcast"] #questions .steps {max-width:950px}
+body.living-book[data-room="podcast"] #questions .steps li {padding-block:28px}
+body.living-book[data-room="podcast"] #questions .steps h3 {font-size:clamp(1.7rem,2.7vw,2.4rem)}
+body.living-book[data-room="podcast"] #questions .steps p {max-width:68ch}
+body.living-book[data-room="podcast"] #ask .contact-grid {grid-template-columns:minmax(0,1.25fr) minmax(0,.75fr);gap:clamp(32px,7vw,100px)}
+body.living-book[data-room="about"] .about-opening h1 {max-width:18ch!important}
+body.living-book[data-room="about"] .hero-art .frame {box-shadow:none}
+body.living-book[data-room="about"] .hero-art img {aspect-ratio:4/3;object-fit:contain}
+body.living-book[data-room="about"] .founder {grid-template-columns:minmax(0,.75fr) minmax(0,1.25fr);gap:clamp(32px,7vw,104px);align-items:start}
+body.living-book[data-room="about"] .founder-portrait {max-width:330px;margin-block:0 30px;margin-inline:0}
+body.living-book[data-room="about"] .founder-portrait img {display:block;width:100%;height:auto;border:1px solid var(--line)}
+body.living-book[data-room="about"] .founder-portrait figcaption {font-size:.9rem;color:var(--ink-soft);padding-top:10px}
+body.living-book[data-room="about"] .founder .body {max-width:65ch;padding-top:12px}
+body.living-book[data-room="about"] .founder .body p {font-size:1.08rem;line-height:1.75}
+body.living-book[data-room="about"] #khadija .cols-2 {grid-template-columns:minmax(0,.75fr) minmax(0,1.25fr);gap:clamp(32px,7vw,104px)}
+body.living-book[data-room="about"] .room-commitments .steps {display:grid;grid-template-columns:repeat(2,minmax(0,1fr));column-gap:60px;border:0}
+body.living-book[data-room="about"] .room-commitments .steps li {border-top:1px solid var(--line);border-bottom:0;padding-block:28px 34px;grid-template-columns:40px minmax(0,1fr);gap:18px}
+body.living-book[data-room="about"] .room-commitments .steps h3 {font-size:clamp(1.55rem,2.1vw,2rem);max-width:23ch}
+body.living-book[data-room="about"] .room-commitments .steps p {font-size:1rem;line-height:1.7}
+body.living-book[data-room="about"] .room-welcome {background:var(--paper-2)}
+body.living-book[data-room="about"] .room-welcome h2 {max-width:17ch}
+body.living-book[data-room="about"] .room-welcome .stack-sm p {font-size:1.08rem;line-height:1.7}
+body.living-book[data-room="contact"] .contact-opening {padding-bottom:44px}
+body.living-book[data-room="contact"] #form {padding-top:44px}
+body.living-book[data-room="contact"] .contact-grid {grid-template-columns:minmax(0,1.2fr) minmax(0,.8fr);gap:clamp(36px,7vw,100px)}
+body.living-book[data-room="contact"] #form .form {padding:clamp(22px,3.5vw,44px);border:1px solid var(--line);background:var(--paper-2)}
+body.living-book[data-room="contact"] #form .stack {padding-top:12px}
+body.living-book[data-room="contact"] .direct .v {min-width:0;overflow-wrap:anywhere}
+body.living-book[data-room="contact"] .steps {max-width:950px}
+body.living-book[data-room="contact"] .steps p {max-width:67ch}
+body.living-book[data-room="not-found"] .missing-opening {min-height:65vh}
+body.living-book[data-room="not-found"] .missing-opening h1 {max-width:15ch!important}
+body.living-book[data-room="not-found"] .arms {margin-block:40px}
+@media (max-width:1000px) {
+body.living-book[data-room="apps"] .status-key {grid-template-columns:repeat(3,minmax(0,1fr))}
+body.living-book[data-room="apps"] .progress-directory .lrow,
+body.living-book[data-room="apps"] #stopped .lrow {grid-template-columns:64px minmax(0,1fr) minmax(0,1.4fr);gap:18px}
+body.living-book[data-room="apps"] .progress-directory .plate,
+body.living-book[data-room="apps"] #stopped .plate {width:64px;height:64px}
+body.living-book[data-room="apps"] .progress-directory .meta,
+body.living-book[data-room="apps"] #stopped .meta {grid-column:2/-1;flex-direction:row;flex-wrap:wrap;align-items:center;text-align:start;gap:18px}
+}
+@media (max-width:800px) {
+body.living-book[data-room="apps"] .hero-grid,
+body.living-book[data-room="podcast"] .podcast-opening .hero-grid,
+body.living-book[data-room="about"] .founder,
+body.living-book[data-room="about"] #khadija .cols-2,
+body.living-book[data-room="contact"] .contact-grid,
+body.living-book[data-room="apps"] #waitlist .contact-grid,
+body.living-book[data-room="podcast"] #ask .contact-grid {grid-template-columns:1fr}
+body.living-book[data-room="apps"] .hero-art {max-width:580px}
+body.living-book[data-room="apps"] .live-directory {grid-template-columns:1fr;gap:34px}
+body.living-book[data-room="apps"] .live-directory .lrow {display:grid;grid-template-columns:120px minmax(0,1fr);gap:0 24px}
+body.living-book[data-room="apps"] .live-directory .plate {grid-row:1/4;margin:0}
+body.living-book[data-room="apps"] .live-directory .meta {grid-column:2}
+body.living-book[data-room="apps"] .live-directory .name {font-size:1.85rem}
+body.living-book[data-room="about"] .room-commitments .steps {grid-template-columns:1fr}
+body.living-book[data-room="podcast"] .podcast-opening .hero-art {max-width:620px}
+body.living-book .guest-assurances {gap:20px}
+}
+@media (max-width:560px) {
+body.living-book .room-opening {padding-block:38px 40px}
+body.living-book[data-room="apps"] .live-directory .lrow {grid-template-columns:72px minmax(0,1fr);gap:0 18px}
+body.living-book[data-room="apps"] .live-directory .plate {grid-row:1;width:72px;margin-bottom:20px}
+body.living-book[data-room="apps"] .live-directory .name {align-self:center;margin-bottom:20px;font-size:1.9rem}
+body.living-book[data-room="apps"] .live-directory .what,
+body.living-book[data-room="apps"] .live-directory .meta {grid-column:1/-1}
+body.living-book[data-room="apps"] .progress-directory .lrow,
+body.living-book[data-room="apps"] #stopped .lrow {grid-template-columns:54px minmax(0,1fr);gap:16px}
+body.living-book[data-room="apps"] .progress-directory .plate,
+body.living-book[data-room="apps"] #stopped .plate {width:54px;height:54px}
+body.living-book[data-room="apps"] .progress-directory .what,
+body.living-book[data-room="apps"] #stopped .what,
+body.living-book[data-room="apps"] .progress-directory .meta,
+body.living-book[data-room="apps"] #stopped .meta {grid-column:1/-1}
+body.living-book[data-room="apps"] .status-key {grid-template-columns:1fr}
+body.living-book .guest-assurances {grid-template-columns:1fr;gap:22px}
+body.living-book .guest-assurances span {max-width:none}
+body.living-book[data-room="about"] .founder-portrait {max-width:260px}
+body.living-book[data-room="contact"] #form .form {padding:20px 16px}
+body.living-book .room-empty {padding:26px 20px}
+}

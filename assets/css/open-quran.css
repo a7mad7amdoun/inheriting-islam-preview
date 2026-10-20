@@ -1,0 +1,280 @@
+body.open-book.living-book[data-room="quran"] main :is(section[id],[data-check],#results){scroll-margin-top:calc(var(--header-height,104px) + var(--armbar-h,52px) + 24px)}
+body.open-book.living-book.illuminated[data-room="quran"] .reading-desk{padding-block:clamp(22px,3.7vw,56px) 0}
+body.open-book.living-book.illuminated[data-room="quran"] .reading-desk>.wrap{padding-inline:var(--gutter);max-width:1520px}
+body.open-book.living-book.illuminated[data-room="quran"] .desk-spread{display:grid;grid-template-columns:minmax(0,.92fr) minmax(0,1.08fr);gap:clamp(36px,5vw,80px);align-items:center;padding-bottom:clamp(30px,4vw,60px)}
+body.open-book.living-book.illuminated[data-room="quran"] .desk-spread h1{font-size:var(--type-signature-size);max-width:15ch;line-height:var(--type-signature-leading);letter-spacing:-.025em;margin:24px 0}
+body.open-book.living-book.illuminated[data-room="quran"] .desk-spread .lede{max-width:43ch;font-size:1.12rem;line-height:1.7;margin-bottom:26px}
+.open-book .desk-introduction{position:relative;padding-inline-start:clamp(22px,2.4vw,38px);border-inline-start:1px solid var(--gold-line)}
+.open-book .desk-introduction::before{content:"";position:absolute;inset-inline-start:-5px;top:4px;width:9px;height:9px;transform:rotate(45deg);border:1px solid var(--gold-line);background:var(--paper);pointer-events:none}
+.open-book .desk-introduction .btns{gap:16px 24px}
+.open-book .desk-introduction-note{font-size:.82rem;line-height:1.6;color:var(--ink-faint);margin-block:26px 0;margin-inline:0;max-width:45ch}
+.open-book .learning-routes{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));margin-block:0}
+.open-book .learning-routes a{display:grid;grid-template-columns:20px minmax(0,1fr) 18px;align-items:start;gap:16px;text-decoration:none;color:var(--ink);padding:25px 26px;border-top:1px solid var(--line);border-bottom:1px solid var(--line);border-inline-end:1px solid var(--line);transition:background-color .35s ease,color .35s ease}
+.open-book .learning-routes a:first-child{padding-inline-start:0}
+.open-book .learning-routes a:last-child{border-inline-end:0;padding-inline-end:0}
+.open-book .learning-routes a:hover{background:var(--gold-wash)}
+.open-book .learning-routes a:focus-visible{outline:3px solid var(--ring);outline-offset:4px}
+.open-book .learning-routes .route-number{font:var(--type-chapter-weight) 1rem/1.5 var(--f-display);font-variant-numeric:tabular-nums;color:var(--gold);padding-top:2px}
+.open-book .learning-routes strong{display:block;font:var(--type-chapter-weight) clamp(1.4rem,2vw,1.85rem)/1.15 var(--f-display)}
+.open-book .learning-routes small{display:block;color:var(--ink-soft);font-size:.86rem;line-height:1.5;margin-top:9px;max-width:34ch}
+.open-book .learning-routes a>span:last-child{color:var(--gold);padding-top:3px}
+.open-book .desk-art{margin:0;min-width:0;align-self:stretch;display:flex;flex-direction:column;justify-content:center}
+.open-book .desk-art img{display:block;width:100%;height:auto;aspect-ratio:1.12;object-fit:cover;object-position:48% center;border:0}
+.open-book .desk-art figcaption{border-bottom:1px solid var(--line);padding-bottom:14px;display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px 16px;color:var(--ink-faint);font-size:.75rem;padding-top:14px}
+.open-book .desk-class-line{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr) auto;align-items:center;gap:22px 32px;margin-top:0;padding-top:28px;padding-bottom:28px;border-top:0;border-bottom:1px solid var(--line)}
+.open-book .desk-class-line .eyebrow{margin-block:0 6px;margin-inline:0}
+.open-book .desk-class-line p{margin:0;font-size:.94rem;line-height:1.5}
+.open-book .desk-class-line dl{display:flex;flex-wrap:wrap;gap:14px 30px;margin:0}
+.open-book .desk-class-line dt{font-size:.75rem;color:var(--ink-faint);margin-bottom:4px}
+.open-book .desk-class-line dd{font-size:1rem;font-weight:600;margin:0}
+.open-book .desk-class-line dd span{font-size:.85rem;font-weight:400}
+.open-book .desk-class-line .desk-status{grid-column:1/-1;font-size:.85rem;color:var(--ink-soft);max-width:95ch}
+.open-book .learning-shelf{display:grid;grid-template-columns:minmax(0,.65fr) minmax(0,1fr);gap:clamp(30px,7vw,110px)}
+.open-book .learning-shelf>div:first-child>p:last-child{max-width:35ch;margin-top:20px;color:var(--ink-soft)}
+.open-book .shelf-links>a{display:block;border-top:1px solid var(--line);padding:24px 0;color:var(--ink);text-decoration:none}
+.open-book .shelf-links>a:last-child{border-bottom:1px solid var(--line)}
+.open-book .shelf-links>a:hover h3{color:var(--gold)}
+.open-book .shelf-links h3{font:var(--type-chapter-weight) clamp(1.8rem,2.7vw,2.5rem)/1.13 var(--f-display);margin-block:9px 10px;margin-inline:0}
+.open-book .shelf-links p{color:var(--ink-soft);max-width:58ch;font-size:1rem;line-height:1.65;margin-block:0 12px;margin-inline:0}
+.open-book .shelf-kicker{font-size:.76rem;color:var(--ink-faint)}
+.open-book .shelf-links .link{font-size:.88rem}
+.open-book .desk-teacher{display:grid;grid-template-columns:minmax(140px,.8fr) minmax(0,1fr);gap:28px;align-items:center;margin-block:30px 24px;margin-inline:0;padding:0;border:0;color:var(--ink);text-decoration:none}
+.open-book .desk-teacher img{width:100%;height:auto;aspect-ratio:4/4.4;object-fit:cover}
+.open-book .desk-teacher>span>span,.open-book .desk-teacher strong{display:block}
+.open-book .desk-teacher strong{font:var(--type-chapter-weight) clamp(1.7rem,2.6vw,2.5rem)/1.1 var(--f-display);margin-block:7px}
+.open-book .desk-teacher>span>span:not(.eyebrow){font-size:.9rem;color:var(--ink-soft)}
+.open-book .desk-teacher .link{margin-top:16px;color:var(--gold)!important}
+body.open-book.living-book.illuminated[data-room="quran"] [data-study="index"] #how{background:var(--paper-2);padding-block:clamp(52px,7vw,106px)}
+body.open-book.living-book.illuminated[data-room="quran"] [data-study="index"] #how h2{font-size:clamp(2.6rem,4.3vw,4.5rem);line-height:1.04}
+body.open-book.living-book.illuminated[data-room="quran"] [data-study="index"] #how .note{padding:24px 0;border:0;border-top:1px solid var(--line);background:transparent}
+body.open-book.living-book.illuminated[data-room="quran"] [data-study="index"] #how .note h3{font:var(--type-chapter-weight) 1.75rem/1.2 var(--f-display)}
+body.open-book.living-book.illuminated[data-room="quran"] [data-study="index"] #path .steps{grid-template-columns:repeat(2,minmax(0,1fr));column-gap:clamp(28px,6vw,90px)}
+body.open-book.living-book.illuminated[data-room="quran"] [data-study="index"] #path .steps li{padding-block:32px;gap:22px;border-top:1px solid var(--gold-line)}
+body.open-book.living-book.illuminated[data-room="quran"] [data-study="index"] #path .steps h3{font:var(--type-chapter-weight) clamp(1.45rem,2vw,1.9rem)/1.2 var(--f-display);margin-bottom:12px}
+body.open-book.living-book.illuminated[data-room="quran"] [data-study="index"] #books .figure{max-width:290px;margin-inline:auto;transform:rotate(-3deg)}
+body.open-book.living-book.illuminated[data-room="quran"] [data-study="lesson"] .chapter-opening-grid{grid-template-columns:minmax(0,1.4fr) minmax(0,.65fr);max-width:1320px}
+body.open-book.living-book.illuminated[data-room="quran"] [data-study="lesson"] .chapter-opening h1{font-size:var(--type-signature-size)}
+body.open-book.living-book.illuminated[data-room="quran"] [data-study="lesson"] #letters{background:var(--paper-2);padding-block:clamp(28px,4vw,56px)}
+body.open-book.living-book.illuminated[data-room="quran"] [data-study="lesson"] .huruf.pick{border:1px solid var(--line);padding:8px;background:var(--paper);gap:5px}
+body.open-book.living-book.illuminated[data-room="quran"] [data-study="lesson"] .huruf.pick button{min-height:72px;border:1px solid var(--line-soft)}
+body.open-book.living-book.illuminated[data-room="quran"] [data-study="lesson"] .letterpane{border:1px solid var(--line);border-top:3px solid var(--gold-line);padding:28px;min-height:250px}
+body.open-book.living-book.illuminated[data-room="quran"] [data-study="lesson"] .letterpane .gl{line-height:1.7;font-family:var(--f-ar);font-weight:400}
+body.open-book.living-book.illuminated[data-room="quran"] [data-study="lesson"] .huruf.pick button{border-radius:2px}
+body.open-book.living-book.illuminated[data-room="quran"] [data-study="lesson"] .huruf.pick button[aria-pressed="true"]{border-color:var(--gold-line);box-shadow:inset 0 -3px 0 var(--gold-line)}
+body.open-book.living-book.illuminated[data-room="quran"] [data-study="lesson"] .band:not(.chapter-opening) h2{font-size:clamp(1.9rem,3vw,3.1rem)}
+body.open-book.living-book.illuminated[data-room="quran"] [data-study="start"] #check-section{background:var(--paper-2)}
+body.open-book.living-book.illuminated[data-room="quran"] [data-study="start"] .check{border:0}
+body.open-book.living-book.illuminated[data-room="quran"] [data-study="start"] .check .step{padding:clamp(22px,4vw,42px);background:var(--paper);border:1px solid var(--line);margin-bottom:18px}
+body.open-book.living-book.illuminated[data-room="quran"] [data-study="start"] .specimen{border-inline:0;background:transparent;margin-top:24px}
+body.open-book.living-book.illuminated[data-room="quran"] [data-study="start"] .choices .btn{flex:1}
+body.open-book.living-book.illuminated[data-room="quran"] [data-study="books"] .book{grid-template-columns:minmax(120px,.34fr) minmax(0,1fr);gap:clamp(26px,6vw,90px);padding-block:42px}
+body.open-book.living-book.illuminated[data-room="quran"] [data-study="books"] .book .shot{padding:clamp(18px,2.5vw,36px);max-width:310px;background:var(--paper-2);border-bottom:3px solid var(--gold-line)}
+body.open-book.living-book.illuminated[data-room="quran"] [data-study="books"] .book .facts{margin-block:20px;padding-block:12px;border-block:1px solid var(--line)}
+.open-book .book-preview-link{display:inline-flex;align-items:center;min-height:44px;font-size:.88rem;margin-top:10px;color:var(--gold);text-underline-offset:.25em}
+.open-book .cohort-opening-facts{display:flex;flex-wrap:wrap;gap:10px 20px;border-top:1px solid var(--line);padding-top:18px;margin-top:22px;font-size:.93rem;color:var(--ink-soft)}
+.open-book .cohort-opening-facts strong{color:var(--ink)}
+body.open-book.living-book.illuminated[data-room="quran"] [data-study="cohorts"] #class-format .col{border-top:2px solid var(--gold-line);padding-top:22px}
+body.open-book.living-book.illuminated[data-room="quran"] [data-study="masajid"] #responsibilities .cols-2{gap:clamp(28px,6vw,88px)}
+body.open-book.living-book.illuminated[data-room="quran"] [data-study="masajid"] #responsibilities .cols-2>div{border-top:1px solid var(--gold-line);padding-top:24px}
+body.open-book.living-book.illuminated[data-room="quran"] [data-study="teacher"] #teacher-record .founder{grid-template-columns:minmax(0,.65fr) minmax(0,1fr);gap:clamp(32px,7vw,100px)}
+body.open-book.living-book.illuminated[data-room="quran"] [data-study="teacher"] .portrait{max-width:420px;margin-bottom:26px}
+body.open-book.living-book.illuminated[data-room="quran"] [data-study="teacher"] .founder .body{padding-top:10px}
+body.open-book.living-book.illuminated[data-room="quran"] [data-study="verify"] .chapter-opening h1{font-size:var(--type-signature-size)}
+body.open-book.living-book.illuminated[data-room="quran"] [data-study="verify"] #register .wrap{max-width:1050px}
+body.open-book.living-book.illuminated[data-room="quran"] [data-study="verify"] .srow{grid-template-columns:minmax(0,.85fr) minmax(0,1fr) auto;background:var(--paper);padding:24px;border:1px solid var(--line)}
+@media(max-width:1000px){
+body.open-book.living-book[data-room="quran"] main :is(section[id],[data-check],#results){scroll-margin-top:calc(var(--header-height,88px) + 24px)}
+.open-book .desk-class-line{grid-template-columns:1fr 1fr}
+.open-book .desk-class-line>.btn{justify-self:start}
+.open-book .desk-class-line .desk-status{grid-column:auto}
+body.open-book.living-book.illuminated[data-room="quran"] .desk-spread{gap:30px}
+body.open-book.living-book.illuminated[data-room="quran"] .desk-spread h1{font-size:var(--type-signature-size)}
+}
+@media(max-width:800px){
+body.open-book.living-book.illuminated[data-room="quran"] .desk-spread{grid-template-columns:1fr}
+body.open-book.living-book.illuminated[data-room="quran"] .desk-spread h1{font-size:var(--type-signature-size);max-width:15ch}
+body.open-book.living-book.illuminated[data-room="quran"] .desk-spread .lede{max-width:60ch}
+.open-book .desk-art img{aspect-ratio:3/2}
+.open-book .learning-routes{grid-template-columns:1fr}
+.open-book .learning-routes a,.open-book .learning-routes a:first-child,.open-book .learning-routes a:last-child{padding:21px 0;border-inline-end:0;border-bottom:0}
+.open-book .learning-routes a:last-child{border-bottom:1px solid var(--line)}
+.open-book .learning-routes small{max-width:none}
+body.open-book.living-book.illuminated[data-room="quran"] [data-study="index"] #path .steps{grid-template-columns:1fr}
+.open-book .learning-shelf{grid-template-columns:1fr;gap:25px}
+.open-book .learning-shelf h2 br{display:none}
+.open-book .learning-shelf>div:first-child>p:last-child{max-width:60ch}
+body.open-book.living-book.illuminated[data-room="quran"] [data-study="lesson"] .chapter-opening-grid,body.open-book.living-book.illuminated[data-room="quran"] [data-study="teacher"] #teacher-record .founder{grid-template-columns:1fr}
+body.open-book.living-book.illuminated[data-room="quran"] [data-study="verify"] .srow{grid-template-columns:1fr}
+}
+@media(max-width:540px){
+.open-book .desk-introduction{padding-inline-start:20px}
+.open-book .desk-art figcaption{font-size:.72rem}
+.open-book .desk-introduction .btns{gap:12px}
+.open-book .desk-introduction .btns .btn{padding-inline:16px}
+.open-book .desk-class-line{grid-template-columns:1fr;gap:20px}
+.open-book .desk-class-line dl{gap:20px 35px}
+.open-book .desk-class-line>.btn{width:100%;justify-content:center}
+.open-book .desk-class-line .desk-status{grid-column:1}
+.open-book .learning-routes a{gap:10px;grid-template-columns:20px minmax(0,1fr) 15px}
+.open-book .learning-routes strong{font-size:1.45rem}
+body.open-book.living-book.illuminated[data-room="quran"] [data-study="lesson"] .letterpane{padding:20px;gap:15px}
+body.open-book.living-book.illuminated[data-room="quran"] [data-study="lesson"] .huruf.pick button{min-height:60px}
+body.open-book.living-book.illuminated[data-room="quran"] [data-study="books"] .book{grid-template-columns:1fr;gap:24px;padding-block:32px}
+body.open-book.living-book.illuminated[data-room="quran"] [data-study="books"] .book .shot{max-width:210px;margin-inline:0;padding:20px}
+.open-book .desk-teacher{grid-template-columns:120px minmax(0,1fr);gap:22px}
+.open-book .desk-teacher strong{font-size:1.5rem}
+}
+@media(prefers-reduced-motion:reduce){.open-book .learning-routes a{transition:none}}
+:root[data-motion="calm"] .open-book .learning-routes a{transition:none}
+@media print{
+.open-book .desk-art,.open-book .learning-routes,.open-book .desk-class-line>.btn{display:none}
+.open-book .desk-spread,.open-book .desk-class-line,.open-book .learning-shelf{display:block!important}
+.open-book .shelf-links>a{break-inside:avoid}
+}
+body.open-book.living-book.illuminated[data-room="quran"] [data-learning-journeys] .reading-desk{padding-top:24px}
+body.open-book.living-book.illuminated[data-room="quran"] [data-learning-journeys] .desk-spread{grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(32px,6vw,90px);padding-bottom:32px}
+body.open-book.living-book.illuminated[data-room="quran"] [data-learning-journeys] .desk-spread h1{font:var(--type-signature-weight) clamp(4.2rem,7.1vw,7rem)/.99 var(--f-display);letter-spacing:-.035em;max-width:13ch;margin:24px 0}
+body.open-book.living-book.illuminated[data-room="quran"] [data-learning-journeys] .desk-introduction{border:0;padding:0}
+body.open-book.living-book.illuminated[data-room="quran"] [data-learning-journeys] .desk-introduction::before{display:none}
+body.open-book.living-book.illuminated[data-room="quran"] [data-learning-journeys] .desk-art img{aspect-ratio:1.35;object-position:center}
+body.open-book.living-book.illuminated[data-room="quran"] [data-learning-journeys] .desk-art figcaption{border:0;font-size:.7rem;padding-top:12px}
+body.open-book.living-book.illuminated[data-room="quran"] .quran-opening-pause{display:grid;grid-template-columns:minmax(0,1.45fr) minmax(0,.7fr);gap:40px;align-items:center;padding-block:24px 30px;border-block:1px solid var(--line)}
+body.open-book.living-book.illuminated[data-room="quran"] .quran-opening-pause .desk-seed{margin:0;padding:0;border:0;grid-template-columns:auto minmax(0,1fr);gap:30px;align-items:center;max-width:none}
+body.open-book.living-book.illuminated[data-room="quran"] .quran-opening-pause .desk-seed .desk-seed-arabic{font-size:2.5rem}
+body.open-book.living-book.illuminated[data-room="quran"] .quran-opening-pause>p{font:var(--type-chapter-weight) 1.6rem/1.4 var(--f-display);margin:0;color:var(--ink)}
+body.open-book.living-book.illuminated[data-room="quran"] .quran-opening-pause>p>span{font:400 .85rem/1.7 var(--f-body);color:var(--ink-soft)}
+body.open-book.living-book.illuminated[data-room="quran"] .learning-doorways{padding-block:clamp(36px,5vw,68px) 0}
+body.open-book.living-book.illuminated[data-room="quran"] .learning-doorways-heading{display:grid;grid-template-columns:1fr 1fr;gap:10px 40px;align-items:end;margin-bottom:30px}
+body.open-book.living-book.illuminated[data-room="quran"] .learning-doorways-heading>.eyebrow{grid-column:1/-1;margin:0}
+body.open-book.living-book.illuminated[data-room="quran"] .learning-doorways-heading h2{font:var(--type-chapter-weight) clamp(2.4rem,4vw,3.7rem)/1.1 var(--f-display);margin:0}
+body.open-book.living-book.illuminated[data-room="quran"] .learning-doorways-heading>p:last-child{font-size:.94rem;line-height:1.6;color:var(--ink-soft);text-align:end;margin:0}
+body.open-book.living-book.illuminated[data-room="quran"] [data-learning-journeys] .learning-routes{width:100%;padding:0;gap:28px}
+body.open-book.living-book.illuminated[data-room="quran"] [data-learning-journeys] .learning-routes>a{position:relative;border:0;border-bottom:1px solid var(--line);padding-block:22px 24px;padding-inline:0;grid-template-columns:22px minmax(0,1fr) 20px;background:transparent}
+body.open-book.living-book.illuminated[data-room="quran"] [data-learning-journeys] .learning-routes>a::after{content:"";height:2px;position:absolute;inset-inline-start:0;inset-inline-end:0;bottom:-1px;background:var(--gold-line);transform:scaleX(0);transform-origin:left;transition:transform .4s cubic-bezier(.22,1,.36,1)}
+body.open-book.living-book.illuminated[data-room="quran"] [data-learning-journeys] .learning-routes>a[aria-selected=true]::after,body.open-book.living-book.illuminated[data-room="quran"] [data-learning-journeys] .learning-routes>a:hover::after{transform:scaleX(1)}
+body.open-book.living-book.illuminated[data-room="quran"] [data-learning-journeys] .learning-routes>a[aria-selected=true] strong{color:var(--gold)}
+body.open-book.living-book.illuminated[data-room="quran"] [data-learning-journeys] .learning-routes>a[aria-selected=true]>span:last-child{transform:rotate(45deg)}
+body.open-book.living-book.illuminated[data-room="quran"] [data-learning-journeys] .learning-routes>a>span:last-child{transition:transform .35s}
+body.open-book.living-book.illuminated[data-room="quran"] [data-learning-journeys] .learning-routes strong{font-size:clamp(1.4rem,2.2vw,2rem);line-height:1.2}
+body.open-book.living-book.illuminated[data-room="quran"] [data-journey-panel]{scroll-margin-top:calc(var(--header-height) + var(--armbar-h,52px) + 24px);min-width:0;outline-offset:-5px}
+body.open-book.living-book.illuminated[data-room="quran"] [data-journey-panel][hidden]{display:none!important}
+body.open-book.living-book.illuminated[data-room="quran"] [data-learning-journeys] .study-contents{position:static;background:transparent;border:0;margin-top:18px}
+body.open-book.living-book.illuminated[data-room="quran"] [data-learning-journeys] .study-contents>.wrap{display:flex;padding-block:12px;justify-content:flex-start;gap:24px}
+body.open-book.living-book.illuminated[data-room="quran"] [data-learning-journeys] .study-contents p{display:none}
+body.open-book.living-book.illuminated[data-room="quran"] [data-learning-journeys] .study-contents a{font-size:.8rem;padding-block:8px}
+body.open-book.living-book.illuminated[data-room="quran"] [data-learning-journeys] #try-learning{padding-block:clamp(36px,5vw,70px)}
+body.open-book.living-book.illuminated[data-room="quran"] .first-lesson-invitation{display:grid;grid-template-columns:1.2fr 1fr;gap:28px 60px;align-items:center}
+body.open-book.living-book.illuminated[data-room="quran"] .first-lesson-invitation h2{font:var(--type-chapter-weight) clamp(2.4rem,4vw,3.8rem)/1.1 var(--f-display);margin:12px 0}
+body.open-book.living-book.illuminated[data-room="quran"] .first-lesson-invitation p:not(.eyebrow){max-width:50ch;color:var(--ink-soft);font-size:1rem;line-height:1.7}
+body.open-book.living-book.illuminated[data-room="quran"] .first-lesson-invitation .btns{justify-content:flex-end;gap:14px 24px}
+body.open-book.living-book.illuminated[data-room="quran"] [data-learning-journeys] #path{padding-block:clamp(40px,5vw,72px);background:var(--paper-2)}
+body.open-book.living-book.illuminated[data-room="quran"] [data-learning-journeys] #how{background:var(--paper);padding-block:clamp(42px,6vw,90px)}
+body.open-book.living-book.illuminated[data-room="quran"] [data-learning-journeys] #tracks,body.open-book.living-book.illuminated[data-room="quran"] [data-learning-journeys] #private,body.open-book.living-book.illuminated[data-room="quran"] [data-learning-journeys] #certificates,body.open-book.living-book.illuminated[data-room="quran"] [data-learning-journeys] #host{background:var(--paper);padding-block:0;border:0}
+body.open-book.living-book.illuminated[data-room="quran"] .course-disclosure{padding-block:0;border-top:1px solid var(--line)}
+body.open-book.living-book.illuminated[data-room="quran"] .course-disclosure>summary{display:flex;align-items:center;justify-content:space-between;gap:24px;padding:24px 0;list-style:none;cursor:pointer}
+body.open-book.living-book.illuminated[data-room="quran"] .course-disclosure>summary::-webkit-details-marker{display:none}
+body.open-book.living-book.illuminated[data-room="quran"] .course-disclosure>summary h2{font:var(--type-chapter-weight) clamp(1.55rem,2.4vw,2rem)/1.25 var(--f-display);margin:0;max-width:35ch}
+body.open-book.living-book.illuminated[data-room="quran"] .course-disclosure>summary>span{font:300 1.75rem/1 var(--f-body);color:var(--gold);transition:transform .3s}
+body.open-book.living-book.illuminated[data-room="quran"] .course-disclosure[open]>summary>span{transform:rotate(45deg)}
+body.open-book.living-book.illuminated[data-room="quran"] .course-disclosure-body{padding-block:12px 36px}
+body.open-book.living-book.illuminated[data-room="quran"] .course-disclosure-body>.wrap{padding-inline:0;width:100%}
+body.open-book.living-book.illuminated[data-room="quran"] [data-learning-journeys] #certificates .chapter-disclosure{border-top:1px solid var(--line);padding-block:24px}
+body.open-book.living-book.illuminated[data-room="quran"] [data-learning-journeys] #certificates .chapter-disclosure>summary h2{font:var(--type-chapter-weight) clamp(1.55rem,2.4vw,2rem)/1.25 var(--f-display)}
+body.open-book.living-book.illuminated[data-room="quran"] [data-learning-journeys] .inheritance-room{background:var(--paper);border:0;padding-top:clamp(40px,5vw,72px)}
+body.open-book.living-book.illuminated[data-room="quran"] [data-learning-journeys] .inheritance-leaf{border:0;background:var(--paper)}
+body.open-book.living-book.illuminated[data-room="quran"] [data-learning-journeys] .inheritance-leaf-body{padding-block:24px 0;padding-inline:0}
+body.open-book.living-book.illuminated[data-room="quran"] [data-learning-journeys] .inheritance-leaf-body>header{padding-bottom:22px;border-color:var(--gold-line)}
+body.open-book.living-book.illuminated[data-room="quran"] [data-learning-journeys] .inheritance-room-heading h2{font-weight:var(--type-chapter-weight)}
+@media(max-width:1000px){
+body.open-book.living-book.illuminated[data-room="quran"] [data-journey-panel]{scroll-margin-top:calc(var(--header-height) + 20px)}
+body.open-book.living-book.illuminated[data-room="quran"] .quran-opening-pause{grid-template-columns:minmax(0,1fr);gap:20px}
+body.open-book.living-book.illuminated[data-room="quran"] .quran-opening-pause>p{font-size:1.4rem}
+body.open-book.living-book.illuminated[data-room="quran"] .quran-opening-pause>p br{display:none}
+body.open-book.living-book.illuminated[data-room="quran"] [data-learning-journeys] .learning-routes{gap:18px}
+}
+@media(max-width:800px){
+body.open-book.living-book.illuminated[data-room="quran"] [data-learning-journeys] .desk-spread{grid-template-columns:minmax(0,1fr);gap:28px}
+body.open-book.living-book.illuminated[data-room="quran"] [data-learning-journeys] .desk-spread h1{font-size:var(--type-signature-size);margin:22px 0}
+body.open-book.living-book.illuminated[data-room="quran"] [data-learning-journeys] .desk-art img{aspect-ratio:1.6}
+body.open-book.living-book.illuminated[data-room="quran"] .learning-doorways-heading{grid-template-columns:minmax(0,1fr);gap:14px}
+body.open-book.living-book.illuminated[data-room="quran"] .learning-doorways-heading>p:last-child{text-align:start}
+body.open-book.living-book.illuminated[data-room="quran"] [data-learning-journeys] .learning-routes{grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+body.open-book.living-book.illuminated[data-room="quran"] [data-learning-journeys] .learning-routes>a{grid-template-columns:1fr;gap:12px;padding-block:16px}
+body.open-book.living-book.illuminated[data-room="quran"] [data-learning-journeys] .learning-routes>a>span:last-child{display:none}
+body.open-book.living-book.illuminated[data-room="quran"] [data-learning-journeys] .learning-routes strong{font-size:1.4rem}
+body.open-book.living-book.illuminated[data-room="quran"] [data-learning-journeys] .learning-routes small{font-size:.74rem}
+body.open-book.living-book.illuminated[data-room="quran"] .first-lesson-invitation{grid-template-columns:minmax(0,1fr);gap:20px}
+body.open-book.living-book.illuminated[data-room="quran"] .first-lesson-invitation .btns{justify-content:flex-start}
+body.open-book.living-book.illuminated[data-room="quran"] [data-learning-journeys] .inheritance-leaf-body{padding-top:6px}
+}
+@media(max-width:480px){
+body.open-book.living-book.illuminated[data-room="quran"] .quran-opening-pause .desk-seed{grid-template-columns:minmax(0,1fr);gap:10px}
+body.open-book.living-book.illuminated[data-room="quran"] .quran-opening-pause .desk-seed .desk-seed-arabic{text-align:start;font-size:2.3rem}
+body.open-book.living-book.illuminated[data-room="quran"] [data-learning-journeys] .learning-routes{gap:10px}
+body.open-book.living-book.illuminated[data-room="quran"] [data-learning-journeys] .learning-routes strong{font-size:1.25rem}
+body.open-book.living-book.illuminated[data-room="quran"] [data-learning-journeys] .learning-routes small{font-size:.72rem;line-height:1.5}
+body.open-book.living-book.illuminated[data-room="quran"] .learning-doorways-heading h2{font-size:2.5rem}
+}
+@media print{
+body.open-book.living-book.illuminated[data-room="quran"] [data-journey-panel][hidden]{display:block!important}
+body.open-book.living-book.illuminated[data-room="quran"] .learning-doorways{display:none}
+body.open-book.living-book.illuminated[data-room="quran"] .quran-opening-pause{display:block}
+}
+body.open-book.living-book.illuminated[data-room="quran"] [data-study="books"] .chapter-opening-grid{grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);align-items:center;gap:clamp(30px,7vw,100px)}
+.open-book .library-cover{min-width:0;padding-block:20px 0;padding-inline:0;align-self:center}
+.open-book .library-cover-books{display:flex;justify-content:center;align-items:center;padding-block:28px 36px;padding-inline:18px;border-bottom:1px solid var(--gold-line)}
+.open-book .library-cover-books>a{display:block;width:36%;max-width:170px;flex-shrink:0;position:relative;outline-offset:8px;transition:transform .3s ease}
+.open-book .library-cover-books>a+a{margin-inline-start:-9%}
+.open-book .library-cover-books>a:nth-child(1){transform:rotate(-7deg);z-index:1}
+.open-book .library-cover-books>a:nth-child(2){transform:translateY(-12px);z-index:3}
+.open-book .library-cover-books>a:nth-child(3){transform:rotate(7deg);z-index:2}
+.open-book .library-cover-books>a:hover,.open-book .library-cover-books>a:focus-visible{transform:translateY(-20px);z-index:4}
+.open-book .library-cover-books img{display:block;width:100%;height:auto;box-shadow:0 10px 20px -12px rgba(0,0,0,.35)}
+.open-book .library-cover>p{font-size:.87rem;line-height:1.7;margin-block:20px 6px;margin-inline:0;color:var(--ink)}
+.open-book .library-cover>p>span{color:var(--ink-soft);font-size:.78rem}
+.open-book .library-cover>.link{display:inline-flex;align-items:center;min-height:44px;font-size:.85rem}
+body.open-book.living-book.illuminated[data-room="quran"] [data-study="books"] #the-books{padding-top:42px}
+body.open-book.living-book.illuminated[data-room="quran"] [data-study="books"] .library-catalog{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 clamp(32px,5vw,76px)}
+body.open-book.living-book.illuminated[data-room="quran"] [data-study="books"] .library-catalog .book{grid-template-columns:minmax(0,.45fr) minmax(0,1fr);gap:24px;padding-block:42px;border-bottom:1px solid var(--line);align-items:start}
+body.open-book.living-book.illuminated[data-room="quran"] [data-study="books"] .library-catalog .book .shot{padding:0;background:transparent;border:0;margin:0;width:100%;max-width:180px}
+body.open-book.living-book.illuminated[data-room="quran"] [data-study="books"] .library-catalog .book h3{font:var(--type-chapter-weight) clamp(1.8rem,2.2vw,2.4rem)/1.12 var(--f-display);margin-block:12px 18px}
+body.open-book.living-book.illuminated[data-room="quran"] [data-study="books"] .library-catalog .book p{font-size:.95rem;line-height:1.75}
+body.open-book.living-book.illuminated[data-room="quran"] [data-study="books"] .book .facts{letter-spacing:0;font-size:.77rem;gap:6px 14px;border:0;padding:0;margin-block:18px 4px;margin-inline:0}
+.open-book .book-inside{font-size:.9rem;line-height:1.7;color:var(--ink-soft);margin-block:12px}
+.open-book .book-inside>summary{cursor:pointer;color:var(--gold);padding-block:10px;min-height:44px;text-underline-offset:4px}
+.open-book .book-inside[open]>summary{margin-bottom:8px}
+body.open-book.living-book.illuminated[data-room="quran"] [data-study="books"] .library-catalog .dl{background:transparent;border:0;border-bottom:1px solid var(--gold-line);border-radius:0;padding:16px 0;min-height:58px;box-shadow:none}
+body.open-book.living-book.illuminated[data-room="quran"] [data-study="books"] .library-catalog .dl .t{font-size:.92rem}
+body.open-book.living-book.illuminated[data-room="quran"] [data-study="books"] #book-care .cols{gap:clamp(26px,4vw,60px)}
+body.open-book.living-book.illuminated[data-room="quran"] [data-study="books"] #book-care .col h3{font:var(--type-chapter-weight) 1.65rem/1.2 var(--f-display)}
+body.open-book.living-book.illuminated[data-room="quran"] [data-study="teacher"] .chapter-opening-grid{grid-template-columns:minmax(0,1.15fr) minmax(0,.75fr);align-items:center}
+.open-book .teacher-opening-portrait{width:100%;max-width:420px;justify-self:end;margin:0}
+.open-book .teacher-opening-portrait img{display:block;width:100%;height:auto;aspect-ratio:4/4.15;object-fit:cover;object-position:center 25%}
+.open-book .teacher-opening-portrait figcaption{font-size:.8rem;line-height:1.6;color:var(--ink-soft);padding-top:14px}
+body.open-book.living-book.illuminated[data-room="quran"] [data-study="teacher"] #teacher-record .founder{grid-template-columns:minmax(0,.7fr) minmax(0,1.3fr);gap:clamp(36px,8vw,120px)}
+body.open-book.living-book.illuminated[data-room="quran"] [data-study="teacher"] #teacher-record h2{font:var(--type-chapter-weight) clamp(2.3rem,3.8vw,3.8rem)/1.08 var(--f-display);max-width:18ch}
+body.open-book.living-book.illuminated[data-room="quran"] [data-study="teacher"] #teacher-record .body{padding:0;max-width:66ch}
+body.open-book.living-book.illuminated[data-room="quran"] [data-study="teacher"] #teaching-practice .steps{grid-template-columns:repeat(2,minmax(0,1fr));gap:0 clamp(30px,6vw,90px)}
+.open-book .teacher-recommendations{display:grid;grid-template-columns:minmax(0,.4fr) minmax(0,1fr);gap:24px 60px;align-items:baseline}
+.open-book .teacher-recommendations>p:last-child{max-width:65ch;color:var(--ink-soft);font-size:.94rem;line-height:1.75;margin:0}
+@media(max-width:1100px){
+body.open-book.living-book.illuminated[data-room="quran"] [data-study="books"] .library-catalog{grid-template-columns:minmax(0,1fr)}
+body.open-book.living-book.illuminated[data-room="quran"] [data-study="books"] .library-catalog .book{grid-template-columns:180px minmax(0,1fr);gap:40px}
+}
+@media(max-width:800px){
+body.open-book.living-book.illuminated[data-room="quran"] [data-study="books"] .chapter-opening-grid,body.open-book.living-book.illuminated[data-room="quran"] [data-study="teacher"] .chapter-opening-grid,body.open-book.living-book.illuminated[data-room="quran"] [data-study="teacher"] #teacher-record .founder{grid-template-columns:minmax(0,1fr)}
+.open-book .library-cover{width:100%;max-width:470px;padding:0}
+.open-book .teacher-opening-portrait{max-width:360px;justify-self:start}
+body.open-book.living-book.illuminated[data-room="quran"] [data-study="teacher"] #teaching-practice .steps{grid-template-columns:minmax(0,1fr)}
+.open-book .teacher-recommendations{grid-template-columns:minmax(0,1fr);gap:16px}
+}
+@media(max-width:540px){
+body.open-book.living-book.illuminated[data-room="quran"] [data-study="books"] .library-catalog .book{grid-template-columns:minmax(0,1fr);gap:24px}
+body.open-book.living-book.illuminated[data-room="quran"] [data-study="books"] .library-catalog .book .shot{max-width:145px}
+.open-book .library-cover-books{padding-inline:12px}
+}
+@media print{
+.open-book .library-cover{display:none}
+body.open-book.living-book.illuminated[data-room="quran"] [data-study="books"] .library-catalog{display:block}
+.open-book .teacher-opening-portrait{max-width:160px}
+}

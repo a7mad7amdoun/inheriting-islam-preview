@@ -1,0 +1,199 @@
+html[data-type-system]{
+--type-signature-family:'Cormorant Garamond',Georgia,serif;
+--type-editorial-family:'EB Garamond',Georgia,serif;
+--type-detail-family:var(--type-editorial-family);
+--type-art-family:var(--type-signature-family);
+--type-interface-family:'Manrope',system-ui,sans-serif;
+--type-prose-family:'Source Sans 3',system-ui,sans-serif;
+--type-script-family:'Amiri Complete','Geeza Pro',serif;
+--type-label-family:var(--type-interface-family);
+--f-display:var(--type-editorial-family);--f-body:var(--type-prose-family);--f-ar:var(--type-script-family);
+--reading-measure:66ch;--type-reading-size:clamp(1.0625rem,1.01rem + .2vw,1.125rem);
+--type-reading-leading:1.8;--type-reference-size:.875rem;--type-reference-leading:1.65;
+--type-signature-leading:1.1;--type-chapter-leading:1.22;
+--type-ui-size:1rem;--type-ui-leading:1.55;--type-arabic-leading:2.15;
+}
+html[data-type-system] body{font-family:var(--type-prose-family);font-synthesis:none}
+html[data-type-system] :is(h1,.type-signature){font-family:var(--type-signature-family)!important;font-kerning:normal;text-wrap:balance}
+html[data-type-system] :is(h2,.type-editorial){font-family:var(--type-editorial-family)!important;text-wrap:balance}
+html[data-type-system] :is(button,input,textarea,select,summary,.btn,.link,label,legend,.nav,.mobile-destinations,.mobile-learning,.type-interface){font-family:var(--type-interface-family)!important}
+html[data-type-system] :is(.eyebrow,.mono,.type-label){font-family:var(--type-label-family)!important;font-size:.8125rem!important;letter-spacing:.045em!important;text-transform:none!important;line-height:1.65!important}
+html[data-type-system] :is(figcaption,.reader-caption,.source-label,.tiny,.meta,.quran-companion-review,.inheritance-review-note,.reader-attribution){font-size:.875rem!important;line-height:var(--type-reference-leading)!important}
+html[data-type-system] :is(.source-arabic,.reader-arabic,.quran-companion-arabic,.inheritance-supplication-arabic,.ar,.ar-lg,[lang=ar]){font-family:var(--type-script-family)!important;font-style:normal!important;letter-spacing:0!important;font-synthesis:none;line-height:var(--type-arabic-leading)}
+html[data-type-system] :is(.source-arabic,.reader-arabic,.quran-companion-arabic){white-space:normal;overflow:visible;word-break:normal;overflow-wrap:normal;padding-block:.2em}
+html[data-type-system] :is(p,li,dd){text-wrap:pretty}
+html[data-type-system] :is(input,select,textarea){font-size:max(1rem,1em);min-width:0}
+html[data-type-system] :is(.email-preview pre,input[type=email],input[type=url],a[href^="tel:"],a[href^="mailto:"]){unicode-bidi:plaintext}
+html[data-type-system] :is(input[type=email],input[type=url],a[href^="tel:"]){direction:ltr}
+html[data-type-system] bdi{unicode-bidi:isolate}
+html[data-type-system] .language-switch{display:flex;align-items:center;gap:.5rem;flex:none;font:500 .875rem/1.4 var(--type-interface-family);white-space:nowrap;direction:ltr}
+html[data-type-system] .language-switch a{display:inline-flex;align-items:center;min-height:44px;padding-inline:.6rem;border:1px solid var(--control-line);border-radius:18px;color:var(--ink);text-decoration:none;transition:background-color .2s,border-color .2s}
+html[data-type-system] .language-switch a:hover{background:var(--paper-2);border-color:var(--gold)}
+html[data-type-system] .language-switch a[lang=ar]{font-size:1.1rem;line-height:1.7}
+html[data-type-system] .language-switch a:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+html[data-type-system] .language-switch .language-current{color:var(--ink-soft)}
+html[data-type-system] #header .brand{min-width:0}
+html[data-type-system] #header .tools{gap:clamp(6px,1vw,16px)}
+html[data-type-system] .fbot{flex-wrap:wrap}
+html[lang=ar][data-type-system]{
+--type-signature-family:var(--type-script-family);
+--type-editorial-family:'Noto Naskh Arabic','Amiri Complete',serif;
+--type-detail-family:var(--type-editorial-family);
+--type-art-family:'Aref Ruqaa','Amiri Complete',serif;
+--type-prose-family:'Noto Sans Arabic',Tahoma,sans-serif;
+--type-interface-family:'IBM Plex Sans Arabic',Tahoma,sans-serif;
+--type-label-family:var(--type-interface-family);
+--type-reading-size:clamp(1.0625rem,1rem + .2vw,1.125rem);
+--type-reading-leading:2;--type-reference-size:1rem;--type-reference-leading:1.95;
+--type-signature-leading:1.65;--type-chapter-leading:1.8;
+--type-ui-size:1rem;--type-ui-leading:1.65;--reading-measure:54ch;
+}
+html[lang=ar][data-type-system] body{font-size:var(--type-reading-size);line-height:var(--type-reading-leading)}
+html[lang=ar][data-type-system] body *{letter-spacing:0!important;text-transform:none!important;font-style:normal!important;font-synthesis:none}
+html[lang=ar][data-type-system] :is(p,li,dd,dt,.lede,.inheritance-intro,.inheritance-hero-lede,.reader-meaning){font-family:var(--type-prose-family)!important;line-height:var(--type-reading-leading)!important}
+html[lang=ar][data-type-system] :is(h1,h2,h3){font-weight:400!important;line-height:var(--type-chapter-leading)!important;overflow:visible;padding-block:.08em}
+html[lang=ar][data-type-system] h1{font-size:clamp(2.5rem,1.8rem + 3vw,4.75rem)!important;line-height:var(--type-signature-leading)!important;max-width:22ch}
+html[lang=ar][data-type-system] .inheritance-hero h1{font-size:clamp(3.25rem,2.4rem + 3.4vw,6rem)!important}
+html[lang=ar][data-type-system] .inheritance-hero-lede{font-size:clamp(1.3rem,1.1rem + .6vw,1.7rem)!important}
+html[lang=ar][data-type-system] :is(.nav a,.nav summary,.btn,button,summary,label,legend,select){line-height:var(--type-ui-leading)!important}
+html[lang=ar][data-type-system] :is(.eyebrow,.mono,.type-label){font-family:var(--type-label-family)!important;font-size:.875rem!important;line-height:1.9!important}
+html[lang=ar][data-type-system] :is(.small,.tiny,.meta,.facts,.formnote,.pending p,figcaption,.reader-caption,.source-label,.quran-companion-review,.inheritance-review-note,.reader-attribution){font-size:1rem!important;line-height:1.95!important}
+html[lang=ar][data-type-system] :is(.nav-panel small,.mobile-destination-title,.vb,.sub){line-height:1.85!important}
+html[lang=ar][data-type-system] [data-proper-name]{font-family:'Source Sans 3',sans-serif!important;direction:ltr;unicode-bidi:isolate;letter-spacing:0!important}
+html[lang=ar][data-type-system] .brand .wm{font-weight:600!important;line-height:1.3!important}
+html[lang=ar][data-type-system] :is(.reader-prose[data-reading-size=large] p){font-size:1.3rem!important;line-height:2.2!important}
+html[lang=ar][data-type-system] .reader-prose[data-reading-size=large] .reader-arabic{font-size:clamp(2.3rem,3.6vw,3.15rem)!important;line-height:2.2!important}
+html[lang=ar][data-type-system] :is(.inheritance-source-notes,.source-reflection,.reader-folio,.quran-companion-page,figcaption){text-align:start!important}
+html[lang=ar][data-type-system] .field select{background-position:19px 55%,14px 55%}
+html[lang=ar][data-type-system] :is(.inheritance-hero-art img,.about-founder-portrait img,.teacher-portrait img,.app-brand-logo,.project-symbol img,.mark){ direction:ltr}
+html[lang=ar][data-type-system] .nav-flow-line{left:0;right:auto}
+html[lang=ar][data-type-system] .email-preview pre{white-space:pre-wrap;overflow-wrap:anywhere;text-align:start;direction:rtl}
+html[lang=ar][data-type-system] :is(.reader-reference,.inheritance-source-ref,.quran-companion-reference){unicode-bidi:plaintext}
+@media(max-width:1250px){html[data-type-system] #header .hcta{display:none}}
+@media(max-width:600px){
+html[data-type-system] .language-switch .language-current{display:none}
+html[data-type-system] .language-switch a{padding-inline:.5rem}
+html[data-type-system] #header .brand{gap:8px}
+html[data-type-system] #header .brand .wm{font-size:1.15rem}
+html[data-type-system] #header .brand .sub{display:none}
+html[data-type-system] #header .mark{width:38px}
+html[data-type-system] #header .house-search{display:none}
+html[lang=ar][data-type-system] h1{font-size:clamp(2.2rem,7vw,3.2rem)!important}
+html[lang=ar][data-type-system] .inheritance-hero h1{font-size:clamp(2.75rem,9vw,4rem)!important}
+html[lang=ar][data-type-system] .inheritance-hero h1 br{display:none}
+}
+@media(prefers-reduced-motion:reduce){html[data-type-system] .language-switch a{transition:none}}
+html[data-motion=calm] .language-switch a{transition:none}
+html[lang=ar][data-type-system] :is(.nav a,.nav summary,.mobile-learning a,.mobile-destination-title,.study-contents a,.armbar a){font-family:var(--type-interface-family)!important}
+html[data-type-system] :is(.source-arabic,.reader-arabic,.quran-companion-arabic,.inheritance-supplication-arabic){direction:rtl;text-align:start}
+html[data-type-system] .inheritance-supplication-arabic{text-align:center}
+html[data-type-system] .mobile-search-link{display:inline-flex;min-height:44px;align-items:center;font-family:var(--type-interface-family);text-decoration:underline;text-underline-offset:4px}
+html[data-type-system] .nav-flow-line{inset-inline-start:auto;left:0;right:auto}
+html[lang=ar][data-type-system] body{--house-body:var(--type-reading-size)!important;--house-small:1rem!important;--house-caption:1rem!important}
+html[lang=ar][data-type-system] main :is(p:not([class]),.body>p,.what,.faq .a p,.note>p,.chapter-note>p:not(.eyebrow),.contact-routing small){font-size:var(--type-reading-size)!important}
+html[data-type-system] :is(.reader-prose,.prose){max-inline-size:var(--reading-measure);min-inline-size:0}
+html[lang=ar][data-type-system] :is(.quran-companion-meaning,.quran-companion-reflection p,.about-letter p){max-inline-size:var(--reading-measure)}
+html[data-type-system] :is(.field,.tool-dossiers .lrow>div,.inheritance-path-grid>a,.nav-learning-grid>a){min-inline-size:0}
+html[dir=rtl][data-type-system] :is(.reading-progress>span,.chapter-rule,.folio-door::before,.learning-routes>a::after){transform-origin:right}
+html[dir=rtl][data-type-system] .btn-primary:hover svg{transform:translateX(-3px)}
+@media(prefers-reduced-motion:reduce){html[dir=rtl][data-type-system] .btn-primary:hover svg{transform:none}}
+html[dir=rtl][data-motion=calm] .btn-primary:hover svg{transform:none}
+html[data-type-system] :is(h3,.type-detail){font-family:var(--type-detail-family)!important;font-weight:500;line-height:1.3}
+html[data-type-system] :is(.nav a,.nav summary,.mobile-destination-title,.mobile-learning a,.study-contents a,.about-contents a,.armbar a,.inheritance-path-action,.app-card-action,.reader-margin a,.footer-search strong,.fcol h4){font-family:var(--type-interface-family)!important;font-weight:500;letter-spacing:0}
+html[data-type-system] :is(.nav-panel-heading strong,.mobile-heading>a){font-family:var(--type-interface-family)!important}
+html[data-type-system] :is(.nav-learning-grid small,.vb,.formnote,.email-preview,.footer-search small){font-family:var(--type-prose-family)!important}
+html[data-type-system] :is(figcaption,.reader-caption,.source-label,.tiny,.meta,.quran-companion-review,.inheritance-review-note,.reader-attribution){font-family:var(--type-prose-family)!important}
+html[data-type-system] main :is(.inheritance-hero-art,.about-inheritance-art) figcaption>span[lang=ar]{font-family:'Aref Ruqaa','Amiri Complete',serif!important;font-size:2.25rem!important;font-weight:400;line-height:1.9!important;padding-block:.12em}
+html[lang=en][data-type-system] :is(.sig .nm,.inheritance-hero-art figcaption>span:last-child,.about-inheritance-art figcaption>span:last-child){font-family:var(--type-art-family)!important;font-size:1.5rem!important;font-weight:500;line-height:1.5!important}
+html[data-type-system] body.open-book :is(.source-arabic,.reader-arabic,.quran-companion-arabic,.inheritance-supplication-arabic,.inheritance-arabic,.letter-glyph,.desk-seed-arabic,.ar,.ar-lg){font-family:var(--type-script-family)!important;font-weight:400!important;line-height:var(--type-arabic-leading)!important;letter-spacing:0!important}
+html[lang=ar][data-type-system] :is(.nav a,.nav summary,.mobile-learning a,.mobile-destination-title,.study-contents a,.about-contents a,.armbar a,.reader-margin a){font-family:var(--type-interface-family)!important;font-size:1rem;line-height:1.75!important}
+html[lang=ar][data-type-system] :is(.mobile-destinations .vb,.nav-panel small){font-family:var(--type-prose-family)!important;font-size:.875rem!important;line-height:1.9!important}
+html[lang=ar][data-type-system] .mobile-destination-title{font-size:1.3rem}
+html[lang=ar][data-type-system] :is(.lede,.inheritance-intro,.inheritance-hero-lede){font-size:clamp(1.125rem,1rem + .4vw,1.375rem)!important;line-height:2!important}
+html[lang=ar][data-type-system] :is(.about-letter-lead,.about-letter-margin blockquote p,.reader-question>p:not(.eyebrow)){font-family:var(--type-editorial-family)!important;font-size:clamp(1.4rem,1.2rem + .5vw,1.8rem)!important;line-height:1.9!important}
+html[lang=ar][data-type-system] :is(.eyebrow,.mono,.type-label){font-size:.9375rem!important;font-weight:500!important}
+html[lang=ar][data-type-system] .language-switch a[lang=en]{font-family:'Manrope',sans-serif!important;font-size:.8125rem}
+html[data-type-system] .language-switch a[lang=ar]{font-family:'IBM Plex Sans Arabic',Tahoma,sans-serif!important;font-size:1rem}
+html[data-type-system] body .brand{direction:ltr;unicode-bidi:isolate;flex-direction:row;gap:14px;white-space:nowrap;text-align:left}
+html[data-type-system] body #header .brand{margin:0;flex-shrink:0}
+html[data-type-system] body .brand .mark{width:68px;height:auto;aspect-ratio:132/64;flex-shrink:0;transform:none;filter:none}
+html[data-type-system] body .brand .wm,html[data-type-system] body .brand .wm [data-proper-name]{font-family:'Cormorant Garamond','Iowan Old Style',Georgia,serif!important;font-size:1.36rem!important;font-weight:600!important;line-height:1.05!important;letter-spacing:-.014em!important;max-width:none!important;text-transform:none!important;color:var(--ink)}
+html[data-type-system] body .brand .sub{font-family:'Source Sans 3',sans-serif!important;font-size:.58rem!important;font-weight:600!important;letter-spacing:.2em!important;line-height:1.7!important;text-transform:uppercase!important;margin-top:4px;color:var(--gold)}
+html[lang=ar][data-type-system] body .brand .sub{font-family:'IBM Plex Sans Arabic',Tahoma,sans-serif!important;font-size:.75rem!important;letter-spacing:0!important;line-height:1.7!important;text-transform:none!important}
+html[data-type-system] body #header .hbar{gap:clamp(12px,1.5vw,28px);justify-content:space-between;min-height:80px}
+html[data-type-system] body #header .nav{margin-inline:auto;flex-shrink:0}
+html[data-type-system] body #header .tools{margin:0;flex-shrink:0}
+html[data-type-system] .language-switch .language-current{display:none}
+html[data-type-system] #mobileNav{overscroll-behavior:contain;scrollbar-gutter:stable;padding-bottom:max(28px,env(safe-area-inset-bottom))}
+html[data-type-system] #mobileNav .mobile-bottom{flex-wrap:wrap;gap:12px 24px;text-align:start}
+html[data-type-system] #mobileNav .mobile-bottom>a[href^="mailto:"]{direction:ltr;unicode-bidi:isolate;overflow-wrap:anywhere}
+html[data-type-system] .mobile-search-link{gap:10px;text-decoration:none;border:1px solid var(--control-line);border-radius:999px;padding:10px 18px}
+html[data-type-system] .mobile-search-link:focus-visible{outline:2px solid var(--gold);outline-offset:4px}
+html[data-type-system] body.open-book main>section:not(.source-encounter),html[data-type-system] body.open-book .reader-section{background-image:none}
+html[data-type-system] body.open-book :is(.source-encounter,.reader-section)>.eyebrow::before,html[data-type-system] body.open-book .shead .eyebrow::before{content:none}
+html[data-type-system] .room-ornament{display:none}
+html[data-type-system] .footer-utilities{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:24px 40px;padding-block:30px;margin-block-start:32px;border-block:1px solid var(--line)}
+html[data-type-system] .footer-search{display:flex;align-items:center;gap:16px;text-decoration:none;padding:12px 0;min-height:52px;min-width:0;color:var(--ink)}
+html[data-type-system] .footer-search svg{width:22px;height:22px;flex:none;color:var(--gold)}
+html[data-type-system] .footer-search>span:first-of-type{display:grid;gap:5px}
+html[data-type-system] .footer-search strong{font-size:.9375rem;line-height:1.6}
+html[data-type-system] .footer-search small{font-size:.875rem;color:var(--ink-soft);line-height:1.7}
+html[data-type-system] .footer-search>span:last-child{margin-inline-start:16px;color:var(--gold);transition:transform .25s ease}
+html[data-type-system] .footer-search:hover>span:last-child{transform:translateY(-2px)}
+html[data-type-system] .footer-appearance{display:flex;align-items:center;gap:16px;flex-wrap:wrap}
+html[data-type-system] .footer-preference-label{font-family:var(--type-prose-family);font-size:.875rem;color:var(--ink-soft)}
+html[data-type-system] .theme-toggle:not([hidden]){display:grid;grid-template-columns:20px auto;align-items:center;gap:2px 10px;padding:12px 18px;border:1px solid var(--control-line);border-radius:16px;background:var(--paper-2);color:var(--ink);font:500 .9375rem/1.5 var(--type-interface-family);text-align:start;cursor:pointer;min-height:48px;transition:background-color .25s ease,border-color .25s ease}
+html[data-type-system] .theme-toggle svg{width:20px;height:20px;grid-row:1/3;color:var(--gold)}
+html[data-type-system] .theme-toggle-hint{grid-column:2;font-family:var(--type-prose-family);font-size:.8125rem;color:var(--ink-soft)}
+html[data-type-system] .theme-toggle:hover{background:var(--paper);border-color:var(--gold)}
+html[data-type-system] :is(.theme-toggle,.footer-search):focus-visible{outline:2px solid var(--gold);outline-offset:5px}
+html[data-type-system] .fbot{border:0;margin-top:0;padding-block:24px;gap:18px 28px}
+html[lang=ar][data-type-system] :is(.footer-search strong,.footer-preference-label){font-size:1rem}
+html[lang=ar][data-type-system] .footer-search small,html[lang=ar][data-type-system] .theme-toggle-hint{font-size:.875rem;line-height:1.85}
+@media(min-width:1001px) and (max-width:1250px){
+html[data-type-system] #header .hbar{gap:12px}
+html[data-type-system] #header .nav{gap:0}
+html[data-type-system] #header .nav>a,html[data-type-system] #header .nav-disclosure>summary{padding-inline:12px}
+}
+@media(max-width:600px){
+html[data-type-system] body #header .hbar{gap:10px;min-height:64px}
+html[data-type-system] body #header .brand{gap:9px}
+html[data-type-system] body #header .brand .mark{width:48px}
+html[data-type-system] body #header .brand .wm{font-size:1.3rem!important}
+html[data-type-system] body #header .brand .sub{display:none}
+html[data-type-system] .footer-utilities{align-items:stretch;gap:18px;padding-block:24px;margin-top:24px}
+html[data-type-system] .footer-search{width:100%}
+html[data-type-system] .footer-search>span:last-child{margin-inline-start:auto}
+html[data-type-system] .footer-appearance{width:100%;justify-content:space-between;gap:12px}
+html[data-type-system] .fbot .vow{max-width:45ch}
+}
+@media(max-width:420px){
+html[data-type-system] body #header .hbar{width:calc(100% - 32px);padding-inline:0;gap:6px}
+html[data-type-system] body #header .brand .mark{width:38px}
+html[data-type-system] body #header .brand .wm{font-size:1.15rem!important}
+html[data-type-system] #header #navToggle{min-width:44px;width:44px;padding-inline:10px}
+html[data-type-system] #navToggle .nav-menu-label{display:none}
+html[data-type-system] #header .tools{gap:6px}
+html[data-type-system] .language-switch a{padding-inline:8px;min-width:44px;justify-content:center}
+}
+@media(prefers-reduced-motion:reduce){html[data-type-system] :is(.theme-toggle,.footer-search>span:last-child){transition:none!important;transform:none!important}}
+html[data-motion=calm] :is(.theme-toggle,.footer-search>span:last-child){transition:none!important;transform:none!important}
+@media print{.footer-utilities{display:none!important}}
+html[data-type-system] :is(.nav-learning-grid>a>span,.nav-menu-label,.nav-panel-heading strong,.fcol ul a){font-family:var(--type-interface-family)!important;font-weight:500}
+html[data-type-system] .nav-learning-grid>a>span{font-size:1rem;line-height:1.7}
+html[data-type-system] .nav-panel-heading strong{font-size:1.2rem;line-height:1.6}
+html[data-type-system] .mobile-destination-title{font-size:clamp(1.1rem,2vw,1.4rem);line-height:1.5;font-style:normal!important}
+html[data-type-system] body.open-book #mobileNav .mrow{padding:20px 16px;gap:8px}
+html[lang=ar][data-type-system] #header .hcta::after{content:"↖"}
+@media(max-width:380px){
+html[data-type-system] #mobileNav .mobile-destinations,html[data-type-system] #mobileNav .mgroup{grid-template-columns:1fr}
+html[data-type-system] #mobileNav .mrow{min-height:90px}
+}
+html[data-type-system] body footer .brand{width:fit-content;max-width:100%;margin-inline:0}
+@media screen {
+html[lang=en][data-type-system] body.open-book #main h1 {font-size:clamp(2.6rem,1.5rem + 3.6vw,4.8rem);line-height:1.12;letter-spacing:-.018em}
+html[lang=en][data-type-system] body.open-book #main .inheritance-hero h1 {font-size:clamp(3.2rem,5.5vw,6.3rem);line-height:1.06}
+html[lang=en][data-type-system] body.open-book #main h2 {line-height:1.2;letter-spacing:-.012em}
+html[data-type-system] body.open-book #main :is(h1,h2,h3) {text-wrap:balance}
+html[data-type-system] body.open-book #main :is(.lede,.inheritance-hero-lede,.about-cover-lede) {text-wrap:pretty}
+}

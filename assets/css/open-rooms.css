@@ -1,0 +1,150 @@
+body.living-book.illuminated.open-book[data-room] .workshop-opening .hero-grid{grid-template-columns:1fr;gap:clamp(32px,4vw,56px)}
+body.living-book.illuminated.open-book[data-room="apps"] .workshop-intro{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);gap:clamp(28px,7vw,100px);align-items:end}
+body.living-book.illuminated.open-book[data-room="apps"] .workshop-opening h1{max-width:17ch;margin-bottom:0}
+.open-book .workshop-intro .hero-note{margin-bottom:0}
+.open-book .need-finder{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0 clamp(20px,3vw,44px);min-width:0}
+.open-book .need-finder>.eyebrow,.open-book .need-finder>.tiny{grid-column:1/-1}
+.open-book .need-finder>.eyebrow{margin-block:0 18px;margin-inline:0}
+.open-book .need-finder>a{display:grid;grid-template-columns:minmax(0,1fr) 24px;gap:20px 12px;align-items:center;padding-block:0 22px;padding-inline:0;color:var(--ink);text-decoration:none;border-bottom:1px solid var(--gold-line);min-width:0}
+.open-book .need-finder>a:hover b{text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:6px}
+.open-book .need-finder img{display:block;grid-column:1/-1;width:100%;height:auto;aspect-ratio:4/3;object-fit:cover;border-radius:0;transition:filter .25s}
+.open-book .need-finder>a:hover img{filter:brightness(1.08)}
+.open-book .need-finder b{font-family:var(--f-display);font-size:clamp(1.65rem,2.4vw,2.4rem);line-height:1.1;font-weight:500;display:block}
+.open-book .need-finder small{font-size:.86rem;line-height:1.5;display:block;color:var(--ink-soft);margin-top:10px}
+.open-book .need-finder>a>span:last-child{font-size:1.5rem;color:var(--gold)}
+.open-book .need-finder>.tiny{margin-block:18px 0;margin-inline:0;color:var(--ink-soft)}
+body.living-book.illuminated.open-book[data-room="apps"] .tool-dossiers{display:block;border:0}
+body.living-book.illuminated.open-book[data-room="apps"] .tool-dossiers .lrow{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:clamp(28px,7vw,110px);align-items:center;padding:clamp(28px,5vw,64px) 0;border-top:1px solid var(--line)}
+body.living-book.illuminated.open-book[data-room="apps"] .tool-dossiers .lrow:last-child{border-bottom:1px solid var(--line)}
+body.living-book.illuminated.open-book[data-room="apps"] .tool-dossiers .plate{grid-row:auto;width:100%;height:auto;max-width:390px;aspect-ratio:auto;justify-self:center;background:transparent;margin:0;border:0;padding:0;overflow:visible}
+body.living-book.illuminated.open-book[data-room="apps"] .tool-dossiers .plate img{display:block;width:100%;height:auto;aspect-ratio:1;object-fit:contain;border:0}
+.open-book .tool-dossiers .plate figcaption{font-size:.76rem;letter-spacing:.06em;color:var(--ink-soft);padding-top:16px;line-height:1.6}
+body.living-book.illuminated.open-book[data-room="apps"] .tool-dossiers .name{font-size:clamp(2.2rem,3.8vw,3.6rem);line-height:1.07;margin-block:10px 18px;margin-inline:0}
+body.living-book.illuminated.open-book[data-room="apps"] .tool-dossiers .kind{color:var(--gold);font-size:.77rem;font-weight:600;letter-spacing:.09em;text-transform:uppercase}
+body.living-book.illuminated.open-book[data-room="apps"] .tool-dossiers .what{font-size:1.08rem;line-height:1.7;max-width:58ch;grid-column:auto}
+.open-book .tool-capabilities{list-style:none;padding:0;margin:24px 0;display:grid;grid-template-columns:1fr 1fr;gap:16px 24px;max-width:62ch}
+.open-book .tool-capabilities li{padding-block:12px 0;padding-inline:0;border-top:1px solid var(--line);font-size:.95rem;line-height:1.55;color:var(--ink-soft)}
+body.living-book.illuminated.open-book[data-room="apps"] .tool-dossiers .meta{grid-column:auto;display:flex;flex-direction:row;align-items:center;flex-wrap:wrap;gap:20px;padding-top:6px}
+.open-book .tool-dossiers .meta .btn{font-size:.94rem}
+.open-book .tool-dossiers .tool-story{min-width:0}
+.open-book .workshop-divider{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);align-items:center;gap:clamp(28px,5vw,70px);margin-block:64px 0;margin-inline:0;background:var(--paper-2)}
+.open-book .workshop-divider img{display:block;width:100%;height:auto;max-height:290px;object-fit:cover}
+.open-book .workshop-divider figcaption{padding:28px}
+.open-book .workshop-divider figcaption>span{display:block}
+.open-book .workshop-divider figcaption>span:last-child{font-family:var(--f-body);font-size:clamp(2rem,4vw,3.4rem);line-height:1.1;margin-top:16px;color:var(--ink)}
+body.living-book.illuminated.open-book[data-room="podcast"] .listening-opening .hero-grid{grid-template-columns:minmax(0,.75fr) minmax(0,1.25fr);align-items:center;gap:clamp(26px,4vw,60px)}
+body.living-book.illuminated.open-book[data-room="podcast"] .listening-opening h1{max-width:12ch;font-size:var(--type-signature-size);line-height:var(--type-signature-leading)}
+body.living-book.illuminated.open-book[data-room="podcast"] .listening-opening .listening-scene{width:100%;max-width:none;margin:0}
+body.living-book.illuminated.open-book[data-room="podcast"] .listening-scene .frame{padding:0;border:0;background:var(--paper-2)}
+body.living-book.illuminated.open-book[data-room="podcast"] .listening-scene .frame::after{display:none}
+body.living-book.illuminated.open-book[data-room="podcast"] .listening-scene img{display:block;aspect-ratio:3/2;object-fit:cover;width:100%;height:auto}
+body.living-book.illuminated.open-book[data-room="podcast"] .listening-scene figcaption{display:block;padding:22px 0;border-bottom:1px solid var(--gold-line)}
+body.living-book.illuminated.open-book[data-room="podcast"] .listening-scene .say{font-family:var(--f-display);font-size:clamp(1.5rem,2.6vw,2.2rem);line-height:1.2;padding:0;margin-block:10px 0;margin-inline:0;border:0;color:var(--ink);font-style:italic}
+.open-book .conversation-themes{gap:clamp(26px,4vw,64px)}
+.open-book .conversation-themes .col{position:relative}
+body.living-book.illuminated.open-book[data-room="podcast"] .conversation-themes .n{display:block;font-family:var(--f-display);font-size:clamp(1.6rem,2.3vw,2.4rem);text-transform:none;letter-spacing:0;color:var(--gold);margin-bottom:30px}
+body.living-book.illuminated.open-book[data-room="podcast"] .room-questions .conversation-themes h3{font-size:clamp(1.85rem,2.7vw,2.6rem);margin-block:16px}
+.open-book .listening-process{align-items:start}
+.open-book .listening-study{margin-block:28px 0;margin-inline:0;max-width:390px}
+.open-book .listening-study img{display:block;width:100%;height:auto}
+.open-book .listening-study figcaption{font-size:.78rem;color:var(--ink-soft);margin-top:9px}
+.open-book .listening-process>.stack-sm{border-top:1px solid var(--gold-line);padding-top:28px;max-width:62ch}
+.open-book .listening-process>.stack-sm p{font-size:1.08rem;line-height:1.75}
+.open-book .invitation-status{display:flex;align-items:center;gap:14px;flex-wrap:wrap;margin-top:26px;font-size:.86rem;color:var(--ink-soft)}
+body.living-book.illuminated.open-book[data-room="podcast"] .invitation-opening .guest-assurances{grid-template-columns:repeat(3,minmax(0,1fr));padding:28px;background:var(--paper-2);border-top:1px solid var(--gold-line);margin-top:32px}
+body.living-book.illuminated.open-book[data-room="about"] .house-opening .chapter-opening-grid{grid-template-columns:minmax(0,1.2fr) minmax(0,.8fr);gap:clamp(28px,6vw,88px);align-items:center}
+body.living-book.illuminated.open-book[data-room="about"] .house-thesis .cols-2{grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:clamp(32px,7vw,100px);align-items:center}
+body.living-book.illuminated.open-book[data-room="about"] .house-thesis .hero-art{max-width:none;width:100%}
+body.living-book.illuminated.open-book[data-room="about"] .house-thesis .frame{padding:0;border:0}
+body.living-book.illuminated.open-book[data-room="about"] .house-thesis .frame::after{display:none}
+body.living-book.illuminated.open-book[data-room="about"] .house-thesis .hero-art img{aspect-ratio:1;object-fit:cover}
+body.living-book.illuminated.open-book[data-room="about"] .house-thesis .hero-art figcaption{background:transparent;border:0;padding-block:18px 0;padding-inline:0}
+body.living-book.illuminated.open-book[data-room="about"] .house-thesis .quote{font-size:clamp(2.5rem,4.4vw,4.8rem);line-height:1.04;border:0;padding:0;max-width:19ch}
+body.living-book.illuminated.open-book[data-room="about"] .founder-portrait{max-width:390px}
+body.living-book.illuminated.open-book[data-room="about"] .founder-portrait img{border:0}
+.open-book .people-register{border-block:1px solid var(--gold-line);padding-block:22px}
+.open-book .people-register>.eyebrow{margin-bottom:18px}
+.open-book .people-register>a{display:grid;grid-template-columns:25px minmax(0,1fr) 20px;align-items:center;gap:18px;padding:20px 0;border-top:1px solid var(--line);color:var(--ink);text-decoration:none;min-height:90px}
+.open-book .people-register>a:hover{background:var(--paper-2)}
+.open-book .people-register>a>span:first-child,.open-book .people-register>a>span:last-child{color:var(--gold);font-size:.85rem}
+.open-book .people-register b{font-family:var(--f-display);font-size:1.9rem;line-height:1.1;font-weight:500;display:block}
+.open-book .people-register small{display:block;color:var(--ink-soft);font-size:.88rem;margin-top:8px}
+.open-book .people-register>.tiny{color:var(--ink-soft);margin-block:18px 0;margin-inline:0}
+.open-book .editorial-care{background:var(--paper-2)}
+.open-book .editorial-care-grid{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:clamp(32px,8vw,120px)}
+.open-book .editorial-care-grid h2{font-size:clamp(2.3rem,4vw,3.8rem);line-height:1.06;margin-block:18px 24px;max-width:18ch}
+.open-book .editorial-care-grid>.small{max-width:40ch}
+.open-book .editorial-practices{list-style:none;margin:0;padding:0}
+.open-book .editorial-practices li{display:grid;grid-template-columns:30px minmax(0,1fr);gap:20px;padding:25px 0;border-top:1px solid var(--line)}
+.open-book .editorial-practices li:first-child{padding-top:0;border-top:0}
+.open-book .editorial-practices li>span{color:var(--gold);font-size:.85rem;padding-top:7px}
+.open-book .editorial-practices h3{font-size:1.8rem;margin-bottom:10px}
+.open-book .editorial-practices p{font-size:1.02rem;line-height:1.7;max-width:60ch;color:var(--ink-soft)}
+.open-book .editorial-practices .link{display:inline-flex;padding-block:12px;min-height:44px;margin-top:6px}
+body.living-book.illuminated.open-book[data-room="contact"] .correspondence-opening .chapter-opening-grid{grid-template-columns:minmax(0,1.2fr) minmax(0,.8fr);align-items:start;gap:clamp(26px,6vw,80px)}
+.open-book .correspondence-opening .btns{margin-top:24px}
+.open-book .contact-routing{border-top:1px solid var(--gold-line);padding-top:18px}
+.open-book .contact-routing>.eyebrow{margin-bottom:15px}
+.open-book .contact-routing>a{display:flex;align-items:center;justify-content:space-between;gap:20px;padding-block:15px;color:var(--ink);text-decoration:none;border-bottom:1px solid var(--line);min-height:64px}
+.open-book .contact-routing>a:hover{background:var(--paper-2)}
+.open-book .contact-routing b{font-size:1.1rem;display:block}
+.open-book .contact-routing small{display:block;font-size:.86rem;color:var(--ink-soft);margin-top:3px}
+.open-book .contact-routing>a>span:last-child{color:var(--gold)}
+.open-book .contact-routing .contact-write-link{font-size:.9rem;color:var(--gold);min-height:48px}
+body.living-book.illuminated.open-book[data-room="contact"] #form .form{border:0;border-top:1px solid var(--gold-line);padding-block:clamp(24px,3vw,40px) 0;padding-inline:0;background:transparent}
+.open-book[data-room="contact"] #form textarea{min-height:180px}
+@media(min-width:901px){
+body.living-book.illuminated.open-book[data-room="apps"] .tool-dossiers .lrow:nth-child(even){grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr)}
+body.living-book.illuminated.open-book[data-room="apps"] .tool-dossiers .lrow:nth-child(even) .plate{grid-column:2;grid-row:1}
+body.living-book.illuminated.open-book[data-room="apps"] .tool-dossiers .lrow:nth-child(even) .tool-story{grid-column:1;grid-row:1}
+}
+@media(max-width:900px){
+body.living-book.illuminated.open-book[data-room] .workshop-opening .hero-grid,
+body.living-book.illuminated.open-book[data-room="podcast"] .listening-opening .hero-grid,
+body.living-book.illuminated.open-book[data-room="about"] .house-opening .chapter-opening-grid,
+body.living-book.illuminated.open-book[data-room="contact"] .correspondence-opening .chapter-opening-grid{grid-template-columns:1fr;gap:28px}
+body.living-book.illuminated.open-book[data-room="apps"] .workshop-intro{grid-template-columns:1fr;gap:24px}
+body.living-book.illuminated.open-book[data-room="about"] .house-thesis .cols-2{grid-template-columns:1fr;gap:36px}
+.open-book .need-finder{max-width:none;gap:0 20px}
+.open-book .need-finder b{font-size:1.6rem}
+.open-book .need-finder small{font-size:.8rem}
+body.living-book.illuminated.open-book[data-room="podcast"] .listening-opening h1{font-size:var(--type-signature-size)}
+body.living-book.illuminated.open-book[data-room="apps"] .tool-dossiers .lrow{grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:30px;align-items:start}
+body.living-book.illuminated.open-book[data-room="apps"] .tool-dossiers .plate{padding:16px}
+.open-book .tool-capabilities{grid-template-columns:1fr;gap:0}
+.open-book .tool-capabilities li{padding-block:10px}
+.open-book .editorial-care-grid{grid-template-columns:1fr;gap:32px}
+.open-book .people-register b{font-size:1.65rem}
+.open-book .workshop-divider figcaption{padding:20px}
+}
+@media(max-width:600px){
+body.living-book.illuminated.open-book[data-room="apps"] .tool-dossiers .lrow{display:flex;flex-direction:column;gap:24px;padding-block:28px;align-items:stretch}
+body.living-book.illuminated.open-book[data-room="apps"] .tool-dossiers .plate{display:grid;grid-template-columns:92px minmax(0,1fr);gap:20px;align-items:center;max-width:none;padding:18px}
+body.living-book.illuminated.open-book[data-room="apps"] .tool-dossiers .plate img{width:92px}
+.open-book .tool-dossiers .plate figcaption{padding:0;max-width:22ch}
+body.living-book.illuminated.open-book[data-room="apps"] .tool-dossiers .name{font-size:2.5rem;margin-block:8px 14px}
+body.living-book.illuminated.open-book[data-room="apps"] .tool-dossiers .meta{flex-direction:column;align-items:flex-start;gap:16px}
+body.living-book.illuminated.open-book[data-room="apps"] .tool-dossiers .meta .btn{width:100%}
+.open-book .workshop-divider{grid-template-columns:1fr;gap:0;margin-top:32px}
+.open-book .workshop-divider img{max-height:220px}
+.open-book .workshop-divider figcaption{padding:24px}
+body.living-book.illuminated.open-book[data-room="podcast"] .invitation-opening .guest-assurances{grid-template-columns:1fr;padding:24px 20px;gap:24px}
+.open-book .listening-process>.stack-sm{padding-top:20px}
+.open-book .editorial-practices li{gap:14px;grid-template-columns:24px minmax(0,1fr)}
+.open-book .people-register>a{gap:12px}
+.open-book .people-register b{font-size:1.55rem}
+.open-book .need-finder{grid-template-columns:1fr;gap:0}
+.open-book .need-finder>a{grid-template-columns:88px minmax(0,1fr) 18px;gap:16px;padding:18px 0}
+.open-book .need-finder img{grid-column:auto;width:88px;aspect-ratio:1}
+.open-book .need-finder b{font-size:1.55rem}
+.open-book .need-finder small{font-size:.8rem;margin-top:6px}
+body.living-book.illuminated.open-book[data-room="about"] .house-thesis .quote{font-size:2.8rem}
+}
+@media(prefers-reduced-motion:reduce){.open-book .need-finder img{transition:none}}
+html[data-motion="calm"] .open-book .need-finder img{transition:none}
+@media print{
+.open-book .need-finder,.open-book .contact-routing,.open-book .listening-study,.open-book .workshop-divider{display:none}
+body.living-book.illuminated.open-book[data-room="apps"] .tool-dossiers .lrow{break-inside:avoid;display:block}
+body.living-book.illuminated.open-book[data-room="apps"] .tool-dossiers .plate{display:none}
+.open-book .editorial-care-grid{display:block}
+}

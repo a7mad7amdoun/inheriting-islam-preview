@@ -1,0 +1,411 @@
+@media screen {
+body[data-art-layout=spacious] :is([data-house-art=community-courtyard],[data-house-art=verification-study],[data-house-art=books-bindery],[data-house-art=guest-hospitality],[data-house-art=beginning-path],[data-house-art=shared-weaving]) .house-art-title {max-width:none;text-wrap:pretty}
+body[data-art-layout=spacious] #book-care>.wrap:has([data-house-art=books-bindery]) {
+display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);
+gap:clamp(28px,4vw,64px);align-items:center;
+}
+body[data-art-layout=spacious] #book-care>.wrap>[data-house-art=books-bindery] {grid-column:2;grid-row:1;margin:0}
+body[data-art-layout=spacious] #book-care>.wrap>.shead {grid-column:1;grid-row:1;margin:0}
+body[data-art-layout=spacious] #book-care>.wrap>:is(.cols,.cols-2) {grid-column:1/-1}
+}
+@media screen and (max-width:760px) {
+body[data-art-layout=spacious] #book-care>.wrap:has([data-house-art=books-bindery]) {grid-template-columns:minmax(0,1fr)}
+body[data-art-layout=spacious] #book-care>.wrap>.shead {grid-column:1;grid-row:1}
+body[data-art-layout=spacious] #book-care>.wrap>[data-house-art=books-bindery] {grid-column:1;grid-row:2}
+}
+@media screen {
+body.living-book.illuminated.open-book[data-art-layout=spacious] {
+--art-gap:clamp(36px,5vw,80px);
+--art-space:clamp(48px,6vw,88px);
+}
+body.living-book.illuminated.open-book[data-home-design=inheritance][data-art-layout=spacious] main>.inheritance-hero>.wrap {
+max-width:1800px;padding-inline:var(--gutter);
+grid-template-columns:minmax(0,.78fr) minmax(0,1.22fr);
+gap:var(--art-gap);padding-block:var(--art-space);
+}
+body[data-home-design=inheritance][data-art-layout=spacious] .inheritance-hero-copy {max-width:640px}
+body[data-home-design=inheritance][data-art-layout=spacious] .inheritance-hero-lede {max-width:37ch;margin-bottom:32px}
+body[data-home-design=inheritance][data-art-layout=spacious] .inheritance-hero-art {width:100%;margin:0;max-width:1080px;justify-self:end}
+body[data-home-design=inheritance][data-art-layout=spacious] .inheritance-hero-art img {height:auto;aspect-ratio:auto;object-fit:contain;border-radius:6px}
+body[data-home-design=inheritance][data-art-layout=spacious] .inheritance-hero-art figcaption {margin-top:20px;padding:0;gap:20px}
+body.living-book.illuminated.open-book[data-room][data-atmosphere][data-edition][data-direction=inheritance][data-art-layout=spacious] :is(.desk-spread,.workshop-opening>.hero-grid,.listening-opening>.hero-grid) {
+grid-template-columns:minmax(0,.75fr) minmax(0,1.25fr);gap:var(--art-gap);max-width:1760px;
+}
+body.living-book.illuminated.open-book[data-room][data-atmosphere][data-edition][data-direction=inheritance][data-art-layout=spacious] :is(.desk-art,.apps-cover-art,.listening-scene) {max-width:1080px;justify-self:end}
+body.living-book.illuminated.open-book[data-room][data-atmosphere][data-edition][data-direction=inheritance][data-art-layout=spacious] :is(.desk-art,.apps-cover-art,.listening-scene) img {aspect-ratio:auto;max-height:none;border-radius:6px}
+body.living-book.illuminated.open-book[data-room][data-atmosphere][data-edition][data-direction=inheritance][data-art-layout=spacious] :is(.desk-art,.apps-cover-art,.listening-scene) figcaption {padding-top:20px;line-height:1.8}
+body.living-book.illuminated.open-book[data-room][data-atmosphere][data-edition][data-direction=inheritance][data-art-layout=spacious] .chapter-opening-grid:has(.house-art) {
+grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:var(--art-gap);align-items:center;
+}
+body.living-book.illuminated.open-book[data-room][data-atmosphere][data-edition][data-direction=inheritance][data-art-layout=spacious] :is(.chapter-note,.contact-routing):has(.house-art) {max-width:860px;width:100%;padding:0;border:0;background:transparent;justify-self:end}
+body.living-book.illuminated.open-book[data-room][data-atmosphere][data-edition][data-direction=inheritance][data-art-layout=spacious] .house-art {width:100%;max-width:none;margin:0 0 32px;padding:0;border:0;background:transparent}
+body.living-book.illuminated.open-book[data-room][data-atmosphere][data-edition][data-direction=inheritance][data-art-layout=spacious] .house-art img {display:block;width:100%;height:auto;max-height:none;aspect-ratio:auto;object-fit:contain;object-position:center;border-radius:6px;filter:none;transform:none}
+body.living-book.illuminated.open-book[data-room][data-atmosphere][data-edition][data-direction=inheritance][data-art-layout=spacious] .house-art figcaption {padding-top:16px;line-height:1.8;max-width:52ch}
+body.living-book.illuminated.open-book[data-room][data-atmosphere][data-edition][data-direction=inheritance][data-art-layout=spacious] .invitation-opening .wrap {max-width:1680px;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);column-gap:var(--art-gap)}
+body.living-book.illuminated.open-book[data-room][data-atmosphere][data-edition][data-direction=inheritance][data-art-layout=spacious] .invitation-opening .wrap>.guest-assurances {padding:0;border:0;background:transparent;max-width:860px}
+body.living-book.illuminated.open-book[data-room][data-atmosphere][data-edition][data-direction=inheritance][data-art-layout=spacious] .guest-assurances>p {padding-block:16px;border-top:1px solid var(--line);border-bottom:0}
+body.living-book.illuminated.open-book[data-direction=inheritance][data-atmosphere=archive][data-edition=people][data-about=story][data-art-layout=spacious] .about-portrait {max-width:620px}
+body.living-book.illuminated.open-book[data-room][data-atmosphere][data-edition][data-direction=inheritance][data-art-layout=spacious] .teacher-opening-portrait {max-width:600px}
+body.living-book.illuminated.open-book[data-direction=inheritance][data-atmosphere=archive][data-edition=people][data-about=story][data-art-layout=spacious] .about-partner-grid {grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:var(--art-gap)}
+body.living-book.illuminated.open-book[data-direction=inheritance][data-atmosphere=archive][data-edition=people][data-about=story][data-art-layout=spacious] .about-inheritance-art {max-width:800px}
+body.living-book.illuminated.open-book[data-direction=inheritance][data-atmosphere=archive][data-edition=people][data-about=story][data-art-layout=spacious] .about-inheritance-art figcaption {padding-top:20px}
+body.living-book.illuminated.open-book[data-room][data-atmosphere][data-edition][data-direction=inheritance][data-art-layout=spacious][data-atmosphere=reading] .reader-opening {grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:var(--art-gap)}
+body.living-book.illuminated.open-book[data-room][data-atmosphere][data-edition][data-direction=inheritance][data-art-layout=spacious][data-atmosphere=reading] .reader-folio {display:block;max-width:720px;width:100%;padding:0;border:0;justify-self:end}
+body[data-art-layout=spacious] .reader-folio .house-art {margin-bottom:20px}
+body.living-book.illuminated.open-book[data-art-layout=spacious] .reader-collection-note:has(.reader-collection-art) {max-width:720px;padding:0;border:0}
+body.living-book.illuminated.open-book[data-room][data-atmosphere][data-edition][data-direction=inheritance][data-art-layout=spacious] .explore-opening {grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:var(--art-gap)}
+body.living-book.illuminated.open-book[data-room][data-atmosphere][data-edition][data-direction=inheritance][data-art-layout=spacious] .explore-opening-note {display:block;max-width:720px;width:100%;padding:0;border:0}
+body.living-book.illuminated.open-book[data-room][data-atmosphere][data-edition][data-direction=inheritance][data-art-layout=spacious] .library-cover-books {display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(14px,2vw,28px);padding-block:20px}
+body.living-book.illuminated.open-book[data-room][data-atmosphere][data-edition][data-direction=inheritance][data-art-layout=spacious] .library-cover-books>a {width:100%;max-width:170px;margin:0;justify-self:center;transform:none}
+}
+@media screen and (max-width:1024px) {
+body.living-book.illuminated.open-book[data-home-design=inheritance][data-art-layout=spacious] main>.inheritance-hero>.wrap {grid-template-columns:1fr;gap:36px;padding-block:40px 56px;max-width:880px}
+body[data-home-design=inheritance][data-art-layout=spacious] .inheritance-hero-art {max-width:none}
+body.living-book.illuminated.open-book[data-room][data-atmosphere][data-edition][data-direction=inheritance][data-art-layout=spacious] :is(.desk-spread,.workshop-opening>.hero-grid,.listening-opening>.hero-grid,.chapter-opening-grid:has(.house-art),.invitation-opening .wrap,.explore-opening) {grid-template-columns:1fr;gap:36px}
+body.living-book.illuminated.open-book[data-room][data-atmosphere][data-edition][data-direction=inheritance][data-art-layout=spacious] :is(.desk-art,.apps-cover-art,.listening-scene,.chapter-note:has(.house-art),.contact-routing:has(.house-art),.invitation-opening .wrap>.guest-assurances) {grid-column:auto;grid-row:auto;max-width:none;justify-self:start;width:100%}
+body.living-book.illuminated.open-book[data-room][data-atmosphere][data-edition][data-direction=inheritance][data-art-layout=spacious] .invitation-opening .wrap {row-gap:0}
+body.living-book.illuminated.open-book[data-room][data-atmosphere][data-edition][data-direction=inheritance][data-art-layout=spacious] .invitation-opening .wrap>.guest-assurances {margin-top:36px}
+body.living-book.illuminated.open-book[data-room][data-atmosphere][data-edition][data-direction=inheritance][data-art-layout=spacious] .explore-opening-note {max-width:720px}
+}
+@media screen and (max-width:760px) {
+body.living-book.illuminated.open-book[data-home-design=inheritance][data-art-layout=spacious] main>.inheritance-hero>.wrap {padding-block:32px 44px;gap:28px}
+body[data-home-design=inheritance][data-art-layout=spacious] .inheritance-hero-art figcaption {gap:14px;margin-top:14px}
+body.living-book.illuminated.open-book[data-room][data-atmosphere][data-edition][data-direction=inheritance][data-art-layout=spacious][data-atmosphere=reading] .reader-opening {grid-template-columns:1fr;gap:28px}
+body.living-book.illuminated.open-book[data-room][data-atmosphere][data-edition][data-direction=inheritance][data-art-layout=spacious][data-atmosphere=reading] .reader-folio {max-width:none;justify-self:start}
+body.living-book.illuminated.open-book[data-direction=inheritance][data-atmosphere=archive][data-edition=people][data-about=story][data-art-layout=spacious] .about-partner-grid {grid-template-columns:1fr;gap:32px}
+body.living-book.illuminated.open-book[data-room][data-atmosphere][data-edition][data-direction=inheritance][data-art-layout=spacious] .house-art {margin-bottom:24px}
+}
+@media screen {
+body.living-book.illuminated.open-book[data-art-layout=spacious] {--blend-direction:90deg;--architecture-opacity:.17}
+html[dir=rtl] body.living-book.illuminated.open-book[data-art-layout=spacious] {--blend-direction:270deg}
+html[data-theme=dark] body.living-book.illuminated.open-book[data-art-layout=spacious] {--architecture-opacity:.23}
+body.living-book.illuminated.open-book[data-art-layout=spacious] :is(.inheritance-hero-layout,.about-cover-grid,.about-partner-grid,.desk-spread,.workshop-opening>.hero-grid,.listening-opening>.hero-grid,.chapter-opening-grid,.reader-opening,.explore-opening,.invitation-opening>.wrap) {position:relative;isolation:isolate}
+body.living-book.illuminated.open-book[data-art-layout=spacious] :is(.inheritance-hero-layout,.about-cover-grid,.about-partner-grid,.desk-spread,.workshop-opening>.hero-grid,.listening-opening>.hero-grid,.chapter-opening-grid,.reader-opening,.explore-opening,.invitation-opening>.wrap)::before {
+content:"";position:absolute;inset-block-start:-40px;inset-inline-end:0;
+width:min(58%,760px);height:calc(100% + 60px);z-index:-1;pointer-events:none;
+background:var(--gold);opacity:var(--architecture-opacity);
+-webkit-mask:url('/assets/img/architecture/inheritance-arch.svg') center top/contain no-repeat;
+mask:url('/assets/img/architecture/inheritance-arch.svg') center top/contain no-repeat;
+translate:0 var(--architecture-drift,0px);
+}
+body.living-book.illuminated.open-book[data-art-layout=spacious][data-atmosphere=listening] :is(.inheritance-hero-layout,.about-cover-grid,.about-partner-grid,.desk-spread,.workshop-opening>.hero-grid,.listening-opening>.hero-grid,.chapter-opening-grid,.reader-opening,.explore-opening,.invitation-opening>.wrap)::before {inset-inline-end:8%;width:68%;opacity:.13}
+body.living-book.illuminated.open-book[data-art-layout=spacious][data-atmosphere=reading] :is(.inheritance-hero-layout,.about-cover-grid,.about-partner-grid,.desk-spread,.workshop-opening>.hero-grid,.listening-opening>.hero-grid,.chapter-opening-grid,.reader-opening,.explore-opening,.invitation-opening>.wrap)::before {inset-inline-end:auto;inset-inline-start:0;width:45%;opacity:.1}
+body.living-book.illuminated.open-book[data-art-layout=spacious][data-atmosphere=correspondence] :is(.inheritance-hero-layout,.about-cover-grid,.about-partner-grid,.desk-spread,.workshop-opening>.hero-grid,.listening-opening>.hero-grid,.chapter-opening-grid,.reader-opening,.explore-opening,.invitation-opening>.wrap)::before {width:48%;inset-block-start:20px}
+body.living-book.illuminated.open-book[data-art-layout=spacious] .about-partner-grid::before {inset-inline-end:auto;inset-inline-start:0;width:46%;opacity:.1}
+body.living-book.illuminated.open-book[data-art-layout=spacious] :is(.inheritance-hero-art,.apps-cover-art,.listening-scene,.about-inheritance-art,.house-art:not([data-house-art=teaching]):not([data-still-art]),.reader-collection-art) {position:relative;isolation:isolate}
+body.living-book.illuminated.open-book[data-art-layout=spacious] :is(.inheritance-hero-art,.apps-cover-art,.listening-scene,.about-inheritance-art,.house-art:not([data-house-art=teaching]):not([data-still-art]),.reader-collection-art) img {
+-webkit-mask-image:none;mask-image:none;
+}
+body.living-book.illuminated.open-book[data-room][data-atmosphere][data-edition][data-direction=inheritance][data-art-layout=spacious] :is(.house-art,.about-inheritance-art,.reader-collection-art) img {border:0;border-radius:0}
+body.living-book.illuminated.open-book[data-home-design=inheritance][data-art-layout=spacious] .inheritance-hero-art img {border-radius:0}
+body.living-book.illuminated.open-book[data-room][data-atmosphere][data-edition][data-direction=inheritance][data-art-layout=spacious] :is(.apps-cover-art,.listening-scene) img {border-radius:0}
+body.living-book.illuminated.open-book[data-room][data-atmosphere][data-edition][data-direction=inheritance][data-art-layout=spacious] .listening-scene .frame {background:transparent;box-shadow:none}
+body.living-book.illuminated.open-book[data-art-layout=spacious] :is(.inheritance-hero-art,.apps-cover-art,.listening-scene,.about-inheritance-art,.house-art:not([data-house-art=teaching]):not([data-still-art]),.reader-collection-art) figcaption {position:relative;color:var(--ink-soft)}
+body.living-book.illuminated.open-book[data-home-design=inheritance][data-art-layout=spacious] .inheritance-hero h1 {font-size:clamp(3.25rem,5.5vw,6.3rem);line-height:1.03;letter-spacing:-.02em}
+body.living-book.illuminated.open-book[data-direction=inheritance][data-atmosphere=archive][data-edition=people][data-about=story][data-art-layout=spacious] .about-cover-grid {max-width:1560px;padding-block:clamp(32px,5vw,72px);gap:clamp(24px,3vw,48px)}
+body.living-book.illuminated.open-book[data-direction=inheritance][data-atmosphere=archive][data-edition=people][data-about=story][data-art-layout=spacious] .about-cover-copy {max-width:620px;position:relative;z-index:2;padding-block:28px}
+body.living-book.illuminated.open-book[data-direction=inheritance][data-atmosphere=archive][data-edition=people][data-about=story][data-art-layout=spacious] .about-portrait {max-width:660px;position:relative;align-self:end}
+body.living-book.illuminated.open-book[data-direction=inheritance][data-atmosphere=archive][data-edition=people][data-about=story][data-art-layout=spacious] .about-portrait::before {
+content:"";position:absolute;inset:8% -6% 5%;z-index:-1;pointer-events:none;
+background:radial-gradient(ellipse at 50% 52%,var(--paper-2) 5%,transparent 70%);
+}
+body.living-book.illuminated.open-book[data-direction=inheritance][data-atmosphere=archive][data-edition=people][data-about=story][data-art-layout=spacious] .about-portrait figcaption {border:0;padding-block:16px;margin:0;text-align:center;justify-content:center}
+body.living-book.illuminated.open-book[data-direction=inheritance][data-atmosphere=archive][data-edition=people][data-about=story][data-art-layout=spacious] .about-letter {padding-block:clamp(56px,7vw,104px)}
+body.living-book.illuminated.open-book[data-direction=inheritance][data-atmosphere=archive][data-edition=people][data-about=story][data-art-layout=spacious] .about-letter-prose {max-width:62ch}
+body.living-book.illuminated.open-book[data-direction=inheritance][data-atmosphere=archive][data-edition=people][data-about=story][data-art-layout=spacious] .about-partner {padding-block:clamp(52px,6vw,88px)}
+body.living-book.illuminated.open-book[data-direction=inheritance][data-atmosphere=archive][data-edition=people][data-about=story][data-art-layout=spacious] .about-inheritance-art {margin:0;width:100%;max-width:860px}
+}
+@media screen and (min-width:1025px) {
+body.living-book.illuminated.open-book[data-home-design=inheritance][data-art-layout=spacious] main>.inheritance-hero>.wrap,
+body.living-book.illuminated.open-book[data-room][data-atmosphere][data-edition][data-direction=inheritance][data-art-layout=spacious] :is(.desk-spread,.workshop-opening>.hero-grid,.listening-opening>.hero-grid) {
+grid-template-columns:repeat(12,minmax(0,1fr));gap:0;max-width:1760px;
+padding-block:clamp(56px,6vw,100px);align-items:center;
+}
+body.living-book.illuminated.open-book[data-home-design=inheritance][data-art-layout=spacious] .inheritance-hero-copy,
+body.living-book.illuminated.open-book[data-room][data-atmosphere][data-edition][data-direction=inheritance][data-art-layout=spacious] :is(.desk-spread,.workshop-opening>.hero-grid,.listening-opening>.hero-grid)>div:first-child {
+grid-column:1 / 7;grid-row:1;position:relative;z-index:2;
+max-width:none;min-width:0;padding-block:32px;padding-inline:0 clamp(32px,4vw,68px);
+background:linear-gradient(var(--blend-direction),var(--paper) 76%,transparent 100%);
+}
+body.living-book.illuminated.open-book[data-home-design=inheritance][data-art-layout=spacious] .inheritance-hero-art,
+body.living-book.illuminated.open-book[data-room][data-atmosphere][data-edition][data-direction=inheritance][data-art-layout=spacious] :is(.desk-art,.apps-cover-art,.listening-scene) {grid-column:6 / -1;grid-row:1;width:100%;max-width:none;margin:0;padding:0;background:transparent}
+body.living-book.illuminated.open-book[data-home-design=inheritance][data-art-layout=spacious] .inheritance-hero-art figcaption,
+body.living-book.illuminated.open-book[data-room][data-atmosphere][data-edition][data-direction=inheritance][data-art-layout=spacious] :is(.desk-art,.apps-cover-art,.listening-scene) figcaption {padding-inline-start:14%;padding-block-start:20px;margin:0}
+body.living-book.illuminated.open-book[data-room][data-atmosphere][data-edition][data-direction=inheritance][data-art-layout=spacious] .desk-spread {column-gap:clamp(24px,3vw,48px)}
+body.living-book.illuminated.open-book[data-room][data-atmosphere][data-edition][data-direction=inheritance][data-art-layout=spacious] .desk-spread>div:first-child {grid-column:1 / 6;padding-inline-end:0;background:transparent}
+body.living-book.illuminated.open-book[data-room][data-atmosphere][data-edition][data-direction=inheritance][data-art-layout=spacious] .desk-art {grid-column:6 / -1}
+body.living-book.illuminated.open-book[data-room][data-atmosphere][data-edition][data-direction=inheritance][data-art-layout=spacious] .desk-art figcaption {padding-inline-start:0}
+body.living-book.illuminated.open-book[data-room][data-atmosphere][data-edition][data-direction=inheritance][data-art-layout=spacious] .listening-opening>.hero-grid {align-items:start}
+body.living-book.illuminated.open-book[data-room][data-atmosphere][data-edition][data-direction=inheritance][data-art-layout=spacious] .listening-scene {margin-block-start:56px}
+body.living-book.illuminated.open-book[data-room][data-atmosphere][data-edition][data-direction=inheritance][data-art-layout=spacious] :is(.chapter-opening-grid:has(.house-art),.explore-opening) {gap:clamp(20px,2.5vw,40px);align-items:center}
+body.living-book.illuminated.open-book[data-room][data-atmosphere][data-edition][data-direction=inheritance][data-art-layout=spacious] :is(.chapter-note,.contact-routing,.explore-opening-note):has(.house-art) {margin-block-start:48px}
+body.living-book.illuminated.open-book[data-room][data-atmosphere][data-edition][data-direction=inheritance][data-art-layout=spacious] .reader-folio {margin-block-start:64px}
+body.living-book.illuminated.open-book[data-room][data-atmosphere][data-edition][data-direction=inheritance][data-art-layout=spacious] .reader-collection-note {margin-block-start:40px}
+body.living-book.illuminated.open-book[data-direction=inheritance][data-atmosphere=archive][data-edition=people][data-about=story][data-art-layout=spacious] .about-partner-grid {grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr);gap:clamp(24px,3vw,48px)}
+body.living-book.illuminated.open-book[data-direction=inheritance][data-atmosphere=archive][data-edition=people][data-about=story][data-art-layout=spacious] .about-inheritance-art {margin-block-start:56px}
+body.living-book.illuminated.open-book[data-art-layout=spacious] :is(.inheritance-hero-art,.apps-cover-art,.listening-scene,.about-inheritance-art,.house-art:not([data-house-art=teaching]):not([data-still-art]),.reader-collection-art) img {translate:0 var(--art-drift,0px);transition:translate .65s cubic-bezier(.22,1,.36,1)}
+}
+@media screen and (max-width:1024px) {
+body.living-book.illuminated.open-book[data-art-layout=spacious] :is(.inheritance-hero-layout,.about-cover-grid,.about-partner-grid,.desk-spread,.workshop-opening>.hero-grid,.listening-opening>.hero-grid,.chapter-opening-grid,.reader-opening,.explore-opening,.invitation-opening>.wrap)::before {width:80%;height:80%;inset-block-start:12%;opacity:.1;translate:none}
+body.living-book.illuminated.open-book[data-home-design=inheritance][data-art-layout=spacious] .inheritance-hero h1 {font-size:clamp(3.2rem,8vw,5.5rem)}
+body.living-book.illuminated.open-book[data-home-design=inheritance][data-art-layout=spacious] .inheritance-hero-art {margin:0;width:100%}
+body.living-book.illuminated.open-book[data-room][data-atmosphere][data-edition][data-direction=inheritance][data-art-layout=spacious] :is(.chapter-note,.contact-routing,.explore-opening-note,.reader-folio,.reader-collection-note):has(.house-art) {margin-block-start:0}
+body.living-book.illuminated.open-book[data-direction=inheritance][data-atmosphere=archive][data-edition=people][data-about=story][data-art-layout=spacious] .about-cover-grid {grid-template-columns:1fr;gap:12px;max-width:820px;padding-block:24px 40px}
+body.living-book.illuminated.open-book[data-direction=inheritance][data-atmosphere=archive][data-edition=people][data-about=story][data-art-layout=spacious] .about-cover-copy {grid-column:1;grid-row:1;max-width:none;padding-block:0 16px}
+body.living-book.illuminated.open-book[data-direction=inheritance][data-atmosphere=archive][data-edition=people][data-about=story][data-art-layout=spacious] .about-portrait {grid-column:1;grid-row:2;max-width:520px;justify-self:center}
+body.living-book.illuminated.open-book[data-direction=inheritance][data-atmosphere=archive][data-edition=people][data-about=story][data-art-layout=spacious] .about-cover-grid::before {inset-block-start:auto;inset-block-end:0;width:100%;height:65%}
+body.living-book.illuminated.open-book[data-direction=inheritance][data-atmosphere=archive][data-edition=people][data-about=story][data-art-layout=spacious] .about-partner-grid {grid-template-columns:1fr;gap:24px}
+body.living-book.illuminated.open-book[data-direction=inheritance][data-atmosphere=archive][data-edition=people][data-about=story][data-art-layout=spacious] .about-inheritance-art {max-width:760px;justify-self:center}
+}
+@media (prefers-reduced-motion:reduce) {
+body.living-book.illuminated.open-book[data-art-layout=spacious] :is(.inheritance-hero-art,.apps-cover-art,.listening-scene,.about-inheritance-art,.house-art:not([data-house-art=teaching]):not([data-still-art]),.reader-collection-art) img,body.living-book.illuminated.open-book[data-art-layout=spacious] :is(.inheritance-hero-layout,.about-cover-grid,.about-partner-grid,.desk-spread,.workshop-opening>.hero-grid,.listening-opening>.hero-grid,.chapter-opening-grid,.reader-opening,.explore-opening,.invitation-opening>.wrap)::before {translate:none;transition:none}
+}
+html[data-motion=calm] body.living-book.illuminated.open-book[data-art-layout=spacious] :is(.inheritance-hero-art,.apps-cover-art,.listening-scene,.about-inheritance-art,.house-art:not([data-house-art=teaching]):not([data-still-art]),.reader-collection-art) img,html[data-motion=calm] body.living-book.illuminated.open-book[data-art-layout=spacious] :is(.inheritance-hero-layout,.about-cover-grid,.about-partner-grid,.desk-spread,.workshop-opening>.hero-grid,.listening-opening>.hero-grid,.chapter-opening-grid,.reader-opening,.explore-opening,.invitation-opening>.wrap)::before {translate:none;transition:none}
+body[data-apps=directory] :is(#in-progress,#stopped)>.wrap {max-width:1480px}
+body[data-apps=directory] #in-progress .apps-upcoming {display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px}
+body[data-apps=directory] #stopped .apps-archive {display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px}
+body[data-apps=directory] :is(#in-progress,#stopped) article.project-card {display:flex;flex-direction:column;align-items:stretch;min-width:0;padding:clamp(24px,2.5vw,36px);border:1px solid var(--line);border-radius:20px;background:var(--paper);gap:24px}
+body[data-apps=directory] :is(#in-progress,#stopped) article.project-card>* {grid-column:auto;min-width:0;margin:0}
+body[data-apps=directory] :is(#in-progress,#stopped) .project-card-heading {display:grid;grid-template-columns:96px minmax(0,1fr);align-items:center;gap:22px}
+body[data-apps=directory] :is(#in-progress,#stopped) .project-mark {display:block;width:96px;aspect-ratio:1;align-self:start;overflow:hidden;border-radius:16px}
+body[data-apps=directory] :is(#in-progress,#stopped) img.project-symbol {display:block;width:100%;height:auto;max-width:none;margin:0;border-radius:0;object-fit:contain;filter:none;transform:none}
+body[data-apps=directory] :is(#in-progress,#stopped) .project-card-title {min-width:0}
+body[data-apps=directory] :is(#in-progress,#stopped) .project-card-title .kind {margin:0 0 8px;font-size:.75rem;line-height:1.6;color:var(--gold)}
+body[data-apps=directory] :is(#in-progress,#stopped) .project-card-title h3 {font-size:clamp(1.65rem,2.2vw,2.1rem);line-height:1.2;margin:0 0 14px;overflow-wrap:normal}
+body[data-apps=directory] :is(#in-progress,#stopped) .project-card-title h3 [lang=ar] {display:block;font-size:1.2rem;line-height:1.85;margin:4px 0 0}
+body[data-apps=directory] :is(#in-progress,#stopped) .project-card-title .pill {display:inline-flex;margin:0;padding:5px 10px;max-width:100%;white-space:normal;text-align:start;font-size:.72rem;line-height:1.5}
+body[data-apps=directory] :is(#in-progress,#stopped) .project-card-copy {flex:1;border-top:1px solid var(--line);padding-top:22px}
+body[data-apps=directory] :is(#in-progress,#stopped) .project-card-copy p {margin:0;font-size:1rem;line-height:1.8;max-width:55ch;color:var(--ink-soft)}
+body[data-apps=directory] :is(#in-progress,#stopped) .apps-project-links {margin-top:auto;padding:0;display:flex;flex-direction:row;flex-wrap:wrap;gap:8px 20px;align-items:center}
+body[data-apps=directory] :is(#in-progress,#stopped) .project-card a {min-height:44px;display:inline-flex;align-items:center;line-height:1.6;text-underline-offset:5px}
+body[data-apps=directory] #stopped .apps-archive-intro {margin-block:8px 32px;max-width:75ch}
+@media(hover:hover) and (prefers-reduced-motion:no-preference) {
+html:not([data-motion=calm]) body[data-apps=directory] :is(#in-progress,#stopped) article.project-card {transition:border-color .3s ease,box-shadow .4s ease}
+html:not([data-motion=calm]) body[data-apps=directory] :is(#in-progress,#stopped) article.project-card:hover {border-color:var(--gold-line);box-shadow:0 12px 28px -20px var(--ink-soft)}
+}
+@media(max-width:1180px) {
+body[data-apps=directory] #in-progress .apps-upcoming {grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media(max-width:760px) {
+body[data-apps=directory] #in-progress .apps-upcoming,body[data-apps=directory] #stopped .apps-archive {grid-template-columns:1fr}
+body[data-apps=directory] :is(#in-progress,#stopped) .project-card-heading {grid-template-columns:80px minmax(0,1fr);gap:20px}
+body[data-apps=directory] :is(#in-progress,#stopped) .project-mark {width:80px;border-radius:12px}
+body[data-apps=directory] :is(#in-progress,#stopped) article.project-card {padding:24px;gap:22px}
+}
+@media(max-width:380px) {
+body[data-apps=directory] :is(#in-progress,#stopped) .project-card-heading {grid-template-columns:64px minmax(0,1fr);gap:16px}
+body[data-apps=directory] :is(#in-progress,#stopped) .project-mark {width:64px}
+body[data-apps=directory] :is(#in-progress,#stopped) article.project-card {padding:20px}
+}
+body[data-apps=directory] :is(#in-progress,#stopped).project-directory {display:block;width:100%;max-width:none;min-width:0;margin-inline:0;box-sizing:border-box}
+body[data-apps=directory] :is(#in-progress,#stopped).project-directory>.wrap {display:block;width:100%;max-width:1360px;min-width:0;margin-inline:auto;box-sizing:border-box}
+body[data-apps=directory] :is(#in-progress,#stopped) :is(.workshop-projects,.history-projects) {display:grid;grid-template-columns:minmax(0,1fr);width:100%;max-width:none;min-width:0;gap:28px;margin-top:36px}
+body[data-apps=directory] :is(#in-progress,#stopped) :is(.workshop-projects,.history-projects)>article.project-card {
+display:grid;grid-template-columns:minmax(160px,240px) minmax(0,1fr);
+grid-template-rows:auto auto 1fr;column-gap:clamp(28px,4vw,56px);row-gap:20px;
+width:100%;max-width:none;min-width:0;padding:clamp(24px,3.5vw,44px);box-sizing:border-box;align-items:start;
+}
+body[data-apps=directory] :is(#in-progress,#stopped) :is(.workshop-projects,.history-projects) .project-card-heading {display:contents}
+body[data-apps=directory] :is(#in-progress,#stopped) :is(.workshop-projects,.history-projects) .project-mark {
+display:block;grid-column:1;grid-row:1 / span 3;width:100%;max-width:240px;min-width:0;
+aspect-ratio:1;align-self:start;border-radius:14px;overflow:hidden;background:#f8f4e9;margin:0;
+}
+body[data-apps=directory] :is(#in-progress,#stopped) :is(.workshop-projects,.history-projects) img.project-symbol {display:block;width:100%;height:100%;max-width:none;aspect-ratio:1;object-fit:contain;border-radius:0;filter:none;margin:0}
+body[data-apps=directory] :is(#in-progress,#stopped) :is(.workshop-projects,.history-projects) .project-card-title {grid-column:2;grid-row:1;width:100%;max-width:none;min-width:0}
+body[data-apps=directory] :is(#in-progress,#stopped) :is(.workshop-projects,.history-projects) .project-card-title :is(.kind,h3) {word-break:normal;overflow-wrap:normal;white-space:normal}
+body[data-apps=directory] :is(#in-progress,#stopped) :is(.workshop-projects,.history-projects) .project-card-title h3 {margin-bottom:16px}
+body[data-apps=directory] :is(#in-progress,#stopped) :is(.workshop-projects,.history-projects) .project-card-copy {grid-column:2;grid-row:2;width:100%;min-width:0;border:0;padding:0}
+body[data-apps=directory] :is(#in-progress,#stopped) :is(.workshop-projects,.history-projects) .project-card-copy p {max-width:65ch;word-break:normal;overflow-wrap:break-word}
+body[data-apps=directory] :is(#in-progress,#stopped) :is(.workshop-projects,.history-projects) :is(.apps-project-links,article.project-card>.link) {grid-column:2;grid-row:3;align-self:end;margin:0;padding-top:4px}
+@media(max-width:760px) {
+body[data-apps=directory] :is(#in-progress,#stopped) :is(.workshop-projects,.history-projects)>article.project-card {display:flex;flex-direction:column;align-items:stretch;gap:24px;padding:24px}
+body[data-apps=directory] :is(#in-progress,#stopped) :is(.workshop-projects,.history-projects) .project-mark {width:100%;max-width:220px;align-self:center}
+body[data-apps=directory] :is(#in-progress,#stopped) :is(.workshop-projects,.history-projects) :is(.apps-project-links,article.project-card>.link) {align-self:stretch}
+}
+body[data-apps=directory] #ledger>.wrap {width:100%;max-width:1360px;min-width:0;box-sizing:border-box}
+body[data-apps=directory] #ledger .tool-dossiers {display:grid;grid-template-columns:minmax(0,1fr);width:100%;min-width:0;gap:28px}
+body[data-apps=directory] #ledger .tool-dossiers .lrow {
+display:grid;grid-template-columns:minmax(160px,240px) minmax(0,1fr);
+align-items:start;gap:clamp(28px,4vw,56px);width:100%;min-width:0;
+padding:clamp(24px,3.5vw,44px);margin:0;border-radius:20px;box-shadow:none;
+}
+body[data-apps=directory] #ledger .tool-dossiers .lrow .plate.app-brand-plate {
+grid-column:1;grid-row:1;align-self:start;justify-self:center;width:100%;max-width:240px;margin:0;
+}
+body[data-apps=directory] #ledger .tool-dossiers .lrow .tool-story {grid-column:2;grid-row:1;min-width:0;width:100%;max-width:65ch;padding:0}
+body[data-apps=directory] #ledger .tool-dossiers .name {font-size:clamp(1.9rem,2.6vw,2.7rem);line-height:1.2;max-width:none;margin-block:0 18px}
+body[data-apps=directory] #ledger .tool-dossiers .what {max-width:65ch;font-size:1rem;line-height:1.8}
+body[data-apps=directory] #ledger .tool-capabilities {grid-template-columns:1fr;gap:12px;max-width:65ch;margin-block:24px;padding-top:22px}
+body[data-apps=directory] #ledger .tool-dossiers .meta {display:flex;flex-wrap:wrap;gap:16px 24px;align-items:center;padding:0;border:0}
+body[data-apps=directory] #ledger .tool-dossiers .meta .btn {min-height:48px;border-radius:12px;max-width:100%}
+@media(max-width:760px) {
+body[data-apps=directory] #ledger .tool-dossiers .lrow {display:flex;flex-direction:column;align-items:stretch;gap:24px;padding:24px}
+body[data-apps=directory] #ledger .tool-dossiers .lrow .plate.app-brand-plate {max-width:220px;align-self:center}
+body[data-apps=directory] #ledger .tool-dossiers .meta {align-items:flex-start;flex-direction:column}
+body[data-apps=directory] #ledger .tool-dossiers .meta .btn {width:100%}
+}
+body[data-apps=directory] #main {--apps-green:transparent;background:var(--paper)}
+html[data-theme=dark] body[data-apps=directory] #main {--apps-green:transparent;--apps-light:rgb(217 180 120 / .04);--apps-illumination-opacity:.14;--apps-lamp:rgb(217 180 120 / .03)}
+html[data-theme=dark] body[data-apps=directory] #main::before {opacity:.14}
+@media screen {
+body.living-book.illuminated.open-book[data-room][data-atmosphere]:is([data-edition],[data-home-design=inheritance])[data-art-layout=spacious]:not([data-apps]) {--journey-section:clamp(56px,6vw,92px);--journey-padding:clamp(24px,3.5vw,44px);--journey-gap:clamp(28px,4vw,56px);--journey-surface:color-mix(in srgb,var(--paper) 55%,var(--paper-2));--journey-wash:rgb(176 141 87 / .035)}
+body.living-book.illuminated.open-book[data-room][data-atmosphere]:is([data-edition],[data-home-design=inheritance])[data-art-layout=spacious]:not([data-apps]) main {background-color:var(--paper);color:var(--ink)}
+body.living-book.illuminated.open-book[data-room][data-atmosphere]:is([data-edition],[data-home-design=inheritance])[data-art-layout=spacious]:not([data-apps]) main>:is(.band,.band-tight,.about-letter,.about-partner,.about-commitments,.inheritance-bridge) {padding-block:var(--journey-section)}
+body.living-book.illuminated.open-book[data-room][data-atmosphere]:is([data-edition],[data-home-design=inheritance])[data-art-layout=spacious]:not([data-apps]) main>.band-tight {padding-block:clamp(40px,4.5vw,64px)}
+body.living-book.illuminated.open-book[data-room][data-atmosphere]:is([data-edition],[data-home-design=inheritance])[data-art-layout=spacious]:not([data-apps]) :is(.band-alt,.source-encounter,#form) {background-color:var(--journey-surface)}
+body.living-book.illuminated.open-book[data-room][data-atmosphere]:is([data-edition],[data-home-design=inheritance])[data-art-layout=spacious]:not([data-apps]) :is(.inheritance-bridge-links,.journal-next,.reading-entries,.library-catalog,.podcast-questions) {gap:28px}
+body.living-book.illuminated.open-book[data-room][data-atmosphere]:is([data-edition],[data-home-design=inheritance])[data-art-layout=spacious]:not([data-apps]) :is(.inheritance-bridge-links>a,.journal-next>a,.reading-entry,.explore-entry>a,#class-format .col,.check .step,.result,.srow) {min-width:0;padding:var(--journey-padding);border:1px solid var(--line);border-radius:20px;background:var(--journey-surface);box-shadow:none}
+body.living-book.illuminated.open-book[data-room][data-atmosphere]:is([data-edition],[data-home-design=inheritance])[data-art-layout=spacious]:not([data-apps]) :is(.inheritance-bridge-links>a,.journal-next>a,.reading-entry,.explore-entry>a) {color:var(--ink)}
+body.living-book.illuminated.open-book[data-room][data-atmosphere]:is([data-edition],[data-home-design=inheritance])[data-art-layout=spacious]:not([data-apps]) :is(.correspondence-letter,.contact-routing) {padding:var(--journey-padding);border-radius:20px;background:var(--journey-surface);box-shadow:none}
+body.living-book.illuminated.open-book[data-room][data-atmosphere]:is([data-edition],[data-home-design=inheritance])[data-art-layout=spacious]:not([data-apps]) #form .correspondence-letter {background:var(--paper)}
+body.living-book.illuminated.open-book[data-room][data-atmosphere]:is([data-edition],[data-home-design=inheritance])[data-art-layout=spacious]:not([data-apps]) .contact-routing {max-width:none}
+body.living-book.illuminated.open-book[data-room][data-atmosphere]:is([data-edition],[data-home-design=inheritance])[data-art-layout=spacious]:not([data-apps]) .contact-routing>a {padding-block:20px}
+body.living-book.illuminated.open-book[data-room][data-atmosphere]:is([data-edition],[data-home-design=inheritance])[data-art-layout=spacious]:not([data-apps]) #form :is(input:not([type=checkbox]):not([type=radio]),textarea,select) {background-color:var(--journey-surface);color:var(--ink);border-radius:10px}
+body.living-book.illuminated.open-book[data-room][data-atmosphere]:is([data-edition],[data-home-design=inheritance])[data-art-layout=spacious]:not([data-apps]) :is(.quran-companion,.reader-source) {background:var(--journey-surface)}
+body.living-book.illuminated.open-book[data-room][data-atmosphere]:is([data-edition],[data-home-design=inheritance])[data-art-layout=spacious]:not([data-apps]) .quran-companion {gap:var(--journey-gap);padding-block:var(--journey-padding)}
+body.living-book.illuminated.open-book[data-room][data-atmosphere]:is([data-edition],[data-home-design=inheritance])[data-art-layout=spacious]:not([data-apps]) .quran-companion-page {padding:var(--journey-padding);background:var(--paper)}
+body.living-book.illuminated.open-book[data-room][data-atmosphere]:is([data-edition],[data-home-design=inheritance])[data-art-layout=spacious]:not([data-apps]) .reader-source {padding:var(--journey-padding);border-radius:16px}
+body.living-book.illuminated.open-book[data-room][data-atmosphere]:is([data-edition],[data-home-design=inheritance])[data-art-layout=spacious]:not([data-apps]) .reader-section {padding-block:clamp(36px,4vw,56px)}
+body.living-book.illuminated.open-book[data-room][data-atmosphere]:is([data-edition],[data-home-design=inheritance])[data-art-layout=spacious]:not([data-apps]) .learning-doorways {gap:var(--journey-gap);padding-block:clamp(36px,4vw,56px)}
+body.living-book.illuminated.open-book[data-room][data-atmosphere]:is([data-edition],[data-home-design=inheritance])[data-art-layout=spacious]:not([data-apps]) .learning-routes {gap:16px}
+body.living-book.illuminated.open-book[data-room][data-atmosphere]:is([data-edition],[data-home-design=inheritance])[data-art-layout=spacious]:not([data-apps]) .learning-routes>a {padding:24px;border-radius:16px;background:var(--journey-surface)}
+body.living-book.illuminated.open-book[data-room][data-atmosphere]:is([data-edition],[data-home-design=inheritance])[data-art-layout=spacious]:not([data-apps]) .learning-routes>a[aria-selected=true] {background:var(--paper-2);border-color:var(--gold-line)}
+body.living-book.illuminated.open-book[data-room][data-atmosphere]:is([data-edition],[data-home-design=inheritance])[data-art-layout=spacious]:not([data-apps]) :is(.about-letter-grid,.about-commitments-grid,.podcast-vision-spread,.podcast-invitation-spread,.podcast-season,#form .contact-grid) {gap:var(--journey-gap)}
+body.living-book.illuminated.open-book[data-room][data-atmosphere]:is([data-edition],[data-home-design=inheritance])[data-art-layout=spacious]:not([data-apps]) :is(.inheritance-bridge-links>a,.journal-next>a,.explore-entry>a):hover {border-color:var(--gold-line);background:var(--paper-2)}
+}
+@media screen and (max-width:760px) {
+body.living-book.illuminated.open-book[data-room][data-atmosphere]:is([data-edition],[data-home-design=inheritance])[data-art-layout=spacious]:not([data-apps]) {--journey-section:48px;--journey-padding:24px;--journey-gap:28px}
+body.living-book.illuminated.open-book[data-room][data-atmosphere]:is([data-edition],[data-home-design=inheritance])[data-art-layout=spacious]:not([data-apps]) main>.band-tight {padding-block:36px}
+body.living-book.illuminated.open-book[data-room][data-atmosphere]:is([data-edition],[data-home-design=inheritance])[data-art-layout=spacious]:not([data-apps]) :is(.inheritance-bridge-links,.journal-next,.reading-entries,.library-catalog,.podcast-questions) {grid-template-columns:minmax(0,1fr);gap:24px}
+body.living-book.illuminated.open-book[data-room][data-atmosphere]:is([data-edition],[data-home-design=inheritance])[data-art-layout=spacious]:not([data-apps]) :is(.about-letter-grid,.about-commitments-grid,.podcast-vision-spread,.podcast-invitation-spread,.podcast-season,#form .contact-grid) {grid-template-columns:minmax(0,1fr)}
+body.living-book.illuminated.open-book[data-room][data-atmosphere]:is([data-edition],[data-home-design=inheritance])[data-art-layout=spacious]:not([data-apps]) .learning-routes>a {padding:20px}
+}
+@media screen {
+html[data-type-system] body.open-book #main :is(.chapter-intro,.inheritance-hero-copy,.inheritance-teacher-copy,.about-cover-copy,.about-letter-prose,.podcast-vision-copy,.tool-story,.reader-prose,.correspondence-letter) {min-width:0}
+html[data-type-system] body.open-book #main :is(.chapter-intro,.inheritance-teacher-copy,.about-letter-prose,.podcast-vision-copy,.tool-story,.reader-prose) p:not([lang=ar]):not(.eyebrow):not(.source-label) {max-inline-size:64ch;text-wrap:pretty}
+html[data-type-system] body.open-book #main :is(.chapter-intro,.inheritance-teacher-copy,.about-letter-prose,.podcast-vision-copy,.tool-story,.reader-prose) p+p {margin-block-start:1.25em}
+html[data-type-system] body.open-book #main :is(.chapter-intro,.inheritance-teacher-copy,.about-letter-prose,.podcast-vision-copy,.tool-story,.reader-prose) :is(h2,h3)+p {margin-block-start:20px}
+html[data-type-system] body.open-book #main :is(.lede,.inheritance-hero-lede,.about-cover-lede) {margin-block-end:32px}
+html[data-type-system] body.open-book #main :is(.chapter-intro,.inheritance-teacher-copy,.about-letter-prose,.podcast-vision-copy,.tool-story) :is(.btns,.meta,.inheritance-hero-actions) {margin-block-start:28px;row-gap:16px}
+html[data-type-system] body.open-book #main :is(.house-art,.about-inheritance-art,.reader-collection-art,.desk-art,.listening-scene,.apps-cover-art) figcaption {padding-block-start:20px;max-inline-size:58ch;text-wrap:pretty}
+html[data-type-system] body.open-book #main .house-art+h2 {margin-block-start:28px}
+body.living-book.illuminated.open-book[data-home-design=inheritance][data-art-layout=spacious] .inheritance-hero-art img {width:100%;height:auto;max-height:none;object-fit:contain}
+body.living-book.illuminated.open-book[data-home-design=inheritance][data-art-layout=spacious] .inheritance-hero-art figcaption {padding-inline-start:0;padding-block-start:20px}
+body.living-book.illuminated.open-book[data-room=home][data-atmosphere][data-home-design=inheritance] .open-life-tools {gap:28px;align-items:stretch}
+body.living-book.illuminated.open-book[data-home-design=inheritance] .open-life-tools>a {min-width:0;padding:clamp(24px,2.5vw,36px);gap:24px}
+}
+@media screen and (min-width:1200px) {
+body.living-book.illuminated.open-book[data-home-design=inheritance][data-art-layout=spacious] main>.inheritance-hero>.wrap {max-width:1920px;grid-template-columns:repeat(14,minmax(0,1fr));gap:0;padding-block:clamp(48px,5vw,80px)}
+body.living-book.illuminated.open-book[data-home-design=inheritance][data-art-layout=spacious] .inheritance-hero-copy {grid-column:1/7;grid-row:1;max-width:none;padding-inline-end:clamp(24px,3vw,48px)}
+body.living-book.illuminated.open-book[data-home-design=inheritance][data-art-layout=spacious] .inheritance-hero-art {grid-column:6/-1;grid-row:1;max-width:none;width:100%}
+body.living-book.illuminated.open-book[data-home-design=inheritance][data-art-layout=spacious] .inheritance-hero-art figcaption {padding-inline-start:12%}
+}
+@media screen and (max-width:760px) {
+html[data-type-system] body.open-book #main :is(.lede,.inheritance-hero-lede,.about-cover-lede) {margin-block-end:24px}
+body.living-book.illuminated.open-book[data-home-design=inheritance][data-art-layout=spacious] .inheritance-hero-art {width:calc(100% + 24px);max-width:none;margin-inline:-12px;justify-self:center}
+body.living-book.illuminated.open-book[data-home-design=inheritance][data-art-layout=spacious] .inheritance-hero-art figcaption {padding-inline:12px}
+body.living-book.illuminated.open-book[data-room=home][data-atmosphere][data-home-design=inheritance] .open-life-tools {grid-template-columns:minmax(0,1fr);gap:24px}
+}
+@media screen {
+body.living-book.illuminated.open-book[data-room][data-atmosphere][data-edition][data-direction=inheritance][data-art-layout=spacious] :is(.desk-art,.apps-cover-art,.about-inheritance-art) {width:100%;max-width:none;min-width:0;margin:0}
+body.living-book.illuminated.open-book[data-room][data-atmosphere][data-edition][data-direction=inheritance][data-art-layout=spacious] :is(.desk-art,.apps-cover-art,.about-inheritance-art) img {display:block;width:100%;height:auto;aspect-ratio:auto;object-fit:contain}
+body.living-book.illuminated.open-book[data-room][data-atmosphere][data-edition][data-direction=inheritance][data-art-layout=spacious] :is(.desk-introduction,.workshop-intro,.about-cover-copy,.about-partner-grid>div) {min-width:0}
+body.living-book.illuminated.open-book[data-room][data-atmosphere][data-edition][data-direction=inheritance][data-art-layout=spacious] :is(.desk-introduction,.workshop-intro,.about-cover-copy,.about-partner-grid>div) p:not(.eyebrow):not([lang=ar]) {max-inline-size:52ch;text-wrap:pretty}
+body.living-book.illuminated.open-book[data-room][data-atmosphere][data-edition][data-direction=inheritance][data-art-layout=spacious] :is(.desk-art,.apps-cover-art,.about-inheritance-art) figcaption {padding-block-start:20px;margin-block-start:0;max-inline-size:58ch;line-height:1.8}
+}
+@media screen and (min-width:1025px) {
+body.living-book.illuminated.open-book[data-room][data-atmosphere][data-edition][data-direction=inheritance][data-art-layout=spacious] .desk-spread {max-width:1920px;grid-template-columns:minmax(0,.78fr) minmax(0,1.22fr);gap:clamp(28px,3.5vw,56px);padding-block:clamp(40px,4vw,64px);align-items:center}
+body.living-book.illuminated.open-book[data-room][data-atmosphere][data-edition][data-direction=inheritance][data-art-layout=spacious] .desk-spread>div:first-child {grid-column:1;grid-row:1;padding:0;background:transparent;max-width:none}
+body.living-book.illuminated.open-book[data-room][data-atmosphere][data-edition][data-direction=inheritance][data-art-layout=spacious] .desk-art {grid-column:2;grid-row:1;justify-self:stretch;align-self:center}
+body.living-book.illuminated.open-book[data-room][data-atmosphere][data-edition][data-direction=inheritance][data-art-layout=spacious] .desk-art figcaption {padding-inline-start:0}
+body.living-book.illuminated.open-book[data-room][data-atmosphere][data-edition][data-direction=inheritance][data-art-layout=spacious][data-about=story] .about-cover {padding-block:clamp(28px,3vw,48px)}
+body.living-book.illuminated.open-book[data-room][data-atmosphere][data-edition][data-direction=inheritance][data-art-layout=spacious][data-about=story] .about-cover-grid {max-width:1840px;grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr);gap:clamp(28px,4vw,64px);padding-block:clamp(28px,3vw,48px);align-items:center}
+body.living-book.illuminated.open-book[data-room][data-atmosphere][data-edition][data-direction=inheritance][data-art-layout=spacious][data-about=story] .about-cover-copy {max-width:640px;padding-block:24px;align-self:center}
+body.living-book.illuminated.open-book[data-room][data-atmosphere][data-edition][data-direction=inheritance][data-art-layout=spacious][data-about=story] .about-portrait {max-width:800px;align-self:center;justify-self:center}
+body.living-book.illuminated.open-book[data-room][data-atmosphere][data-edition][data-direction=inheritance][data-art-layout=spacious][data-about=story] .about-partner-grid {max-width:1920px;grid-template-columns:minmax(0,.75fr) minmax(0,1.25fr);gap:clamp(28px,4vw,64px);align-items:center}
+body.living-book.illuminated.open-book[data-room][data-atmosphere][data-edition][data-direction=inheritance][data-art-layout=spacious][data-about=story] .about-inheritance-art {max-width:none;margin-block-start:0;justify-self:stretch}
+}
+@media screen and (min-width:1200px) {
+body.living-book.illuminated.open-book[data-room][data-atmosphere][data-edition][data-direction=inheritance][data-art-layout=spacious] .workshop-opening>.hero-grid {max-width:1920px;grid-template-columns:repeat(14,minmax(0,1fr));gap:0;padding-block:clamp(48px,5vw,80px);align-items:center}
+body.living-book.illuminated.open-book[data-room][data-atmosphere][data-edition][data-direction=inheritance][data-art-layout=spacious] .workshop-opening>.hero-grid>div:first-child {grid-column:1/7;grid-row:1;padding-inline-end:clamp(24px,3vw,48px);max-width:none}
+body.living-book.illuminated.open-book[data-room][data-atmosphere][data-edition][data-direction=inheritance][data-art-layout=spacious] .apps-cover-art {grid-column:6/-1;grid-row:1;width:100%;max-width:none}
+body.living-book.illuminated.open-book[data-room][data-atmosphere][data-edition][data-direction=inheritance][data-art-layout=spacious] .apps-cover-art figcaption {padding-inline-start:12%;max-inline-size:none}
+}
+@media screen and (max-width:1024px) {
+body.living-book.illuminated.open-book[data-room][data-atmosphere][data-edition][data-direction=inheritance][data-art-layout=spacious] :is(.desk-art,.apps-cover-art,.about-inheritance-art) {width:100%;max-width:none;margin:0;justify-self:stretch}
+body.living-book.illuminated.open-book[data-room][data-atmosphere][data-edition][data-direction=inheritance][data-art-layout=spacious] :is(.desk-spread,.workshop-opening>.hero-grid,.about-partner-grid) {gap:32px}
+body.living-book.illuminated.open-book[data-room][data-atmosphere][data-edition][data-direction=inheritance][data-art-layout=spacious] :is(.desk-art,.apps-cover-art,.about-inheritance-art) figcaption {padding-inline-start:0}
+body.living-book.illuminated.open-book[data-room][data-atmosphere][data-edition][data-direction=inheritance][data-art-layout=spacious][data-about=story] .about-portrait {max-width:560px}
+}
+@media screen and (max-width:760px) {
+body.living-book.illuminated.open-book[data-room][data-atmosphere][data-edition][data-direction=inheritance][data-art-layout=spacious] :is(.desk-art,.apps-cover-art,.about-inheritance-art) {width:calc(100% + 24px);max-width:none;margin-inline:-12px;justify-self:center}
+body.living-book.illuminated.open-book[data-room][data-atmosphere][data-edition][data-direction=inheritance][data-art-layout=spacious] :is(.desk-art,.apps-cover-art,.about-inheritance-art) figcaption {padding-inline:12px;padding-block-start:16px}
+body.living-book.illuminated.open-book[data-room][data-atmosphere][data-edition][data-direction=inheritance][data-art-layout=spacious] :is(.desk-spread,.workshop-opening>.hero-grid,.about-partner-grid) {gap:28px}
+}
+@media screen {
+body.living-book.illuminated.open-book[data-room][data-atmosphere][data-edition][data-direction=inheritance][data-art-layout=spacious] .listening-scene {width:100%;max-width:none;margin:0}
+body.living-book.illuminated.open-book[data-room][data-atmosphere][data-edition][data-direction=inheritance][data-art-layout=spacious] .listening-scene img {width:100%;height:auto;aspect-ratio:auto;object-fit:contain}
+body.living-book.illuminated.open-book[data-room][data-atmosphere][data-edition][data-direction=inheritance][data-art-layout=spacious] .listening-scene figcaption {max-inline-size:58ch;padding-block-start:20px;margin:0}
+body.living-book.illuminated.open-book[data-room][data-atmosphere][data-edition][data-direction=inheritance][data-art-layout=spacious] :is(.listening-title,.correspondence-opening .chapter-intro) {min-width:0}
+body.living-book.illuminated.open-book[data-room][data-atmosphere][data-edition][data-direction=inheritance][data-art-layout=spacious] :is(.listening-title,.correspondence-opening .chapter-intro) .lede {max-inline-size:48ch;text-wrap:pretty}
+body.living-book.illuminated.open-book[data-room][data-atmosphere][data-edition][data-direction=inheritance][data-art-layout=spacious] .correspondence-opening .contact-routing {display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0 24px;width:100%;max-width:none;margin:0;padding:0;border:0;border-radius:0;background:transparent;box-shadow:none}
+body.living-book.illuminated.open-book[data-room][data-atmosphere][data-edition][data-direction=inheritance][data-art-layout=spacious] .correspondence-opening .contact-routing>:is(figure,.eyebrow,.contact-write-link) {grid-column:1/-1}
+body.living-book.illuminated.open-book[data-room][data-atmosphere][data-edition][data-direction=inheritance][data-art-layout=spacious] .correspondence-opening .contact-routing>.house-art {width:100%;max-width:none;margin-block:0 28px}
+body.living-book.illuminated.open-book[data-room][data-atmosphere][data-edition][data-direction=inheritance][data-art-layout=spacious] .correspondence-opening .contact-routing>a {min-width:0;gap:16px;align-items:center;padding-block:20px;border-top:1px solid var(--line)}
+body.living-book.illuminated.open-book[data-room][data-atmosphere][data-edition][data-direction=inheritance][data-art-layout=spacious] .correspondence-opening .contact-routing>a small {max-inline-size:32ch;line-height:1.7}
+body.living-book.illuminated.open-book[data-room][data-atmosphere][data-edition][data-direction=inheritance][data-art-layout=spacious] .correspondence-opening .contact-routing .house-art figcaption {padding-block-start:20px;max-inline-size:58ch}
+}
+@media screen and (min-width:1025px) {
+body.living-book.illuminated.open-book[data-room][data-atmosphere][data-edition][data-direction=inheritance][data-art-layout=spacious] .correspondence-opening>.chapter-opening-grid {max-width:1920px;grid-template-columns:minmax(0,.75fr) minmax(0,1.25fr);gap:clamp(32px,4vw,64px);align-items:start;padding-block:clamp(40px,4vw,64px)}
+body.living-book.illuminated.open-book[data-room][data-atmosphere][data-edition][data-direction=inheritance][data-art-layout=spacious] .correspondence-opening .chapter-intro {padding-block:clamp(24px,4vw,64px);max-width:640px}
+body.living-book.illuminated.open-book[data-room][data-atmosphere][data-edition][data-direction=inheritance][data-art-layout=spacious] .listening-opening>.hero-grid {align-items:center}
+body.living-book.illuminated.open-book[data-room][data-atmosphere][data-edition][data-direction=inheritance][data-art-layout=spacious] .listening-scene {margin-block-start:0}
+}
+@media screen and (min-width:1200px) {
+body.living-book.illuminated.open-book[data-room][data-atmosphere][data-edition][data-direction=inheritance][data-art-layout=spacious] .listening-opening>.hero-grid {max-width:1920px;grid-template-columns:repeat(14,minmax(0,1fr));gap:0;padding-block:clamp(48px,5vw,80px)}
+body.living-book.illuminated.open-book[data-room][data-atmosphere][data-edition][data-direction=inheritance][data-art-layout=spacious] .listening-opening>.hero-grid>div:first-child {grid-column:1/7;grid-row:1;padding-inline-end:clamp(24px,3vw,48px);max-width:none}
+body.living-book.illuminated.open-book[data-room][data-atmosphere][data-edition][data-direction=inheritance][data-art-layout=spacious] .listening-scene {grid-column:6/-1;grid-row:1;max-width:none;width:100%}
+body.living-book.illuminated.open-book[data-room][data-atmosphere][data-edition][data-direction=inheritance][data-art-layout=spacious] .listening-scene figcaption {padding-inline-start:12%;max-inline-size:none}
+}
+@media screen and (max-width:1024px) {
+body.living-book.illuminated.open-book[data-room][data-atmosphere][data-edition][data-direction=inheritance][data-art-layout=spacious] :is(.listening-opening>.hero-grid,.correspondence-opening>.chapter-opening-grid) {grid-template-columns:minmax(0,1fr);gap:32px}
+body.living-book.illuminated.open-book[data-room][data-atmosphere][data-edition][data-direction=inheritance][data-art-layout=spacious] .listening-scene {grid-column:1;grid-row:auto;justify-self:stretch;max-width:none;width:100%;margin:0}
+body.living-book.illuminated.open-book[data-room][data-atmosphere][data-edition][data-direction=inheritance][data-art-layout=spacious] .listening-scene figcaption {padding-inline-start:0}
+body.living-book.illuminated.open-book[data-room][data-atmosphere][data-edition][data-direction=inheritance][data-art-layout=spacious] .correspondence-opening .chapter-intro {padding:0}
+}
+@media screen and (max-width:760px) {
+body.living-book.illuminated.open-book[data-room][data-atmosphere][data-edition][data-direction=inheritance][data-art-layout=spacious] :is(.listening-opening>.hero-grid,.correspondence-opening>.chapter-opening-grid) {gap:28px}
+body.living-book.illuminated.open-book[data-room][data-atmosphere][data-edition][data-direction=inheritance][data-art-layout=spacious] .correspondence-opening .contact-routing {grid-template-columns:minmax(0,1fr);gap:0}
+body.living-book.illuminated.open-book[data-room][data-atmosphere][data-edition][data-direction=inheritance][data-art-layout=spacious] .listening-scene,body.living-book.illuminated.open-book[data-room][data-atmosphere][data-edition][data-direction=inheritance][data-art-layout=spacious] .correspondence-opening .contact-routing>.house-art {width:calc(100% + 24px);max-width:none;margin-inline:-12px;justify-self:center}
+body.living-book.illuminated.open-book[data-room][data-atmosphere][data-edition][data-direction=inheritance][data-art-layout=spacious] .listening-scene figcaption,body.living-book.illuminated.open-book[data-room][data-atmosphere][data-edition][data-direction=inheritance][data-art-layout=spacious] .correspondence-opening .contact-routing .house-art figcaption {padding-inline:12px;padding-block-start:16px}
+}
+@media screen {
+body.living-book.illuminated.open-book[data-room][data-atmosphere][data-edition][data-direction=inheritance][data-art-layout=spacious]:is([data-room=quran],[data-atmosphere=reading]) :is(.chapter-note:has(.house-art),.reader-folio,.reader-collection-note) {width:100%;max-width:none;margin-block-start:0;padding:0;border:0;background:transparent}
+body.living-book.illuminated.open-book[data-room][data-atmosphere][data-edition][data-direction=inheritance][data-art-layout=spacious]:is([data-room=quran],[data-atmosphere=reading]) :is(.reader-collection-art,.reader-folio .house-art,.chapter-note .house-art) {width:100%;max-width:none;margin-block:0 28px}
+body.living-book.illuminated.open-book[data-room][data-atmosphere][data-edition][data-direction=inheritance][data-art-layout=spacious]:is([data-room=quran],[data-atmosphere=reading]) :is(.reader-collection-art,.reader-folio .house-art,.chapter-note .house-art) img {width:100%;height:auto;aspect-ratio:auto;object-fit:contain}
+body.living-book.illuminated.open-book[data-room][data-atmosphere][data-edition][data-direction=inheritance][data-art-layout=spacious]:is([data-room=quran],[data-atmosphere=reading]) :is(.chapter-note,.reader-collection-note)>p {max-inline-size:56ch;text-wrap:pretty}
+body.living-book.illuminated.open-book[data-room][data-atmosphere][data-edition][data-direction=inheritance][data-art-layout=spacious]:is([data-room=quran],[data-atmosphere=reading]) .reader-collection-art figcaption {padding-block-start:20px}
+body.living-book.illuminated.open-book[data-room][data-atmosphere][data-edition][data-direction=inheritance][data-art-layout=spacious]:is([data-room=quran],[data-atmosphere=reading]) .library-cover-books {gap:clamp(16px,2.5vw,40px)}
+body.living-book.illuminated.open-book[data-room][data-atmosphere][data-edition][data-direction=inheritance][data-art-layout=spacious]:is([data-room=quran],[data-atmosphere=reading]) .library-cover-books>a {max-width:240px}
+body.living-book.illuminated.open-book[data-room][data-atmosphere][data-edition][data-direction=inheritance][data-art-layout=spacious]:is([data-room=quran],[data-atmosphere=reading]) #book-care .house-art {margin:0}
+}
+@media screen and (min-width:1025px) {
+body.living-book.illuminated.open-book[data-room][data-atmosphere][data-edition][data-direction=inheritance][data-art-layout=spacious]:is([data-room=quran],[data-atmosphere=reading]) :is(.chapter-opening-grid:has(.chapter-note .house-art),.reader-opening) {max-width:1920px;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:clamp(32px,4vw,64px);align-items:center;padding-block:clamp(40px,4vw,64px)}
+body.living-book.illuminated.open-book[data-room][data-atmosphere][data-edition][data-direction=inheritance][data-art-layout=spacious]:is([data-room=quran],[data-atmosphere=reading]) .reader-folio {max-width:none;margin-inline:0;justify-self:stretch}
+body.living-book.illuminated.open-book[data-room][data-atmosphere][data-edition][data-direction=inheritance][data-art-layout=spacious]:is([data-room=quran],[data-atmosphere=reading]) .reader-collection-opening {grid-template-columns:minmax(0,.75fr) minmax(0,1.25fr)}
+body.living-book.illuminated.open-book[data-room][data-atmosphere][data-edition][data-direction=inheritance][data-art-layout=spacious]:is([data-room=quran],[data-atmosphere=reading]) #book-care>.wrap {max-width:1840px;display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:clamp(32px,4vw,64px);align-items:center}
+body.living-book.illuminated.open-book[data-room][data-atmosphere][data-edition][data-direction=inheritance][data-art-layout=spacious]:is([data-room=quran],[data-atmosphere=reading]) #book-care .house-art {grid-column:2;grid-row:1}
+body.living-book.illuminated.open-book[data-room][data-atmosphere][data-edition][data-direction=inheritance][data-art-layout=spacious]:is([data-room=quran],[data-atmosphere=reading]) #book-care .shead {grid-column:1;grid-row:1;margin:0}
+body.living-book.illuminated.open-book[data-room][data-atmosphere][data-edition][data-direction=inheritance][data-art-layout=spacious]:is([data-room=quran],[data-atmosphere=reading]) #book-care :is(.cols,.cols-2) {grid-column:1/-1}
+body.living-book.illuminated.open-book[data-room][data-atmosphere][data-edition][data-direction=inheritance][data-art-layout=spacious]:is([data-room=quran],[data-atmosphere=reading]) .teacher-opening-portrait {max-width:740px}
+}
+@media screen and (max-width:1024px) {
+body.living-book.illuminated.open-book[data-room][data-atmosphere][data-edition][data-direction=inheritance][data-art-layout=spacious]:is([data-room=quran],[data-atmosphere=reading]) :is(.chapter-opening-grid:has(.chapter-note .house-art),.reader-opening) {grid-template-columns:minmax(0,1fr);gap:32px}
+body.living-book.illuminated.open-book[data-room][data-atmosphere][data-edition][data-direction=inheritance][data-art-layout=spacious]:is([data-room=quran],[data-atmosphere=reading]) :is(.reader-folio,.reader-collection-note,.chapter-note:has(.house-art)) {max-width:none;margin:0;justify-self:stretch}
+body.living-book.illuminated.open-book[data-room][data-atmosphere][data-edition][data-direction=inheritance][data-art-layout=spacious]:is([data-room=quran],[data-atmosphere=reading]) #book-care .house-art {margin-block-end:32px}
+}
+@media screen and (max-width:760px) {
+body.living-book.illuminated.open-book[data-room][data-atmosphere][data-edition][data-direction=inheritance][data-art-layout=spacious]:is([data-room=quran],[data-atmosphere=reading]) :is(.reader-folio .house-art,.reader-collection-art,.chapter-note .house-art,#book-care .house-art) {width:calc(100% + 24px);max-width:none;margin-inline:-12px}
+body.living-book.illuminated.open-book[data-room][data-atmosphere][data-edition][data-direction=inheritance][data-art-layout=spacious]:is([data-room=quran],[data-atmosphere=reading]) :is(.reader-folio .house-art,.reader-collection-art,.chapter-note .house-art,#book-care .house-art) figcaption {padding-inline:12px;padding-block-start:16px}
+body.living-book.illuminated.open-book[data-room][data-atmosphere][data-edition][data-direction=inheritance][data-art-layout=spacious]:is([data-room=quran],[data-atmosphere=reading]) :is(.chapter-opening-grid:has(.chapter-note .house-art),.reader-opening) {gap:28px}
+}
