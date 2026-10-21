@@ -42,7 +42,10 @@
         if (event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
         if (compact.matches) index.open = false;
         // Keep the native anchor behavior; move keyboard focus to its destination.
-        requestAnimationFrame(function () { entry.section.focus({preventScroll:true}); queue(); });
+        requestAnimationFrame(function () {
+          if (!entry.section.hasAttribute('tabindex')) entry.section.tabIndex = -1;
+          entry.section.focus({preventScroll:true}); queue();
+        });
       });
     });
     queue();

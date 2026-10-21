@@ -469,6 +469,7 @@
       tab.addEventListener('click', function (event) {
         if (event.ctrlKey || event.metaKey || event.altKey || event.shiftKey) return;
         event.preventDefault();activate('push');
+        panel.focus({preventScroll:true});
         panel.scrollIntoView({behavior:root.dataset.motion === 'calm' ? 'auto' : 'smooth',block:'start'});
       });
       tab.addEventListener('keydown', function (event) {
