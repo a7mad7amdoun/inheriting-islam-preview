@@ -268,8 +268,67 @@
     summary.addEventListener('blur', function () { lastTap = null; });
   });
 
+  /* Progressive contents console: native destinations remain available without JS. */
+  document.querySelectorAll('#header .nav-disclosure .nav-panel').forEach(function (panel, menuIndex) {
+    var arabic = document.documentElement.lang === 'ar';
+    var apps = panel.closest('.fihrist-apps');
+    var sections = Array.from(panel.querySelectorAll(apps ? '.fihrist-app-list, .fihrist-app-sections' : '.quran-nav-group'));
+    if (!sections.length) return;
+    var shell = document.createElement('div'); shell.className = 'contents-console';
+    var rail = document.createElement('div'); rail.className = 'contents-index'; rail.setAttribute('role','tablist');
+    rail.setAttribute('aria-label', arabic ? 'أقسام الدليل' : 'Contents sections'); rail.setAttribute('aria-orientation','vertical');
+    var body = document.createElement('div'); body.className = 'contents-destinations';
+    shell.appendChild(rail); shell.appendChild(body);
+    var labels = apps ? (arabic ? ['التطبيقات المتاحة','المشاريع'] : ['Live apps','Projects']) : sections.map(function (section) { return section.querySelector('.quran-nav-label').textContent.trim(); });
+    sections.forEach(function (section, index) {
+      var id = 'contents-' + menuIndex + '-' + index;
+      var tab = document.createElement('button'); tab.type = 'button'; tab.id = id + '-tab'; tab.textContent = labels[index];
+      tab.setAttribute('role','tab'); tab.setAttribute('aria-controls',id);
+      section.id = id; section.setAttribute('role','tabpanel'); section.setAttribute('aria-labelledby',tab.id);
+      rail.appendChild(tab); body.appendChild(section);
+      tab.addEventListener('click',function () { select(index, false); });
+      tab.addEventListener('keydown',function (event) {
+        var next = index;
+        if (event.key === 'ArrowDown') next = (index + 1) % sections.length;
+        else if (event.key === 'ArrowUp') next = (index + sections.length - 1) % sections.length;
+        else if (event.key === 'Home') next = 0;
+        else if (event.key === 'End') next = sections.length - 1;
+        else return;
+        event.preventDefault(); select(next, true);
+      });
+    });
+    var emptyGrid = panel.querySelector('.quran-contents-grid'); if (emptyGrid) emptyGrid.remove();
+    panel.appendChild(shell); panel.dataset.console = 'ready';
+    function select(index, focus) {
+      Array.from(rail.children).forEach(function (tab, i) { tab.setAttribute('aria-selected',String(i===index)); tab.tabIndex = i===index ? 0 : -1; sections[i].hidden = i!==index; });
+      rail.style.setProperty('--contents-position', index);
+      if (focus) rail.children[index].focus();
+    }
+    // Reopen on the learning route that contains the current page.
+    var currentSection = sections.findIndex(function (section) {
+      return Array.from(section.querySelectorAll('a[href]')).some(function (link) {
+        var url = new URL(link.href, location.href);
+        var active = url.origin === location.origin && url.pathname === location.pathname && !url.hash;
+        if (active) link.setAttribute('aria-current','page');
+        return active;
+      });
+    });
+    select(currentSection < 0 ? 0 : currentSection,false);
+  });
+
   /* Native desktop disclosure: usable without JS, enhanced with dismissal.
      These are ordinary navigation links, not an application menu widget. */
+  document.querySelectorAll('.nav-disclosure > summary').forEach(function (summary) {
+    summary.addEventListener('keydown', function (event) {
+      if (event.key !== 'ArrowDown') return;
+      event.preventDefault();
+      var menu = summary.parentElement;
+      document.querySelectorAll('.nav-disclosure').forEach(function (other) { if (other !== menu) other.open = false; });
+      menu.open = true;
+      var first = menu.querySelector('.nav-panel a');
+      if (first) first.focus();
+    });
+  });
   document.querySelectorAll('.nav-disclosure').forEach(function (learningMenu) {
   function closeLearning(restoreFocus) {
     if (!learningMenu || !learningMenu.open) return;
