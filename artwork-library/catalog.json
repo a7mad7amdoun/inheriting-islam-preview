@@ -1,17 +1,307 @@
 [
   {
+    "id": "25",
+    "slug": "25-an-inheritance-illuminated",
+    "title": "An inheritance, illuminated",
+    "category": "Identity",
+    "use": "Homepage \u00b7 brand introduction",
+    "description": "The original linked identity, softened by layered paper and a restrained brass finish.",
+    "collection": "hybrid",
+    "lighting": "Daylight",
+    "width": 1536,
+    "height": 1024,
+    "original": "originals/25-an-inheritance-illuminated.png",
+    "preview": "previews/25-an-inheritance-illuminated.jpg",
+    "sizeLabel": "2.2 MB",
+    "alt": "Three hollow interlocking diamond loops, the two outer loops built from visibly stacked ivory and deep green paper layers, the central loop a thin brushed antique-brass edge over warm sand paper."
+  },
+  {
+    "id": "26",
+    "slug": "26-beyond-the-threshold",
+    "title": "Beyond the threshold",
+    "category": "Identity",
+    "use": "About \u00b7 welcoming visitors",
+    "description": "A deeper evening version of the doorway, for introductions and moments of transition.",
+    "collection": "hybrid",
+    "lighting": "Lamplight",
+    "width": 1536,
+    "height": 1024,
+    "original": "originals/26-beyond-the-threshold.png",
+    "preview": "previews/26-beyond-the-threshold.jpg",
+    "sizeLabel": "2.5 MB",
+    "alt": "One stepped pointed arch cut from thick ivory paper, a single inset dark green zellige panel swung open, thin antique-brass inner edging."
+  },
+  {
+    "id": "27",
+    "slug": "27-across-the-same-bridge",
+    "title": "Across the same bridge",
+    "category": "Identity",
+    "use": "Community \u00b7 belonging",
+    "description": "A new composition about connection across places and communities.",
+    "collection": "hybrid",
+    "lighting": "Daylight",
+    "width": 1536,
+    "height": 1024,
+    "original": "originals/27-across-the-same-bridge.png",
+    "preview": "previews/27-across-the-same-bridge.jpg",
+    "sizeLabel": "2.3 MB",
+    "alt": "A low simple arched bridge built from layered ivory paper with one tiny green zellige detail, spanning a narrow ribbon of deep-green paper water, between two warm sandstone-paper banks."
+  },
+  {
+    "id": "28",
+    "slug": "28-knowledge-carefully-kept",
+    "title": "Knowledge, carefully kept",
+    "category": "Learning",
+    "use": "Books \u00b7 learning resources",
+    "description": "For learning resources and a collection worth keeping close.",
+    "collection": "hybrid",
+    "lighting": "Daylight",
+    "width": 1536,
+    "height": 1024,
+    "original": "originals/28-knowledge-carefully-kept.png",
+    "preview": "previews/28-knowledge-carefully-kept.jpg",
+    "sizeLabel": "2.2 MB",
+    "alt": "Three unlettered paper-bound books in an open ivory slipcase, dark green cloth-textured paper spines with hairline antique brass detailing."
+  },
+  {
+    "id": "29",
+    "slug": "29-a-little-light-for-learning",
+    "title": "A little light for learning",
+    "category": "Learning",
+    "use": "Teacher \u00b7 guided practice",
+    "description": "A focused teaching scene with warmth around the book and quiet space around it.",
+    "collection": "hybrid",
+    "lighting": "Lamplight",
+    "width": 1536,
+    "height": 1024,
+    "original": "originals/29-a-little-light-for-learning.png",
+    "preview": "previews/29-a-little-light-for-learning.jpg",
+    "sizeLabel": "2.3 MB",
+    "alt": "One open blank ivory book on a low folded-paper reading stand, beside a single small sculptural brass-shaded desk lamp."
+  },
+  {
+    "id": "30",
+    "slug": "30-steady-progress",
+    "title": "Steady progress",
+    "category": "Learning",
+    "use": "Practice \u00b7 lesson progress",
+    "description": "An alternative to steps: progress expressed through the pages we return to.",
+    "collection": "hybrid",
+    "lighting": "Daylight",
+    "width": 1536,
+    "height": 1024,
+    "original": "originals/30-steady-progress.png",
+    "preview": "previews/30-steady-progress.jpg",
+    "sizeLabel": "2.5 MB",
+    "alt": "Five thick blank ivory pages arranged as a very shallow ascending fan, leading to one closed dark green paper book; thin warm brass page edges, one small gold zellige bookmark at the base."
+  },
+  {
+    "id": "31",
+    "slug": "31-a-quiet-reading-alcove",
+    "title": "A quiet reading alcove",
+    "category": "Reading",
+    "use": "Reading collection \u00b7 reflection",
+    "description": "A warm evening setting for longer reads and thoughtful pauses.",
+    "collection": "hybrid",
+    "lighting": "Lamplight",
+    "width": 1536,
+    "height": 1024,
+    "original": "originals/31-a-quiet-reading-alcove.png",
+    "preview": "previews/31-a-quiet-reading-alcove.jpg",
+    "sizeLabel": "2.2 MB",
+    "alt": "A small ivory layered-paper pointed reading alcove holding one green paper armchair and a plain closed book on a stone-colored paper side ledge."
+  },
+  {
+    "id": "32",
+    "slug": "32-the-place-you-left",
+    "title": "The place you left",
+    "category": "Reading",
+    "use": "Saved readings \u00b7 return visits",
+    "description": "A calm return point, with the bookmark as the main detail.",
+    "collection": "hybrid",
+    "lighting": "Daylight",
+    "width": 1536,
+    "height": 1024,
+    "original": "originals/32-the-place-you-left.png",
+    "preview": "previews/32-the-place-you-left.jpg",
+    "sizeLabel": "2.3 MB",
+    "alt": "One blank open ivory paper book partly nested in a shallow travertine-colored paper tray, dark-green bookmark lying across one page with a tiny antique-brass eight-point star at its end."
+  },
+  {
+    "id": "33",
+    "slug": "33-stillness-at-first-light",
+    "title": "Stillness at first light",
+    "category": "Reading",
+    "use": "Reflections \u00b7 morning reading",
+    "description": "A spacious reflection scene with light and rhythm rather than a busy background.",
+    "collection": "hybrid",
+    "lighting": "Daylight",
+    "width": 1536,
+    "height": 1024,
+    "original": "originals/33-stillness-at-first-light.png",
+    "preview": "previews/33-stillness-at-first-light.jpg",
+    "sizeLabel": "2.2 MB",
+    "alt": "One shallow round ivory basin built from layered paper with broad pale-gold paper ripples and a single dark green olive sprig above it."
+  },
+  {
+    "id": "34",
+    "slug": "34-carry-a-place-of-peace",
+    "title": "Carry a place of peace",
+    "category": "Everyday apps",
+    "use": "A Room to Pray \u00b7 travel",
+    "description": "For prayer while travelling, with a compact composition that crops well.",
+    "collection": "hybrid",
+    "lighting": "Daylight",
+    "width": 1536,
+    "height": 1024,
+    "original": "originals/34-carry-a-place-of-peace.png",
+    "preview": "previews/34-carry-a-place-of-peace.jpg",
+    "sizeLabel": "2.5 MB",
+    "alt": "An elegant rolled deep green paper prayer mat and a modest ivory paper travel pouch on a low pale stone-colored plane."
+  },
+  {
+    "id": "35",
+    "slug": "35-a-beginning-held-with-care",
+    "title": "A beginning held with care",
+    "category": "Everyday apps",
+    "use": "First Adhan \u00b7 family",
+    "description": "A softer, quieter family scene with the new beginning at its centre.",
+    "collection": "hybrid",
+    "lighting": "Daylight",
+    "width": 1536,
+    "height": 1024,
+    "original": "originals/35-a-beginning-held-with-care.png",
+    "preview": "previews/35-a-beginning-held-with-care.jpg",
+    "sizeLabel": "2.0 MB",
+    "alt": "A minimal ivory layered-paper cradle in a quiet oval silhouette, neatly folded deep green paper blanket inside, one small antique-gold eight-point star on its side and pale stone-toned feet."
+  },
+  {
+    "id": "36",
+    "slug": "36-a-place-for-gentle-support",
+    "title": "A place for gentle support",
+    "category": "Everyday apps",
+    "use": "Life Is Temporary \u00b7 remembrance",
+    "description": "An evening scene for care and support, without literal depictions of loss.",
+    "collection": "hybrid",
+    "lighting": "Lamplight",
+    "width": 1536,
+    "height": 1024,
+    "original": "originals/36-a-place-for-gentle-support.png",
+    "preview": "previews/36-a-place-for-gentle-support.jpg",
+    "sizeLabel": "2.3 MB",
+    "alt": "One small ivory stone-textured paper bench with a folded muted-gold paper cloth, one olive branch behind it, and a small simple brass lantern casting warm side light."
+  },
+  {
+    "id": "37",
+    "slug": "37-learning-around-one-table",
+    "title": "Learning around one table",
+    "category": "Community",
+    "use": "Classes \u00b7 community learning",
+    "description": "A generous composition for cohorts, shared study, and community invitations.",
+    "collection": "hybrid",
+    "lighting": "Daylight",
+    "width": 1536,
+    "height": 1024,
+    "original": "originals/37-learning-around-one-table.png",
+    "preview": "previews/37-learning-around-one-table.jpg",
+    "sizeLabel": "2.6 MB",
+    "alt": "One round low ivory paper table with two blank open books placed respectfully on top and three green paper cushions spaced around it; a single precise gold zellige band on table edge."
+  },
+  {
+    "id": "38",
+    "slug": "38-voices-carried-forward",
+    "title": "Voices carried forward",
+    "category": "Community",
+    "use": "Podcast \u00b7 conversations",
+    "description": "A new podcast composition that connects listening with the layered visual identity.",
+    "collection": "hybrid",
+    "lighting": "Lamplight",
+    "width": 1536,
+    "height": 1024,
+    "original": "originals/38-voices-carried-forward.png",
+    "preview": "previews/38-voices-carried-forward.jpg",
+    "sizeLabel": "2.2 MB",
+    "alt": "One classic microphone made of deep-green layered paper with fine brushed-brass grille, standing before three broad concentric arch-shaped paper layers suggesting sound and listening."
+  },
+  {
+    "id": "39",
+    "slug": "39-a-thoughtful-reply",
+    "title": "A thoughtful reply",
+    "category": "Community",
+    "use": "Contact \u00b7 questions",
+    "description": "For asking a question, welcoming a message, or opening a conversation.",
+    "collection": "hybrid",
+    "lighting": "Daylight",
+    "width": 1536,
+    "height": 1024,
+    "original": "originals/39-a-thoughtful-reply.png",
+    "preview": "previews/39-a-thoughtful-reply.jpg",
+    "sizeLabel": "2.2 MB",
+    "alt": "One open ivory cotton-paper envelope and blank card on a small pale stone-colored paper ledge, a single dark green pen with antique-brass nib, a tiny zellige star debossed into the envelope corner."
+  },
+  {
+    "id": "40",
+    "slug": "40-an-evening-of-return",
+    "title": "An evening of return",
+    "category": "Seasonal",
+    "use": "Ramadan \u00b7 evening reflection",
+    "description": "A restrained Ramadan scene that brings light into the darker palette.",
+    "collection": "hybrid",
+    "lighting": "Lamplight",
+    "width": 1536,
+    "height": 1024,
+    "original": "originals/40-an-evening-of-return.png",
+    "preview": "previews/40-an-evening-of-return.jpg",
+    "sizeLabel": "2.0 MB",
+    "alt": "One elegant hexagonal lantern predominantly made of stacked ivory paper with a single dark green geometric zellige panel and fine antique-brass frame; a very soft warm gold glow inside, no flame."
+  },
+  {
+    "id": "41",
+    "slug": "41-enough-to-share",
+    "title": "Enough to share",
+    "category": "Seasonal",
+    "use": "Iftar \u00b7 generosity",
+    "description": "For gratitude, iftar, and sharing simple provisions.",
+    "collection": "hybrid",
+    "lighting": "Daylight",
+    "width": 1536,
+    "height": 1024,
+    "original": "originals/41-enough-to-share.png",
+    "preview": "previews/41-enough-to-share.jpg",
+    "sizeLabel": "2.2 MB",
+    "alt": "One pale stone-colored shallow paper bowl holding three faceted gold-brown paper dates and two stylised wheat stems, resting on a folded ivory paper cloth with one deep green zellige edge."
+  },
+  {
+    "id": "42",
+    "slug": "42-the-care-we-pass-on",
+    "title": "The care we pass on",
+    "category": "Seasonal",
+    "use": "Heritage \u00b7 patience",
+    "description": "A tactile heritage scene about preserving and caring for what we inherit.",
+    "collection": "hybrid",
+    "lighting": "Daylight",
+    "width": 1536,
+    "height": 1024,
+    "original": "originals/42-the-care-we-pass-on.png",
+    "preview": "previews/42-the-care-we-pass-on.jpg",
+    "sizeLabel": "2.4 MB",
+    "alt": "One folded ivory and deep green paper textile with a single eight-point zellige motif, an elegant muted-gold thread joining two layered paper edges, resting on a smooth warm stone-colored paper plinth."
+  },
+  {
     "id": "01",
     "slug": "01-the-inheritance-we-share",
     "title": "The inheritance we share",
     "category": "Identity",
     "use": "Homepage \u00b7 brand stories",
     "description": "A recognisable brand composition for an opening, announcement, or identity post.",
+    "collection": "cut-paper",
+    "lighting": "Daylight",
     "width": 1536,
     "height": 1024,
     "original": "originals/01-the-inheritance-we-share.png",
     "preview": "previews/01-the-inheritance-we-share.jpg",
     "sizeLabel": "2.0 MB",
-    "alt": "The inheritance we share \u2014 a layered ivory, green and gold cut-paper illustration."
+    "alt": "Three hollow angular diamond-shaped frames physically interlocking across, outer two dark green and middle muted gold, made of layered cut paper; a single small precision-cut ivory zellige strip forms their low base."
   },
   {
     "id": "02",
@@ -20,12 +310,14 @@
     "category": "Identity",
     "use": "About \u00b7 welcoming new visitors",
     "description": "A welcoming entrance for About, introductions, and first visits.",
+    "collection": "cut-paper",
+    "lighting": "Daylight",
     "width": 1536,
     "height": 1024,
     "original": "originals/02-a-door-into-learning.png",
     "preview": "previews/02-a-door-into-learning.jpg",
     "sizeLabel": "2.0 MB",
-    "alt": "A door into learning \u2014 a layered ivory, green and gold cut-paper illustration."
+    "alt": "A single open pointed-arch doorway made from layered ivory and gold paper with one dark green zellige lattice door, opening onto two sand-colored paper hills and a muted gold sun."
   },
   {
     "id": "03",
@@ -34,12 +326,14 @@
     "category": "Identity",
     "use": "Community \u00b7 homepage",
     "description": "An inclusive gathering place, with room left open for the next visitor.",
+    "collection": "cut-paper",
+    "lighting": "Daylight",
     "width": 1536,
     "height": 1024,
     "original": "originals/03-room-for-everyone.png",
     "preview": "previews/03-room-for-everyone.jpg",
     "sizeLabel": "2.0 MB",
-    "alt": "Room for everyone \u2014 a layered ivory, green and gold cut-paper illustration."
+    "alt": "Three simple ivory and green paper seats arranged openly around a low round table, viewed in a gentle three-quarter perspective."
   },
   {
     "id": "04",
@@ -48,12 +342,14 @@
     "category": "Identity",
     "use": "About \u00b7 inheritance",
     "description": "A visual metaphor for care and an inheritance that grows over time.",
+    "collection": "cut-paper",
+    "lighting": "Daylight",
     "width": 1536,
     "height": 1024,
     "original": "originals/04-roots-that-keep-growing.png",
     "preview": "previews/04-roots-that-keep-growing.jpg",
     "sizeLabel": "2.2 MB",
-    "alt": "Roots that keep growing \u2014 a layered ivory, green and gold cut-paper illustration."
+    "alt": "One sculptural olive tree made of layered paper with dark green cut-paper leaves and a sand trunk, rooted in a low ivory planter with a single thin zellige cutout band."
   },
   {
     "id": "05",
@@ -62,12 +358,14 @@
     "category": "Learning",
     "use": "Start Here \u00b7 first lesson",
     "description": "A gentle starting point for a first lesson or practice invitation.",
+    "collection": "cut-paper",
+    "lighting": "Daylight",
     "width": 1536,
     "height": 1024,
     "original": "originals/05-begin-with-one-page.png",
     "preview": "previews/05-begin-with-one-page.jpg",
     "sizeLabel": "2.0 MB",
-    "alt": "Begin with one page \u2014 a layered ivory, green and gold cut-paper illustration."
+    "alt": "One small low ivory paper desk bearing a blank sheet, a single green pencil and a plain closed gold-edged book."
   },
   {
     "id": "06",
@@ -76,12 +374,14 @@
     "category": "Learning",
     "use": "Quran overview \u00b7 daily reading",
     "description": "For invitations to read, learn, or return to a daily routine.",
+    "collection": "cut-paper",
+    "lighting": "Daylight",
     "width": 1536,
     "height": 1024,
     "original": "originals/06-a-quiet-place-to-read.png",
     "preview": "previews/06-a-quiet-place-to-read.jpg",
     "sizeLabel": "2.0 MB",
-    "alt": "A quiet place to read \u2014 a layered ivory, green and gold cut-paper illustration."
+    "alt": "An open book with blank ivory layered pages and dark green cover on a simple folded gold paper X-shaped reading stand."
   },
   {
     "id": "07",
@@ -90,12 +390,14 @@
     "category": "Learning",
     "use": "Teacher \u00b7 guided lessons",
     "description": "A patient setting for guided learning with a teacher.",
+    "collection": "cut-paper",
+    "lighting": "Daylight",
     "width": 1536,
     "height": 1024,
     "original": "originals/07-learning-together.png",
     "preview": "previews/07-learning-together.jpg",
     "sizeLabel": "2.0 MB",
-    "alt": "Learning together \u2014 a layered ivory, green and gold cut-paper illustration."
+    "alt": "Two modest paper chairs, one dark green and one ivory, angled toward a single low reading table holding an open blank book."
   },
   {
     "id": "08",
@@ -104,12 +406,14 @@
     "category": "Learning",
     "use": "Practice \u00b7 lesson progress",
     "description": "A progress illustration for steady practice, without suggesting a guaranteed outcome.",
+    "collection": "cut-paper",
+    "lighting": "Daylight",
     "width": 1536,
     "height": 1024,
     "original": "originals/08-one-step-then-another.png",
     "preview": "previews/08-one-step-then-another.jpg",
     "sizeLabel": "2.0 MB",
-    "alt": "One step, then another \u2014 a layered ivory, green and gold cut-paper illustration."
+    "alt": "Five low, broad ascending ivory paper steps with a dark-green ribbon gently following the steps to one small plain gold-edged book."
   },
   {
     "id": "09",
@@ -118,12 +422,14 @@
     "category": "Reading",
     "use": "Books \u00b7 reading collection",
     "description": "For the reading collection, book releases, and curated recommendations.",
+    "collection": "cut-paper",
+    "lighting": "Daylight",
     "width": 1536,
     "height": 1024,
     "original": "originals/09-a-collection-to-return-to.png",
     "preview": "previews/09-a-collection-to-return-to.jpg",
     "sizeLabel": "2.0 MB",
-    "alt": "A collection to return to \u2014 a layered ivory, green and gold cut-paper illustration."
+    "alt": "A small elegant ivory cut-paper bookshelf holding six plain green, ivory and gold books of varying heights, with one central star-cut zellige shelf divider."
   },
   {
     "id": "10",
@@ -132,12 +438,14 @@
     "category": "Reading",
     "use": "Saved readings \u00b7 continue reading",
     "description": "A simple invitation to continue a saved chapter.",
+    "collection": "cut-paper",
+    "lighting": "Daylight",
     "width": 1536,
     "height": 1024,
     "original": "originals/10-keep-your-place.png",
     "preview": "previews/10-keep-your-place.jpg",
     "sizeLabel": "2.0 MB",
-    "alt": "Keep your place \u2014 a layered ivory, green and gold cut-paper illustration."
+    "alt": "One open blank ivory paper book, a deep green bookmark ribbon resting between its pages, and one small gold eight-point star paper medallion at the ribbon end."
   },
   {
     "id": "11",
@@ -146,12 +454,14 @@
     "category": "Reading",
     "use": "Reflections \u00b7 contemplation",
     "description": "A pause between reading and reflection, without depicting scripture.",
+    "collection": "cut-paper",
+    "lighting": "Daylight",
     "width": 1536,
     "height": 1024,
     "original": "originals/11-room-to-reflect.png",
     "preview": "previews/11-room-to-reflect.jpg",
     "sizeLabel": "2.1 MB",
-    "alt": "Room to reflect \u2014 a layered ivory, green and gold cut-paper illustration."
+    "alt": "One shallow circular ivory paper pool with three concentric cut-paper ripple rings and a single olive branch leaning over it."
   },
   {
     "id": "12",
@@ -160,12 +470,14 @@
     "category": "Reading",
     "use": "Certificates \u00b7 learning milestones",
     "description": "An illustration for learning milestones; it is not an actual certificate.",
+    "collection": "cut-paper",
+    "lighting": "Daylight",
     "width": 1536,
     "height": 1024,
     "original": "originals/12-a-milestone-worth-keeping.png",
     "preview": "previews/12-a-milestone-worth-keeping.jpg",
     "sizeLabel": "2.3 MB",
-    "alt": "A milestone worth keeping \u2014 a layered ivory, green and gold cut-paper illustration."
+    "alt": "One completely blank ivory paper certificate sheet with a narrow clean green zellige border, a plain muted gold ribbon resting beside it."
   },
   {
     "id": "13",
@@ -174,12 +486,14 @@
     "category": "Everyday apps",
     "use": "A Room to Pray \u00b7 travel",
     "description": "A reusable travel-and-prayer scene alongside the original app logo.",
+    "collection": "cut-paper",
+    "lighting": "Daylight",
     "width": 1536,
     "height": 1024,
     "original": "originals/13-a-place-to-pray-wherever-you-are.png",
     "preview": "previews/13-a-place-to-pray-wherever-you-are.jpg",
     "sizeLabel": "2.3 MB",
-    "alt": "A place to pray, wherever you are \u2014 a layered ivory, green and gold cut-paper illustration."
+    "alt": "A folded deep green prayer mat and a small ivory travel bag beside it, both layered paper."
   },
   {
     "id": "14",
@@ -188,12 +502,14 @@
     "category": "Everyday apps",
     "use": "First Adhan \u00b7 family",
     "description": "For early family life and welcoming a child, without portraying people.",
+    "collection": "cut-paper",
+    "lighting": "Daylight",
     "width": 1536,
     "height": 1024,
     "original": "originals/14-welcoming-a-new-beginning.png",
     "preview": "previews/14-welcoming-a-new-beginning.jpg",
     "sizeLabel": "1.9 MB",
-    "alt": "Welcoming a new beginning \u2014 a layered ivory, green and gold cut-paper illustration."
+    "alt": "One simple ivory paper cradle holding a neatly folded dark green blanket; a single muted gold zellige star decorates the cradle side."
   },
   {
     "id": "15",
@@ -202,12 +518,14 @@
     "category": "Everyday apps",
     "use": "Life Is Temporary \u00b7 care",
     "description": "A gentle image of support, remembrance, and practical care.",
+    "collection": "cut-paper",
+    "lighting": "Daylight",
     "width": 1536,
     "height": 1024,
     "original": "originals/15-care-through-difficult-days.png",
     "preview": "previews/15-care-through-difficult-days.jpg",
     "sizeLabel": "2.1 MB",
-    "alt": "Care through difficult days \u2014 a layered ivory, green and gold cut-paper illustration."
+    "alt": "One simple ivory paper bench beneath a small olive branch canopy, with a folded gold blanket resting on one end."
   },
   {
     "id": "16",
@@ -216,12 +534,14 @@
     "category": "Everyday apps",
     "use": "Useful tools \u00b7 generosity",
     "description": "For generosity, shared provision, and practical community support.",
+    "collection": "cut-paper",
+    "lighting": "Daylight",
     "width": 1536,
     "height": 1024,
     "original": "originals/16-making-room-to-give.png",
     "preview": "previews/16-making-room-to-give.jpg",
     "sizeLabel": "2.1 MB",
-    "alt": "Making room to give \u2014 a layered ivory, green and gold cut-paper illustration."
+    "alt": "A single shallow ivory paper basket holding stylised wheat, dates and one folded green cloth, with one gold zellige cutout detail around its side."
   },
   {
     "id": "17",
@@ -230,12 +550,14 @@
     "category": "Community",
     "use": "Classes \u00b7 masjid partnerships",
     "description": "For cohorts and shared learning, with an open, welcoming composition.",
+    "collection": "cut-paper",
+    "lighting": "Daylight",
     "width": 1536,
     "height": 1024,
     "original": "originals/17-a-circle-of-learning.png",
     "preview": "previews/17-a-circle-of-learning.jpg",
     "sizeLabel": "2.0 MB",
-    "alt": "A circle of learning \u2014 a layered ivory, green and gold cut-paper illustration."
+    "alt": "Four low paper stools arranged in a clear open circle around one low ivory table and a blank open book, green and gold accents, one small zellige detail on the table."
   },
   {
     "id": "18",
@@ -244,12 +566,14 @@
     "category": "Community",
     "use": "Podcast \u00b7 conversations",
     "description": "A distinct podcast image for thoughtful conversations.",
+    "collection": "cut-paper",
+    "lighting": "Daylight",
     "width": 1536,
     "height": 1024,
     "original": "originals/18-a-conversation-worth-hearing.png",
     "preview": "previews/18-a-conversation-worth-hearing.jpg",
     "sizeLabel": "2.0 MB",
-    "alt": "A conversation worth hearing \u2014 a layered ivory, green and gold cut-paper illustration."
+    "alt": "Two simple vintage-style paper microphones facing gently toward one another across a small ivory round table, green stems and gold grille strips."
   },
   {
     "id": "19",
@@ -258,12 +582,14 @@
     "category": "Community",
     "use": "Podcast guests \u00b7 hospitality",
     "description": "For guest invitations, hospitality, and community stories.",
+    "collection": "cut-paper",
+    "lighting": "Daylight",
     "width": 1536,
     "height": 1024,
     "original": "originals/19-the-welcome-is-already-here.png",
     "preview": "previews/19-the-welcome-is-already-here.jpg",
     "sizeLabel": "2.0 MB",
-    "alt": "The welcome is already here \u2014 a layered ivory, green and gold cut-paper illustration."
+    "alt": "One small low ivory paper tea tray holding an understated dark green teapot and two ivory cups, with one gold zellige star cutout in the tray's rim."
   },
   {
     "id": "20",
@@ -272,12 +598,14 @@
     "category": "Community",
     "use": "Contact \u00b7 ask a teacher",
     "description": "A clear, friendly image for contact and questions.",
+    "collection": "cut-paper",
+    "lighting": "Daylight",
     "width": 1536,
     "height": 1024,
     "original": "originals/20-there-is-room-for-your-question.png",
     "preview": "previews/20-there-is-room-for-your-question.jpg",
     "sizeLabel": "1.8 MB",
-    "alt": "There is room for your question \u2014 a layered ivory, green and gold cut-paper illustration."
+    "alt": "One open ivory paper envelope with a blank sheet rising slightly from it, beside a single dark green fountain pen."
   },
   {
     "id": "21",
@@ -286,12 +614,14 @@
     "category": "Seasonal",
     "use": "Ramadan \u00b7 evening reflection",
     "description": "For Ramadan and evening reflection posts.",
+    "collection": "cut-paper",
+    "lighting": "Daylight",
     "width": 1536,
     "height": 1024,
     "original": "originals/21-an-evening-for-reflection.png",
     "preview": "previews/21-an-evening-for-reflection.jpg",
     "sizeLabel": "1.9 MB",
-    "alt": "An evening for reflection \u2014 a layered ivory, green and gold cut-paper illustration."
+    "alt": "A single layered paper lantern with ivory and green panels and one crisp eight-point zellige cutout panel, a small warm gold paper interior instead of realistic light."
   },
   {
     "id": "22",
@@ -300,12 +630,14 @@
     "category": "Seasonal",
     "use": "Iftar \u00b7 gratitude",
     "description": "For iftar, gratitude, and the beauty of simple moments.",
+    "collection": "cut-paper",
+    "lighting": "Daylight",
     "width": 1536,
     "height": 1024,
     "original": "originals/22-a-simple-moment-of-gratitude.png",
     "preview": "previews/22-a-simple-moment-of-gratitude.jpg",
     "sizeLabel": "2.0 MB",
-    "alt": "A simple moment of gratitude \u2014 a layered ivory, green and gold cut-paper illustration."
+    "alt": "One small ivory paper dish holding three dark gold paper dates beside one clear-looking ivory layered paper cup represented graphically, a single green zellige strip under the plate."
   },
   {
     "id": "23",
@@ -314,12 +646,14 @@
     "category": "Seasonal",
     "use": "Eid \u00b7 greetings",
     "description": "A festive illustration ready for Eid greetings and community invitations.",
+    "collection": "cut-paper",
+    "lighting": "Daylight",
     "width": 1536,
     "height": 1024,
     "original": "originals/23-a-joyful-welcome.png",
     "preview": "previews/23-a-joyful-welcome.jpg",
     "sizeLabel": "2.1 MB",
-    "alt": "A joyful welcome \u2014 a layered ivory, green and gold cut-paper illustration."
+    "alt": "One ivory pointed doorway with two open muted gold paper doors and a small dark green olive garland above, one clean zellige star cutout at the arch apex."
   },
   {
     "id": "24",
@@ -328,11 +662,13 @@
     "category": "Seasonal",
     "use": "Heritage \u00b7 care and patience",
     "description": "For stories about patience, preservation, and caring for what we inherit.",
+    "collection": "cut-paper",
+    "lighting": "Daylight",
     "width": 1536,
     "height": 1024,
     "original": "originals/24-what-we-mend-we-pass-on.png",
     "preview": "previews/24-what-we-mend-we-pass-on.jpg",
     "sizeLabel": "2.0 MB",
-    "alt": "What we mend, we pass on \u2014 a layered ivory, green and gold cut-paper illustration."
+    "alt": "One folded ivory and dark green woven-paper textile with a short loose gold paper thread gently stitching an edge, one simple star-shaped zellige motif woven into a corner."
   }
 ]
