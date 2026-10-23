@@ -12,6 +12,13 @@ OUT = ROOT / "_site"
 BASE = "/inheriting-islam-preview/"
 ORIGIN = "https://a7mad7amdoun.github.io"
 files = json.loads((ROOT / ".review-files.json").read_text())
+# The standalone artwork gallery is maintained separately from website exports.
+# Including it here keeps future website refreshes from dropping its public URL.
+gallery = ROOT / "artwork-library"
+if gallery.exists():
+    files = sorted(set(files) | {
+        p.relative_to(ROOT).as_posix() for p in gallery.rglob("*") if p.is_file()
+    })
 if OUT.exists():
     shutil.rmtree(OUT)
 OUT.mkdir()

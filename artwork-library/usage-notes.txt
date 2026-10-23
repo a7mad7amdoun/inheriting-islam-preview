@@ -1,0 +1,22 @@
+INHERITING ISLAM — ARTWORK COLLECTION 01
+Prepared for Hamza, October 2026.
+
+24 AI-generated proposals exploring the supplied zellige cut-paper direction.
+These are review concepts, not a claim of Hamza's approval. Existing website assets have not been replaced.
+
+FILES
+The originals folder contains the native PNG outputs. No artificial resolution increase is applied.
+The gallery lists each file's actual dimensions. JPEG previews are for browsing; use the original PNG for production.
+catalog.json maps artwork numbers to titles, suggested uses, and filenames.
+generation-prompts.txt records the style brief and scene prompts. Generated with the built-in image-generation tool.
+
+USE
+Designed as text-free illustrations for website sections and social posts. Add approved typography and captions separately.
+Keep the main subject complete when cropping. Check the crop for each social platform rather than stretching the image.
+These artworks do not replace the original brand logo, app symbols, portrait, book covers, or issued certificates.
+The certificate illustration is a blank conceptual sheet, not a real credential. Unlettered books do not reproduce Quran text.
+Review geometric detail and brand fit at full size before final use. The gallery does not certify religious meaning or attach religious claims to these illustrations.
+
+SHORTLIST
+Bookmarks are stored locally in the viewer's browser when storage is available. No account or backend is used.
+Download the shortlist to share selections. Individual links open the corresponding artwork.
