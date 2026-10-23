@@ -25,7 +25,7 @@
    var rect = el.getBoundingClientRect();
    if (rect.bottom < -100 || rect.top > height + 100) return 0;
    var progress = Math.max(-1, Math.min(1, (height / 2 - rect.top - rect.height / 2) / height));
-   return progress * (i < art.length ? (i % 2 ? -5 : 6) : 12);
+   return progress * (i < art.length ? (i % 2 ? -14 : 18) : 16);
   });
   art.forEach(function (img, i) { img.style.setProperty('--art-drift', offsets[i].toFixed(2) + 'px'); });
   rooms.forEach(function (room, i) { room.style.setProperty('--architecture-drift', offsets[art.length + i].toFixed(2) + 'px'); });
@@ -86,7 +86,7 @@
   var distance = Math.max(1, mobile ? main.scrollHeight - main.clientHeight : root.scrollHeight - window.innerHeight);
   var progress = Math.max(0, Math.min(1, (mobile ? main.scrollTop : window.scrollY) / distance));
   tx = .94 - progress * .88; ty = .18 + progress * .64;
-  targetZoom = 1 + progress * (window.innerWidth <= 760 ? .05 : .08);
+  targetZoom = 1 + progress * (window.innerWidth <= 760 ? .07 : .10);
   start();
  }
  document.addEventListener('scroll', scroll, {capture:true, passive:true});

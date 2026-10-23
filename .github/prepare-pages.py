@@ -64,9 +64,9 @@ class Links(HTMLParser):
             if not value:
                 continue
             candidates = []
-            if key in {"href", "src", "data-logo-dark", "data-logo-light", "data-language-link"}:
+            if key in {"href", "src", "data-logo-dark", "data-logo-light", "data-art-dark", "data-art-light", "data-language-link"}:
                 candidates.append(value)
-            elif key == "srcset":
+            elif key == "srcset" or key in {"data-art-light-srcset", "data-art-dark-srcset"}:
                 candidates.extend(x.strip().split()[0] for x in value.split(","))
             for url in candidates:
                 if not url.startswith("/") or url.startswith("//"):

@@ -13,7 +13,17 @@
     "original": "originals/25-an-inheritance-illuminated.png",
     "preview": "previews/25-an-inheritance-illuminated.jpg",
     "sizeLabel": "2.2 MB",
-    "alt": "Three hollow interlocking diamond loops, the two outer loops built from visibly stacked ivory and deep green paper layers, the central loop a thin brushed antique-brass edge over warm sand paper."
+    "alt": "Three hollow interlocking diamond loops, the two outer loops built from visibly stacked ivory and deep green paper layers, the central loop a thin brushed antique-brass edge over warm sand paper.",
+    "pairs": {
+      "light": {
+        "original": "originals/25-an-inheritance-illuminated.png",
+        "preview": "previews/25-an-inheritance-illuminated.jpg"
+      },
+      "dark": {
+        "original": "theme-pairs/25-an-inheritance-illuminated-dark.png",
+        "preview": "theme-previews/25-an-inheritance-illuminated-dark.jpg"
+      }
+    }
   },
   {
     "id": "26",
@@ -29,7 +39,17 @@
     "original": "originals/26-beyond-the-threshold.png",
     "preview": "previews/26-beyond-the-threshold.jpg",
     "sizeLabel": "2.5 MB",
-    "alt": "One stepped pointed arch cut from thick ivory paper, a single inset dark green zellige panel swung open, thin antique-brass inner edging."
+    "alt": "One stepped pointed arch cut from thick ivory paper, a single inset dark green zellige panel swung open, thin antique-brass inner edging.",
+    "pairs": {
+      "light": {
+        "original": "theme-pairs/26-beyond-the-threshold-light.png",
+        "preview": "theme-previews/26-beyond-the-threshold-light.jpg"
+      },
+      "dark": {
+        "original": "originals/26-beyond-the-threshold.png",
+        "preview": "previews/26-beyond-the-threshold.jpg"
+      }
+    }
   },
   {
     "id": "27",
@@ -45,7 +65,17 @@
     "original": "originals/27-across-the-same-bridge.png",
     "preview": "previews/27-across-the-same-bridge.jpg",
     "sizeLabel": "2.3 MB",
-    "alt": "A low simple arched bridge built from layered ivory paper with one tiny green zellige detail, spanning a narrow ribbon of deep-green paper water, between two warm sandstone-paper banks."
+    "alt": "A low simple arched bridge built from layered ivory paper with one tiny green zellige detail, spanning a narrow ribbon of deep-green paper water, between two warm sandstone-paper banks.",
+    "pairs": {
+      "light": {
+        "original": "originals/27-across-the-same-bridge.png",
+        "preview": "previews/27-across-the-same-bridge.jpg"
+      },
+      "dark": {
+        "original": "theme-pairs/27-across-the-same-bridge-dark.png",
+        "preview": "theme-previews/27-across-the-same-bridge-dark.jpg"
+      }
+    }
   },
   {
     "id": "28",
@@ -61,7 +91,17 @@
     "original": "originals/28-knowledge-carefully-kept.png",
     "preview": "previews/28-knowledge-carefully-kept.jpg",
     "sizeLabel": "2.2 MB",
-    "alt": "Three unlettered paper-bound books in an open ivory slipcase, dark green cloth-textured paper spines with hairline antique brass detailing."
+    "alt": "Three unlettered paper-bound books in an open ivory slipcase, dark green cloth-textured paper spines with hairline antique brass detailing.",
+    "pairs": {
+      "light": {
+        "original": "originals/28-knowledge-carefully-kept.png",
+        "preview": "previews/28-knowledge-carefully-kept.jpg"
+      },
+      "dark": {
+        "original": "theme-pairs/28-knowledge-carefully-kept-dark.png",
+        "preview": "theme-previews/28-knowledge-carefully-kept-dark.jpg"
+      }
+    }
   },
   {
     "id": "29",
@@ -77,7 +117,17 @@
     "original": "originals/29-a-little-light-for-learning.png",
     "preview": "previews/29-a-little-light-for-learning.jpg",
     "sizeLabel": "2.3 MB",
-    "alt": "One open blank ivory book on a low folded-paper reading stand, beside a single small sculptural brass-shaded desk lamp."
+    "alt": "One open blank ivory book on a low folded-paper reading stand, beside a single small sculptural brass-shaded desk lamp.",
+    "pairs": {
+      "light": {
+        "original": "theme-pairs/29-a-little-light-for-learning-light.png",
+        "preview": "theme-previews/29-a-little-light-for-learning-light.jpg"
+      },
+      "dark": {
+        "original": "originals/29-a-little-light-for-learning.png",
+        "preview": "previews/29-a-little-light-for-learning.jpg"
+      }
+    }
   },
   {
     "id": "30",
@@ -93,7 +143,17 @@
     "original": "originals/30-steady-progress.png",
     "preview": "previews/30-steady-progress.jpg",
     "sizeLabel": "2.5 MB",
-    "alt": "Five thick blank ivory pages arranged as a very shallow ascending fan, leading to one closed dark green paper book; thin warm brass page edges, one small gold zellige bookmark at the base."
+    "alt": "Five thick blank ivory pages arranged as a very shallow ascending fan, leading to one closed dark green paper book; thin warm brass page edges, one small gold zellige bookmark at the base.",
+    "pairs": {
+      "light": {
+        "original": "originals/30-steady-progress.png",
+        "preview": "previews/30-steady-progress.jpg"
+      },
+      "dark": {
+        "original": "theme-pairs/30-steady-progress-dark.png",
+        "preview": "theme-previews/30-steady-progress-dark.jpg"
+      }
+    }
   },
   {
     "id": "31",
@@ -109,7 +169,17 @@
     "original": "originals/31-a-quiet-reading-alcove.png",
     "preview": "previews/31-a-quiet-reading-alcove.jpg",
     "sizeLabel": "2.2 MB",
-    "alt": "A small ivory layered-paper pointed reading alcove holding one green paper armchair and a plain closed book on a stone-colored paper side ledge."
+    "alt": "A small ivory layered-paper pointed reading alcove holding one green paper armchair and a plain closed book on a stone-colored paper side ledge.",
+    "pairs": {
+      "light": {
+        "original": "theme-pairs/31-a-quiet-reading-alcove-light.png",
+        "preview": "theme-previews/31-a-quiet-reading-alcove-light.jpg"
+      },
+      "dark": {
+        "original": "originals/31-a-quiet-reading-alcove.png",
+        "preview": "previews/31-a-quiet-reading-alcove.jpg"
+      }
+    }
   },
   {
     "id": "32",
@@ -125,7 +195,17 @@
     "original": "originals/32-the-place-you-left.png",
     "preview": "previews/32-the-place-you-left.jpg",
     "sizeLabel": "2.3 MB",
-    "alt": "One blank open ivory paper book partly nested in a shallow travertine-colored paper tray, dark-green bookmark lying across one page with a tiny antique-brass eight-point star at its end."
+    "alt": "One blank open ivory paper book partly nested in a shallow travertine-colored paper tray, dark-green bookmark lying across one page with a tiny antique-brass eight-point star at its end.",
+    "pairs": {
+      "light": {
+        "original": "originals/32-the-place-you-left.png",
+        "preview": "previews/32-the-place-you-left.jpg"
+      },
+      "dark": {
+        "original": "theme-pairs/32-the-place-you-left-dark.png",
+        "preview": "theme-previews/32-the-place-you-left-dark.jpg"
+      }
+    }
   },
   {
     "id": "33",
@@ -141,7 +221,17 @@
     "original": "originals/33-stillness-at-first-light.png",
     "preview": "previews/33-stillness-at-first-light.jpg",
     "sizeLabel": "2.2 MB",
-    "alt": "One shallow round ivory basin built from layered paper with broad pale-gold paper ripples and a single dark green olive sprig above it."
+    "alt": "One shallow round ivory basin built from layered paper with broad pale-gold paper ripples and a single dark green olive sprig above it.",
+    "pairs": {
+      "light": {
+        "original": "originals/33-stillness-at-first-light.png",
+        "preview": "previews/33-stillness-at-first-light.jpg"
+      },
+      "dark": {
+        "original": "theme-pairs/33-stillness-at-first-light-dark.png",
+        "preview": "theme-previews/33-stillness-at-first-light-dark.jpg"
+      }
+    }
   },
   {
     "id": "34",
@@ -157,7 +247,17 @@
     "original": "originals/34-carry-a-place-of-peace.png",
     "preview": "previews/34-carry-a-place-of-peace.jpg",
     "sizeLabel": "2.5 MB",
-    "alt": "An elegant rolled deep green paper prayer mat and a modest ivory paper travel pouch on a low pale stone-colored plane."
+    "alt": "An elegant rolled deep green paper prayer mat and a modest ivory paper travel pouch on a low pale stone-colored plane.",
+    "pairs": {
+      "light": {
+        "original": "originals/34-carry-a-place-of-peace.png",
+        "preview": "previews/34-carry-a-place-of-peace.jpg"
+      },
+      "dark": {
+        "original": "theme-pairs/34-carry-a-place-of-peace-dark.png",
+        "preview": "theme-previews/34-carry-a-place-of-peace-dark.jpg"
+      }
+    }
   },
   {
     "id": "35",
@@ -173,7 +273,17 @@
     "original": "originals/35-a-beginning-held-with-care.png",
     "preview": "previews/35-a-beginning-held-with-care.jpg",
     "sizeLabel": "2.0 MB",
-    "alt": "A minimal ivory layered-paper cradle in a quiet oval silhouette, neatly folded deep green paper blanket inside, one small antique-gold eight-point star on its side and pale stone-toned feet."
+    "alt": "A minimal ivory layered-paper cradle in a quiet oval silhouette, neatly folded deep green paper blanket inside, one small antique-gold eight-point star on its side and pale stone-toned feet.",
+    "pairs": {
+      "light": {
+        "original": "originals/35-a-beginning-held-with-care.png",
+        "preview": "previews/35-a-beginning-held-with-care.jpg"
+      },
+      "dark": {
+        "original": "theme-pairs/35-a-beginning-held-with-care-dark.png",
+        "preview": "theme-previews/35-a-beginning-held-with-care-dark.jpg"
+      }
+    }
   },
   {
     "id": "36",
@@ -189,7 +299,17 @@
     "original": "originals/36-a-place-for-gentle-support.png",
     "preview": "previews/36-a-place-for-gentle-support.jpg",
     "sizeLabel": "2.3 MB",
-    "alt": "One small ivory stone-textured paper bench with a folded muted-gold paper cloth, one olive branch behind it, and a small simple brass lantern casting warm side light."
+    "alt": "One small ivory stone-textured paper bench with a folded muted-gold paper cloth, one olive branch behind it, and a small simple brass lantern casting warm side light.",
+    "pairs": {
+      "light": {
+        "original": "theme-pairs/36-a-place-for-gentle-support-light.png",
+        "preview": "theme-previews/36-a-place-for-gentle-support-light.jpg"
+      },
+      "dark": {
+        "original": "originals/36-a-place-for-gentle-support.png",
+        "preview": "previews/36-a-place-for-gentle-support.jpg"
+      }
+    }
   },
   {
     "id": "37",
@@ -205,7 +325,17 @@
     "original": "originals/37-learning-around-one-table.png",
     "preview": "previews/37-learning-around-one-table.jpg",
     "sizeLabel": "2.6 MB",
-    "alt": "One round low ivory paper table with two blank open books placed respectfully on top and three green paper cushions spaced around it; a single precise gold zellige band on table edge."
+    "alt": "One round low ivory paper table with two blank open books placed respectfully on top and three green paper cushions spaced around it; a single precise gold zellige band on table edge.",
+    "pairs": {
+      "light": {
+        "original": "originals/37-learning-around-one-table.png",
+        "preview": "previews/37-learning-around-one-table.jpg"
+      },
+      "dark": {
+        "original": "theme-pairs/37-learning-around-one-table-dark.png",
+        "preview": "theme-previews/37-learning-around-one-table-dark.jpg"
+      }
+    }
   },
   {
     "id": "38",
@@ -221,7 +351,17 @@
     "original": "originals/38-voices-carried-forward.png",
     "preview": "previews/38-voices-carried-forward.jpg",
     "sizeLabel": "2.2 MB",
-    "alt": "One classic microphone made of deep-green layered paper with fine brushed-brass grille, standing before three broad concentric arch-shaped paper layers suggesting sound and listening."
+    "alt": "One classic microphone made of deep-green layered paper with fine brushed-brass grille, standing before three broad concentric arch-shaped paper layers suggesting sound and listening.",
+    "pairs": {
+      "light": {
+        "original": "theme-pairs/38-voices-carried-forward-light.png",
+        "preview": "theme-previews/38-voices-carried-forward-light.jpg"
+      },
+      "dark": {
+        "original": "originals/38-voices-carried-forward.png",
+        "preview": "previews/38-voices-carried-forward.jpg"
+      }
+    }
   },
   {
     "id": "39",
@@ -237,7 +377,17 @@
     "original": "originals/39-a-thoughtful-reply.png",
     "preview": "previews/39-a-thoughtful-reply.jpg",
     "sizeLabel": "2.2 MB",
-    "alt": "One open ivory cotton-paper envelope and blank card on a small pale stone-colored paper ledge, a single dark green pen with antique-brass nib, a tiny zellige star debossed into the envelope corner."
+    "alt": "One open ivory cotton-paper envelope and blank card on a small pale stone-colored paper ledge, a single dark green pen with antique-brass nib, a tiny zellige star debossed into the envelope corner.",
+    "pairs": {
+      "light": {
+        "original": "originals/39-a-thoughtful-reply.png",
+        "preview": "previews/39-a-thoughtful-reply.jpg"
+      },
+      "dark": {
+        "original": "theme-pairs/39-a-thoughtful-reply-dark.png",
+        "preview": "theme-previews/39-a-thoughtful-reply-dark.jpg"
+      }
+    }
   },
   {
     "id": "40",
@@ -253,7 +403,17 @@
     "original": "originals/40-an-evening-of-return.png",
     "preview": "previews/40-an-evening-of-return.jpg",
     "sizeLabel": "2.0 MB",
-    "alt": "One elegant hexagonal lantern predominantly made of stacked ivory paper with a single dark green geometric zellige panel and fine antique-brass frame; a very soft warm gold glow inside, no flame."
+    "alt": "One elegant hexagonal lantern predominantly made of stacked ivory paper with a single dark green geometric zellige panel and fine antique-brass frame; a very soft warm gold glow inside, no flame.",
+    "pairs": {
+      "light": {
+        "original": "theme-pairs/40-an-evening-of-return-light.png",
+        "preview": "theme-previews/40-an-evening-of-return-light.jpg"
+      },
+      "dark": {
+        "original": "originals/40-an-evening-of-return.png",
+        "preview": "previews/40-an-evening-of-return.jpg"
+      }
+    }
   },
   {
     "id": "41",
@@ -269,7 +429,17 @@
     "original": "originals/41-enough-to-share.png",
     "preview": "previews/41-enough-to-share.jpg",
     "sizeLabel": "2.2 MB",
-    "alt": "One pale stone-colored shallow paper bowl holding three faceted gold-brown paper dates and two stylised wheat stems, resting on a folded ivory paper cloth with one deep green zellige edge."
+    "alt": "One pale stone-colored shallow paper bowl holding three faceted gold-brown paper dates and two stylised wheat stems, resting on a folded ivory paper cloth with one deep green zellige edge.",
+    "pairs": {
+      "light": {
+        "original": "originals/41-enough-to-share.png",
+        "preview": "previews/41-enough-to-share.jpg"
+      },
+      "dark": {
+        "original": "theme-pairs/41-enough-to-share-dark.png",
+        "preview": "theme-previews/41-enough-to-share-dark.jpg"
+      }
+    }
   },
   {
     "id": "42",
@@ -285,7 +455,17 @@
     "original": "originals/42-the-care-we-pass-on.png",
     "preview": "previews/42-the-care-we-pass-on.jpg",
     "sizeLabel": "2.4 MB",
-    "alt": "One folded ivory and deep green paper textile with a single eight-point zellige motif, an elegant muted-gold thread joining two layered paper edges, resting on a smooth warm stone-colored paper plinth."
+    "alt": "One folded ivory and deep green paper textile with a single eight-point zellige motif, an elegant muted-gold thread joining two layered paper edges, resting on a smooth warm stone-colored paper plinth.",
+    "pairs": {
+      "light": {
+        "original": "originals/42-the-care-we-pass-on.png",
+        "preview": "previews/42-the-care-we-pass-on.jpg"
+      },
+      "dark": {
+        "original": "theme-pairs/42-the-care-we-pass-on-dark.png",
+        "preview": "theme-previews/42-the-care-we-pass-on-dark.jpg"
+      }
+    }
   },
   {
     "id": "01",
@@ -301,7 +481,17 @@
     "original": "originals/01-the-inheritance-we-share.png",
     "preview": "previews/01-the-inheritance-we-share.jpg",
     "sizeLabel": "2.0 MB",
-    "alt": "Three hollow angular diamond-shaped frames physically interlocking across, outer two dark green and middle muted gold, made of layered cut paper; a single small precision-cut ivory zellige strip forms their low base."
+    "alt": "Three hollow angular diamond-shaped frames physically interlocking across, outer two dark green and middle muted gold, made of layered cut paper; a single small precision-cut ivory zellige strip forms their low base.",
+    "pairs": {
+      "light": {
+        "original": "originals/01-the-inheritance-we-share.png",
+        "preview": "previews/01-the-inheritance-we-share.jpg"
+      },
+      "dark": {
+        "original": "theme-pairs/01-the-inheritance-we-share-dark.png",
+        "preview": "theme-previews/01-the-inheritance-we-share-dark.jpg"
+      }
+    }
   },
   {
     "id": "02",
@@ -317,7 +507,17 @@
     "original": "originals/02-a-door-into-learning.png",
     "preview": "previews/02-a-door-into-learning.jpg",
     "sizeLabel": "2.0 MB",
-    "alt": "A single open pointed-arch doorway made from layered ivory and gold paper with one dark green zellige lattice door, opening onto two sand-colored paper hills and a muted gold sun."
+    "alt": "A single open pointed-arch doorway made from layered ivory and gold paper with one dark green zellige lattice door, opening onto two sand-colored paper hills and a muted gold sun.",
+    "pairs": {
+      "light": {
+        "original": "originals/02-a-door-into-learning.png",
+        "preview": "previews/02-a-door-into-learning.jpg"
+      },
+      "dark": {
+        "original": "theme-pairs/02-a-door-into-learning-dark.png",
+        "preview": "theme-previews/02-a-door-into-learning-dark.jpg"
+      }
+    }
   },
   {
     "id": "03",
@@ -333,7 +533,17 @@
     "original": "originals/03-room-for-everyone.png",
     "preview": "previews/03-room-for-everyone.jpg",
     "sizeLabel": "2.0 MB",
-    "alt": "Three simple ivory and green paper seats arranged openly around a low round table, viewed in a gentle three-quarter perspective."
+    "alt": "Three simple ivory and green paper seats arranged openly around a low round table, viewed in a gentle three-quarter perspective.",
+    "pairs": {
+      "light": {
+        "original": "originals/03-room-for-everyone.png",
+        "preview": "previews/03-room-for-everyone.jpg"
+      },
+      "dark": {
+        "original": "theme-pairs/03-room-for-everyone-dark.png",
+        "preview": "theme-previews/03-room-for-everyone-dark.jpg"
+      }
+    }
   },
   {
     "id": "04",
@@ -349,7 +559,17 @@
     "original": "originals/04-roots-that-keep-growing.png",
     "preview": "previews/04-roots-that-keep-growing.jpg",
     "sizeLabel": "2.2 MB",
-    "alt": "One sculptural olive tree made of layered paper with dark green cut-paper leaves and a sand trunk, rooted in a low ivory planter with a single thin zellige cutout band."
+    "alt": "One sculptural olive tree made of layered paper with dark green cut-paper leaves and a sand trunk, rooted in a low ivory planter with a single thin zellige cutout band.",
+    "pairs": {
+      "light": {
+        "original": "originals/04-roots-that-keep-growing.png",
+        "preview": "previews/04-roots-that-keep-growing.jpg"
+      },
+      "dark": {
+        "original": "theme-pairs/04-roots-that-keep-growing-dark.png",
+        "preview": "theme-previews/04-roots-that-keep-growing-dark.jpg"
+      }
+    }
   },
   {
     "id": "05",
@@ -365,7 +585,17 @@
     "original": "originals/05-begin-with-one-page.png",
     "preview": "previews/05-begin-with-one-page.jpg",
     "sizeLabel": "2.0 MB",
-    "alt": "One small low ivory paper desk bearing a blank sheet, a single green pencil and a plain closed gold-edged book."
+    "alt": "One small low ivory paper desk bearing a blank sheet, a single green pencil and a plain closed gold-edged book.",
+    "pairs": {
+      "light": {
+        "original": "originals/05-begin-with-one-page.png",
+        "preview": "previews/05-begin-with-one-page.jpg"
+      },
+      "dark": {
+        "original": "theme-pairs/05-begin-with-one-page-dark.png",
+        "preview": "theme-previews/05-begin-with-one-page-dark.jpg"
+      }
+    }
   },
   {
     "id": "06",
@@ -381,7 +611,17 @@
     "original": "originals/06-a-quiet-place-to-read.png",
     "preview": "previews/06-a-quiet-place-to-read.jpg",
     "sizeLabel": "2.0 MB",
-    "alt": "An open book with blank ivory layered pages and dark green cover on a simple folded gold paper X-shaped reading stand."
+    "alt": "An open book with blank ivory layered pages and dark green cover on a simple folded gold paper X-shaped reading stand.",
+    "pairs": {
+      "light": {
+        "original": "originals/06-a-quiet-place-to-read.png",
+        "preview": "previews/06-a-quiet-place-to-read.jpg"
+      },
+      "dark": {
+        "original": "theme-pairs/06-a-quiet-place-to-read-dark.png",
+        "preview": "theme-previews/06-a-quiet-place-to-read-dark.jpg"
+      }
+    }
   },
   {
     "id": "07",
@@ -397,7 +637,17 @@
     "original": "originals/07-learning-together.png",
     "preview": "previews/07-learning-together.jpg",
     "sizeLabel": "2.0 MB",
-    "alt": "Two modest paper chairs, one dark green and one ivory, angled toward a single low reading table holding an open blank book."
+    "alt": "Two modest paper chairs, one dark green and one ivory, angled toward a single low reading table holding an open blank book.",
+    "pairs": {
+      "light": {
+        "original": "originals/07-learning-together.png",
+        "preview": "previews/07-learning-together.jpg"
+      },
+      "dark": {
+        "original": "theme-pairs/07-learning-together-dark.png",
+        "preview": "theme-previews/07-learning-together-dark.jpg"
+      }
+    }
   },
   {
     "id": "08",
@@ -413,7 +663,17 @@
     "original": "originals/08-one-step-then-another.png",
     "preview": "previews/08-one-step-then-another.jpg",
     "sizeLabel": "2.0 MB",
-    "alt": "Five low, broad ascending ivory paper steps with a dark-green ribbon gently following the steps to one small plain gold-edged book."
+    "alt": "Five low, broad ascending ivory paper steps with a dark-green ribbon gently following the steps to one small plain gold-edged book.",
+    "pairs": {
+      "light": {
+        "original": "originals/08-one-step-then-another.png",
+        "preview": "previews/08-one-step-then-another.jpg"
+      },
+      "dark": {
+        "original": "theme-pairs/08-one-step-then-another-dark.png",
+        "preview": "theme-previews/08-one-step-then-another-dark.jpg"
+      }
+    }
   },
   {
     "id": "09",
@@ -429,7 +689,17 @@
     "original": "originals/09-a-collection-to-return-to.png",
     "preview": "previews/09-a-collection-to-return-to.jpg",
     "sizeLabel": "2.0 MB",
-    "alt": "A small elegant ivory cut-paper bookshelf holding six plain green, ivory and gold books of varying heights, with one central star-cut zellige shelf divider."
+    "alt": "A small elegant ivory cut-paper bookshelf holding six plain green, ivory and gold books of varying heights, with one central star-cut zellige shelf divider.",
+    "pairs": {
+      "light": {
+        "original": "originals/09-a-collection-to-return-to.png",
+        "preview": "previews/09-a-collection-to-return-to.jpg"
+      },
+      "dark": {
+        "original": "theme-pairs/09-a-collection-to-return-to-dark.png",
+        "preview": "theme-previews/09-a-collection-to-return-to-dark.jpg"
+      }
+    }
   },
   {
     "id": "10",
@@ -445,7 +715,17 @@
     "original": "originals/10-keep-your-place.png",
     "preview": "previews/10-keep-your-place.jpg",
     "sizeLabel": "2.0 MB",
-    "alt": "One open blank ivory paper book, a deep green bookmark ribbon resting between its pages, and one small gold eight-point star paper medallion at the ribbon end."
+    "alt": "One open blank ivory paper book, a deep green bookmark ribbon resting between its pages, and one small gold eight-point star paper medallion at the ribbon end.",
+    "pairs": {
+      "light": {
+        "original": "originals/10-keep-your-place.png",
+        "preview": "previews/10-keep-your-place.jpg"
+      },
+      "dark": {
+        "original": "theme-pairs/10-keep-your-place-dark.png",
+        "preview": "theme-previews/10-keep-your-place-dark.jpg"
+      }
+    }
   },
   {
     "id": "11",
@@ -461,7 +741,17 @@
     "original": "originals/11-room-to-reflect.png",
     "preview": "previews/11-room-to-reflect.jpg",
     "sizeLabel": "2.1 MB",
-    "alt": "One shallow circular ivory paper pool with three concentric cut-paper ripple rings and a single olive branch leaning over it."
+    "alt": "One shallow circular ivory paper pool with three concentric cut-paper ripple rings and a single olive branch leaning over it.",
+    "pairs": {
+      "light": {
+        "original": "originals/11-room-to-reflect.png",
+        "preview": "previews/11-room-to-reflect.jpg"
+      },
+      "dark": {
+        "original": "theme-pairs/11-room-to-reflect-dark.png",
+        "preview": "theme-previews/11-room-to-reflect-dark.jpg"
+      }
+    }
   },
   {
     "id": "12",
@@ -477,7 +767,17 @@
     "original": "originals/12-a-milestone-worth-keeping.png",
     "preview": "previews/12-a-milestone-worth-keeping.jpg",
     "sizeLabel": "2.3 MB",
-    "alt": "One completely blank ivory paper certificate sheet with a narrow clean green zellige border, a plain muted gold ribbon resting beside it."
+    "alt": "One completely blank ivory paper certificate sheet with a narrow clean green zellige border, a plain muted gold ribbon resting beside it.",
+    "pairs": {
+      "light": {
+        "original": "originals/12-a-milestone-worth-keeping.png",
+        "preview": "previews/12-a-milestone-worth-keeping.jpg"
+      },
+      "dark": {
+        "original": "theme-pairs/12-a-milestone-worth-keeping-dark.png",
+        "preview": "theme-previews/12-a-milestone-worth-keeping-dark.jpg"
+      }
+    }
   },
   {
     "id": "13",
@@ -493,7 +793,17 @@
     "original": "originals/13-a-place-to-pray-wherever-you-are.png",
     "preview": "previews/13-a-place-to-pray-wherever-you-are.jpg",
     "sizeLabel": "2.3 MB",
-    "alt": "A folded deep green prayer mat and a small ivory travel bag beside it, both layered paper."
+    "alt": "A folded deep green prayer mat and a small ivory travel bag beside it, both layered paper.",
+    "pairs": {
+      "light": {
+        "original": "originals/13-a-place-to-pray-wherever-you-are.png",
+        "preview": "previews/13-a-place-to-pray-wherever-you-are.jpg"
+      },
+      "dark": {
+        "original": "theme-pairs/13-a-place-to-pray-wherever-you-are-dark.png",
+        "preview": "theme-previews/13-a-place-to-pray-wherever-you-are-dark.jpg"
+      }
+    }
   },
   {
     "id": "14",
@@ -509,7 +819,17 @@
     "original": "originals/14-welcoming-a-new-beginning.png",
     "preview": "previews/14-welcoming-a-new-beginning.jpg",
     "sizeLabel": "1.9 MB",
-    "alt": "One simple ivory paper cradle holding a neatly folded dark green blanket; a single muted gold zellige star decorates the cradle side."
+    "alt": "One simple ivory paper cradle holding a neatly folded dark green blanket; a single muted gold zellige star decorates the cradle side.",
+    "pairs": {
+      "light": {
+        "original": "originals/14-welcoming-a-new-beginning.png",
+        "preview": "previews/14-welcoming-a-new-beginning.jpg"
+      },
+      "dark": {
+        "original": "theme-pairs/14-welcoming-a-new-beginning-dark.png",
+        "preview": "theme-previews/14-welcoming-a-new-beginning-dark.jpg"
+      }
+    }
   },
   {
     "id": "15",
@@ -525,7 +845,17 @@
     "original": "originals/15-care-through-difficult-days.png",
     "preview": "previews/15-care-through-difficult-days.jpg",
     "sizeLabel": "2.1 MB",
-    "alt": "One simple ivory paper bench beneath a small olive branch canopy, with a folded gold blanket resting on one end."
+    "alt": "One simple ivory paper bench beneath a small olive branch canopy, with a folded gold blanket resting on one end.",
+    "pairs": {
+      "light": {
+        "original": "originals/15-care-through-difficult-days.png",
+        "preview": "previews/15-care-through-difficult-days.jpg"
+      },
+      "dark": {
+        "original": "theme-pairs/15-care-through-difficult-days-dark.png",
+        "preview": "theme-previews/15-care-through-difficult-days-dark.jpg"
+      }
+    }
   },
   {
     "id": "16",
@@ -541,7 +871,17 @@
     "original": "originals/16-making-room-to-give.png",
     "preview": "previews/16-making-room-to-give.jpg",
     "sizeLabel": "2.1 MB",
-    "alt": "A single shallow ivory paper basket holding stylised wheat, dates and one folded green cloth, with one gold zellige cutout detail around its side."
+    "alt": "A single shallow ivory paper basket holding stylised wheat, dates and one folded green cloth, with one gold zellige cutout detail around its side.",
+    "pairs": {
+      "light": {
+        "original": "originals/16-making-room-to-give.png",
+        "preview": "previews/16-making-room-to-give.jpg"
+      },
+      "dark": {
+        "original": "theme-pairs/16-making-room-to-give-dark.png",
+        "preview": "theme-previews/16-making-room-to-give-dark.jpg"
+      }
+    }
   },
   {
     "id": "17",
@@ -557,7 +897,17 @@
     "original": "originals/17-a-circle-of-learning.png",
     "preview": "previews/17-a-circle-of-learning.jpg",
     "sizeLabel": "2.0 MB",
-    "alt": "Four low paper stools arranged in a clear open circle around one low ivory table and a blank open book, green and gold accents, one small zellige detail on the table."
+    "alt": "Four low paper stools arranged in a clear open circle around one low ivory table and a blank open book, green and gold accents, one small zellige detail on the table.",
+    "pairs": {
+      "light": {
+        "original": "originals/17-a-circle-of-learning.png",
+        "preview": "previews/17-a-circle-of-learning.jpg"
+      },
+      "dark": {
+        "original": "theme-pairs/17-a-circle-of-learning-dark.png",
+        "preview": "theme-previews/17-a-circle-of-learning-dark.jpg"
+      }
+    }
   },
   {
     "id": "18",
@@ -573,7 +923,17 @@
     "original": "originals/18-a-conversation-worth-hearing.png",
     "preview": "previews/18-a-conversation-worth-hearing.jpg",
     "sizeLabel": "2.0 MB",
-    "alt": "Two simple vintage-style paper microphones facing gently toward one another across a small ivory round table, green stems and gold grille strips."
+    "alt": "Two simple vintage-style paper microphones facing gently toward one another across a small ivory round table, green stems and gold grille strips.",
+    "pairs": {
+      "light": {
+        "original": "originals/18-a-conversation-worth-hearing.png",
+        "preview": "previews/18-a-conversation-worth-hearing.jpg"
+      },
+      "dark": {
+        "original": "theme-pairs/18-a-conversation-worth-hearing-dark.png",
+        "preview": "theme-previews/18-a-conversation-worth-hearing-dark.jpg"
+      }
+    }
   },
   {
     "id": "19",
@@ -589,7 +949,17 @@
     "original": "originals/19-the-welcome-is-already-here.png",
     "preview": "previews/19-the-welcome-is-already-here.jpg",
     "sizeLabel": "2.0 MB",
-    "alt": "One small low ivory paper tea tray holding an understated dark green teapot and two ivory cups, with one gold zellige star cutout in the tray's rim."
+    "alt": "One small low ivory paper tea tray holding an understated dark green teapot and two ivory cups, with one gold zellige star cutout in the tray's rim.",
+    "pairs": {
+      "light": {
+        "original": "originals/19-the-welcome-is-already-here.png",
+        "preview": "previews/19-the-welcome-is-already-here.jpg"
+      },
+      "dark": {
+        "original": "theme-pairs/19-the-welcome-is-already-here-dark.png",
+        "preview": "theme-previews/19-the-welcome-is-already-here-dark.jpg"
+      }
+    }
   },
   {
     "id": "20",
@@ -605,7 +975,17 @@
     "original": "originals/20-there-is-room-for-your-question.png",
     "preview": "previews/20-there-is-room-for-your-question.jpg",
     "sizeLabel": "1.8 MB",
-    "alt": "One open ivory paper envelope with a blank sheet rising slightly from it, beside a single dark green fountain pen."
+    "alt": "One open ivory paper envelope with a blank sheet rising slightly from it, beside a single dark green fountain pen.",
+    "pairs": {
+      "light": {
+        "original": "originals/20-there-is-room-for-your-question.png",
+        "preview": "previews/20-there-is-room-for-your-question.jpg"
+      },
+      "dark": {
+        "original": "theme-pairs/20-there-is-room-for-your-question-dark.png",
+        "preview": "theme-previews/20-there-is-room-for-your-question-dark.jpg"
+      }
+    }
   },
   {
     "id": "21",
@@ -621,7 +1001,17 @@
     "original": "originals/21-an-evening-for-reflection.png",
     "preview": "previews/21-an-evening-for-reflection.jpg",
     "sizeLabel": "1.9 MB",
-    "alt": "A single layered paper lantern with ivory and green panels and one crisp eight-point zellige cutout panel, a small warm gold paper interior instead of realistic light."
+    "alt": "A single layered paper lantern with ivory and green panels and one crisp eight-point zellige cutout panel, a small warm gold paper interior instead of realistic light.",
+    "pairs": {
+      "light": {
+        "original": "originals/21-an-evening-for-reflection.png",
+        "preview": "previews/21-an-evening-for-reflection.jpg"
+      },
+      "dark": {
+        "original": "theme-pairs/21-an-evening-for-reflection-dark.png",
+        "preview": "theme-previews/21-an-evening-for-reflection-dark.jpg"
+      }
+    }
   },
   {
     "id": "22",
@@ -637,7 +1027,17 @@
     "original": "originals/22-a-simple-moment-of-gratitude.png",
     "preview": "previews/22-a-simple-moment-of-gratitude.jpg",
     "sizeLabel": "2.0 MB",
-    "alt": "One small ivory paper dish holding three dark gold paper dates beside one clear-looking ivory layered paper cup represented graphically, a single green zellige strip under the plate."
+    "alt": "One small ivory paper dish holding three dark gold paper dates beside one clear-looking ivory layered paper cup represented graphically, a single green zellige strip under the plate.",
+    "pairs": {
+      "light": {
+        "original": "originals/22-a-simple-moment-of-gratitude.png",
+        "preview": "previews/22-a-simple-moment-of-gratitude.jpg"
+      },
+      "dark": {
+        "original": "theme-pairs/22-a-simple-moment-of-gratitude-dark.png",
+        "preview": "theme-previews/22-a-simple-moment-of-gratitude-dark.jpg"
+      }
+    }
   },
   {
     "id": "23",
@@ -653,7 +1053,17 @@
     "original": "originals/23-a-joyful-welcome.png",
     "preview": "previews/23-a-joyful-welcome.jpg",
     "sizeLabel": "2.1 MB",
-    "alt": "One ivory pointed doorway with two open muted gold paper doors and a small dark green olive garland above, one clean zellige star cutout at the arch apex."
+    "alt": "One ivory pointed doorway with two open muted gold paper doors and a small dark green olive garland above, one clean zellige star cutout at the arch apex.",
+    "pairs": {
+      "light": {
+        "original": "originals/23-a-joyful-welcome.png",
+        "preview": "previews/23-a-joyful-welcome.jpg"
+      },
+      "dark": {
+        "original": "theme-pairs/23-a-joyful-welcome-dark.png",
+        "preview": "theme-previews/23-a-joyful-welcome-dark.jpg"
+      }
+    }
   },
   {
     "id": "24",
@@ -669,6 +1079,16 @@
     "original": "originals/24-what-we-mend-we-pass-on.png",
     "preview": "previews/24-what-we-mend-we-pass-on.jpg",
     "sizeLabel": "2.0 MB",
-    "alt": "One folded ivory and dark green woven-paper textile with a short loose gold paper thread gently stitching an edge, one simple star-shaped zellige motif woven into a corner."
+    "alt": "One folded ivory and dark green woven-paper textile with a short loose gold paper thread gently stitching an edge, one simple star-shaped zellige motif woven into a corner.",
+    "pairs": {
+      "light": {
+        "original": "originals/24-what-we-mend-we-pass-on.png",
+        "preview": "previews/24-what-we-mend-we-pass-on.jpg"
+      },
+      "dark": {
+        "original": "theme-pairs/24-what-we-mend-we-pass-on-dark.png",
+        "preview": "theme-previews/24-what-we-mend-we-pass-on-dark.jpg"
+      }
+    }
   }
 ]

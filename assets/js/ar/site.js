@@ -18,7 +18,7 @@
     if (calm && document.getAnimations) document.getAnimations().forEach(function (a) { a.cancel(); });
     if (motionButton) {
       motionButton.hidden = false;
-      motionButton.textContent = reduce.matches ? "الحركة: مخفّضة وفق إعدادات جهازك" : calm ? "الحركة: هادئة" : "الحركة: لطيفة";
+      motionButton.textContent = reduce.matches ? "الحركة: مخفّضة وفق إعدادات جهازك" : calm ? "الحركة: هادئة" : "الحركة: انسيابية";
       motionButton.setAttribute('aria-pressed', String(calm));
       motionButton.disabled = reduce.matches;
     }
@@ -44,6 +44,18 @@
   });
 
   var toggle = document.getElementById('themeToggle');
+  var themeButtons = document.querySelectorAll('#themeToggle, [data-theme-toggle]');
+  var themeArtwork = document.querySelectorAll('img[data-art-light][data-art-dark]');
+  function syncThemeArtwork() {
+    var theme = root.dataset.theme === 'light' ? 'light' : 'dark';
+    themeArtwork.forEach(function (img) {
+      var source = img.getAttribute('data-art-' + theme);
+      var sources = img.getAttribute('data-art-' + theme + '-srcset');
+      if (sources) img.setAttribute('srcset', sources);
+      if (img.getAttribute('src') !== source) img.setAttribute('src', source);
+    });
+  }
+  syncThemeArtwork();
   var appLogos = document.querySelectorAll('img[data-logo-dark][data-logo-light]');
   function syncAppLogos() {
     var theme = root.dataset.theme === 'light' ? 'light' : 'dark';
@@ -54,14 +66,14 @@
   }
   syncAppLogos();
   function themeLabel() {
-    if (toggle) toggle.setAttribute('aria-label', root.dataset.theme === 'dark' ? "التبديل إلى ضوء النهار" : "التبديل إلى ضوء المصباح");
-    if (toggle) toggle.title = root.dataset.theme === 'dark' ? "ضوء النهار — عاجي دافئ وأخضر صنوبر" : "ضوء المصباح — أخضر عميق ونحاسي";
-    if (toggle) {
-      var name = toggle.querySelector('[data-theme-name]');
-      var action = toggle.querySelector('[data-theme-action]');
+    themeButtons.forEach(function (button) {
+      button.setAttribute('aria-label', root.dataset.theme === 'dark' ? "التبديل إلى ضوء النهار" : "التبديل إلى ضوء المصباح");
+      button.title = root.dataset.theme === 'dark' ? "التبديل إلى ضوء النهار" : "التبديل إلى ضوء المصباح";
+      var name = button.querySelector('[data-theme-name]');
+      var action = button.querySelector('[data-theme-action]');
       if (name) name.textContent = root.dataset.theme === 'dark' ? "ضوء المصباح" : "ضوء النهار";
       if (action) action.textContent = root.dataset.theme === 'dark' ? "التبديل إلى ضوء النهار" : "التبديل إلى ضوء المصباح";
-    }
+    });
   }
   var desiredTheme = root.dataset.theme === 'light' ? 'light' : 'dark';
   var activeThemeTransition = null;
@@ -69,6 +81,7 @@
   function applyTheme(theme) {
     root.dataset.theme = theme;
     syncAppLogos();
+    syncThemeArtwork();
     themeLabel();
   }
   function changeTheme() {
@@ -100,11 +113,28 @@
       delete root.dataset.themeTransition;
     }
   }
-  if (toggle) {
-    toggle.hidden = false;
-    themeLabel();
-    toggle.addEventListener('click', changeTheme);
+  var preparedArt = Object.create(null);
+  function prepareVisibleArtwork() {
+    var next = root.dataset.theme === 'dark' ? 'light' : 'dark';
+    themeArtwork.forEach(function (img) {
+      var rect = img.getBoundingClientRect();
+      if (rect.bottom < 0 || rect.top > window.innerHeight) return;
+      var source = img.getAttribute('data-art-' + next);
+      if (preparedArt[source]) return;
+      var preload = new Image();
+      preparedArt[source] = preload;
+      preload.sizes = img.sizes;
+      preload.srcset = img.getAttribute('data-art-' + next + '-srcset') || '';
+      preload.src = source;
+    });
   }
+  themeButtons.forEach(function (button) {
+    button.addEventListener('pointerenter', prepareVisibleArtwork, {passive:true});
+    button.addEventListener('focus', prepareVisibleArtwork);
+    button.hidden = false;
+    button.addEventListener('click', changeTheme);
+  });
+  themeLabel();
   var header = document.getElementById('header');
   if (header) {
     var onScroll = function () { header.classList.toggle('is-stuck', (window.scrollY || document.body.scrollTop) > 8); };
