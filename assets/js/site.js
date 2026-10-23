@@ -741,7 +741,7 @@
       e.preventDefault();
       var firstInvalid = null;
       form.querySelectorAll('input, select, textarea').forEach(function (el) {
-        if (el.type === 'text' || el.type === 'email') el.value = el.value.trim();
+        if (el.type === 'text' || el.type === 'email' || el.tagName === 'TEXTAREA') el.value = el.value.trim();
         var valid = el.checkValidity();
         if (valid) el.removeAttribute('aria-invalid'); else { el.setAttribute('aria-invalid', 'true'); if (!firstInvalid) firstInvalid = el; }
       });
